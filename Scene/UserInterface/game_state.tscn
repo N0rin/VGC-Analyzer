@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ceehn6gyw3dlr"]
+
+[node name="GameState" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Border" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Mon-Field Split" type="HSplitContainer" parent="Border"]
+layout_mode = 2
+
+[node name="MonGrid" type="GridContainer" parent="Border/Mon-Field Split"]
+layout_mode = 2
+
+[node name="FieldEffects" type="VBoxContainer" parent="Border/Mon-Field Split"]
+layout_mode = 2

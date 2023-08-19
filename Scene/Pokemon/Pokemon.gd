@@ -31,3 +31,5 @@ class_name Pokemon
 
 var health : int
 var condition = ""
+var terracrystalized = false
+var combat_data = {}
