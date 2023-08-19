@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cl8v28x7fu1r8"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_dr1l1"]
+
+[resource]
+script = ExtResource("1_dr1l1")
+name = "Flutter Mane"
+main_type = "Ghost"
+secondary_type = "Fairy"
+hp = 55
+atk = 55
+def = 55
+spa = 135
+spd = 135
+spe = 135
