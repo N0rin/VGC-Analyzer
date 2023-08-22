@@ -29,7 +29,7 @@ class_name Pokemon
 @export var move3 : Move
 @export var move4 : Move
 
-var health : int
-var condition = ""
-var terracrystalized = false
-var combat_data = {}
+@export var health : int
+@export var condition = ""
+@export var terracrystalized = false
+@export var combat_data = {}

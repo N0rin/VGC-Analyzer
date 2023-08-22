@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://xxiibuexut8e"]
+
+[ext_resource type="Texture2D" uid="uid://d1jw1ux2e7e8o" path="res://Assets/987.png" id="1_e624s"]
+
+[node name="FighterDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("1_e624s")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_top = 123.0
+offset_right = 150.0
+offset_bottom = 150.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+custom_minimum_size = Vector2(140, 25)
+layout_mode = 2
+value = 100.0
+
+[node name="Slot Info" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 125.0

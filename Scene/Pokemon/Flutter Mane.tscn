@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://i0g2r16yo0mq"]
+
+[ext_resource type="PackedScene" uid="uid://bgpxym6hhtr7w" path="res://Scene/Pokemon/PokemonTemplate.tscn" id="1_7rr6a"]
+[ext_resource type="Resource" uid="uid://cl8v28x7fu1r8" path="res://Ressourcen/Species/Flutter Mane.tres" id="2_dglyj"]
+
+[node name="PokemonTemplate" instance=ExtResource("1_7rr6a")]
+species = ExtResource("2_dglyj")
+tera_type = "Fairy"
