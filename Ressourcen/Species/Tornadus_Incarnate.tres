@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dpjcaaffrdl70"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ocq7r"]
+[ext_resource type="Texture2D" uid="uid://7iuf7j71hhav" path="res://Assets/Pokemon/0641Tornadus.png" id="2_xcldd"]
+
+[resource]
+script = ExtResource("1_ocq7r")
+sprite = ExtResource("2_xcldd")
+name = "Tornadus Incarnate"
+main_type = "Flying"
+secondary_type = "None"
+hp = 79
+atk = 115
+def = 70
+spa = 125
+spd = 80
+spe = 111

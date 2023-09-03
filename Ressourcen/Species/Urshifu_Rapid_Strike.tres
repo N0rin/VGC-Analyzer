@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bhdnoq5uiyhjf"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_m2j2m"]
+[ext_resource type="Texture2D" uid="uid://ucxtuql6u6ic" path="res://Assets/Pokemon/shifours-mille-poings-urshifu-rapid-strike.png" id="2_l7in3"]
+
+[resource]
+script = ExtResource("1_m2j2m")
+sprite = ExtResource("2_l7in3")
+name = "Urshifu Rapid"
+main_type = "Fighting"
+secondary_type = "Water"
+hp = 100
+atk = 130
+def = 100
+spa = 36
+spd = 60
+spe = 97

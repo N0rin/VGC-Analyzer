@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://qw63aovrhxxa"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_o2gha"]
+[ext_resource type="Texture2D" uid="uid://ciymjghgu08hf" path="res://Assets/Pokemon/770998_SWSH_Rillaboom_OfficialArt_Glow_RGB_300dpi.png" id="2_sij8k"]
+
+[resource]
+script = ExtResource("1_o2gha")
+sprite = ExtResource("2_sij8k")
+name = "Rillaboom"
+main_type = "Grass"
+secondary_type = "None"
+hp = 100
+atk = 125
+def = 90
+spa = 60
+spd = 70
+spe = 85

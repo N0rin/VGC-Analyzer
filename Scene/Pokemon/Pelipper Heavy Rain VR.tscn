@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://br1642dii7fov"]
+
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_7qqpd"]
+[ext_resource type="Resource" uid="uid://dkssojvbfbmq3" path="res://Ressourcen/Species/Pelipper.tres" id="2_3vnox"]
+
+[node name="PokemonTemplate" instance=ExtResource("1_7qqpd")]
+species = ExtResource("2_3vnox")
+tera_type = "Steel"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 252
+def_evs = 100
+spa_evs = 116
+spd_evs = 4
+spe_evs = 36
+atk_ivs = 0

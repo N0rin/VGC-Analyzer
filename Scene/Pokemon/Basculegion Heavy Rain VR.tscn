@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb3rqmwkc6a0o"]
+
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_dpup4"]
+[ext_resource type="Resource" uid="uid://b42vjc7aangu7" path="res://Ressourcen/Species/Basculegion_Male.tres" id="2_mc8dj"]
+
+[node name="Basculegion" instance=ExtResource("1_dpup4")]
+species = ExtResource("2_mc8dj")
+tera_type = "Steel"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+atk_evs = 252
+def_evs = 212
+spe_evs = 44

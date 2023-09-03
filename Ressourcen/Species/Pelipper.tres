@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dkssojvbfbmq3"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_nfykh"]
+[ext_resource type="Texture2D" uid="uid://bswg8haj1gtnp" path="res://Assets/Pokemon/250px-0279Pelipper.png" id="2_b8ade"]
+
+[resource]
+script = ExtResource("1_nfykh")
+sprite = ExtResource("2_b8ade")
+name = "Pelipper"
+main_type = "Water"
+secondary_type = "Flying"
+hp = 60
+atk = 50
+def = 100
+spa = 85
+spd = 70
+spe = 65

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bs1esxggwhgwg"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n2gwb"]
+[ext_resource type="Texture2D" uid="uid://de53mkjfmba7p" path="res://Assets/Pokemon/250px-0989Sandy_Shocks.png" id="2_fpx3a"]
+
+[resource]
+script = ExtResource("1_n2gwb")
+sprite = ExtResource("2_fpx3a")
+name = "Sandy Shocks"
+main_type = "Electric"
+secondary_type = "Ground"
+hp = 85
+atk = 81
+def = 97
+spa = 121
+spd = 85
+spe = 101

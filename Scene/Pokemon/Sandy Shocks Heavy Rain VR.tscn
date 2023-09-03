@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj161iae8bp3m"]
+
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_3yl1q"]
+[ext_resource type="Resource" uid="uid://bs1esxggwhgwg" path="res://Ressourcen/Species/Sandy Shocks.tres" id="2_qdikc"]
+
+[node name="PokemonTemplate" instance=ExtResource("1_3yl1q")]
+species = ExtResource("2_qdikc")
+tera_type = "Ghost"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_evs = 252
+def_evs = 4
+spe_evs = 252
+atk_ivs = 0

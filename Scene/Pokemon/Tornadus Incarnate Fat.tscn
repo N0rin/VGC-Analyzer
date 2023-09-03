@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt4r7mqbts01f"]
+
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_08ryc"]
+[ext_resource type="Resource" uid="uid://dpjcaaffrdl70" path="res://Ressourcen/Species/Tornadus_Incarnate.tres" id="2_2vi6o"]
+
+[node name="PokemonTemplate" instance=ExtResource("1_08ryc")]
+species = ExtResource("2_2vi6o")
+tera_type = "Ghost"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_evs = 252
+def_evs = 252
+spe_evs = 4
+atk_ivs = 0

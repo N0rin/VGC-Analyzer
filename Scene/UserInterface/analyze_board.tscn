@@ -1,3 +1,214 @@
-[gd_scene format=3 uid="uid://c3q80r0510w6m"]
+[gd_scene load_steps=13 format=3 uid="uid://c3q80r0510w6m"]
 
-[node name="Analyze Board" type="Node2D"]
+[ext_resource type="Script" path="res://Scene/UserInterface/analyze_board.gd" id="1_7e0nj"]
+[ext_resource type="PackedScene" uid="uid://ceehn6gyw3dlr" path="res://Scene/UserInterface/game_state.tscn" id="1_p6323"]
+[ext_resource type="PackedScene" uid="uid://buapsis7b6ks7" path="res://Scene/UserInterface/input_selection.tscn" id="1_r8m5f"]
+[ext_resource type="PackedScene" uid="uid://c38y7vxqm5qxv" path="res://Scene/UserInterface/pokeslot_edit.tscn" id="3_q73bn"]
+[ext_resource type="PackedScene" uid="uid://dc2p7cscamke8" path="res://Scene/Pokemon/Flutter Mane.tscn" id="4_cnj64"]
+[ext_resource type="PackedScene" uid="uid://bt4r7mqbts01f" path="res://Scene/Pokemon/Tornadus Incarnate Fat.tscn" id="5_wlxfr"]
+[ext_resource type="PackedScene" uid="uid://d3avrynmqj6hu" path="res://Scene/Pokemon/Urshifu Rapid Strike.tscn" id="6_lo6qb"]
+[ext_resource type="PackedScene" uid="uid://cgmkysveosee2" path="res://Scene/Pokemon/Rillaboom Assault Vest.tscn" id="7_dig77"]
+[ext_resource type="PackedScene" uid="uid://cyh2ulq61gxcf" path="res://Scene/Pokemon/Barraskewda Heavy Rain VR.tscn" id="7_uktvs"]
+[ext_resource type="PackedScene" uid="uid://bb3rqmwkc6a0o" path="res://Scene/Pokemon/Basculegion Heavy Rain VR.tscn" id="8_vp040"]
+[ext_resource type="PackedScene" uid="uid://br1642dii7fov" path="res://Scene/Pokemon/Pelipper Heavy Rain VR.tscn" id="9_216l7"]
+[ext_resource type="PackedScene" uid="uid://bj161iae8bp3m" path="res://Scene/Pokemon/Sandy Shocks Heavy Rain VR.tscn" id="10_1pcw7"]
+
+[node name="AnalyzeBoard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7e0nj")
+
+[node name="Interface" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftMenu" type="VBoxContainer" parent="Interface"]
+layout_mode = 2
+
+[node name="Previous" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Previous"
+
+[node name="Next1" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Next 1"
+
+[node name="Next2" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Next 2"
+
+[node name="Next3" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Next 3"
+
+[node name="Next4" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Next 4"
+
+[node name="Add State" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Add State"
+
+[node name="Board" type="VBoxContainer" parent="Interface"]
+layout_mode = 2
+
+[node name="Title" type="HBoxContainer" parent="Interface/Board"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Interface/Board/Title"]
+layout_mode = 2
+text = "Zug "
+
+[node name="Label2" type="Label" parent="Interface/Board/Title"]
+layout_mode = 2
+text = "0"
+
+[node name="Spacing" type="Control" parent="Interface/Board/Title"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="TitleEdt" type="LineEdit" parent="Interface/Board/Title"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+placeholder_text = "Titel"
+
+[node name="InputUpper" parent="Interface/Board" instance=ExtResource("1_r8m5f")]
+layout_mode = 2
+
+[node name="GameState" parent="Interface/Board" instance=ExtResource("1_p6323")]
+layout_mode = 2
+
+[node name="InputLower" parent="Interface/Board" instance=ExtResource("1_r8m5f")]
+layout_mode = 2
+
+[node name="Right Menu" type="VBoxContainer" parent="Interface"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="UpperTeamEdit" type="GridContainer" parent="Interface/Right Menu"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Slot1" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+
+[node name="Slot2" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 1
+
+[node name="Slot3" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 2
+
+[node name="Slot4" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 3
+
+[node name="FieldEdit" type="HBoxContainer" parent="Interface/Right Menu"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="Interface/Right Menu/FieldEdit"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="SpinBox" type="SpinBox" parent="Interface/Right Menu/FieldEdit"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="Interface/Right Menu/FieldEdit"]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Up"
+popup/item_0/id = 0
+popup/item_1/text = "Middle"
+popup/item_1/id = 1
+popup/item_2/text = "Bottom"
+popup/item_2/id = 2
+
+[node name="Button" type="Button" parent="Interface/Right Menu/FieldEdit"]
+layout_mode = 2
+text = "Add"
+
+[node name="Button2" type="Button" parent="Interface/Right Menu/FieldEdit"]
+layout_mode = 2
+text = "Iterate"
+
+[node name="Button3" type="Button" parent="Interface/Right Menu/FieldEdit"]
+layout_mode = 2
+text = "Clear all"
+
+[node name="LowerTeamEdit" type="GridContainer" parent="Interface/Right Menu"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Slot5" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 4
+
+[node name="Slot6" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 5
+
+[node name="Slot7" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 6
+
+[node name="Slot8" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+layout_mode = 2
+slot = 7
+
+[node name="Upper Team" type="Node" parent="."]
+
+[node name="FlutterMane" parent="Upper Team" instance=ExtResource("4_cnj64")]
+
+[node name="Tornadus" parent="Upper Team" instance=ExtResource("5_wlxfr")]
+
+[node name="Urshifu" parent="Upper Team" instance=ExtResource("6_lo6qb")]
+
+[node name="Rillaboom" parent="Upper Team" instance=ExtResource("7_dig77")]
+
+[node name="Lower Team" type="Node" parent="."]
+
+[node name="Barraskewda" parent="Lower Team" instance=ExtResource("7_uktvs")]
+
+[node name="Basculegion" parent="Lower Team" instance=ExtResource("8_vp040")]
+
+[node name="Pelipper" parent="Lower Team" instance=ExtResource("9_216l7")]
+
+[node name="SandyShocks" parent="Lower Team" instance=ExtResource("10_1pcw7")]
+
+[connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_status_set"]
+[connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_health_set"]
+[connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_pokemon_set"]
+[connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_status_set"]

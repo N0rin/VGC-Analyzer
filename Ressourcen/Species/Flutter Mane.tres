@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cl8v28x7fu1r8"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_dr1l1"]
-[ext_resource type="Texture2D" uid="uid://d1jw1ux2e7e8o" path="res://Assets/987.png" id="2_hrymb"]
+[ext_resource type="Texture2D" uid="uid://d1jw1ux2e7e8o" path="res://Assets/Pokemon/987.png" id="2_hrymb"]
 
 [resource]
 script = ExtResource("1_dr1l1")

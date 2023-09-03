@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgmkysveosee2"]
+
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_kqic4"]
+[ext_resource type="Resource" uid="uid://qw63aovrhxxa" path="res://Ressourcen/Species/Rillaboom.tres" id="2_edk55"]
+
+[node name="PokemonTemplate" instance=ExtResource("1_kqic4")]
+species = ExtResource("2_edk55")
+tera_type = "Water"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_evs = 252
+atk_evs = 116
+def_evs = 4
+spd_evs = 124
+spe_evs = 12

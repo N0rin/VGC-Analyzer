@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2kkmkp7x1rbp"
-path="res://.godot/imported/450_1000.png-d2fde105df38b738d184e112b1ed243c.ctex"
+uid="uid://bl8eitnapetf2"
+path="res://.godot/imported/0847Barraskewda.png-9b15852ebe6b71b4c6b1d2c2ae5a214a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/450_1000.png"
-dest_files=["res://.godot/imported/450_1000.png-d2fde105df38b738d184e112b1ed243c.ctex"]
+source_file="res://Assets/Pokemon/0847Barraskewda.png"
+dest_files=["res://.godot/imported/0847Barraskewda.png-9b15852ebe6b71b4c6b1d2c2ae5a214a.ctex"]
 
 [params]
 

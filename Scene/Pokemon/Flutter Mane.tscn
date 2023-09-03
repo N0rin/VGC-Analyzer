@@ -1,8 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://i0g2r16yo0mq"]
+[gd_scene load_steps=3 format=3 uid="uid://dc2p7cscamke8"]
 
-[ext_resource type="PackedScene" uid="uid://bgpxym6hhtr7w" path="res://Scene/Pokemon/PokemonTemplate.tscn" id="1_7rr6a"]
-[ext_resource type="Resource" uid="uid://cl8v28x7fu1r8" path="res://Ressourcen/Species/Flutter Mane.tres" id="2_dglyj"]
+[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_5d4ah"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Flutter Mane.tres" id="2_dglyj"]
 
-[node name="PokemonTemplate" instance=ExtResource("1_7rr6a")]
+[node name="PokemonTemplate" instance=ExtResource("1_5d4ah")]
 species = ExtResource("2_dglyj")
 tera_type = "Fairy"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_evs = 212
+def_evs = 132
+spa_evs = 36
+spd_evs = 4
+spe_evs = 124
+atk_ivs = 0
