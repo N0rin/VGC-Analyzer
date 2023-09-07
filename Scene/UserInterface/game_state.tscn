@@ -1,22 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceehn6gyw3dlr"]
+[gd_scene load_steps=4 format=3 uid="uid://ceehn6gyw3dlr"]
 
 [ext_resource type="PackedScene" uid="uid://wk22jmqhdn2r" path="res://Scene/UserInterface/bank_display.tscn" id="1_0klwg"]
 [ext_resource type="Script" path="res://Scene/UserInterface/game_state.gd" id="1_6vowj"]
 [ext_resource type="PackedScene" uid="uid://by0wc0a4eykq2" path="res://Scene/UserInterface/fighter_display.tscn" id="1_m025q"]
-[ext_resource type="PackedScene" uid="uid://cd0vpagvoq5rm" path="res://Scene/field_info.tscn" id="1_n4eof"]
 
 [node name="GameState" type="Control"]
-custom_minimum_size = Vector2(500, 388)
+custom_minimum_size = Vector2(420, 388)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 500.0
+offset_right = 400.0
 offset_bottom = 388.0
 script = ExtResource("1_6vowj")
 
 [node name="Border" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 460.0
-offset_bottom = 538.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Mon-Field Split" type="HBoxContainer" parent="Border"]
 layout_mode = 2
@@ -87,13 +89,7 @@ layout_mode = 2
 [node name="FieldEffects" type="VBoxContainer" parent="Border/Mon-Field Split"]
 layout_mode = 2
 
-[node name="PanelContainer" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
-layout_mode = 2
-
-[node name="FieldInfo" parent="Border/Mon-Field Split/FieldEffects/PanelContainer" instance=ExtResource("1_n4eof")]
-layout_mode = 2
-
-[node name="FieldInfo2" parent="Border/Mon-Field Split/FieldEffects/PanelContainer" instance=ExtResource("1_n4eof")]
+[node name="UpperSide" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
 layout_mode = 2
 
 [node name="Buffer" type="Control" parent="Border/Mon-Field Split/FieldEffects"]
@@ -101,16 +97,7 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PanelContainer2" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
-layout_mode = 2
-
-[node name="FieldInfo2" parent="Border/Mon-Field Split/FieldEffects/PanelContainer2" instance=ExtResource("1_n4eof")]
-layout_mode = 2
-
-[node name="FieldInfo3" parent="Border/Mon-Field Split/FieldEffects/PanelContainer2" instance=ExtResource("1_n4eof")]
-layout_mode = 2
-
-[node name="FieldInfo4" parent="Border/Mon-Field Split/FieldEffects/PanelContainer2" instance=ExtResource("1_n4eof")]
+[node name="BothSides" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
 layout_mode = 2
 
 [node name="Buffer3" type="Control" parent="Border/Mon-Field Split/FieldEffects"]
@@ -118,11 +105,5 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PanelContainer3" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
-layout_mode = 2
-
-[node name="Info" parent="Border/Mon-Field Split/FieldEffects/PanelContainer3" instance=ExtResource("1_n4eof")]
-layout_mode = 2
-
-[node name="Info2" parent="Border/Mon-Field Split/FieldEffects/PanelContainer3" instance=ExtResource("1_n4eof")]
+[node name="LowerSide" type="VBoxContainer" parent="Border/Mon-Field Split/FieldEffects"]
 layout_mode = 2

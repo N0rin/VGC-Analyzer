@@ -9,6 +9,7 @@ func set_slot(pokemon:Pokemon) -> void:
 	$ProgressBar.value = pokemon.health
 	$ProgressBar.show()
 	set_status(pokemon.condition)
+	set_terra(pokemon.terracrystalized)
 
 func set_status(status:String) -> void:
 	$"Status Info/brn".hide()
@@ -35,3 +36,10 @@ func set_status(status:String) -> void:
 func clear() -> void:
 	$TextureRect.texture = null
 	$ProgressBar.hide()
+	$Terra.hide()
+
+func set_terra(is_terra:bool):
+	if is_terra:
+		$Terra.show()
+	else:
+		$Terra.hide()

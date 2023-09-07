@@ -9,6 +9,7 @@ func set_fighter(pokemon:Pokemon) -> void:
 	$MarginContainer/ProgressBar.value = pokemon.health
 	$"Slot Info/InfoText".text = pokemon.combat_data
 	set_status(pokemon.condition)
+	set_terra(pokemon.terracrystalized)
 
 func set_status(status:String) -> void:
 	$"Status Info/brn".hide()
@@ -37,3 +38,10 @@ func clear() -> void:
 	$MarginContainer/ProgressBar.value = 0
 	$"Slot Info/InfoText".text = ""
 	set_status("")
+	$Terra.hide()
+
+func set_terra(is_terra:bool):
+	if is_terra:
+		$Terra.show()
+	else:
+		$Terra.hide()

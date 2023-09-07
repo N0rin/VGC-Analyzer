@@ -80,4 +80,6 @@ placeholder_text = "Commentary"
 
 [connection signal="item_selected" from="OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="value_changed" from="HBoxContainer/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="item_selected" from="HBoxContainer2/OptionButton" to="." method="_on_option_status_button_item_selected"]
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_edit_text_changed"]
