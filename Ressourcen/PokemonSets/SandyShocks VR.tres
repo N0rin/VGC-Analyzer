@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://dyufpod7hsjn2"]
+
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_k2efr"]
+[ext_resource type="Resource" uid="uid://bs1esxggwhgwg" path="res://Ressourcen/Species/Sandy Shocks.tres" id="2_hwb0f"]
+
+[resource]
+script = ExtResource("1_k2efr")
+species = ExtResource("2_hwb0f")
+tera_type = "Ghost"
+increased_stat = "None"
+reduced_stat = "None"
+hp_evs = 0
+atk_evs = 0
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31

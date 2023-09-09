@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkj8imp6lqjp7"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/NextButton.gd" id="1_bwns0"]
+
+[node name="Next1" type="Button"]
+text = "Next 1"
+script = ExtResource("1_bwns0")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

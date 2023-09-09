@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://btasy33qi55rm"]
+
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_m8g42"]
+[ext_resource type="Resource" uid="uid://bhdnoq5uiyhjf" path="res://Ressourcen/Species/Urshifu_Rapid_Strike.tres" id="2_8df2x"]
+
+[resource]
+script = ExtResource("1_m8g42")
+species = ExtResource("2_8df2x")
+tera_type = "Normal"
+increased_stat = "None"
+reduced_stat = "None"
+hp_evs = 0
+atk_evs = 0
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31

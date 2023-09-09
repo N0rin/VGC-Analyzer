@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://drtns3m7sf0p"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Scene/Pokemon/_Pokemon.gd" id="1_5o815"]
+[ext_resource type="Script" path="res://Ressourcen/Pokemon.gd" id="1_5o815"]
 
 [node name="PokemonTemplate" type="Node2D"]
 script = ExtResource("1_5o815")

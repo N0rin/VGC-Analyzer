@@ -5,11 +5,11 @@ func set_fighter(pokemon:Pokemon) -> void:
 		clear()
 		return
 	
-	$TextureRect.texture = pokemon.species.sprite
-	$MarginContainer/ProgressBar.value = pokemon.health
-	$"Slot Info/InfoText".text = pokemon.combat_data
-	set_status(pokemon.condition)
-	set_terra(pokemon.terracrystalized)
+	$TextureRect.texture = pokemon.data.species.sprite
+	$MarginContainer/ProgressBar.value = pokemon.state.health
+	$"Slot Info/InfoText".text = pokemon.state.combat_data
+	set_status(pokemon.state.condition)
+	set_terra(pokemon.state.terracrystalized)
 
 func set_status(status:String) -> void:
 	$"Status Info/brn".hide()

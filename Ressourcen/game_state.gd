@@ -1,8 +1,48 @@
 extends Control
+class_name GameStateInterface
 
 @onready var field_effect_scene = load("res://Scene/field_info.tscn")
-@onready var state_name = ""
-@onready var state_turn = 0
+@onready var data: GameStateData
+@onready var upper_pokemon_data:Array[PokemonData] = [null,null,null,null,null,null]
+@onready var lower_pokemon_data:Array[PokemonData] = [null,null,null,null,null,null]
+
+func set_data(state_data:GameStateData) -> void:
+	data = state_data
+	refresh_from_data()
+
+func set_teams(upper_data:Array[PokemonData], lower_data:Array[PokemonData]) -> void:
+	upper_pokemon_data = upper_data
+	lower_pokemon_data = lower_data
+
+func get_pokemon(slot:int, is_upper_team:bool) -> Pokemon:
+	var pokemon:= Pokemon.new()
+	if is_upper_team:
+		if upper_pokemon_data[data.upper_team_lineup[slot]] == null:
+			return null
+		pokemon.data = upper_pokemon_data[data.upper_team_lineup[slot]]
+		pokemon.state = data.upper_team_states[slot]
+	else:
+		if lower_pokemon_data[data.lower_team_lineup[slot]] == null:
+			return null
+		pokemon.data = lower_pokemon_data[data.lower_team_lineup[slot]]
+		pokemon.state = data.lower_team_states[slot]
+	return pokemon
+
+func refresh_from_data() -> void:
+	var upper_team:Array[Pokemon]
+	var lower_team:Array[Pokemon]
+	for slot in range(data.upper_team_states.size()):
+		upper_team.append(get_pokemon(slot, true))
+	for slot in range(data.lower_team_states.size()):
+		lower_team.append(get_pokemon(slot, false))
+	
+	set_fighters(upper_team[0], upper_team[1], lower_team[0], lower_team[1])
+	set_bank(upper_team, true)
+	set_bank(lower_team, false)
+	
+	clear_field_effects()
+	for effect in data.field_effects:
+		add_field_effect(effect.name, effect.duration, effect.position)
 
 func set_fighter(pokemon:Pokemon, slot:int) -> void:
 	match(slot):
@@ -51,23 +91,6 @@ func add_field_effect(name:String, duration:int, position:int) -> void:
 		2:
 			$"Border/Mon-Field Split/FieldEffects/LowerSide".add_child(new_field)
 
-func iterate_field():
-	for effect in $"Border/Mon-Field Split/FieldEffects/UpperSide".get_children():
-		effect.iterate()
-		if effect.effect_duration == 0:
-			$"Border/Mon-Field Split/FieldEffects/BothSides".remove_child(effect)
-			effect.queue_free()
-	for effect in $"Border/Mon-Field Split/FieldEffects/BothSides".get_children():
-		effect.iterate()
-		if effect.effect_duration == 0:
-			$"Border/Mon-Field Split/FieldEffects/BothSides".remove_child(effect)
-			effect.queue_free()
-	for effect in $"Border/Mon-Field Split/FieldEffects/LowerSide".get_children():
-		effect.iterate()
-		if effect.effect_duration == 0:
-			$"Border/Mon-Field Split/FieldEffects/BothSides".remove_child(effect)
-			effect.queue_free()
-
 func clear_field_effects():
 	for effect in $"Border/Mon-Field Split/FieldEffects/UpperSide".get_children():
 		$"Border/Mon-Field Split/FieldEffects/BothSides".remove_child(effect)
@@ -78,3 +101,6 @@ func clear_field_effects():
 	for effect in $"Border/Mon-Field Split/FieldEffects/LowerSide".get_children():
 		$"Border/Mon-Field Split/FieldEffects/BothSides".remove_child(effect)
 		effect.queue_free()
+
+func return_gamestate_data() -> GameStateData:
+	return data

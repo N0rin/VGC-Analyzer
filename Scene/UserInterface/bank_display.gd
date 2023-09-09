@@ -5,11 +5,11 @@ func set_slot(pokemon:Pokemon) -> void:
 		clear()
 		return
 	
-	$TextureRect.texture = pokemon.species.sprite
-	$ProgressBar.value = pokemon.health
+	$TextureRect.texture = pokemon.data.species.sprite
+	$ProgressBar.value = pokemon.state.health
 	$ProgressBar.show()
-	set_status(pokemon.condition)
-	set_terra(pokemon.terracrystalized)
+	set_status(pokemon.state.condition)
+	set_terra(pokemon.state.terracrystalized)
 
 func set_status(status:String) -> void:
 	$"Status Info/brn".hide()

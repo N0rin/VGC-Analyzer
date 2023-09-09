@@ -1,17 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3q80r0510w6m"]
+[gd_scene load_steps=6 format=3 uid="uid://c3q80r0510w6m"]
 
 [ext_resource type="Script" path="res://Scene/UserInterface/analyze_board.gd" id="1_7e0nj"]
-[ext_resource type="PackedScene" uid="uid://ceehn6gyw3dlr" path="res://Scene/UserInterface/game_state.tscn" id="1_p6323"]
+[ext_resource type="PackedScene" uid="uid://dpcjlt32d7ftl" path="res://Scene/UserInterface/game_state.tscn" id="1_p6323"]
 [ext_resource type="PackedScene" uid="uid://buapsis7b6ks7" path="res://Scene/UserInterface/input_selection.tscn" id="1_r8m5f"]
+[ext_resource type="Resource" uid="uid://b6oxte8t7toqs" path="res://Ressourcen/StartData.tres" id="2_1qnho"]
 [ext_resource type="PackedScene" uid="uid://c38y7vxqm5qxv" path="res://Scene/UserInterface/pokeslot_edit.tscn" id="3_q73bn"]
-[ext_resource type="PackedScene" uid="uid://dc2p7cscamke8" path="res://Scene/Pokemon/Flutter Mane.tscn" id="4_cnj64"]
-[ext_resource type="PackedScene" uid="uid://bt4r7mqbts01f" path="res://Scene/Pokemon/Tornadus Incarnate Fat.tscn" id="5_wlxfr"]
-[ext_resource type="PackedScene" uid="uid://d3avrynmqj6hu" path="res://Scene/Pokemon/Urshifu Rapid Strike.tscn" id="6_lo6qb"]
-[ext_resource type="PackedScene" uid="uid://cgmkysveosee2" path="res://Scene/Pokemon/Rillaboom Assault Vest.tscn" id="7_dig77"]
-[ext_resource type="PackedScene" uid="uid://cyh2ulq61gxcf" path="res://Scene/Pokemon/Barraskewda Heavy Rain VR.tscn" id="7_uktvs"]
-[ext_resource type="PackedScene" uid="uid://bb3rqmwkc6a0o" path="res://Scene/Pokemon/Basculegion Heavy Rain VR.tscn" id="8_vp040"]
-[ext_resource type="PackedScene" uid="uid://br1642dii7fov" path="res://Scene/Pokemon/Pelipper Heavy Rain VR.tscn" id="9_216l7"]
-[ext_resource type="PackedScene" uid="uid://bj161iae8bp3m" path="res://Scene/Pokemon/Sandy Shocks Heavy Rain VR.tscn" id="10_1pcw7"]
 
 [node name="AnalyzeBoard" type="Control"]
 layout_mode = 3
@@ -21,6 +14,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e0nj")
+filename = null
+battle_data = ExtResource("2_1qnho")
 
 [node name="Interface" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -34,28 +29,32 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Previous" type="Button" parent="Interface/LeftMenu"]
+visible = false
 layout_mode = 2
 text = "Previous"
 
-[node name="Next1" type="Button" parent="Interface/LeftMenu"]
+[node name="NextSlots" type="VBoxContainer" parent="Interface/LeftMenu"]
 layout_mode = 2
-text = "Next 1"
-
-[node name="Next2" type="Button" parent="Interface/LeftMenu"]
-layout_mode = 2
-text = "Next 2"
-
-[node name="Next3" type="Button" parent="Interface/LeftMenu"]
-layout_mode = 2
-text = "Next 3"
-
-[node name="Next4" type="Button" parent="Interface/LeftMenu"]
-layout_mode = 2
-text = "Next 4"
 
 [node name="Add State" type="Button" parent="Interface/LeftMenu"]
 layout_mode = 2
 text = "Add State"
+
+[node name="Spacing" type="Control" parent="Interface/LeftMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Filename" type="LineEdit" parent="Interface/LeftMenu"]
+layout_mode = 2
+placeholder_text = "Filename"
+
+[node name="Load" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Load"
+
+[node name="Save" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "Save"
 
 [node name="Board" type="VBoxContainer" parent="Interface"]
 layout_mode = 2
@@ -88,6 +87,11 @@ layout_mode = 2
 
 [node name="InputLower" parent="Interface/Board" instance=ExtResource("1_r8m5f")]
 layout_mode = 2
+
+[node name="Commentary" type="TextEdit" parent="Interface/Board"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Commentary"
 
 [node name="Right Menu" type="VBoxContainer" parent="Interface"]
 layout_mode = 2
@@ -155,67 +159,65 @@ columns = 2
 
 [node name="Slot5" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
 layout_mode = 2
-slot = 4
+is_upper = false
 
 [node name="Slot6" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
 layout_mode = 2
-slot = 5
+slot = 1
+is_upper = false
 
 [node name="Slot7" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
 layout_mode = 2
-slot = 6
+slot = 2
+is_upper = false
 
 [node name="Slot8" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
 layout_mode = 2
-slot = 7
+slot = 3
+is_upper = false
 
-[node name="Upper Team" type="Node" parent="."]
+[node name="Data" type="Node" parent="."]
 
-[node name="FlutterMane" parent="Upper Team" instance=ExtResource("4_cnj64")]
-
-[node name="Tornadus" parent="Upper Team" instance=ExtResource("5_wlxfr")]
-
-[node name="Urshifu" parent="Upper Team" instance=ExtResource("6_lo6qb")]
-
-[node name="Rillaboom" parent="Upper Team" instance=ExtResource("7_dig77")]
-
-[node name="Lower Team" type="Node" parent="."]
-
-[node name="Barraskewda" parent="Lower Team" instance=ExtResource("7_uktvs")]
-
-[node name="Basculegion" parent="Lower Team" instance=ExtResource("8_vp040")]
-
-[node name="Pelipper" parent="Lower Team" instance=ExtResource("9_216l7")]
-
-[node name="SandyShocks" parent="Lower Team" instance=ExtResource("10_1pcw7")]
-
-[connection signal="text_changed" from="Interface/Board/Title/TitleEdt" to="." method="_on_title_edit_text_changed"]
+[connection signal="text_changed" from="Interface/LeftMenu/Filename" to="." method="_on_filename_text_changed"]
+[connection signal="pressed" from="Interface/LeftMenu/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
 [connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_status_set"]
 [connection signal="terra_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/UpperTeamEdit/Slot2" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/UpperTeamEdit/Slot3" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_status_set"]
-[connection signal="pressed" from="Interface/Right Menu/FieldEdit/AddEffect" to="." method="_on_add_field_effect_pressed"]
-[connection signal="pressed" from="Interface/Right Menu/FieldEdit/Iterate" to="." method="_on_iterate_pressed"]
-[connection signal="pressed" from="Interface/Right Menu/FieldEdit/ClearAll" to="." method="_on_clear_all_pressed"]
+[connection signal="terra_set" from="Interface/Right Menu/UpperTeamEdit/Slot4" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/LowerTeamEdit/Slot5" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/LowerTeamEdit/Slot6" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/LowerTeamEdit/Slot7" to="." method="_on_terra_set"]
+[connection signal="combat_info_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_health_set"]
 [connection signal="pokemon_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_pokemon_set"]
 [connection signal="status_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_status_set"]
+[connection signal="terra_set" from="Interface/Right Menu/LowerTeamEdit/Slot8" to="." method="_on_terra_set"]

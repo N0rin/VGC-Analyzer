@@ -1,5 +1,5 @@
-extends Node2D
-class_name Pokemon
+extends Resource
+class_name PokemonData
 
 @export var species : Species
 @export var ability : Ability
@@ -28,8 +28,3 @@ class_name Pokemon
 @export var move2 : Move
 @export var move3 : Move
 @export var move4 : Move
-
-var health = 100
-var condition = ""
-var terracrystalized = false
-var combat_data = ""

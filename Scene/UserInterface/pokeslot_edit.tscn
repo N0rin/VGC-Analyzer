@@ -13,19 +13,6 @@ script = ExtResource("1_7er3a")
 
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 2
-item_count = 6
-popup/item_0/text = "Pokemon 1"
-popup/item_0/id = 0
-popup/item_1/text = "Pokemon 2"
-popup/item_1/id = 1
-popup/item_2/text = "Pokemon 3"
-popup/item_2/id = 2
-popup/item_3/text = "Pokemon 4"
-popup/item_3/id = 3
-popup/item_4/text = "Pokemon 5"
-popup/item_4/id = 4
-popup/item_5/text = "Pokemon 6"
-popup/item_5/id = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2

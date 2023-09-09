@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://dewqaj6n18k7q"]
+
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_o5tti"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Flutter Mane.tres" id="2_e0vo0"]
+
+[resource]
+script = ExtResource("1_o5tti")
+species = ExtResource("2_e0vo0")
+tera_type = "Fairy"
+increased_stat = "None"
+reduced_stat = "None"
+hp_evs = 0
+atk_evs = 0
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
