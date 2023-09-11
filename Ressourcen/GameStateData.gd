@@ -57,9 +57,12 @@ func switch_position(position_a:int, position_b:int, is_upper:bool) -> void:
 	pokemon_states[position_b] = switched_pokemon_state_value
 
 func iterate_field() -> void:
-	for effect in field_effects:
-		effect.duration -= 1
-		if effect.duration == 0:
-			field_effects.erase(effect)
+	var size = field_effects.size()
+	for i in range(size):
+		var index = size-1-i
+		field_effects[index].duration -= 1
+	
+		if field_effects[index].duration == 0:
+			field_effects.remove_at(index)
 	
 	state_turn += 1

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3avrynmqj6hu"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_wralc"]
-[ext_resource type="Resource" uid="uid://bhdnoq5uiyhjf" path="res://Ressourcen/Species/Urshifu_Rapid_Strike.tres" id="2_xd56b"]
+[ext_resource type="PackedScene" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_wralc"]
+[ext_resource type="Resource" uid="uid://bhdnoq5uiyhjf" path="res://Ressourcen/Species/UrshifuRapidStrike.tres" id="2_xd56b"]
 
 [node name="PokemonTemplate" instance=ExtResource("1_wralc")]
 species = ExtResource("2_xd56b")

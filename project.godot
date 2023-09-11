@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalEnums="*res://global_enums.gd"
-SavingSystem="*res://saving_system.gd"
 
 [rendering]
 

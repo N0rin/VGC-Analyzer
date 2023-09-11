@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_n2gwb")
 sprite = ExtResource("2_fpx3a")
-name = "Sandy Shocks"
+name = "SandyShocks"
 main_type = "Electric"
 secondary_type = "Ground"
 hp = 85

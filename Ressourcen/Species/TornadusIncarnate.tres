@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_ocq7r")
 sprite = ExtResource("2_xcldd")
-name = "Tornadus Incarnate"
+name = "TornadusIncarnate"
 main_type = "Flying"
 secondary_type = "None"
 hp = 79

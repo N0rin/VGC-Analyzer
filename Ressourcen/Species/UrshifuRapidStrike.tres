@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_m2j2m")
 sprite = ExtResource("2_l7in3")
-name = "Urshifu Rapid"
+name = "UrshifuRapidStrike"
 main_type = "Fighting"
 secondary_type = "Water"
 hp = 100

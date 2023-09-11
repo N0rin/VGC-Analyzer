@@ -1,7 +1,7 @@
 extends Control
 class_name GameStateInterface
 
-@onready var field_effect_scene = load("res://Scene/field_info.tscn")
+@onready var field_effect_scene = load("res://Scene/UserInterface/field_info.tscn")
 @onready var data: GameStateData
 @onready var upper_pokemon_data:Array[PokemonData] = [null,null,null,null,null,null]
 @onready var lower_pokemon_data:Array[PokemonData] = [null,null,null,null,null,null]

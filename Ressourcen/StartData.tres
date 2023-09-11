@@ -4,12 +4,12 @@
 [ext_resource type="Script" path="res://Ressourcen/GameStateData.gd" id="1_ntdag"]
 [ext_resource type="Resource" uid="uid://dhnidj2bdyup4" path="res://Ressourcen/PokemonSets/Barraskewda VR.tres" id="2_y0s8t"]
 [ext_resource type="Resource" uid="uid://dk60flvyurg2u" path="res://Ressourcen/PokemonSets/Pelipper VR.tres" id="3_qp5lp"]
-[ext_resource type="Resource" uid="uid://bi6soa8go88t4" path="res://Ressourcen/PokemonSets/Basculegion VR.tres" id="4_k8cye"]
-[ext_resource type="Resource" uid="uid://dyufpod7hsjn2" path="res://Ressourcen/PokemonSets/SandyShocks VR.tres" id="5_5h81q"]
-[ext_resource type="Resource" uid="uid://dewqaj6n18k7q" path="res://Ressourcen/PokemonSets/FlutterMane Specs.tres" id="7_ugc62"]
-[ext_resource type="Resource" uid="uid://c6irwljmwxxii" path="res://Ressourcen/PokemonSets/Tornadus Defensive.tres" id="8_kgvrm"]
+[ext_resource type="Resource" path="res://Ressourcen/PokemonSets/Basculegion VR.tres" id="4_k8cye"]
+[ext_resource type="Resource" path="res://Ressourcen/PokemonSets/SandyShocks VR.tres" id="5_5h81q"]
+[ext_resource type="Resource" path="res://Ressourcen/PokemonSets/FlutterMane Specs.tres" id="7_ugc62"]
+[ext_resource type="Resource" path="res://Ressourcen/PokemonSets/Tornadus Defensive.tres" id="8_kgvrm"]
 [ext_resource type="Resource" uid="uid://54q7nox87c06" path="res://Ressourcen/PokemonSets/Rillaboom AssaultVest.tres" id="9_ter2p"]
-[ext_resource type="Resource" uid="uid://btasy33qi55rm" path="res://Ressourcen/PokemonSets/UrshifuWater MysticWater.tres" id="10_8iecs"]
+[ext_resource type="Resource" path="res://Ressourcen/PokemonSets/UrshifuWater MysticWater.tres" id="10_8iecs"]
 
 [sub_resource type="Resource" id="Resource_p28wv"]
 script = ExtResource("1_ntdag")

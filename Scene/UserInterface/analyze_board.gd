@@ -3,6 +3,7 @@ extends Control
 @onready var active_game_state:= GameStateData.new()
 @onready var gamestate_position:Array[int] = []
 @onready var next_button_scene = load("res://Scene/UserInterface/NextButton.tscn")
+@onready var saveloader = SaveLoader.new()
 
 @export var battle_data:GameData
 
@@ -88,7 +89,7 @@ func make_gamestate_child() -> GameStateData:
 
 func load_gamestate(tree_path: Array[int]) -> void:
 	active_game_state = battle_data.game_state_data.get_child_at_path(tree_path.duplicate())
-	$Interface/Board/Title/TitleEdt.text = active_game_state.state_name
+	$Interface/Board/Title/TitleEdit.text = active_game_state.state_name
 	$Interface/Board/Title/Label2.text = str(active_game_state.state_turn)
 	$Interface/Board/Commentary.text = active_game_state.commentary
 	
@@ -99,6 +100,10 @@ func refresh_navigation_buttons() -> void:
 	$Interface/LeftMenu/Previous.show()
 	if active_game_state.parent == null:
 		$Interface/LeftMenu/Previous.hide()
+	
+	for button in $Interface/LeftMenu/NextSlots.get_children():
+		$Interface/LeftMenu/NextSlots.remove_child(button)
+		button.queue_free()
 	
 	for index in range(active_game_state.children.size()):
 		var new_button = next_button_scene.instantiate()
@@ -179,16 +184,11 @@ func _on_next_pressed(index:int):
 	gamestate_position.append(index)
 	load_gamestate(gamestate_position)
 
-func _on_filename_text_changed(new_text):
-	filename = new_text
-
 func _on_load_pressed():
-	if save_exists():
-		var test = load_savegame()
-		battle_data = load_savegame()
-	refresh_game_state()
+	battle_data = saveloader.load_data($Interface/LeftMenu/Filename.text)
+	load_gamestate([])
 
 func _on_save_pressed():
-	if filename != "":
-		write_savegame(battle_data)
+	save_changes()
+	saveloader.save_data($Interface/LeftMenu/Filename.text, battle_data)
 

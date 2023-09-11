@@ -28,3 +28,6 @@ class_name PokemonData
 @export var move2 : Move
 @export var move3 : Move
 @export var move4 : Move
+
+func load_species(species_name: String):
+	species = load("res://Ressourcen/Species/" + species_name + ".tres")
