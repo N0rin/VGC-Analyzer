@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://domgejtuh26u3"]
+[gd_scene load_steps=5 format=3 uid="uid://domgejtuh26u3"]
+
+[ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_hkcfj"]
+[ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_b1lt6"]
+[ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_oww6h"]
+[ext_resource type="PackedScene" uid="uid://b1qn3c8niw3l6" path="res://Scene/UserInterface/team_select.tscn" id="4_045my"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,37 +14,104 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
 
-[node name="VSplitContainer" type="VSplitContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VSplitContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="VSplitContainer/VBoxContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VSplitContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VSplitContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VSplitContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Analyzer"
 horizontal_alignment = 1
 
-[node name="OptionButton" type="OptionButton" parent="VSplitContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/VSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/VSplitContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_hkcfj")
+theme_override_styles/hover = ExtResource("2_b1lt6")
+theme_override_styles/pressed = ExtResource("3_oww6h")
+item_count = 1
+selected = 0
+popup/item_0/text = "Regulation F"
+popup/item_0/id = 0
 
-[node name="HSplitContainer" type="HSplitContainer" parent="VSplitContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/VSplitContainer"]
 layout_mode = 2
+
+[node name="TeamSelect" parent="MarginContainer/VBoxContainer/VSplitContainer/HSplitContainer" instance=ExtResource("4_045my")]
+layout_mode = 2
+
+[node name="TeamSelect2" parent="MarginContainer/VBoxContainer/VSplitContainer/HSplitContainer" instance=ExtResource("4_045my")]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("1_hkcfj")
+theme_override_styles/hover = ExtResource("2_b1lt6")
+theme_override_styles/pressed = ExtResource("3_oww6h")
+text = "Go Back"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("1_hkcfj")
+theme_override_styles/hover = ExtResource("2_b1lt6")
+theme_override_styles/pressed = ExtResource("3_oww6h")
+text = "Continue"
