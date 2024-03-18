@@ -1,17 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://domgejtuh26u3"]
+[gd_scene load_steps=6 format=3 uid="uid://domgejtuh26u3"]
 
+[ext_resource type="Script" path="res://Scene/UserInterface/analyzer.gd" id="1_5fpeq"]
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_hkcfj"]
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_b1lt6"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_oww6h"]
 [ext_resource type="PackedScene" uid="uid://b1qn3c8niw3l6" path="res://Scene/UserInterface/team_select.tscn" id="4_045my"]
 
-[node name="Control" type="Control"]
+[node name="Analyzer" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5fpeq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -92,7 +94,7 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("1_hkcfj")
 theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
@@ -110,8 +112,10 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("1_hkcfj")
 theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
 text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
