@@ -5,7 +5,8 @@ func set_slot(pokemon:Pokemon) -> void:
 		clear()
 		return
 	
-	$TextureRect.texture = pokemon.data.species.sprite
+	$TileMap.show()
+	set_sprite(pokemon.data.species.texture_x, pokemon.data.species.texture_y, pokemon.data.species.texture_id)
 	$ProgressBar.value = pokemon.state.health
 	$ProgressBar.show()
 	set_status(pokemon.state.condition)
@@ -34,7 +35,7 @@ func set_status(status:String) -> void:
 			$"Status Info/tox".show()
 
 func clear() -> void:
-	$TextureRect.texture = null
+	$TileMap.hide()
 	$ProgressBar.hide()
 	$Terra.hide()
 
@@ -43,3 +44,6 @@ func set_terra(is_terra:bool):
 		$Terra.show()
 	else:
 		$Terra.hide()
+
+func set_sprite(x: int, y: int, source_id: int = 4):
+	$TileMap.set_cell(0, Vector2i.ZERO, source_id, Vector2i(x, y), 0)

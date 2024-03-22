@@ -20,3 +20,7 @@ func _on_signal_back_to_main():
 	$Calculations.hide()
 	$Metasets.hide()
 	$Main.show()
+
+func _on_analyzer_continue_to_board():
+	$Analyzer.hide()
+	$AnalyzeBoard.show()

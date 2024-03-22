@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://djagrai67tui1"]
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://djagrai67tui1"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5ccq6"]
-[ext_resource type="Texture2D" uid="uid://bl8eitnapetf2" path="res://Assets/Pokemon/0847Barraskewda.png" id="2_rwvju"]
 
 [resource]
 script = ExtResource("1_5ccq6")
-sprite = ExtResource("2_rwvju")
+texture_id = 4
+texture_x = 33
+texture_y = 25
 name = "Barraskewda"
 main_type = "Water"
 secondary_type = "None"

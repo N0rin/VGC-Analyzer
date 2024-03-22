@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bs1esxggwhgwg"]
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bs1esxggwhgwg"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n2gwb"]
-[ext_resource type="Texture2D" uid="uid://de53mkjfmba7p" path="res://Assets/Pokemon/250px-0989Sandy_Shocks.png" id="2_fpx3a"]
 
 [resource]
 script = ExtResource("1_n2gwb")
-sprite = ExtResource("2_fpx3a")
+texture_id = 0
+texture_x = 11
+texture_y = 6
 name = "SandyShocks"
 main_type = "Electric"
 secondary_type = "Ground"

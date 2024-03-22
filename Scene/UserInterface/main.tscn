@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://du3jlorsdi04i"]
+[gd_scene load_steps=8 format=3 uid="uid://du3jlorsdi04i"]
 
 [ext_resource type="Script" path="res://Scene/UserInterface/main.gd" id="1_j0dnr"]
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_k1rlv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://domgejtuh26u3" path="res://Scene/UserInterface/analyzer.tscn" id="3_nrylc"]
 [ext_resource type="PackedScene" uid="uid://c3o24fe5hsiil" path="res://Scene/UserInterface/calculations.tscn" id="5_doh50"]
 [ext_resource type="PackedScene" uid="uid://brb6ktceqlvcm" path="res://Scene/UserInterface/metasets.tscn" id="6_12fql"]
+[ext_resource type="PackedScene" uid="uid://c3q80r0510w6m" path="res://Scene/UserInterface/analyze_board.tscn" id="7_rfm26"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -117,10 +118,15 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="AnalyzeBoard" parent="." instance=ExtResource("7_rfm26")]
+visible = false
+layout_mode = 1
+
 [connection signal="pressed" from="Main/MarginContainer/VBoxContainer/ButtonAnalyzer" to="." method="_on_button_analyzer_pressed"]
 [connection signal="pressed" from="Main/MarginContainer/VBoxContainer/ButtonCalculations" to="." method="_on_button_calculations_pressed"]
 [connection signal="pressed" from="Main/MarginContainer/VBoxContainer/ButtonMetasets" to="." method="_on_button_metasets_pressed"]
 [connection signal="pressed" from="Main/MarginContainer/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="back_to_main" from="Analyzer" to="." method="_on_signal_back_to_main"]
+[connection signal="continue_to_board" from="Analyzer" to="." method="_on_analyzer_continue_to_board"]
 [connection signal="back_to_main" from="Calculations" to="." method="_on_signal_back_to_main"]
 [connection signal="back_to_main" from="Metasets" to="." method="_on_signal_back_to_main"]

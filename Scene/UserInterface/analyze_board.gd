@@ -194,3 +194,7 @@ func _on_save_pressed():
 	save_changes()
 	saveloader.save_data($Interface/LeftMenu/Filename.text, battle_data)
 
+
+
+func _on_button_pressed():
+	$"Interface/Board/GameState/Border/Mon-Field Split/VBoxContainer/MonGrid/FighterDisplay".set_sprite(38, 0)

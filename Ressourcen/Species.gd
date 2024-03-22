@@ -1,7 +1,9 @@
 extends Resource
 class_name Species
 
-@export var sprite : Texture
+@export var texture_id : int
+@export var texture_x : int
+@export var texture_y : int
 @export var name = ""
 @export_enum( "Normal", "Grass", "Fire", "Water", "Electric", "Fighting", "Flying", 
 "Poison", "Ground", "Rock", "Bug", "Ice", "Psychic", "Ghost", "Dragon", "Dark",

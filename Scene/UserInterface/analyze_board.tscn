@@ -43,6 +43,10 @@ text = "Add State"
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Button" type="Button" parent="Interface/LeftMenu"]
+layout_mode = 2
+text = "TestDisplay"
+
 [node name="Filename" type="LineEdit" parent="Interface/LeftMenu"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -181,6 +185,7 @@ is_upper = false
 
 [connection signal="pressed" from="Interface/LeftMenu/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="Interface/LeftMenu/Add State" to="." method="_on_add_state_pressed"]
+[connection signal="pressed" from="Interface/LeftMenu/Button" to="." method="_on_button_pressed"]
 [connection signal="text_changed" from="Interface/LeftMenu/Filename" to="." method="_on_filename_text_changed"]
 [connection signal="pressed" from="Interface/LeftMenu/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
