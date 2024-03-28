@@ -1,0 +1,465 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddf8ofme5gq66"]
+
+[ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_2hhlj"]
+[ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_4okmv"]
+[ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_6qvp8"]
+
+[node name="MetaCalcs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Top" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Top"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Top"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Meta Calcs"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/Top"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Regulation F"
+popup/item_0/id = 0
+
+[node name="CoreUI" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="Set Edit" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Ogerpon (Wellspring)"
+popup/item_0/id = 0
+
+[node name="Tera" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Tera Type"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+selected = 0
+popup/item_0/text = "Water"
+popup/item_0/id = 0
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera"]
+layout_mode = 2
+
+[node name="Stats" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+columns = 3
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "IVs"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "EVs"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "HP"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit2" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ATK"
+
+[node name="TextEdit3" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit4" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "DEF"
+
+[node name="TextEdit5" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit6" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SPA"
+
+[node name="TextEdit7" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit8" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SPD"
+
+[node name="TextEdit9" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit10" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SPE"
+
+[node name="TextEdit11" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="TextEdit12" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Nature"
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 5
+selected = 0
+popup/item_0/text = "+ ATK"
+popup/item_0/id = 0
+popup/item_1/text = "+ DEF"
+popup/item_1/id = 1
+popup/item_2/text = "+ SPA"
+popup/item_2/id = 2
+popup/item_3/text = "+ SPD"
+popup/item_3/id = 3
+popup/item_4/text = "+ SPE"
+popup/item_4/id = 4
+
+[node name="OptionButton4" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 5
+selected = 2
+popup/item_0/text = "- ATK"
+popup/item_0/id = 0
+popup/item_1/text = "- DEF"
+popup/item_1/id = 1
+popup/item_2/text = "- SPA"
+popup/item_2/id = 2
+popup/item_3/text = "- SPD"
+popup/item_3/id = 3
+popup/item_4/text = "- SPE"
+popup/item_4/id = 4
+
+[node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ability"
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Water Absorb"
+popup/item_0/id = 0
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Item"
+
+[node name="OptionButton3" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Wellspring Mask"
+popup/item_0/id = 0
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Status"
+
+[node name="OptionButton4" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 6
+selected = 0
+popup/item_0/text = "Healthy"
+popup/item_0/id = 0
+popup/item_1/text = "Poisoned"
+popup/item_1/id = 1
+popup/item_2/text = "Badly Poisoned"
+popup/item_2/id = 2
+popup/item_3/text = "Burned"
+popup/item_3/id = 3
+popup/item_4/text = "Paralyzed"
+popup/item_4/id = 4
+popup/item_5/text = "Frozen"
+popup/item_5/id = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Moves"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Moonblast"
+popup/item_0/id = 0
+
+[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Moonblast"
+popup/item_0/id = 0
+
+[node name="OptionButton3" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Moonblast"
+popup/item_0/id = 0
+
+[node name="OptionButton4" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 1
+popup/item_0/text = "Moonblast"
+popup/item_0/id = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+text = "Save"
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_styles/normal = ExtResource("1_2hhlj")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Details zu 
+dem ausgewählten 
+Angriff"
+
+[node name="Middle" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MiddleScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+text = "Go Back"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+text = "Continue"
