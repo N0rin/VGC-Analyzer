@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddf8ofme5gq66"]
+[gd_scene load_steps=6 format=3 uid="uid://ddf8ofme5gq66"]
 
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_2hhlj"]
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_4okmv"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_6qvp8"]
+[ext_resource type="PackedScene" uid="uid://tvnlr676x744" path="res://Scene/UserInterface/SubScenes/move_calc_item.tscn" id="4_puudf"]
+[ext_resource type="PackedScene" uid="uid://bm7ysubftbd38" path="res://Scene/UserInterface/SubScenes/set_selection_item.tscn" id="5_ir036"]
 
 [node name="MetaCalcs" type="Control"]
 layout_mode = 3
@@ -73,6 +75,7 @@ popup/item_0/id = 0
 [node name="CoreUI" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/separation = 50
 
 [node name="Left" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
@@ -410,9 +413,13 @@ Angriff"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
 [node name="MiddleScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
 custom_minimum_size = Vector2(200, 0)
@@ -420,15 +427,22 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll/VBoxContainer" instance=ExtResource("4_puudf")]
+layout_mode = 2
+
 [node name="Right" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Control" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ir036")]
+layout_mode = 2
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

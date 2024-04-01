@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://tvnlr676x744"]
+
+[ext_resource type="StyleBox" uid="uid://c05r2rcv5ur6s" path="res://Ressourcen/Styles/black_border.tres" id="1_u3voj"]
+
+[node name="MoveCalcItem" type="PanelContainer"]
+offset_right = 646.0
+offset_bottom = 52.0
+theme_override_styles/panel = ExtResource("1_u3voj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "252+ SpA Life Orb Exeggutor Expanding Force (120 BP) vs. 0 HP / 4 SpD Ogerpon-Hearthflame in Psychic Terrain"
+autowrap_mode = 2
+
+[node name="Minimum" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "92%"
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "-"
+
+[node name="Maximum" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "108%"
+
+[node name="RemoveButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"
