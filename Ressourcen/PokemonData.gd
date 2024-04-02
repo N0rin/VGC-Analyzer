@@ -31,3 +31,47 @@ class_name PokemonData
 
 func load_species(species_name: String):
 	species = load("res://Ressourcen/Species/" + species_name + ".tres")
+
+func get_move(value:int) -> Move:
+	match(value):
+		2:
+			return move2
+		3:
+			return move3
+		4:
+			return move4
+		_:
+			return move1
+
+func get_hp_value() -> int:
+	return damage_calculation.pokeRound(((( 2 * species.hp + hp_ivs + (hp_evs/4)) * 50) /100) + 60)
+
+func get_atk_value() -> int:
+	var atk = damage_calculation.pokeRound(((( 2 * species.atk + atk_ivs + (atk_evs/4)) * 50) /100) + 5)
+	if increased_stat == "Atk":
+		return floor(atk * 1.1)
+	return atk
+
+func get_def_value() -> int:
+	var def = damage_calculation.pokeRound(((( 2 * species.def + def_ivs + (def_evs/4)) * 50) /100) + 5)
+	if increased_stat == "Def":
+		return floor(def * 1.1)
+	return def
+
+func get_spa_value() -> int:
+	var spa = damage_calculation.pokeRound(((( 2 * species.spa + spa_ivs + (spa_evs/4)) * 50) /100) + 5)
+	if increased_stat == "SpA":
+		return floor(spa * 1.1)
+	return spa
+
+func get_spd_value() -> int:
+	var spd = damage_calculation.pokeRound(((( 2 * species.spd + spd_ivs + (spd_evs/4)) * 50) /100) + 5)
+	if increased_stat == "SpD":
+		return floor(spd * 1.1)
+	return spd
+
+func get_spe_value() -> int:
+	var spe = damage_calculation.pokeRound(((( 2 * species.spe + spe_ivs + (spe_evs/4)) * 50) /100) + 5)
+	if increased_stat == "Spe":
+		return floor(spe * 1.1)
+	return spe
