@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bdhqvok1k33pu"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_w8i4u"]
+
+[resource]
+script = ExtResource("1_w8i4u")
+name = "Choice Specs"

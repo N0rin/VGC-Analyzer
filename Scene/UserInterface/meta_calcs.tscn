@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddf8ofme5gq66"]
+[gd_scene load_steps=7 format=3 uid="uid://ddf8ofme5gq66"]
 
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_2hhlj"]
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_4okmv"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_6qvp8"]
+[ext_resource type="PackedScene" uid="uid://ce10khqhsu0mo" path="res://Scene/UserInterface/SubScenes/modifier.tscn" id="4_kdhss"]
 [ext_resource type="PackedScene" uid="uid://tvnlr676x744" path="res://Scene/UserInterface/SubScenes/move_calc_item.tscn" id="4_puudf"]
 [ext_resource type="PackedScene" uid="uid://bm7ysubftbd38" path="res://Scene/UserInterface/SubScenes/set_selection_item.tscn" id="5_ir036"]
 
@@ -86,7 +87,7 @@ size_flags_stretch_ratio = 0.7
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 
-[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+[node name="Species" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -105,6 +106,38 @@ fit_to_longest_item = false
 popup/item_0/text = "Ogerpon (Wellspring)"
 popup/item_0/id = 0
 
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Set" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+
+[node name="SetSelect" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+item_count = 1
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "New Set"
+popup/item_0/id = 0
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+text = " Save "
+
 [node name="Tera" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
 
@@ -121,9 +154,6 @@ item_count = 1
 selected = 0
 popup/item_0/text = "Water"
 popup/item_0/id = 0
-
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera"]
-layout_mode = 2
 
 [node name="Stats" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
@@ -304,30 +334,6 @@ item_count = 1
 popup/item_0/text = "Wellspring Mask"
 popup/item_0/id = 0
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Status"
-
-[node name="OptionButton4" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("1_2hhlj")
-item_count = 6
-selected = 0
-popup/item_0/text = "Healthy"
-popup/item_0/id = 0
-popup/item_1/text = "Poisoned"
-popup/item_1/id = 1
-popup/item_2/text = "Badly Poisoned"
-popup/item_2/id = 2
-popup/item_3/text = "Burned"
-popup/item_3/id = 3
-popup/item_4/text = "Paralyzed"
-popup/item_4/id = 4
-popup/item_5/text = "Frozen"
-popup/item_5/id = 5
-
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
 
@@ -372,12 +378,16 @@ item_count = 1
 popup/item_0/text = "Moonblast"
 popup/item_0/id = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
+[node name="Extras" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
 layout_mode = 2
-size_flags_horizontal = 8
+
+[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Extras"]
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -386,28 +396,153 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("1_2hhlj")
 theme_override_styles/hover = ExtResource("2_4okmv")
 theme_override_styles/pressed = ExtResource("3_6qvp8")
-text = "Save"
+text = "Terastalize"
 
-[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_styles/normal = ExtResource("1_2hhlj")
-
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/VBoxContainer"]
+[node name="Factors" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Details zu 
-dem ausgewählten 
-Angriff"
+theme_override_styles/normal = ExtResource("1_2hhlj")
+text = "Add Modifier"
+
+[node name="Modifier Type" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 7
+popup/item_0/text = "Weather"
+popup/item_0/id = 0
+popup/item_1/text = "Terrain"
+popup/item_1/id = 1
+popup/item_2/text = "Ruin Ability"
+popup/item_2/id = 2
+popup/item_3/text = "Helping Hand"
+popup/item_3/id = 3
+popup/item_4/text = "Stat Boosts"
+popup/item_4/id = 4
+popup/item_5/text = "Screens"
+popup/item_5/id = 5
+popup/item_6/text = "Friend Guard"
+popup/item_6/id = 6
+
+[node name="Weather Select" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 4
+popup/item_0/text = "Sun"
+popup/item_0/id = 0
+popup/item_1/text = "Rain"
+popup/item_1/id = 1
+popup/item_2/text = "Snow"
+popup/item_2/id = 2
+popup/item_3/text = "Sand"
+popup/item_3/id = 3
+
+[node name="Terrain Select" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 4
+popup/item_0/text = "Grassy"
+popup/item_0/id = 0
+popup/item_1/text = "Electric"
+popup/item_1/id = 1
+popup/item_2/text = "Psychic"
+popup/item_2/id = 2
+popup/item_3/text = "Misty"
+popup/item_3/id = 3
+
+[node name="Ruin Select" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 4
+popup/item_0/text = "Sword"
+popup/item_0/id = 0
+popup/item_1/text = "Beads"
+popup/item_1/id = 1
+popup/item_2/text = "Vessel"
+popup/item_2/id = 2
+popup/item_3/text = "Tablets"
+popup/item_3/id = 3
+
+[node name="Stat Select" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 4
+popup/item_0/text = "ATK"
+popup/item_0/id = 0
+popup/item_1/text = "DEF"
+popup/item_1/id = 1
+popup/item_2/text = "SPA"
+popup/item_2/id = 2
+popup/item_3/text = "SPD"
+popup/item_3/id = 3
+
+[node name="Stat Strength Select" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+item_count = 12
+popup/item_0/text = "+6"
+popup/item_0/id = 0
+popup/item_1/text = "+5"
+popup/item_1/id = 1
+popup/item_2/text = "+4"
+popup/item_2/id = 2
+popup/item_3/text = "+3"
+popup/item_3/id = 3
+popup/item_4/text = "+2"
+popup/item_4/id = 4
+popup/item_5/text = "+1"
+popup/item_5/id = 5
+popup/item_6/text = "-1"
+popup/item_6/id = 6
+popup/item_7/text = "-2"
+popup/item_7/id = 7
+popup/item_8/text = "-3"
+popup/item_8/id = 8
+popup/item_9/text = "-4"
+popup/item_9/id = 9
+popup/item_10/text = "-5"
+popup/item_10/id = 10
+popup/item_11/text = "-6"
+popup/item_11/id = 11
+
+[node name="Target Button" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_2hhlj")
+theme_override_styles/hover = ExtResource("2_4okmv")
+theme_override_styles/pressed = ExtResource("3_6qvp8")
+text = "Self"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors"]
+layout_mode = 2
+
+[node name="Modifier" parent="MarginContainer/VBoxContainer/CoreUI/Left/Factors/GridContainer" instance=ExtResource("4_kdhss")]
+layout_mode = 2
 
 [node name="Middle" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2

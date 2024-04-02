@@ -19,3 +19,11 @@ func combineModifier(old_value : float, new_modifier : float) -> int:
 func calculateBaseDamage(base_power: float, attack: float, defense: float, level: float = 50):
 	return floor(floor(floor( (2 * level) /5 + 2) * base_power * attack /defense) /50) +2
 
+func calculateAttackValue(pokemon:PokemonData, move:Move) -> int:
+	return 1
+
+func calculateDefenseValue(pokemon:PokemonData, move:Move) -> int:
+	return 1
+
+func calculateCompleteDamage(attacker:PokemonData, defender:PokemonData, move_slot:int, damage_roll:int ,modifiers:Array) -> int:
+	return 1
