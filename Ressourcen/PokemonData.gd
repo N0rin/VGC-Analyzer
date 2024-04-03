@@ -43,6 +43,9 @@ func get_move(value:int) -> Move:
 		_:
 			return move1
 
+func get_types() -> Array[String]:
+	return [species.main_type, species.secondary_type]
+
 func get_hp_value() -> int:
 	return damage_calculation.pokeRound(((( 2 * species.hp + hp_ivs + (hp_evs/4)) * 50) /100) + 60)
 
