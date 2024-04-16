@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddf8ofme5gq66"]
+[gd_scene load_steps=8 format=3 uid="uid://ddf8ofme5gq66"]
 
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_2hhlj"]
+[ext_resource type="Script" path="res://Scene/UserInterface/meta_calcs.gd" id="1_n72al"]
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_4okmv"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_6qvp8"]
 [ext_resource type="PackedScene" uid="uid://ce10khqhsu0mo" path="res://Scene/UserInterface/SubScenes/modifier.tscn" id="4_kdhss"]
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_n72al")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
