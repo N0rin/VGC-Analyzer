@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://b2d8prfr3quax"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_o5tti"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/FlutterMane.tres" id="2_e0vo0"]
+[ext_resource type="Resource" uid="uid://b8a2q7ss1ijen" path="res://Ressourcen/Species/FlutterMane.tres" id="2_e0vo0"]
 
 [resource]
 script = ExtResource("1_o5tti")
+set_name = "Specs"
 species = ExtResource("2_e0vo0")
 tera_type = "Fairy"
 increased_stat = "None"

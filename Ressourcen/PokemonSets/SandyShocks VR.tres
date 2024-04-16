@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://do2dejmy0goxs"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_k2efr"]
 [ext_resource type="Resource" uid="uid://bs1esxggwhgwg" path="res://Ressourcen/Species/SandyShocks.tres" id="2_hwb0f"]
 
 [resource]
 script = ExtResource("1_k2efr")
+set_name = "Heavy Rain"
 species = ExtResource("2_hwb0f")
 tera_type = "Ghost"
 increased_stat = "None"

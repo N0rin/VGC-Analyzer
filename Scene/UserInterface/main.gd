@@ -24,3 +24,8 @@ func _on_signal_back_to_main():
 func _on_analyzer_continue_to_board():
 	$Analyzer.hide()
 	$AnalyzeBoard.show()
+
+
+func _on_calculations_to_meta():
+	$Calculations/MetaCalcs.show()
+	$Calculations/MetaCalcs.load_saved_pokemon_data()

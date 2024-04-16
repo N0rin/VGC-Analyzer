@@ -104,4 +104,7 @@ theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
 text = "Go Back"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMeta" to="." method="_on_button_meta_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMatchup" to="." method="_on_button_matchup_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonDamage" to="." method="_on_button_damage_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

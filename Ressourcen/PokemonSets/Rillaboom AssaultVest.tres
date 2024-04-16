@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_54ynr")
+set_name = "Assault Vest"
 species = ExtResource("2_6deje")
 tera_type = "Normal"
 increased_stat = "None"

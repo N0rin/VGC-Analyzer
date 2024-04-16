@@ -1,6 +1,7 @@
 extends Resource
 class_name PokemonData
 
+@export var set_name : String
 @export var species : Species
 @export var ability : Ability
 @export var item : Item

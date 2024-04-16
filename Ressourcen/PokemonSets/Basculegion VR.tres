@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://c1vpsuwbomo4n"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_ayrtw"]
 [ext_resource type="Resource" uid="uid://b42vjc7aangu7" path="res://Ressourcen/Species/BasculegionMale.tres" id="2_liu73"]
 
 [resource]
 script = ExtResource("1_ayrtw")
+set_name = "Heavy Rain"
 species = ExtResource("2_liu73")
 tera_type = "Steel"
 increased_stat = "None"

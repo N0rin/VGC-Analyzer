@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://bmuthejlpj1il"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_tjfw5"]
 [ext_resource type="Resource" uid="uid://dpjcaaffrdl70" path="res://Ressourcen/Species/TornadusIncarnate.tres" id="2_vts7s"]
 
 [resource]
 script = ExtResource("1_tjfw5")
+set_name = "Defensive"
 species = ExtResource("2_vts7s")
 tera_type = "Normal"
 increased_stat = "None"

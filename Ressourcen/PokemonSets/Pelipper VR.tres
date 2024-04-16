@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_ew27j")
+set_name = "Heavy Rain"
 species = ExtResource("2_j5rsq")
 tera_type = "Normal"
 increased_stat = "None"

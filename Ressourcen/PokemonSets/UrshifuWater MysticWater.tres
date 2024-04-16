@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://dtbc8jspskrgb"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_m8g42"]
 [ext_resource type="Resource" uid="uid://bhdnoq5uiyhjf" path="res://Ressourcen/Species/UrshifuRapidStrike.tres" id="2_8df2x"]
 
 [resource]
 script = ExtResource("1_m8g42")
+set_name = "Mystic Water"
 species = ExtResource("2_8df2x")
 tera_type = "Normal"
 increased_stat = "None"
