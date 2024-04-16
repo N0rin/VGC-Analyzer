@@ -125,7 +125,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("1_2hhlj")
 theme_override_styles/hover = ExtResource("2_4okmv")
 theme_override_styles/pressed = ExtResource("3_6qvp8")
-selected = 0
 fit_to_longest_item = false
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set"]
