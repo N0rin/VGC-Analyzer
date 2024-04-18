@@ -40,3 +40,8 @@ func _on_species_item_selected(index):
 			set_selector.add_item(set.set_name, id)
 			set_selector.set_item_metadata(id, set)
 			id += 1
+
+
+func _on_back_pressed():
+	hide()
+	#reset
