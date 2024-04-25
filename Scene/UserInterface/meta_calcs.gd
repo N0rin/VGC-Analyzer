@@ -21,22 +21,21 @@ func load_saved_pokemon_data():
 	update_interface()
 
 func update_interface():
-	var id = 0
+	update_pokemon_selector()
+
+func update_pokemon_selector():
+	pokemon_selector.clear()
 	for pokemon in pokemon_list:
-		pokemon_selector.add_item(pokemon.name, id)
-		pokemon_selector.set_item_metadata(id, pokemon.name)
-		id += 1
-	pokemon_selector.select(-1)
+		pokemon_selector.add_item(pokemon.name)
 
-
-func _on_species_item_selected(index):
+func _on_species_item_selected(name):
 	set_selector.clear()
 	set_selector.add_item("New Set", 0)
 	set_selector.set_item_metadata(0, null)
 	
 	var id = 1
 	for set in pokemon_set_list:
-		if set.species.name == pokemon_selector.get_item_metadata(index):
+		if set.species.name == name:
 			set_selector.add_item(set.set_name, id)
 			set_selector.set_item_metadata(id, set)
 			id += 1

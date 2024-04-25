@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vmq1p3f35nsl"]
+
+[ext_resource type="Script" path="res://SearchPopupButton.gd" id="1_cktnr"]
+
+[node name="SearchPopupButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_cktnr")
