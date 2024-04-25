@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://b8a2q7ss1ijen"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b8a2q7ss1ijen"]
 
+[ext_resource type="Resource" uid="uid://duoxf7vanfokv" path="res://Ressourcen/Abilities/Protosynthesis.tres" id="1_14ls5"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_dr1l1"]
 
 [resource]
@@ -10,6 +11,7 @@ texture_y = 6
 name = "Flutter Mane"
 main_type = "Ghost"
 secondary_type = "Fairy"
+ability1 = ExtResource("1_14ls5")
 hp = 55
 atk = 55
 def = 55

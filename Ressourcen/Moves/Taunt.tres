@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://x4h1hw8dqqn"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_5wmei"]
+
+[resource]
+script = ExtResource("1_5wmei")
+name = "Taunt"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Status"
+type = "Dark"

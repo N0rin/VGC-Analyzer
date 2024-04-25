@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dpjcaaffrdl70"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dpjcaaffrdl70"]
 
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="1_bydyo"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ocq7r"]
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="2_fhjw5"]
 
 [resource]
 script = ExtResource("1_ocq7r")
@@ -10,6 +12,8 @@ texture_y = 18
 name = "Tornadus - Incarnate"
 main_type = "Flying"
 secondary_type = "None"
+ability1 = ExtResource("1_bydyo")
+ability3 = ExtResource("2_fhjw5")
 hp = 79
 atk = 115
 def = 70

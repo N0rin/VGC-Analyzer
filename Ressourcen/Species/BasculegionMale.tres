@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://b42vjc7aangu7"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://b42vjc7aangu7"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_16dp0"]
+[ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_kuvr6"]
+[ext_resource type="Resource" uid="uid://d32eknymc0nd5" path="res://Ressourcen/Abilities/Adaptability.tres" id="2_ami2t"]
+[ext_resource type="Resource" uid="uid://dscu2ntdo48m8" path="res://Ressourcen/Abilities/Mold_Breaker.tres" id="3_207q8"]
 
 [resource]
 script = ExtResource("1_16dp0")
@@ -10,6 +13,9 @@ texture_y = 27
 name = "Basculegion Male"
 main_type = "Water"
 secondary_type = "Ghost"
+ability1 = ExtResource("1_kuvr6")
+ability2 = ExtResource("2_ami2t")
+ability3 = ExtResource("3_207q8")
 hp = 120
 atk = 112
 def = 65

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://crgu5vwlkwviy"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_mlk8k"]
+
+[resource]
+script = ExtResource("1_mlk8k")
+name = "Tailwind"
+base_damage = 0
+accuracy = 100
+targeting = "Allies"
+category = "Status"
+type = "Flying"

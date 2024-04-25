@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b7vvmg6s38fkb"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_5l4p3"]
+
+[resource]
+script = ExtResource("1_5l4p3")
+name = "Grassy Glide"
+base_damage = 55
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Grass"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bw1hgw5b4hc5u"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_6kiw8"]
+
+[resource]
+script = ExtResource("1_6kiw8")
+name = "Wide Guard"
+base_damage = 0
+accuracy = 100
+priority = 3
+targeting = "Allies"
+category = "Status"
+type = "Rock"

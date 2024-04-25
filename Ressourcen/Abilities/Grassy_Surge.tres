@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://c8e1duj1synj0"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_a8ygk"]
+
+[resource]
+script = ExtResource("1_a8ygk")
+name = "Grassy Surge"

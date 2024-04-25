@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ctxf173b0q5nb"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_pyr70"]
+
+[resource]
+script = ExtResource("1_pyr70")
+name = "Gravity"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "All"
+category = "Status"
+type = "Psychic"

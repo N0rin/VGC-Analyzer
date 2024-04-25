@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://brureoauqfwed"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_sabwl"]
+
+[resource]
+script = ExtResource("1_sabwl")
+name = "Protect"
+base_damage = 0
+accuracy = 100
+priority = 4
+targeting = "Self"
+category = "Status"
+type = "Normal"

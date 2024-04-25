@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://nc26vpv0spb0"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_fjpvy"]
+
+[resource]
+script = ExtResource("1_fjpvy")
+name = "Helping Hand"
+base_damage = 0
+accuracy = 100
+priority = 5
+targeting = "Partner"
+category = "Status"
+type = "Normal"

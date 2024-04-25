@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://nbs7llaulo5n"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_w0jen"]
+
+[resource]
+script = ExtResource("1_w0jen")
+name = "Detect"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Self"
+category = "Status"
+type = "Fighting"

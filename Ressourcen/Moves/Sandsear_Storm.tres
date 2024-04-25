@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dvqep1jd3q0x5"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_adni4"]
+
+[resource]
+script = ExtResource("1_adni4")
+name = "Sandsear Storm"
+base_damage = 100
+accuracy = 80
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Ground"

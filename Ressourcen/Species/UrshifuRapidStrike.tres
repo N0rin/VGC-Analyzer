@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bhdnoq5uiyhjf"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bhdnoq5uiyhjf"]
 
+[ext_resource type="Resource" uid="uid://breep8i1w1qkh" path="res://Ressourcen/Abilities/Unseen_Fist.tres" id="1_h70ti"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_m2j2m"]
 
 [resource]
@@ -10,6 +11,7 @@ texture_y = 27
 name = "Urshifu - Rapid Strike"
 main_type = "Fighting"
 secondary_type = "Water"
+ability1 = ExtResource("1_h70ti")
 hp = 100
 atk = 130
 def = 100

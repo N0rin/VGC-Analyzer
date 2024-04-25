@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bxj6lopuadeia"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_vjaom"]
+
+[resource]
+script = ExtResource("1_vjaom")
+name = "Mystic Water"

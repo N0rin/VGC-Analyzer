@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bwt01uc6aw6n0"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_io02g"]
+
+[resource]
+script = ExtResource("1_io02g")
+name = "U-Turn"
+base_damage = 70
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Bug"

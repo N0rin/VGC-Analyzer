@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://54jn80jhyjwg"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_88r8u"]
+
+[resource]
+script = ExtResource("1_88r8u")
+name = "Wave Crash"
+base_damage = 120
+accuracy = 100
+targeting = "Single"
+category = "Physical"
+type = "Water"

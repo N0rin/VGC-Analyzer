@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dkssojvbfbmq3"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dkssojvbfbmq3"]
 
+[ext_resource type="Resource" uid="uid://bibicy2ivua7h" path="res://Ressourcen/Abilities/Keen_Eye.tres" id="1_3uk7e"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_nfykh"]
+[ext_resource type="Resource" uid="uid://bax8amm3k186m" path="res://Ressourcen/Abilities/Drizzle.tres" id="2_nqiiu"]
+[ext_resource type="Resource" uid="uid://7sswfkt2j3w8" path="res://Ressourcen/Abilities/Rain_Dish.tres" id="3_cox5q"]
 
 [resource]
 script = ExtResource("1_nfykh")
@@ -10,6 +13,9 @@ texture_y = 9
 name = "Pelipper"
 main_type = "Water"
 secondary_type = "Flying"
+ability1 = ExtResource("1_3uk7e")
+ability2 = ExtResource("2_nqiiu")
+ability3 = ExtResource("3_cox5q")
 hp = 60
 atk = 50
 def = 100

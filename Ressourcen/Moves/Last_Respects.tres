@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://c62t0gnah4xqr"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_jaqs3"]
+
+[resource]
+script = ExtResource("1_jaqs3")
+name = "Last Respects"
+base_damage = 50
+accuracy = 100
+targeting = "Single"
+category = "Physical"
+type = "Ghost"

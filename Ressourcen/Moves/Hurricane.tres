@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://lvjrgfcvptbx"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_gl2ac"]
+
+[resource]
+script = ExtResource("1_gl2ac")
+name = "Hurricane"
+base_damage = 110
+accuracy = 70
+targeting = "Single"
+category = "Special"
+type = "Flying"

@@ -346,12 +346,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ability: "
 
 [node name="AbilityOption" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("1_2hhlj")
-item_count = 1
-popup/item_0/text = "Water Absorb"
-popup/item_0/id = 0
 
 [node name="FullAbilityOption" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2" instance=ExtResource("6_8gsq0")]
 visible = false
@@ -621,4 +619,5 @@ theme_override_styles/pressed = ExtResource("3_6qvp8")
 text = "Continue"
 
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Species" to="." method="_on_species_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set/SetSelect" to="." method="_on_set_select_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]

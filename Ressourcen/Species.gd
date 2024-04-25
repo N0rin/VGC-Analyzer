@@ -11,6 +11,9 @@ class_name Species
 @export_enum("None", "Normal", "Grass", "Fire", "Water", "Electric", "Fighting", "Flying", 
 "Poison", "Ground", "Rock", "Bug", "Ice", "Psychic", "Ghost", "Dragon", "Dark",
 "Steel", "Fairy" ) var secondary_type = "None"
+@export var ability1 : Ability
+@export var ability2 : Ability
+@export var ability3 : Ability
 @export var hp = 0
 @export var atk = 0
 @export var def = 0

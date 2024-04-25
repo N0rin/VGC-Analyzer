@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bs2oxy1euwpyn"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_mvriy"]
+
+[resource]
+script = ExtResource("1_mvriy")
+name = "Bleakwind Storm"
+base_damage = 100
+accuracy = 80
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Flying"

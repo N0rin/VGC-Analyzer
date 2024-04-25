@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://djagrai67tui1"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://djagrai67tui1"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5ccq6"]
+[ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_khdnr"]
+[ext_resource type="Resource" uid="uid://ckhhjtwdsd855" path="res://Ressourcen/Abilities/Propeller Tail.tres" id="2_1mvlo"]
 
 [resource]
 script = ExtResource("1_5ccq6")
@@ -10,6 +12,8 @@ texture_y = 25
 name = "Barraskewda"
 main_type = "Water"
 secondary_type = "None"
+ability1 = ExtResource("1_khdnr")
+ability3 = ExtResource("2_1mvlo")
 hp = 61
 atk = 123
 def = 60

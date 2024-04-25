@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bs1esxggwhgwg"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bs1esxggwhgwg"]
 
+[ext_resource type="Resource" uid="uid://duoxf7vanfokv" path="res://Ressourcen/Abilities/Protosynthesis.tres" id="1_bqd5e"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n2gwb"]
 
 [resource]
@@ -10,6 +11,7 @@ texture_y = 6
 name = "SandyShocks"
 main_type = "Electric"
 secondary_type = "Ground"
+ability1 = ExtResource("1_bqd5e")
 hp = 85
 atk = 81
 def = 97

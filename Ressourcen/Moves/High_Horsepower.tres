@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://cc4fjmyjnt1p1"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_y42kn"]
+
+[resource]
+script = ExtResource("1_y42kn")
+name = "High Horsepower"
+base_damage = 95
+accuracy = 95
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Ground"

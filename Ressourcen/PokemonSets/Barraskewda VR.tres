@@ -1,24 +1,36 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://dhnidj2bdyup4"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3 uid="uid://dhnidj2bdyup4"]
 
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_khrb5"]
+[ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_unur1"]
+[ext_resource type="Resource" uid="uid://ds0iujuf4eire" path="res://Ressourcen/Items/Choice_Band.tres" id="2_axcud"]
 [ext_resource type="Resource" uid="uid://djagrai67tui1" path="res://Ressourcen/Species/Barraskewda.tres" id="2_wso37"]
+[ext_resource type="Resource" uid="uid://ctn35lb5ucq2q" path="res://Ressourcen/Moves/Liquidation.tres" id="3_h8ofq"]
+[ext_resource type="Resource" uid="uid://yt7wv8ah8eup" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_ekjm5"]
+[ext_resource type="Resource" uid="uid://couh6okm2mwgh" path="res://Ressourcen/Moves/Throat_Chop.tres" id="5_knvfs"]
+[ext_resource type="Resource" uid="uid://qu2abmdk7kqo" path="res://Ressourcen/Moves/Aqua Jet.tres" id="6_4hual"]
 
 [resource]
 script = ExtResource("1_khrb5")
 set_name = "Heavy Rain"
 species = ExtResource("2_wso37")
-tera_type = "Dark"
-increased_stat = "None"
-reduced_stat = "None"
+ability = ExtResource("1_unur1")
+item = ExtResource("2_axcud")
+tera_type = "Ghost"
+increased_stat = "Spe"
+reduced_stat = "SpA"
 hp_evs = 0
-atk_evs = 0
-def_evs = 0
+atk_evs = 252
+def_evs = 4
 spa_evs = 0
 spd_evs = 0
-spe_evs = 0
+spe_evs = 252
 hp_ivs = 31
 atk_ivs = 31
 def_ivs = 31
 spa_ivs = 31
 spd_ivs = 31
 spe_ivs = 31
+move1 = ExtResource("3_h8ofq")
+move2 = ExtResource("4_ekjm5")
+move3 = ExtResource("5_knvfs")
+move4 = ExtResource("6_4hual")

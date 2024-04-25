@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dneycyqnkfcfc"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_upnam"]
+
+[resource]
+script = ExtResource("1_upnam")
+name = "Surging Strikes"
+base_damage = 25
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Water"

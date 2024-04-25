@@ -1,24 +1,36 @@
-[gd_resource type="Resource" script_class="PokemonData" load_steps=3 format=3 uid="uid://b2d8prfr3quax"]
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3 uid="uid://b2d8prfr3quax"]
 
+[ext_resource type="Resource" uid="uid://duoxf7vanfokv" path="res://Ressourcen/Abilities/Protosynthesis.tres" id="1_4ih6e"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="1_o5tti"]
 [ext_resource type="Resource" uid="uid://b8a2q7ss1ijen" path="res://Ressourcen/Species/FlutterMane.tres" id="2_e0vo0"]
+[ext_resource type="Resource" uid="uid://bdhqvok1k33pu" path="res://Ressourcen/Items/Choice_Specs.tres" id="2_n7b2a"]
+[ext_resource type="Resource" uid="uid://j72gn7ut26tf" path="res://Ressourcen/Moves/Moonblast.tres" id="3_bdcvh"]
+[ext_resource type="Resource" uid="uid://cn1h0d8pey00c" path="res://Ressourcen/Moves/Dazzling_Gleam.tres" id="4_qdy4t"]
+[ext_resource type="Resource" uid="uid://cisb26l2h0e6l" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="5_8r45o"]
+[ext_resource type="Resource" uid="uid://d20ntfthhgkud" path="res://Ressourcen/Moves/Power_Gem.tres" id="6_mvpid"]
 
 [resource]
 script = ExtResource("1_o5tti")
 set_name = "Specs"
 species = ExtResource("2_e0vo0")
+ability = ExtResource("1_4ih6e")
+item = ExtResource("2_n7b2a")
 tera_type = "Fairy"
-increased_stat = "None"
-reduced_stat = "None"
+increased_stat = "Spe"
+reduced_stat = "Atk"
 hp_evs = 0
 atk_evs = 0
-def_evs = 0
-spa_evs = 0
+def_evs = 4
+spa_evs = 252
 spd_evs = 0
-spe_evs = 0
+spe_evs = 252
 hp_ivs = 31
-atk_ivs = 31
+atk_ivs = 0
 def_ivs = 31
 spa_ivs = 31
 spd_ivs = 31
 spe_ivs = 31
+move1 = ExtResource("3_bdcvh")
+move2 = ExtResource("4_qdy4t")
+move3 = ExtResource("5_8r45o")
+move4 = ExtResource("6_mvpid")

@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_8jhhp")
-name = ""
-base_damage = 0
+name = "Moonblast"
+base_damage = 95
 accuracy = 100
-category = "Physical"
-type = "Normal"
+targeting = "Single"
+category = "Special"
+type = "Fairy"
