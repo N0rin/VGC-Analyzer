@@ -294,15 +294,15 @@ update_on_text_changed = true
 [node name="SpeEv" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats" instance=ExtResource("5_3qt34")]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+[node name="NatureSelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Nature"
 
-[node name="OptionButton2" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+[node name="NatureIncrease" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("1_2hhlj")
@@ -319,7 +319,7 @@ popup/item_3/id = 3
 popup/item_4/text = "+ SPE"
 popup/item_4/id = 4
 
-[node name="OptionButton4" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/HBoxContainer2"]
+[node name="NatureDecrease" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("1_2hhlj")
@@ -336,31 +336,34 @@ popup/item_3/id = 3
 popup/item_4/text = "- SPE"
 popup/item_4/id = 4
 
-[node name="GridContainer2" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+[node name="AbilitySelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
 layout_mode = 2
-columns = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/AbilitySelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ability: "
 
-[node name="AbilityOption" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+[node name="AbilityOption" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/AbilitySelector"]
+visible = false
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("1_2hhlj")
 
-[node name="FullAbilityOption" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2" instance=ExtResource("6_8gsq0")]
-visible = false
+[node name="FullAbilityOption" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/AbilitySelector" instance=ExtResource("6_8gsq0")]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2"]
+[node name="ItemSelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/ItemSelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Item: "
 
-[node name="Item" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/GridContainer2" instance=ExtResource("6_8gsq0")]
+[node name="Item" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/ItemSelector" instance=ExtResource("6_8gsq0")]
 layout_mode = 2
 
 [node name="Moves" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit"]

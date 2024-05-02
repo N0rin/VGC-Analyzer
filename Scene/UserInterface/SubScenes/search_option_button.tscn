@@ -55,5 +55,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 toggle_mode = true
 
+[connection signal="popup_hide" from="PopupPanel" to="." method="_on_popup_panel_popup_hide"]
 [connection signal="text_changed" from="PopupPanel/Box/Search" to="." method="_on_search_text_changed"]
 [connection signal="toggled" from="MainButton" to="." method="_on_button_toggled"]

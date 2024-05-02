@@ -35,7 +35,6 @@ func clear():
 func _on_popup_button_pressed(name):
 	$MainButton.text = name
 	selected = name
-	$MainButton.button_pressed = false
 	$PopupPanel.hide()
 	$PopupPanel/Box/Search.text = ""
 	_on_search_text_changed("")
@@ -54,3 +53,11 @@ func _on_search_text_changed(new_text):
 			button.show()
 		else:
 			button.hide()
+
+func select(name: String):
+	selected = name
+	$MainButton.text = name
+
+
+func _on_popup_panel_popup_hide():
+	$MainButton.button_pressed = false

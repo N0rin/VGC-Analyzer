@@ -11,10 +11,10 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton:
 		match(event.button_index):
 			MOUSE_BUTTON_WHEEL_UP:
-				if (int(value) - 4) % 8 != 0:
+				if (int(value) - 4) % 8 != 0 and value > 0:
 					value -= (int(value) - 4) % 8
 			MOUSE_BUTTON_WHEEL_DOWN:
-				if (int(value) - 4) % 8 != 0:
+				if (int(value) - 4) % 8 != 0 and value > 4:
 					value -= (int(value) - 4) % 8
-				if value == 4:
+				if value < 4:
 					value = 0

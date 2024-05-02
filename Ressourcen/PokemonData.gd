@@ -7,7 +7,7 @@ class_name PokemonData
 @export var item : Item
 @export_enum( "Normal", "Grass", "Fire", "Water", "Electric", "Fighting", "Flying", 
 "Poison", "Ground", "Rock", "Bug", "Ice", "Psychic", "Ghost", "Dragon", "Dark",
-"Steel", "Fairy" ) var tera_type = "Normal"
+"Steel", "Fairy", "Stellar" ) var tera_type = "Normal"
 @export_category("Effort Values")
 @export_enum("None","Atk", "Def", "SpA", "SpD", "Spe") var increased_stat = "None"
 @export_enum("None", "Atk", "Def", "SpA", "SpD", "Spe") var reduced_stat = "None"
