@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm7ysubftbd38"]
 
 [ext_resource type="StyleBox" uid="uid://c05r2rcv5ur6s" path="res://Ressourcen/Styles/black_border.tres" id="1_0qnfc"]
-[ext_resource type="PackedScene" uid="uid://4xb3g6peymqt" path="res://Scene/UserInterface/SubScenes/subset_check.tscn" id="2_fg57m"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/set_selection_item.gd" id="2_83xy6"]
 
-[node name="Control" type="PanelContainer"]
+[node name="SetSelectionItem" type="PanelContainer"]
 theme_override_styles/panel = ExtResource("1_0qnfc")
+script = ExtResource("2_83xy6")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -18,12 +19,9 @@ layout_mode = 2
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/Species"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/Species"]
-custom_minimum_size = Vector2(200, 0)
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Species"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Ogerpon-Wellspring"
 
 [node name="Subsets" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -33,7 +31,4 @@ custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 
 [node name="SubsetContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Subsets"]
-layout_mode = 2
-
-[node name="Subset" parent="MarginContainer/VBoxContainer/Subsets/SubsetContainer" instance=ExtResource("2_fg57m")]
 layout_mode = 2

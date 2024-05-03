@@ -1,6 +1,8 @@
 extends Control
 const DATA_PATH = "res://Ressourcen/"
 
+@onready var set_selection_item_scene = preload("res://Scene/UserInterface/SubScenes/set_selection_item.tscn")
+
 var pokemon_list: Array[Species]
 var pokemon_set_list: Array[PokemonData]
 var move_list: Array[Move]
@@ -17,6 +19,7 @@ var ability_list: Array[Ability]
 @onready var move_selector3 = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Moves/Move3"
 @onready var move_selector4 = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Moves/Move4"
 @onready var move_selectors = [move_selector1, move_selector2, move_selector3, move_selector4]
+@onready var right_set_selection = $MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer
 
 func load_saved_pokemon_data():
 	load_into_list(pokemon_list, "Species")
@@ -27,7 +30,7 @@ func load_saved_pokemon_data():
 	
 	update_interface()
 
-func load_into_list(list: Array, dirname):
+func load_into_list(list: Array, dirname: String):
 	var dir = DirAccess.open(DATA_PATH)
 	var file_list = dir.get_files_at(DATA_PATH + dirname)
 	
@@ -39,6 +42,8 @@ func update_interface():
 	update_ability_selector()
 	update_item_selector()
 	update_move_selector()
+	
+	update_right_set_selection()
 
 func update_pokemon_selector():
 	pokemon_selector.clear()
@@ -61,6 +66,12 @@ func update_move_selector():
 		for move in move_list:
 			move_selector.add_item(move.name)
 
+func update_right_set_selection():
+	for pokemon in pokemon_list:
+		var set_selection_item = set_selection_item_scene.instantiate()
+		right_set_selection.add_child(set_selection_item)
+		set_selection_item.load_data(pokemon.name, get_pokemon_set_from_species(pokemon.name))
+
 func _on_species_item_selected(name):
 	clear_set()
 	set_selector.set_item_metadata(0, null)
@@ -70,11 +81,10 @@ func _on_species_item_selected(name):
 			set_tera_type(species.main_type)
 	
 	var id = 1
-	for set in pokemon_set_list:
-		if set.species.name == name:
-			set_selector.add_item(set.set_name, id)
-			set_selector.set_item_metadata(id, set)
-			id += 1
+	for pokemon_set in get_pokemon_set_from_species(name):
+		set_selector.add_item(pokemon_set.set_name, id)
+		set_selector.set_item_metadata(id, pokemon_set)
+		id += 1
 
 func clear():
 	pokemon_list.clear()
@@ -108,6 +118,11 @@ func clear_set():
 		move_selector.select("")
 	
 
+func clear_right_selection():
+	for child in right_set_selection.get_children():
+		right_set_selection.remove_child(child)
+		child.queue_free()
+
 func _on_back_pressed():
 	hide()
 	clear()
@@ -115,6 +130,15 @@ func _on_back_pressed():
 func _on_set_select_item_selected(index):
 	var pokemon_set: PokemonData = set_selector.get_item_metadata(index)
 	set_pokemon_data(pokemon_set)
+
+func get_pokemon_set_from_species(name: String) -> Array[PokemonData]:
+	var list: Array[PokemonData]
+	
+	for pokemon_set in pokemon_set_list:
+		if pokemon_set.species.name == name:
+			list.append(pokemon_set)
+	
+	return list
 
 func set_pokemon_data(pokemon_data: PokemonData):
 	set_tera_type(pokemon_data.tera_type)

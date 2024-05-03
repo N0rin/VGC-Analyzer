@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://4xb3g6peymqt"]
+[gd_scene load_steps=2 format=3 uid="uid://4xb3g6peymqt"]
 
-[node name="HBoxContainer" type="HBoxContainer"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/subset_check.gd" id="1_jd0vp"]
+
+[node name="SubsetCheck" type="HBoxContainer"]
+script = ExtResource("1_jd0vp")
 
 [node name="CheckBox" type="CheckBox" parent="."]
 layout_mode = 2
