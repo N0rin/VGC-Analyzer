@@ -32,3 +32,5 @@ layout_mode = 2
 
 [node name="SubsetContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Subsets"]
 layout_mode = 2
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Species/CheckBox" to="." method="_on_check_box_toggled"]

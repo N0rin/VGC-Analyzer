@@ -68,6 +68,9 @@ func update_move_selector():
 
 func update_right_set_selection():
 	for pokemon in pokemon_list:
+		if get_pokemon_set_from_species(pokemon.name).size() == 0:
+			continue
+		
 		var set_selection_item = set_selection_item_scene.instantiate()
 		right_set_selection.add_child(set_selection_item)
 		set_selection_item.load_data(pokemon.name, get_pokemon_set_from_species(pokemon.name))
