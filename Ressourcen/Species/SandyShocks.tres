@@ -5,10 +5,10 @@
 
 [resource]
 script = ExtResource("1_n2gwb")
+name = "Sandy Shocks"
 texture_id = 0
 texture_x = 11
 texture_y = 6
-name = "Sandy Shocks"
 main_type = "Electric"
 secondary_type = "Ground"
 ability1 = ExtResource("1_bqd5e")
@@ -18,3 +18,4 @@ def = 97
 spa = 121
 spd = 85
 spe = 101
+weight = 60.0

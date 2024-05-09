@@ -7,10 +7,10 @@
 
 [resource]
 script = ExtResource("1_16dp0")
+name = "Basculegion Male"
 texture_id = 4
 texture_x = 27
 texture_y = 27
-name = "Basculegion Male"
 main_type = "Water"
 secondary_type = "Ghost"
 ability1 = ExtResource("1_kuvr6")
@@ -22,3 +22,4 @@ def = 65
 spa = 80
 spd = 75
 spe = 78
+weight = 110.0

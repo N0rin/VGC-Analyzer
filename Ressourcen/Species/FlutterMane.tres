@@ -5,10 +5,10 @@
 
 [resource]
 script = ExtResource("1_dr1l1")
+name = "Flutter Mane"
 texture_id = 0
 texture_x = 9
 texture_y = 6
-name = "Flutter Mane"
 main_type = "Ghost"
 secondary_type = "Fairy"
 ability1 = ExtResource("1_14ls5")
@@ -18,3 +18,4 @@ def = 55
 spa = 135
 spd = 135
 spe = 135
+weight = 4.0

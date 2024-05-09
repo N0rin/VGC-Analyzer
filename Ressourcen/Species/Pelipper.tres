@@ -7,10 +7,10 @@
 
 [resource]
 script = ExtResource("1_nfykh")
+name = "Pelipper"
 texture_id = 4
 texture_x = 2
 texture_y = 9
-name = "Pelipper"
 main_type = "Water"
 secondary_type = "Flying"
 ability1 = ExtResource("1_3uk7e")
@@ -22,3 +22,4 @@ def = 100
 spa = 85
 spd = 70
 spe = 65
+weight = 28.0

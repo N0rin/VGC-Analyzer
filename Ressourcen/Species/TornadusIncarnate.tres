@@ -6,10 +6,10 @@
 
 [resource]
 script = ExtResource("1_ocq7r")
+name = "Tornadus - Incarnate"
 texture_id = 4
 texture_x = 40
 texture_y = 18
-name = "Tornadus - Incarnate"
 main_type = "Flying"
 secondary_type = "None"
 ability1 = ExtResource("1_bydyo")
@@ -20,3 +20,4 @@ def = 70
 spa = 125
 spd = 80
 spe = 111
+weight = 63.0

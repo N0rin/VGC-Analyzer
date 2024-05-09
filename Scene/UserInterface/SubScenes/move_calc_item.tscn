@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://tvnlr676x744"]
+[gd_scene load_steps=3 format=3 uid="uid://tvnlr676x744"]
 
 [ext_resource type="StyleBox" uid="uid://c05r2rcv5ur6s" path="res://Ressourcen/Styles/black_border.tres" id="1_u3voj"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/move_calc_item.gd" id="2_6mind"]
 
 [node name="MoveCalcItem" type="PanelContainer"]
 offset_right = 646.0
 offset_bottom = 52.0
 theme_override_styles/panel = ExtResource("1_u3voj")
+script = ExtResource("2_6mind")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

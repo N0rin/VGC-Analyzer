@@ -6,10 +6,10 @@
 
 [resource]
 script = ExtResource("1_5ccq6")
+name = "Barraskewda"
 texture_id = 4
 texture_x = 33
 texture_y = 25
-name = "Barraskewda"
 main_type = "Water"
 secondary_type = "None"
 ability1 = ExtResource("1_khdnr")
@@ -20,3 +20,4 @@ def = 60
 spa = 60
 spd = 50
 spe = 136
+weight = 60.0

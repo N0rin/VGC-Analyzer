@@ -19,7 +19,7 @@ var ability_list: Array[Ability]
 @onready var move_selector3 = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Moves/Move3"
 @onready var move_selector4 = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Moves/Move4"
 @onready var move_selectors = [move_selector1, move_selector2, move_selector3, move_selector4]
-@onready var right_set_selection = $MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer
+@onready var right_set_selection = $MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer
 
 func load_saved_pokemon_data():
 	load_into_list(pokemon_list, "Species")
@@ -74,6 +74,7 @@ func update_right_set_selection():
 		var set_selection_item = set_selection_item_scene.instantiate()
 		right_set_selection.add_child(set_selection_item)
 		set_selection_item.load_data(pokemon.name, get_pokemon_set_from_species(pokemon.name))
+		set_selection_item.toggled.connect(_on_right_box_toggled)
 
 func _on_species_item_selected(name):
 	clear_set()
@@ -88,6 +89,20 @@ func _on_species_item_selected(name):
 		set_selector.add_item(pokemon_set.set_name, id)
 		set_selector.set_item_metadata(id, pokemon_set)
 		id += 1
+
+func _on_right_box_toggled(toggled_on):
+	var all_pressed = true
+	var all_unpressed = true
+	for right_set_item in right_set_selection.get_children():
+		if right_set_item.get_toggle_state():
+			all_unpressed = false
+		else:
+			all_pressed = false
+	
+	if all_pressed:
+		$MarginContainer/VBoxContainer/CoreUI/Right/AllCheck.button_pressed = true
+	if all_unpressed:
+		$MarginContainer/VBoxContainer/CoreUI/Right/AllCheck.button_pressed = false
 
 func clear():
 	pokemon_list.clear()
@@ -245,3 +260,8 @@ func set_moves(pokemon_data: PokemonData):
 	move_selector2.select(pokemon_data.move2.name)
 	move_selector3.select(pokemon_data.move3.name)
 	move_selector4.select(pokemon_data.move4.name)
+
+
+func _on_all_check_toggled(toggled_on):
+	for right_set_item in right_set_selection.get_children():
+		right_set_item.set_toggle_state(toggled_on)

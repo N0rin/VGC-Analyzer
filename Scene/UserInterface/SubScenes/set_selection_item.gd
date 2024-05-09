@@ -1,5 +1,6 @@
 extends PanelContainer
 class_name SetSelectionItem
+signal toggled(toggled_on:bool)
 
 @onready var subset_check_scene = preload("res://Scene/UserInterface/SubScenes/subset_check.tscn")
 
@@ -21,6 +22,7 @@ func load_data(species_name: String, pokemon_set_list: Array[PokemonData]):
 func _on_check_box_toggled(toggled_on):
 	for child in subset_container.get_children():
 		child.set_toggle_state(toggled_on)
+	emit_signal("toggled", toggled_on)
 
 func _on_subset_toggled():
 	var all_pressed = true
@@ -35,3 +37,9 @@ func _on_subset_toggled():
 		$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = true
 	if all_unpressed:
 		$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = false
+
+func get_toggle_state():
+	return $MarginContainer/VBoxContainer/Species/CheckBox.button_pressed
+
+func set_toggle_state(button_pressed: bool):
+	$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = button_pressed

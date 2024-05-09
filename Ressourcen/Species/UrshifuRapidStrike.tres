@@ -5,10 +5,10 @@
 
 [resource]
 script = ExtResource("1_m2j2m")
+name = "Urshifu - Rapid Strike"
 texture_id = 4
 texture_x = 12
 texture_y = 27
-name = "Urshifu - Rapid Strike"
 main_type = "Fighting"
 secondary_type = "Water"
 ability1 = ExtResource("1_h70ti")
@@ -18,3 +18,4 @@ def = 100
 spa = 36
 spd = 60
 spe = 97
+weight = 105.0
