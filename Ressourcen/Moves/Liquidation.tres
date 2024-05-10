@@ -11,3 +11,6 @@ priority = 0
 targeting = "Single"
 category = "Physical"
 type = "Water"
+added_effect = "-Def"
+added_effect_chance = 20
+crit_bonus = 0

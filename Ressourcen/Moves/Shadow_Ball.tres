@@ -11,3 +11,6 @@ priority = 0
 targeting = "Single"
 category = "Special"
 type = "Ghost"
+added_effect = "-SpD"
+added_effect_chance = 20
+crit_bonus = 0

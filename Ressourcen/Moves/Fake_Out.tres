@@ -11,3 +11,6 @@ priority = 3
 targeting = "Single"
 category = "Physical"
 type = "Normal"
+added_effect = "Flinch"
+added_effect_chance = 100
+crit_bonus = 0

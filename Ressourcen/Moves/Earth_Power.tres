@@ -11,3 +11,6 @@ priority = 0
 targeting = "Single"
 category = "Special"
 type = "Ground"
+added_effect = "-SpD"
+added_effect_chance = 10
+crit_bonus = 0

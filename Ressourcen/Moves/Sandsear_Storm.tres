@@ -11,3 +11,6 @@ priority = 0
 targeting = "Enemies"
 category = "Special"
 type = "Ground"
+added_effect = "Burn"
+added_effect_chance = 20
+crit_bonus = 0

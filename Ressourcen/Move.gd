@@ -10,3 +10,7 @@ class_name Move
 @export_enum( "Normal", "Grass", "Fire", "Water", "Electric", "Fighting", "Flying", 
 "Poison", "Ground", "Rock", "Bug", "Ice", "Psychic", "Ghost", "Dragon", "Dark",
 "Steel", "Fairy" ) var type = "Normal"
+@export_group("Extra Effects")
+@export var added_effect = ""
+@export_range(0, 100, 1) var added_effect_chance = 0
+@export var crit_bonus = 0
