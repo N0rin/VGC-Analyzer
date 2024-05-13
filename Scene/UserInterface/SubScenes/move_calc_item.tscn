@@ -17,12 +17,13 @@ theme_override_constants/margin_left = 5
 layout_mode = 2
 
 [node name="Description" type="Label" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 52)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "252+ SpA Life Orb Exeggutor Expanding Force (120 BP) vs. 0 HP / 4 SpD Ogerpon-Hearthflame in Psychic Terrain"
+vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Minimum" type="Label" parent="MarginContainer/HBoxContainer"]
@@ -45,3 +46,5 @@ text = "108%"
 [node name="RemoveButton" type="Button" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "X"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/RemoveButton" to="." method="_on_remove_button_pressed"]

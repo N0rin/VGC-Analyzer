@@ -380,7 +380,7 @@ func checkTypeMatchup(move:Move, defense_types:Array[String]) -> int:
 	return type_shifter
 
 func isPokemonGrounded(pokemon: Pokemon) -> bool:
-	match(pokemon.get_type()):
+	match(pokemon.get_typing()):
 		["Flying", _], [_, "Flying"]:
 			return false
 	if pokemon.data.ability.name == "Levitate":

@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddf8ofme5gq66"]
+[gd_scene load_steps=8 format=3 uid="uid://ddf8ofme5gq66"]
 
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_2hhlj"]
 [ext_resource type="Script" path="res://Scene/UserInterface/meta_calcs.gd" id="1_n72al"]
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_4okmv"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_6qvp8"]
 [ext_resource type="PackedScene" uid="uid://ce10khqhsu0mo" path="res://Scene/UserInterface/SubScenes/modifier.tscn" id="4_kdhss"]
-[ext_resource type="PackedScene" uid="uid://tvnlr676x744" path="res://Scene/UserInterface/SubScenes/move_calc_item.tscn" id="4_puudf"]
 [ext_resource type="PackedScene" uid="uid://cxjnym73ccpik" path="res://Scene/UserInterface/SubScenes/ev_spin_box.tscn" id="5_3qt34"]
 [ext_resource type="PackedScene" uid="uid://cueqqi8r12cud" path="res://Scene/UserInterface/SubScenes/search_option_button.tscn" id="6_8gsq0"]
 
@@ -563,14 +562,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
+[node name="MoveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll/VBoxContainer" instance=ExtResource("4_puudf")]
-layout_mode = 2
 
 [node name="Right" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2

@@ -29,7 +29,7 @@ func create_description(context: AttackContext):
 	var environment = screen + friend_guard + terrain + weather
 	
 	var description = attacker + attack + "vs. " + defender + environment
-	$MarginContainer/HBoxContainer/Description.text = description
+	return description
 
 func get_attack_boost(context: AttackContext) -> String:
 	var boost_value = 0
@@ -190,9 +190,9 @@ func get_attacker_ability(context: AttackContext) -> String:
 
 func get_offensive_ruin(context: AttackContext) -> String:
 	match([get_used_defense_stat(context), context.ruin_sword, context.ruin_sword]):
-		["Defense", true, _]:
+		["Defense", true, _] when context.defender.data.ability.name != "Sword of Ruin":
 			return "Sword of Ruin "
-		["Special Defense", _, true]:
+		["Special Defense", _, true] when context.defender.data.ability.name != "Beads of Ruin":
 			return "Beads of Ruin "
 	return ""
 
@@ -207,7 +207,7 @@ func get_helping_hand(context: AttackContext) -> String:
 		return "Helping Hand "
 	return ""
 
-func get_extra_attack_info(context: AttackContext):
+func get_extra_attack_info(context: AttackContext) -> String:
 	match(context.get_move().name):
 		"Heavy Slam", "Heat Crash":
 			return "(" + str(damage_calculation.get_heavy_slam_power(context.attacker.data.species.weight, context.defender.data.species.weight)) + " BP) "
@@ -222,6 +222,7 @@ func get_extra_attack_info(context: AttackContext):
 		"Misty Explosion":
 			if context.terrain == "Misty":
 				return "(150 BP) "
+	return ""
 
 func get_defense_boost(context: AttackContext) -> String:
 	var boost_value = 0
@@ -238,28 +239,33 @@ func get_defense_boost(context: AttackContext) -> String:
 
 func get_defender_training(context: AttackContext) -> String:
 	var data = context.defender.data
-	var text = ""
+	var defense = ""
 	var stat = ""
 	var iv = 0
 	match(get_used_defense_stat(context)):
 		"Defense":
 			stat = "Def"
-			text = str(data.def_evs)
+			defense = str(data.def_evs)
 			iv = data.def_ivs
 		"Special Defense":
 			stat = "SpD"
-			text = str(data.spd_evs)
+			defense = str(data.spd_evs)
 			iv = data.spd_ivs
 	
 	if data.increased_stat == stat:
-		text = text + "+"
+		defense = defense + "+"
 	if data.reduced_stat == stat:
-		text = text + "-"
+		defense = defense + "-"
 	
 	if iv != 31:
-		text = text + " " + str(iv) + "IV"
+		defense = defense + " " + str(iv) + "IV"
 	
-	return text + " " + stat + " "
+	var hp = str(data.hp_evs)
+	
+	if data.hp_ivs != 31:
+		hp = "%s %sIV" % [hp, data.hp_ivs]
+	
+	return "%s HP / %s %s " % [hp, defense, stat]
 
 func get_defender_item(context: AttackContext) -> String:
 	var item = context.defender.data.item
@@ -267,7 +273,7 @@ func get_defender_item(context: AttackContext) -> String:
 		["Assault Vest", "Special"]:
 			return item + " "
 	
-	var type_matchup = damage_calculation.checkTypeMatchup(context.get_move(),context.defender.data.get_types())
+	var type_matchup = damage_calculation.checkTypeMatchup(context.get_move(),context.defender.get_typing())
 	match(context.get_move().type):
 		"Normal":
 			match(item):
@@ -368,9 +374,9 @@ func get_defender_ability(context: AttackContext) -> String:
 
 func get_defensive_ruin(context: AttackContext) -> String:
 	match([context.get_move().category, context.ruin_tablets, context.ruin_vessel]):
-		["Physical", true, _]:
+		["Physical", true, _] when context.attacker.data.ability.name != "Tablets of Ruin":
 			return "Tablets of Ruin "
-		["Special", _, true]:
+		["Special", _, true] when context.attacker.data.ability.name != "Vessel of Ruin":
 			return "Vessel of Ruin "
 	return ""
 

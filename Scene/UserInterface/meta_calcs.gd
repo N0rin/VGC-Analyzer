@@ -2,6 +2,7 @@ extends Control
 const DATA_PATH = "res://Ressourcen/"
 
 @onready var set_selection_item_scene = preload("res://Scene/UserInterface/SubScenes/set_selection_item.tscn")
+@onready var move_calc_item_scene = preload("res://Scene/UserInterface/SubScenes/move_calc_item.tscn")
 
 var pokemon_list: Array[Species]
 var pokemon_set_list: Array[PokemonData]
@@ -20,6 +21,7 @@ var ability_list: Array[Ability]
 @onready var move_selector4 = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Moves/Move4"
 @onready var move_selectors = [move_selector1, move_selector2, move_selector3, move_selector4]
 @onready var right_set_selection = $MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer
+@onready var middle_move_list = $MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll/MoveList
 
 func load_saved_pokemon_data():
 	load_into_list(pokemon_list, "Species")
@@ -79,10 +81,65 @@ func update_right_set_selection():
 		set_selection_item.toggled.connect(_on_right_box_toggled)
 
 func update_middle():
-	pass
+	clear_middle_selection()
+	var is_left_attacker = true
+	var test_pokemon = Pokemon.new()
+	test_pokemon.state = PokemonState.new()
+	test_pokemon.data = get_left_pokemon_data()
+	var context = AttackContext.new()
+	
+	for set_selection_item: SetSelectionItem in right_set_selection.get_children():
+		for meta_set in set_selection_item.get_sets():
+			var meta_pokemon = Pokemon.new()
+			meta_pokemon.state = PokemonState.new()
+			meta_pokemon.data = meta_set
+			
+			if is_left_attacker:
+				context.attacker = test_pokemon
+				context.defender = meta_pokemon
+			else:
+				context.attacker = meta_pokemon
+				context.defender = test_pokemon
+			
+			for move_value in range(1,4):
+				context.used_attack = move_value
+				if context.get_move():
+					match(context.get_move().category):
+						"Physical", "Special":
+							var move_calc_item = move_calc_item_scene.instantiate()
+							move_calc_item.load_attack(context)
+							middle_move_list.add_child(move_calc_item)
+
+func get_left_pokemon_data() -> PokemonData:
+	var data = PokemonData.new()
+	data.species = find_by_name(pokemon_list, pokemon_selector.selected)
+	data.ability = find_by_name(ability_list, ability_selector_full.selected)
+	data.item = find_by_name(item_list, item_selector.selected)
+	data.tera_type = get_selected_tera_type()
+	data.increased_stat = get_modified_stat($"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector/NatureIncrease".selected)
+	data.reduced_stat = get_modified_stat($"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector/NatureDecrease".selected)
+	data.hp_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/HpEv".value
+	data.atk_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/AtkEv".value
+	data.def_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/DefEv".value
+	data.spa_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpaEv".value
+	data.spd_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpdEv".value
+	data.spe_evs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpeEv".value
+	data.hp_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/HpIv".value
+	data.atk_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/AtkIv".value
+	data.def_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/DefIv".value
+	data.spa_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpaIv".value
+	data.spd_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpdIv".value
+	data.spe_ivs = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats/SpeIv".value
+	data.move1 = find_by_name(move_list, move_selector1.selected)
+	data.move2 = find_by_name(move_list, move_selector2.selected)
+	data.move3 = find_by_name(move_list, move_selector3.selected)
+	data.move4 = find_by_name(move_list, move_selector4.selected)
+	return data
 
 func _on_species_item_selected(name):
 	clear_set()
+	set_selector.clear()
+	set_selector.add_item("New Set", 0)
 	set_selector.set_item_metadata(0, null)
 	
 	for species in pokemon_list:
@@ -123,15 +180,20 @@ func clear():
 	for move_selector in move_selectors:
 		move_selector.clear()
 	
-	clear_set()
-
-func clear_set():
 	set_selector.clear()
 	set_selector.add_item("New Set", 0)
+	clear_set()
+	
+	clear_right_selection()
+	clear_middle_selection()
+
+func clear_set():
 	set_tera_type("Normal")
 	for node in $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats".get_children():
-		if node is SpinBox:
+		if node is EvSpinBox:
 			node.value = 0
+		elif node is SpinBox:
+			node.value = 31
 	$"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector/NatureIncrease".select(0)
 	$"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/NatureSelector/NatureDecrease".select(2)
 	ability_selector.select(-1)
@@ -145,13 +207,21 @@ func clear_right_selection():
 		right_set_selection.remove_child(child)
 		child.queue_free()
 
+func clear_middle_selection():
+	for child in middle_move_list.get_children():
+		middle_move_list.remove_child(child)
+		child.queue_free()
+
 func _on_back_pressed():
 	hide()
 	clear()
 
 func _on_set_select_item_selected(index):
 	var pokemon_set: PokemonData = set_selector.get_item_metadata(index)
-	set_pokemon_data(pokemon_set)
+	if pokemon_set:
+		set_pokemon_data(pokemon_set)
+	else:
+		clear_set()
 
 func get_pokemon_set_from_species(name: String) -> Array[PokemonData]:
 	var list: Array[PokemonData]
@@ -211,6 +281,63 @@ func set_tera_type(type_name:String):
 		"Stellar":
 			index = 18
 	$"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera/OptionButton".select(index)
+
+func get_selected_tera_type() -> String:
+	var index = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Tera/OptionButton".selected
+	match(index):
+		0:
+			return "Bug"
+		1:
+			return "Dark"
+		2:
+			return "Dragon"
+		3:
+			return "Electric"
+		4:
+			return "Fairy"
+		5:
+			return "Fighting"
+		6:
+			return "Fire"
+		7:
+			return "Flying"
+		8:
+			return "Ghost"
+		9:
+			return "Grass"
+		10:
+			return "Ground"
+		11:
+			return "Ice"
+		12:
+			return "Normal"
+		13:
+			return "Poison"
+		14:
+			return "Psychic"
+		15:
+			return "Rock"
+		16:
+			return "Steel"
+		17:
+			return "Water"
+		18:
+			return "Stellar"
+	return ""
+
+func get_modified_stat(index: int) -> String:
+	match(index):
+		0:
+			return "Atk"
+		1:
+			return "Def"
+		2:
+			return "SpA"
+		3:
+			return "SpD"
+		4:
+			return "Spe"
+	return ""
 
 func set_training_values(pokemon_data: PokemonData):
 	var container_node = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Stats"
@@ -273,3 +400,8 @@ func _on_all_check_toggled(toggled_on):
 
 func _on_apply_selection_pressed():
 	update_middle()
+
+func find_by_name(list: Array, name: String):
+	for thing in list:
+		if thing.name == name:
+			return thing

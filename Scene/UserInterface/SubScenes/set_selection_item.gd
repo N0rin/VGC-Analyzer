@@ -18,6 +18,12 @@ func load_data(species_name: String, pokemon_set_list: Array[PokemonData]):
 	species_label.text = species_name
 	create_subsets(pokemon_set_list)
 
+func get_sets() -> Array[PokemonData]:
+	var pokemon_sets : Array[PokemonData]
+	for subset in subset_container.get_children():
+		pokemon_sets.append(subset.get_set_data())
+	
+	return pokemon_sets
 
 func _on_check_box_toggled(toggled_on):
 	for child in subset_container.get_children():
