@@ -44,6 +44,8 @@ func update_interface():
 	update_move_selector()
 	
 	update_right_set_selection()
+	
+	update_middle()
 
 func update_pokemon_selector():
 	pokemon_selector.clear()
@@ -75,6 +77,9 @@ func update_right_set_selection():
 		right_set_selection.add_child(set_selection_item)
 		set_selection_item.load_data(pokemon.name, get_pokemon_set_from_species(pokemon.name))
 		set_selection_item.toggled.connect(_on_right_box_toggled)
+
+func update_middle():
+	pass
 
 func _on_species_item_selected(name):
 	clear_set()
@@ -134,7 +139,6 @@ func clear_set():
 	item_selector.select("")
 	for move_selector in move_selectors:
 		move_selector.select("")
-	
 
 func clear_right_selection():
 	for child in right_set_selection.get_children():
@@ -265,3 +269,7 @@ func set_moves(pokemon_data: PokemonData):
 func _on_all_check_toggled(toggled_on):
 	for right_set_item in right_set_selection.get_children():
 		right_set_item.set_toggle_state(toggled_on)
+
+
+func _on_apply_selection_pressed():
+	update_middle()

@@ -219,6 +219,33 @@ func calculateCompleteDamage(attacker:PokemonData, defender:PokemonData, move_sl
 	
 	return damage
 
+func get_heavy_slam_power(attacker_weight: float, defender_weight: float) -> float:
+	var relative_weight = defender_weight / attacker_weight
+	if relative_weight > 0.5:
+		return 40
+	elif relative_weight > 33.34:
+		return 60
+	elif relative_weight > 0.25:
+		return 80
+	elif relative_weight > 0.2:
+		return 100
+	else:
+		return 120
+
+func get_low_kick_power(weight: float) -> float:
+	if weight < 10:
+		return 20
+	elif weight < 25:
+		return 40
+	elif weight < 50:
+		return 60
+	elif weight < 100:
+		return 80
+	elif weight < 200:
+		return 100
+	else:
+		return 120
+
 func checkTypeMatchup(move:Move, defense_types:Array[String]) -> int:
 	var type_shifter:int = 0
 	for defender_type in defense_types:
@@ -351,3 +378,14 @@ func checkTypeMatchup(move:Move, defense_types:Array[String]) -> int:
 					"Fighting", "Dragon", "Dark":
 						type_shifter += 1
 	return type_shifter
+
+func isPokemonGrounded(pokemon: Pokemon) -> bool:
+	match(pokemon.get_type()):
+		["Flying", _], [_, "Flying"]:
+			return false
+	if pokemon.data.ability.name == "Levitate":
+		return false
+	if pokemon.data.item.name == "Air Balloon":
+		return false
+	
+	return true

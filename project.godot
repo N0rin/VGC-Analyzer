@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalEnums="*res://Ressourcen/Global/global_enums.gd"
 damage_calculation="*res://Ressourcen/Global/damage_calculation.gd"
+AttackDescription="*res://Ressourcen/Global/attack_description.gd"
 
 [display]
 
