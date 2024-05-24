@@ -10,6 +10,8 @@ var move_list: Array[Move]
 var item_list: Array[Item]
 var ability_list: Array[Ability]
 
+var is_left_attacker = true
+
 @onready var pokemon_selector = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Species"
 @onready var set_selector = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set/SetSelect"
 @onready var ability_selector = $"MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/AbilitySelector/AbilityOption"
@@ -46,8 +48,6 @@ func update_interface():
 	update_move_selector()
 	
 	update_right_set_selection()
-	
-	update_middle()
 
 func update_pokemon_selector():
 	pokemon_selector.clear()
@@ -82,12 +82,12 @@ func update_right_set_selection():
 
 func update_middle():
 	clear_middle_selection()
-	var is_left_attacker = true
 	var test_pokemon = Pokemon.new()
 	test_pokemon.state = PokemonState.new()
 	test_pokemon.data = get_left_pokemon_data()
 	var context = AttackContext.new()
 	
+	var move_calc_list: Array[MoveCalcItem]
 	for set_selection_item: SetSelectionItem in right_set_selection.get_children():
 		for meta_set in set_selection_item.get_sets():
 			var meta_pokemon = Pokemon.new()
@@ -108,7 +108,10 @@ func update_middle():
 						"Physical", "Special":
 							var move_calc_item = move_calc_item_scene.instantiate()
 							move_calc_item.load_attack(context)
-							middle_move_list.add_child(move_calc_item)
+							move_calc_list.append(move_calc_item)
+	move_calc_list.sort_custom(func(a,b): return a.max_damage > b.max_damage)
+	for move_calc_item in move_calc_list:
+		middle_move_list.add_child(move_calc_item)
 
 func get_left_pokemon_data() -> PokemonData:
 	var data = PokemonData.new()
@@ -141,6 +144,7 @@ func _on_species_item_selected(name):
 	set_selector.clear()
 	set_selector.add_item("New Set", 0)
 	set_selector.set_item_metadata(0, null)
+	clear_middle_selection()
 	
 	for species in pokemon_list:
 		if name in species.name:
@@ -165,6 +169,8 @@ func _on_right_box_toggled(toggled_on):
 		$MarginContainer/VBoxContainer/CoreUI/Right/AllCheck.button_pressed = true
 	if all_unpressed:
 		$MarginContainer/VBoxContainer/CoreUI/Right/AllCheck.button_pressed = false
+	
+	update_middle()
 
 func clear():
 	pokemon_list.clear()
@@ -222,6 +228,7 @@ func _on_set_select_item_selected(index):
 		set_pokemon_data(pokemon_set)
 	else:
 		clear_set()
+	update_middle()
 
 func get_pokemon_set_from_species(name: String) -> Array[PokemonData]:
 	var list: Array[PokemonData]
@@ -392,16 +399,21 @@ func set_moves(pokemon_data: PokemonData):
 	move_selector3.select(pokemon_data.move3.name)
 	move_selector4.select(pokemon_data.move4.name)
 
-
 func _on_all_check_toggled(toggled_on):
 	for right_set_item in right_set_selection.get_children():
 		right_set_item.set_toggle_state(toggled_on)
-
-
-func _on_apply_selection_pressed():
 	update_middle()
 
 func find_by_name(list: Array, name: String):
 	for thing in list:
 		if thing.name == name:
 			return thing
+
+func _on_toggle_attacker_pressed():
+	if is_left_attacker:
+		is_left_attacker = false
+		$MarginContainer/VBoxContainer/Bottom/ToggleAttacker.text = " Defense "
+	else:
+		is_left_attacker = true
+		$MarginContainer/VBoxContainer/Bottom/ToggleAttacker.text = " Offense "
+	update_middle()

@@ -19,9 +19,13 @@ func load_data(species_name: String, pokemon_set_list: Array[PokemonData]):
 	create_subsets(pokemon_set_list)
 
 func get_sets() -> Array[PokemonData]:
+	if not $MarginContainer/VBoxContainer/Species/CheckBox.button_pressed:
+		return []
+	
 	var pokemon_sets : Array[PokemonData]
 	for subset in subset_container.get_children():
-		pokemon_sets.append(subset.get_set_data())
+		if subset.get_set_data():
+			pokemon_sets.append(subset.get_set_data())
 	
 	return pokemon_sets
 

@@ -11,7 +11,6 @@ func _ready():
 	initialize_board()
 	set_edit_names()
 	
-	$Interface/Board/Commentary.text = str(damage_calculation.calculateBaseDamage(256, 256, 256) * 1.5)
 
 func initialize_board():
 	gamestate_interface.set_teams(battle_data.upper_team, battle_data.lower_team)

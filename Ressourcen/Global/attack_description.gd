@@ -76,7 +76,7 @@ func get_attacker_training(context: AttackContext) -> String:
 	return text + " " + stat + " "
 
 func get_attacker_item(context: AttackContext) -> String:
-	var item = context.attacker.data.item
+	var item = context.attacker.data.item.name
 	match([item, context.get_move().category]):
 		["Choice Band", "Physical"], ["Choice Specs", "Special"], ["Life Orb", _]:
 			return item + " "
@@ -149,7 +149,10 @@ func get_attacker_item(context: AttackContext) -> String:
 			match(item):
 				"Pixie Plate", "Fairy Feather":
 					return item + " "
-			
+		"Water":
+			match(item):
+				"Splash Plate", "Mystic Water":
+					return item + " "
 	return ""
 
 func get_attacker_ability(context: AttackContext) -> String:
@@ -268,12 +271,12 @@ func get_defender_training(context: AttackContext) -> String:
 	return "%s HP / %s %s " % [hp, defense, stat]
 
 func get_defender_item(context: AttackContext) -> String:
-	var item = context.defender.data.item
+	var item = context.defender.data.item.name
 	match([item, context.get_move().category]):
 		["Assault Vest", "Special"]:
 			return item + " "
 	
-	var type_matchup = damage_calculation.checkTypeMatchup(context.get_move(),context.defender.get_typing())
+	var type_matchup = damage_calculation.check_type_matchup(context.get_move(),context.defender.get_typing())
 	match(context.get_move().type):
 		"Normal":
 			match(item):
@@ -343,7 +346,10 @@ func get_defender_item(context: AttackContext) -> String:
 			match(item):
 				"Roseli Berry":
 					return item + " "
-	
+		"Water" when type_matchup > 0:
+			match(item):
+				"Passho Berry":
+					return item + " "
 	return ""
 
 func get_defender_ability(context: AttackContext) -> String:
@@ -398,7 +404,7 @@ func get_friend_guard(context: AttackContext) -> String:
 
 func get_terrain(context: AttackContext) -> String:
 	var terrain = ""
-	if damage_calculation.isPokemonGrounded(context.attacker):
+	if context.attacker.is_grounded():
 		match([context.terrain, context.get_move().type]):
 			["Grassy", "Grass"]:
 				terrain = context.terrain
@@ -407,10 +413,13 @@ func get_terrain(context: AttackContext) -> String:
 			["Electric", "Electric"]:
 				terrain = context.terrain
 	
-	if damage_calculation.isPokemonGrounded(context.defender):
+	if context.defender.is_grounded():
 		match([context.terrain, context.get_move().type]):
 			["Misty", "Dragon"]:
 				terrain = context.terrain
+		
+		if context.get_move().priority > 0 and context.terrain == "Psychic":
+			terrain = context.terrain
 	
 	match(context.get_move().name):
 		"Earthquake", "Bulldoze", "Magnitude":

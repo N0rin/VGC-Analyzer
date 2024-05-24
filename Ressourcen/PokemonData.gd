@@ -79,3 +79,6 @@ func get_spe_value() -> int:
 	if increased_stat == "Spe":
 		return floor(spe * 1.1)
 	return spe
+
+func get_weight() -> float:
+	return species.weight

@@ -2,6 +2,7 @@ extends Resource
 class_name PokemonState
 
 var health = 100
+var damage_received = 0
 var condition = ""
 var terracrystalized = false
 var combat_data = ""

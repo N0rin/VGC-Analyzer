@@ -10,7 +10,9 @@ func set_pokemon_data(pokemon_data: PokemonData):
 	$Label.text = pokemon_data.set_name
 
 func get_set_data() -> PokemonData:
-	return set_data
+	if $CheckBox.button_pressed:
+		return set_data
+	return null
 
 func get_toggle_state() -> bool:
 	return $CheckBox.button_pressed

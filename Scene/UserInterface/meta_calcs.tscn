@@ -614,7 +614,7 @@ text = "Go Back"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Apply Selection" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
+[node name="ToggleAttacker" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
 custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -626,10 +626,10 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("1_2hhlj")
 theme_override_styles/hover = ExtResource("2_4okmv")
 theme_override_styles/pressed = ExtResource("3_6qvp8")
-text = "  Apply Selection  "
+text = "Offense"
 
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Species" to="." method="_on_species_item_selected"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit/Set/SetSelect" to="." method="_on_set_select_item_selected"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/CoreUI/Right/AllCheck" to="." method="_on_all_check_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Apply Selection" to="." method="_on_apply_selection_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/ToggleAttacker" to="." method="_on_toggle_attacker_pressed"]

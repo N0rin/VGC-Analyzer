@@ -11,3 +11,7 @@ priority = 1
 targeting = "Single"
 category = "Physical"
 type = "Water"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -13,211 +13,427 @@ func pokeRound(value: float) -> int:
 		return floori(value)
 	return roundi(value)
 
-func applyModifier(value : float, modifier : float) -> int:
+func apply_modifier(value : float, modifier : float) -> int:
 	return pokeRound(value * (modifier / 4096) )
 
-func combineModifier(old_value : float, new_modifier : float) -> int:
+func combine_modifier(old_value : float, new_modifier : float) -> int:
 	return roundi((old_value * new_modifier) / 4096)
 
-func calculateBaseDamage(base_power: float, attack: float, defense: float, level: float = 50):
+func calculate_base_damage(base_power: float, attack: float, defense: float, level: float = 50):
 	return floor(floor(floor( (2 * level) /5 + 2) * base_power * attack /defense) /50) +2
 
-func calculateBasePower(move:Move, modifiers:Array[Modifier]):
+func calculate_base_power(context: AttackContext):
+	var move = context.get_move()
+	
 	var modifier_value:float = 4096
 	var move_power:float = move.base_damage
-	for modifier in modifiers:
-		match(modifier.name):
-			#Terrains
-			"Psychic Terrain":
+	
+	match(move.name):
+		"Heavy Slam", "Heat Crash":
+			move_power = get_heavy_slam_power(context.attacker.get_weight(), context.defender.get_weight())
+		"Low Kick", "Grass Knot":
+			move_power == get_low_kick_power(context.defender.get_weight())
+	
+	#Type-Boost-Items
+	var item = context.attacker.data.item.name
+	match(context.get_move().type):
+		"Normal":
+			match(item):
+				"Silk Scarf":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Fighting": 
+			match(item):
+				"Fist Plate","Black Belt":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Flying":
+			match(item):
+				"Sky Plate", "Sharp Beak":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Poison":
+			match(item):
+				"Toxic Plate", "Poison Barb":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Ground":
+			match(item):
+				"Earth Plate", "Soft Sand":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Rock":
+			match(item):
+				"Stone Plate", "Hard Stone":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Bug":
+			match(item):
+				"Insect Plate", "Silver Powder":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Ghost":
+			match(item):
+				"Spooky Plate", "Spell Tag":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Steel":
+			match(item):
+				"Iron Plate", "Metal Coat":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Fire":
+			match(item):
+				"Flame Plate", "Charcoal":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Grass":
+			match(item):
+				"Meadow Plate", "Miracle Seed":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Electric":
+			match(item):
+				"Zap Plate", "Magnet":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Psychic":
+			match(item):
+				"Mind Plate", "Twisted Spoon":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Ice":
+			match(item):
+				"Icicle Plate", "Never-Melt Ice":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Dragon":
+			match(item):
+				"Draco Plate", "Dragon Fang":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Dark":
+			match(item):
+				"Dread Plate", "Black Glasses":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Fairy":
+			match(item):
+				"Pixie Plate", "Fairy Feather":
+					modifier_value = combine_modifier(modifier_value, 4915)
+		"Water":
+			match(item):
+				"Splash Plate", "Mystic Water":
+					modifier_value = combine_modifier(modifier_value, 4915)
+	
+	#Helping Hand
+	if context.helping_hand:
+		modifier_value = combine_modifier(modifier_value, 6144)
+	
+	#Terrains
+	match([context.terrain, context.get_move().name]):
+		["Grassy", "Bulldoze"], ["Grassy", "Earthquake"], ["Grassy", "Magnitude"]:
+			modifier_value = combine_modifier(modifier_value, 2048)
+	
+	if context.defender.is_grounded():
+		match (context.terrain):
+			"Misty":
+				if move.type == "Dragon":
+					modifier_value = combine_modifier(modifier_value, 2048)
+	if context.attacker.is_grounded():
+		match(context.terrain):
+			"Psychic":
 				if move.name == "Expanding Force":
 					move_power = 120
 				if move.type == "Psychic":
-					modifier_value = combineModifier(modifier_value, 5325)
-			"Grassy Terrain":
+					modifier_value = combine_modifier(modifier_value, 5325)
+			"Grassy":
 				if move.type == "Grass":
-					modifier_value = combineModifier(modifier_value, 5325)
-			"Electric Terrain":
+					modifier_value = combine_modifier(modifier_value, 5325)
+			"Electric":
 				if move.type == "Electric":
-					modifier_value = combineModifier(modifier_value, 5325)
+					modifier_value = combine_modifier(modifier_value, 5325)
 	
-	return applyModifier(move_power, modifier_value)
+	return apply_modifier(move_power, modifier_value)
 
-func calculateAttackValue(pokemon:PokemonData, move:Move, modifiers:Array[Modifier]) -> int:
+func calculate_attack_value(context: AttackContext) -> int:
 	var attack = 1
+	var attack_stack = 0
 	var is_special = false
-	if move.category == "Special":
+	
+	if context.get_move().category == "Special":
 		is_special = true
 	
-	if is_special:
-		attack = pokemon.get_spa_value()
-	else:
-		attack = pokemon.get_atk_value()
+	match([is_special, context.get_move().name]):
+		[true, _]:
+			attack = context.attacker.data.get_spa_value()
+			attack_stack = context.attacker.state.special_attack_stack
+		[_, "Foul Play"]:
+			attack = context.defender.data.get_atk_value()
+			attack_stack = context.defender.state.attack_stack
+		[_, "Body Press"]:
+			attack = context.attacker.data.get_def_value()
+			attack_stack = context.attacker.state.defense_stack
+		[false, _]:
+			attack = context.attacker.data.get_atk_value()
+			attack_stack = context.attacker.state.attack_stack
 	
-	var stat_modifier = 0
-	for modifier in modifiers:
-		if modifier.category == CAT.StatStage:
-			match([modifier.name, is_special]):
-				["Atk-Stat", false], ["SpA-Stat", true]:
-					stat_modifier = modifier.value
+	if context.defender.data.ability.name == "Unaware":
+		attack_stack = 0
+	if context.critical_hit and attack_stack < 0:
+		attack_stack = 0
 	
-	if stat_modifier > 0:
-		attack = floor(attack * (2 + stat_modifier)/2 ) 
-	if stat_modifier < 0:
-		attack = floor(attack * 2/(-stat_modifier+2) )
+	if attack_stack > 0:
+		attack = floor(attack * (2 + attack_stack)/2 ) 
+	if attack_stack < 0:
+		attack = floor(attack * 2/(-attack_stack+2) )
 	
 	var attack_modifier = 4096
-	for modifier in modifiers:
-		match([modifier.name, is_special]):
-			["Tablets of Ruin", false], ["Vessel of Ruin", true]:
-				attack_modifier = combineModifier(attack_modifier, 3072)
-	for modifier in modifiers:
-		match([modifier.name, is_special]):
+	#Ruin Abilities
+	match([context.ruin_sword, context.ruin_vessel, is_special]):
+			[true, _, false], [_, true, true]:
+				attack_modifier = combine_modifier(attack_modifier, 3072)
+	#Offensive Abilities
+	match(context.attacker.data.ability.name):
+		"Overgrow" when context.get_move().type == "Grass":
+			if context.attacker.get_current_hp() <= floor(context.attacker.data.get_hp_value() /3):
+				attack_modifier = combine_modifier(attack_modifier, 6144)
+		"Blaze" when context.get_move().type == "Fire":
+			if context.attacker.get_current_hp() <= floor(context.attacker.data.get_hp_value() /3):
+				attack_modifier = combine_modifier(attack_modifier, 6144)
+		"Torrent" when context.get_move().type == "Water":
+			if context.attacker.get_current_hp() <= floor(context.attacker.data.get_hp_value() /3):
+				attack_modifier = combine_modifier(attack_modifier, 6144)
+	#Choice Items
+	match([context.attacker.data.item.name, is_special]):
 			["Choice Band", false], ["Choice Specs", true]:
-				attack_modifier = combineModifier(attack_modifier, 6144)
+				attack_modifier = combine_modifier(attack_modifier, 6144)
 	
-	return applyModifier(attack, attack_modifier)
+	return apply_modifier(attack, attack_modifier)
 
-func calculateDefenseValue(pokemon:PokemonData, move:Move, modifiers:Array[Modifier]) -> int:
+func calculate_defense_value(context: AttackContext) -> int:
 	var defense = 1
+	var defense_stack = 0
 	
 	var is_special = false
-	if move.category == "Special":
+	if context.get_move().category == "Special":
 		is_special = true
+	match (context.get_move().name):
+		"Psyshock", "Psystrike", "Secret Sword":
+			is_special = false
 	
-	if is_special:
-		defense = pokemon.get_spd_value()
-	else:
-		defense = pokemon.get_def_value()
+	match(is_special):
+		false:
+			defense = context.defender.data.get_def_value()
+			defense_stack = context.defender.state.defense_stack
+		true:
+			defense = context.defender.data.get_spd_value()
+			defense_stack = context.defender.state.special_defense_stack
 	
-	var stat_modifier = 0
-	for modifier in modifiers:
-		if modifier.category == CAT.StatStage:
-			match([modifier.name, is_special]):
-				["Def-Stat", false], ["SpD-Stat", true]:
-					stat_modifier = modifier.value
+	if context.attacker.data.ability.name == "Unaware":
+		defense_stack = 0
+	if context.get_move().name == "Sacred Sword":
+		defense_stack = 0
+	if context.critical_hit and defense_stack > 0:
+		defense_stack = 0
 	
-	if stat_modifier > 0:
-		defense = floor(defense * (2 + stat_modifier)/2 ) 
-	if stat_modifier < 0:
-		defense = floor(defense * 2/(-stat_modifier+2) )
+	if defense_stack > 0:
+		defense = floor(defense * (2 + defense_stack)/2 ) 
+	if defense_stack < 0:
+		defense = floor(defense * 2/(-defense_stack+2) )
 	
-	for modifier in modifiers:
-		match([modifier.name, is_special,pokemon.species.main_type, pokemon.species.main_type]):
-			["Sand", true, "Rock", _],["Sand", true, _, "Rock"]:
-				defense = applyModifier(defense, 6144)
+	#Weather
+	match([context.weather, is_special, context.defender.get_typing()]):
+		["Sand", true, ["Rock", _]],["Sand", true, [_, "Rock"]]:
+			defense = apply_modifier(defense, 6144)
+		["Snow", false, ["Ice", _]],["Snow", false, [_, "Ice"]]:
+			defense = apply_modifier(defense, 6144)
 	
 	var defense_modifier = 4096
-	for modifier in modifiers:
-		match([modifier.name, is_special]):
-			["Eviolite", _], ["Assault Vest", true]:
-				defense_modifier = combineModifier(defense_modifier, 6144)
 	
-	return applyModifier(defense, defense_modifier) 
+	#Ruin Abilities
+	match([context.ruin_tablets, context.ruin_beads, is_special]):
+			[true, _, false], [_, true, true]:
+				defense_modifier = combine_modifier(defense_modifier, 3072)
+	
+	#Items
+	match([context.defender.data.item.name, is_special]):
+		["Eviolite", _], ["Assault Vest", true]:
+			defense_modifier = combine_modifier(defense_modifier, 6144)
+	
+	return apply_modifier(defense, defense_modifier) 
 
-func calculateFinalModifier(move:Move, modifiers:Array[Modifier], defender:PokemonData) -> int:
+func calculate_final_modifier(context: AttackContext) -> int:
 	var modifier_value = 4096
 	
-	for modifier in modifiers:
-		match([modifier.name, move.category]):
-			["Aurora Veil", _], ["Reflector", "Physical"],["Light Screen", "Special"]:
-				modifier_value = combineModifier(modifier_value, 2732)
-				break
+	match([context.screen, context.get_move().category]):
+			["Aurora Veil", _], ["Reflector", "Physical"],["Light Screen", "Special"] when not context.critical_hit:
+					modifier_value = combine_modifier(modifier_value, 2732)
+	match(context.attacker.data.ability):
+		"Neuroforce" when check_type_matchup(context.get_move(), context.defender.get_typing()) > 0:
+			modifier_value = combine_modifier(modifier_value, 5120)
+		"Sniper" when context.critical_hit:
+			modifier_value = combine_modifier(modifier_value, 6144)
+		"Tinted Lens" when check_type_matchup(context.get_move(), context.defender.get_typing()) < 0:
+			modifier_value = combine_modifier(modifier_value, 8192)
 	
-	for modifier in modifiers:
-		match(modifier.name):
-			"Multiscale", "Shadow Shield":
-				modifier_value = combineModifier(modifier_value, 2048)
+	match(context.defender.data.ability.name):
+		"Multiscale", "Shadow Shield" when context.defender.get_current_hp() == context.defender.data.get_hp_value():
+			modifier_value = combine_modifier(modifier_value, 2048)
+		"Fluffy" when context.get_move().makes_contact:
+			modifier_value = combine_modifier(modifier_value, 2048)
 	
-	for modifier in modifiers:
-		match(modifier.name):
-			"Friend Guard":
-				modifier_value = combineModifier(modifier_value, 3072)
+	if context.friend_guard:
+			modifier_value = combine_modifier(modifier_value, 3072)
 	
-	for modifier in modifiers:
-		match(modifier.name):
-			"Solid Rock", "Filter", "Prism Armor":
-				if checkTypeMatchup(move, defender.get_types()) < 0:
-					modifier_value = combineModifier(modifier_value, 3072)
+	match(context.defender.data.ability.name):
+		"Solid Rock", "Filter", "Prism Armor" when check_type_matchup(context.get_move(), context.defender.get_typing()) < 0:
+			modifier_value = combine_modifier(modifier_value, 3072)
+		"Fluffy" when context.get_move().type == "Fire":
+			modifier_value = combine_modifier(modifier_value, 8192)
+		
+	match(context.attacker.data.item):
+		"Expert Belt" when check_type_matchup(context.get_move(), context.defender.get_typing()) > 0:
+			modifier_value = combine_modifier(modifier_value, 4915)
+		"Life Orb":
+			modifier_value = combine_modifier(modifier_value, 5324)
 	
-	for modifier in modifiers:
-		match(modifier.name):
-			"Expert Belt":
-				if checkTypeMatchup(move, defender.get_types()) > 0:
-					modifier_value = combineModifier(modifier_value, 4915)
-	
-	for modifier in modifiers:
-		match(modifier.name):
-			"Life Orb":
-				modifier_value = combineModifier(modifier_value, 5324)
-	
+	var type_matchup = damage_calculation.check_type_matchup(context.get_move(),context.defender.get_typing())
+	var item = context.defender.data.item.name
+	match(context.get_move().type):
+		"Normal":
+			match(item):
+				"Chilan Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Fighting" when type_matchup > 0: 
+			match(item):
+				"Chople Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Flying" when type_matchup > 0:
+			match(item):
+				"Coba Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Poison" when type_matchup > 0:
+			match(item):
+				"Kebia Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Ground" when type_matchup > 0:
+			match(item):
+				"Shuca Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Rock" when type_matchup > 0:
+			match(item):
+				"Charti Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Bug" when type_matchup > 0:
+			match(item):
+				"Tanga Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Ghost" when type_matchup > 0:
+			match(item):
+				"Kasib Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Steel" when type_matchup > 0:
+			match(item):
+				"Babiri Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Fire" when type_matchup > 0:
+			match(item):
+				"Occa Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Grass" when type_matchup > 0:
+			match(item):
+				"Rindo Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Electric" when type_matchup > 0:
+			match(item):
+				"Wacan Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Psychic" when type_matchup > 0:
+			match(item):
+				"Payapa Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Ice" when type_matchup > 0:
+			match(item):
+				"Yache Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Dragon" when type_matchup > 0:
+			match(item):
+				"Haban Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Dark" when type_matchup > 0:
+			match(item):
+				"Colbur Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Fairy" when type_matchup > 0:
+			match(item):
+				"Roseli Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+		"Water" when type_matchup > 0:
+			match(item):
+				"Passho Berry":
+					modifier_value = combine_modifier(modifier_value, 2048)
+					
 	return modifier_value
 
-func calculateCompleteDamage(attacker:PokemonData, defender:PokemonData, move_slot:int, damage_roll:int, modifiers:Array[Modifier]) -> int:
-	var move = attacker.get_move(move_slot)
-	var bp_modifiers:Array[Modifier]
-	var attack_modifiers:Array[Modifier]
-	var defense_modifiers:Array[Modifier]
-	var general_modifiers:Array[Modifier]
-	var final_modifiers:Array[Modifier]
+func calculate_complete_damage(context: AttackContext) -> int:
+	var base_power = calculate_base_power(context)
+	var attack = calculate_attack_value(context)
+	var defense = calculate_defense_value(context)
 	
-	for modifier in modifiers:
-		match(modifier.apply_on):
-			STEP.BasePower:
-				bp_modifiers.append(modifier)
-			STEP.Attack:
-				attack_modifiers.append(modifier)
-			STEP.Defense:
-				defense_modifiers.append(modifier)
-			STEP.General:
-				general_modifiers.append(modifier)
-			STEP.Final:
-				final_modifiers.append(modifier)
+	var damage:int = calculate_base_damage(base_power, attack, defense)
 	
-	var base_power = calculateBasePower(move, bp_modifiers)
-	var attack = calculateAttackValue(attacker, move, attack_modifiers)
-	var defense = calculateDefenseValue(defender, move, defense_modifiers)
+	#Spread Reduction
+	if context.is_spread:
+		damage = apply_modifier(damage, 3072)
 	
-	var damage:int = calculateBaseDamage(base_power, attack, defense)
-	
-	#Modifiers
-	for modifier in general_modifiers:
-		match(modifier.name):
-			"Spread":
-				damage = applyModifier(damage, 3072)
-	
-	for modifier in general_modifiers:
-		match([modifier.name, move.type]):
+	#Weather
+	match([context.weather, context.get_move().type]):
 			["Sun", "Fire"], ["Rain", "Water"]:
-				damage = applyModifier(damage, 6144)
+				damage = apply_modifier(damage, 6144)
 			["Sun", "Water"], ["Rain", "Fire"]:
-				damage = applyModifier(damage, 2048)
+				damage = apply_modifier(damage, 2048)
 	
-	for modifier in general_modifiers:
-		match(modifier.name):
-			"Critical Hit":
-				damage = pokeRound((damage *3)/2)
+	#Critical Hit
+	if context.critical_hit:
+		damage = pokeRound((damage *3)/2)
 	
+	#Damage Roll
+	var damage_roll = context.damage_roll
 	if damage_roll < 0:
 		damage_roll = 0
 	if damage_roll > 15:
 		damage_roll = 15
 	damage = floor( (damage * (100 - damage_roll)) /100)
 	
-	if move.type == attacker.species.main_type or move.type == attacker.species.secondary_type:
-		damage = applyModifier(damage, 6144)
+	#Stab
+	var is_stab = false
+	if context.get_move().type == context.attacker.data.species.main_type:
+		is_stab = true
+	if context.get_move().type == context.attacker.data.species.secondary_type:
+		is_stab = true
+	var is_tera_boosted = context.attacker.state.terracrystalized and context.get_move().type == context.attacker.data.tera_type
+	var has_adaptability = context.attacker.data.ability.name == "Adaptability"
+	match([is_stab, is_tera_boosted, has_adaptability]):
+		[true, false, false], [false, true, false]: #normaler Stab
+			damage = apply_modifier(damage, 6144)
+		[true, false, true] when not context.attacker.state.terracrystalized: #Adaptability Stab
+			damage = apply_modifier(damage, 8192)
+		[false, true, true], [true, true, false]: #Tera Adaptability Stab
+			damage = apply_modifier(damage, 8192)
+		[true, true, true]: #Megacombo
+			damage = apply_modifier(damage, 9216)
 	
-	var type_shifter = checkTypeMatchup(move, [defender.species.main_type, defender.species.secondary_type])
-	damage = damage<<type_shifter
+	#Type Matchup
+	var type_shift = check_type_matchup(context.get_move(), context.defender.get_typing())
+	if type_shift == -10:
+		damage = 0
+	if type_shift > 0:
+		damage = floor(damage * (2 ** type_shift))
+	if type_shift < 0:
+		damage = floor(damage / (2 ** -type_shift))
 	
-	for modifier in general_modifiers:
-		match([modifier.name, move.category]):
-			["Burn", "Physical"]:
-				damage = applyModifier(damage, 2048)
+	#Burn
+	match([context.attacker.state.condition, context.get_move().category]):
+		["Burn", "Physical"]:
+			damage = apply_modifier(damage, 2048)
 	
-	var final_modifier = calculateFinalModifier(move, final_modifiers, defender)
-	damage = applyModifier(damage, final_modifier)
+	#Final Modifiers
+	var final_modifier = calculate_final_modifier(context)
+	damage = apply_modifier(damage, final_modifier)
 	
 	return damage
+
+func calculate_percentage(context: AttackContext) -> float:
+	var defender_hp: float = context.defender.data.get_hp_value()
+	var attack_damage: float = calculate_complete_damage(context)
+	
+	#if attack_damage
+	return (attack_damage / defender_hp) * 100
 
 func get_heavy_slam_power(attacker_weight: float, defender_weight: float) -> float:
 	var relative_weight = defender_weight / attacker_weight
@@ -246,7 +462,7 @@ func get_low_kick_power(weight: float) -> float:
 	else:
 		return 120
 
-func checkTypeMatchup(move:Move, defense_types:Array[String]) -> int:
+func check_type_matchup(move:Move, defense_types:Array[String]) -> int:
 	var type_shifter:int = 0
 	for defender_type in defense_types:
 		match(move.type):
@@ -378,14 +594,3 @@ func checkTypeMatchup(move:Move, defense_types:Array[String]) -> int:
 					"Fighting", "Dragon", "Dark":
 						type_shifter += 1
 	return type_shifter
-
-func isPokemonGrounded(pokemon: Pokemon) -> bool:
-	match(pokemon.get_typing()):
-		["Flying", _], [_, "Flying"]:
-			return false
-	if pokemon.data.ability.name == "Levitate":
-		return false
-	if pokemon.data.item.name == "Air Balloon":
-		return false
-	
-	return true
