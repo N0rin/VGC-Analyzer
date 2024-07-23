@@ -11,6 +11,7 @@ priority = 0
 targeting = "Single"
 category = "Special"
 type = "Electric"
+makes_contact = false
 added_effect = "Paralyze"
 added_effect_chance = 30
 crit_bonus = 0

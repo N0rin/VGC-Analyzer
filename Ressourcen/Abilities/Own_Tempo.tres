@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://d4cs6wcf06hpr"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_u5wyt"]
+
+[resource]
+script = ExtResource("1_u5wyt")
+name = "Own Tempo"

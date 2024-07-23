@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5ccq6"]
 [ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_khdnr"]
-[ext_resource type="Resource" uid="uid://ckhhjtwdsd855" path="res://Ressourcen/Abilities/Propeller Tail.tres" id="2_1mvlo"]
+[ext_resource type="Resource" uid="uid://ckhhjtwdsd855" path="res://Ressourcen/Abilities/Propeller_Tail.tres" id="2_7by1k"]
 
 [resource]
 script = ExtResource("1_5ccq6")
@@ -13,7 +13,7 @@ texture_y = 25
 main_type = "Water"
 secondary_type = "None"
 ability1 = ExtResource("1_khdnr")
-ability3 = ExtResource("2_1mvlo")
+ability3 = ExtResource("2_7by1k")
 hp = 61
 atk = 123
 def = 60

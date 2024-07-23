@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://c1qg70hve3fna"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_pnuyp"]
+[ext_resource type="Resource" uid="uid://duci0ks4doxp7" path="res://Ressourcen/Abilities/Blaze.tres" id="1_vpf6o"]
+[ext_resource type="Resource" uid="uid://d4b55n2x3fqg3" path="res://Ressourcen/Abilities/Intimidate.tres" id="2_478mb"]
+
+[resource]
+script = ExtResource("1_pnuyp")
+name = "Incineroar"
+texture_id = 4
+texture_x = 15
+texture_y = 22
+main_type = "Fire"
+secondary_type = "Dark"
+ability1 = ExtResource("1_vpf6o")
+ability3 = ExtResource("2_478mb")
+hp = 95
+atk = 115
+def = 90
+spa = 80
+spd = 90
+spe = 60
+weight = 83.0

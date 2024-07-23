@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://jio64y5jfnch"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_byh6j"]
+[ext_resource type="Resource" uid="uid://dg6jo3efc85mr" path="res://Ressourcen/Abilities/Effect_Spore.tres" id="1_m4l0r"]
+[ext_resource type="Resource" uid="uid://7eok1280ufky" path="res://Ressourcen/Abilities/Regenerator.tres" id="2_epiny"]
+
+[resource]
+script = ExtResource("1_byh6j")
+name = "Amoonguss"
+texture_id = 4
+texture_x = 30
+texture_y = 17
+main_type = "Grass"
+secondary_type = "Poison"
+ability1 = ExtResource("1_m4l0r")
+ability3 = ExtResource("2_epiny")
+hp = 114
+atk = 85
+def = 70
+spa = 85
+spd = 80
+spe = 30
+weight = 10.5

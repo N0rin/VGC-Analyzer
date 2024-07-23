@@ -11,6 +11,7 @@ priority = 0
 targeting = "Single"
 category = "Special"
 type = "Fairy"
+makes_contact = false
 added_effect = "-SpA"
 added_effect_chance = 30
 crit_bonus = 0

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://d0mdm01ie4ihp"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_4kp04"]
+[ext_resource type="Resource" uid="uid://dc6rvoe4p8bdv" path="res://Ressourcen/Abilities/Sword_of_Ruin.tres" id="1_lii8p"]
+
+[resource]
+script = ExtResource("1_4kp04")
+name = "Chien-Pao"
+texture_id = 0
+texture_x = 0
+texture_y = 8
+main_type = "Dark"
+secondary_type = "Ice"
+ability1 = ExtResource("1_lii8p")
+hp = 80
+atk = 120
+def = 80
+spa = 90
+spd = 65
+spe = 135
+weight = 152.2

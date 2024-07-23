@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cbadtqby54eh"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_3xpi6"]
+[ext_resource type="Resource" uid="uid://ifpvp67kdc6b" path="res://Ressourcen/Abilities/Cud_Chew.tres" id="1_chva4"]
+[ext_resource type="Resource" uid="uid://cqkfy1q2ve2p0" path="res://Ressourcen/Abilities/Armor_Tail.tres" id="2_axkww"]
+[ext_resource type="Resource" uid="uid://dwv7rmpxngxbm" path="res://Ressourcen/Abilities/Sap_Sipper.tres" id="3_icood"]
+
+[resource]
+script = ExtResource("1_3xpi6")
+name = "Farigiraf"
+texture_id = 0
+texture_x = 3
+texture_y = 6
+main_type = "Normal"
+secondary_type = "Psychic"
+ability1 = ExtResource("1_chva4")
+ability2 = ExtResource("2_axkww")
+ability3 = ExtResource("3_icood")
+hp = 120
+atk = 90
+def = 70
+spa = 110
+spd = 70
+spe = 60
+weight = 160.0

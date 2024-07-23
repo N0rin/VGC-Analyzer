@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://l232h375mih1"]
+
+[ext_resource type="Resource" uid="uid://d4cs6wcf06hpr" path="res://Ressourcen/Abilities/Own_Tempo.tres" id="1_41036"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_dblle"]
+[ext_resource type="Resource" uid="uid://268ahikws470" path="res://Ressourcen/Abilities/Synchronize.tres" id="2_2gtyo"]
+[ext_resource type="Resource" uid="uid://b5uw2im3yweax" path="res://Ressourcen/Abilities/Psychic_Surge.tres" id="3_nvaia"]
+
+[resource]
+script = ExtResource("1_dblle")
+name = "Indeedee"
+texture_id = 4
+texture_x = 34
+texture_y = 26
+main_type = "Psychic"
+secondary_type = "Normal"
+ability1 = ExtResource("1_41036")
+ability2 = ExtResource("2_2gtyo")
+ability3 = ExtResource("3_nvaia")
+hp = 70
+atk = 55
+def = 65
+spa = 95
+spd = 105
+spe = 85
+weight = 28.0

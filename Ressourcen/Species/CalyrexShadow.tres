@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dlr0nvxoowput"]
+
+[ext_resource type="Resource" uid="uid://clixyygol4vf7" path="res://Ressourcen/Abilities/As_One.tres" id="1_jd7nm"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_nfocm"]
+
+[resource]
+script = ExtResource("2_nfocm")
+name = "Shadow Rrider Calyrex"
+texture_id = 4
+texture_x = 23
+texture_y = 27
+main_type = "Psychic"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_jd7nm")
+hp = 100
+atk = 85
+def = 80
+spa = 165
+spd = 100
+spe = 150
+weight = 53.6

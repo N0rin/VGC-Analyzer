@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cgfdmmavqi4r0"]
+
+[ext_resource type="Resource" uid="uid://cawfosed1u1pc" path="res://Ressourcen/Abilities/Beads_of_Ruin.tres" id="1_b7nus"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_kvwuq"]
+
+[resource]
+script = ExtResource("2_kvwuq")
+name = "Chi-Yu"
+texture_id = 0
+texture_x = 2
+texture_y = 8
+main_type = "Dark"
+secondary_type = "Fire"
+ability1 = ExtResource("1_b7nus")
+hp = 55
+atk = 80
+def = 80
+spa = 135
+spd = 120
+spe = 100
+weight = 4.9

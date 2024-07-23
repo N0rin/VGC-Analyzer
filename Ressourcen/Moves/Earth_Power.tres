@@ -11,6 +11,7 @@ priority = 0
 targeting = "Single"
 category = "Special"
 type = "Ground"
+makes_contact = false
 added_effect = "-SpD"
 added_effect_chance = 10
 crit_bonus = 0

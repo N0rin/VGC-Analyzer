@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dio2hcel4gtwc"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_eo7y1"]
+[ext_resource type="Resource" uid="uid://duoxf7vanfokv" path="res://Ressourcen/Abilities/Protosynthesis.tres" id="1_mjbpg"]
+
+[resource]
+script = ExtResource("1_eo7y1")
+name = "Raging Bolt"
+texture_id = 0
+texture_x = 7
+texture_y = 9
+main_type = "Electric"
+secondary_type = "Dragon"
+ability1 = ExtResource("1_mjbpg")
+hp = 125
+atk = 73
+def = 91
+spa = 137
+spd = 89
+spe = 75
+weight = 480.0

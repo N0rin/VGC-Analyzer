@@ -11,6 +11,7 @@ priority = 0
 targeting = "Enemies"
 category = "Special"
 type = "Flying"
+makes_contact = false
 added_effect = "-Spe"
 added_effect_chance = 30
 crit_bonus = 0
