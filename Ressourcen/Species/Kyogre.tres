@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://pj5lgtj1xrr4"]
+
+[ext_resource type="Resource" uid="uid://bax8amm3k186m" path="res://Ressourcen/Abilities/Drizzle.tres" id="1_36owe"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_yckyr"]
+
+[resource]
+script = ExtResource("1_yckyr")
+name = "Kyogre"
+texture_id = 4
+texture_x = 36
+texture_y = 11
+main_type = "Water"
+secondary_type = "None"
+ability1 = ExtResource("1_36owe")
+hp = 100
+atk = 100
+def = 90
+spa = 150
+spd = 140
+spe = 90
+weight = 352.0

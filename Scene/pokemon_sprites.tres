@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://c8gr6wfavimsj"]
 
-[ext_resource type="Texture2D" uid="uid://b0l7nnbf4lq6g" path="res://Assets/Icons/dfm5q2i-f52dbc9b-e52c-4c79-bd60-52fadbfac69a.png" id="1_2y0re"]
-[ext_resource type="Texture2D" uid="uid://b3gn0vkqekh8q" path="res://Assets/Icons/national_dex_box_sprite_paldea_update_by_sehitam_hitam_dfuh6yj.png" id="2_l5ceq"]
+[ext_resource type="Texture2D" uid="uid://b0l7nnbf4lq6g" path="res://Assets/Icons/dfm5q2i-f52dbc9b-e52c-4c79-bd60-52fadbfac69a.png" id="1_e5yjm"]
+[ext_resource type="Texture2D" uid="uid://b3gn0vkqekh8q" path="res://Assets/Icons/national_dex_box_sprite_paldea_update_by_sehitam_hitam_dfuh6yj.png" id="2_6e4qh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mj3vq"]
-texture = ExtResource("1_2y0re")
+texture = ExtResource("1_e5yjm")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -150,7 +150,7 @@ texture_region_size = Vector2i(32, 32)
 9:12/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2d575"]
-texture = ExtResource("2_l5ceq")
+texture = ExtResource("2_6e4qh")
 margins = Vector2i(57, 18)
 texture_region_size = Vector2i(63, 51)
 4:0/0 = 0

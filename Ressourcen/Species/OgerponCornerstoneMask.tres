@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b7l44gl07d3c5"]
+
+[ext_resource type="Resource" uid="uid://blmy6q7drcm0q" path="res://Ressourcen/Abilities/Sturdy.tres" id="1_703ki"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_8j2xo"]
+
+[resource]
+script = ExtResource("2_8j2xo")
+name = "Ogerpon Cornerstone"
+texture_id = 0
+texture_x = 7
+texture_y = 12
+main_type = "Grass"
+secondary_type = "Rock"
+ability1 = ExtResource("1_703ki")
+hp = 80
+atk = 120
+def = 84
+spa = 60
+spd = 96
+spe = 110
+weight = 39.8

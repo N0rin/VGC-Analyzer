@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dsssgly7eugyr"]
+
+[ext_resource type="Resource" uid="uid://dotbl6e1v6rcv" path="res://Ressourcen/Abilities/Inner_Focus.tres" id="1_6p7kg"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_iccnl"]
+[ext_resource type="Resource" uid="uid://7eok1280ufky" path="res://Ressourcen/Abilities/Regenerator.tres" id="2_1471y"]
+[ext_resource type="Resource" uid="uid://svq57m5ogqr0" path="res://Ressourcen/Abilities/Reckless.tres" id="3_3vfsx"]
+
+[resource]
+script = ExtResource("1_iccnl")
+name = "Mienshao"
+texture_id = 4
+texture_x = 18
+texture_y = 18
+main_type = "Fighting"
+secondary_type = "None"
+ability1 = ExtResource("1_6p7kg")
+ability2 = ExtResource("2_1471y")
+ability3 = ExtResource("3_3vfsx")
+hp = 65
+atk = 125
+def = 60
+spa = 95
+spd = 60
+spe = 105
+weight = 35.5

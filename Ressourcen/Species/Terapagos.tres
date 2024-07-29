@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dbu75j2r1f2xe"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_3rtl2"]
+[ext_resource type="Resource" uid="uid://ug8ofupow25u" path="res://Ressourcen/Abilities/Tera_Shell.tres" id="1_lgoij"]
+
+[resource]
+script = ExtResource("1_3rtl2")
+name = "Terapagos"
+texture_id = 0
+texture_x = 8
+texture_y = 12
+main_type = "Normal"
+secondary_type = "None"
+ability1 = ExtResource("1_lgoij")
+hp = 95
+atk = 95
+def = 110
+spa = 105
+spd = 110
+spe = 85
+weight = 16.0

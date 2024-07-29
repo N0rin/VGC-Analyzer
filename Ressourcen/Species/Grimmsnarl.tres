@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://b3niwslpffoxw"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_07v7v"]
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="1_t3so6"]
+[ext_resource type="Resource" uid="uid://dx6pjrclvrjlm" path="res://Ressourcen/Abilities/Frisk.tres" id="2_jrk27"]
+[ext_resource type="Resource" uid="uid://dem7ciqwmd63p" path="res://Ressourcen/Abilities/Pickpocket.tres" id="3_fl0ck"]
+
+[resource]
+script = ExtResource("1_07v7v")
+name = "Grimmsnarl"
+texture_id = 4
+texture_x = 7
+texture_y = 26
+main_type = "Dark"
+secondary_type = "Fairy"
+ability1 = ExtResource("1_t3so6")
+ability2 = ExtResource("2_jrk27")
+ability3 = ExtResource("3_fl0ck")
+hp = 95
+atk = 120
+def = 65
+spa = 95
+spd = 75
+spe = 60
+weight = 61.0

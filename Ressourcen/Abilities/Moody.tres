@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://by32dh61fbd3"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_hrmcl"]
+
+[resource]
+script = ExtResource("1_hrmcl")
+name = "Moody"

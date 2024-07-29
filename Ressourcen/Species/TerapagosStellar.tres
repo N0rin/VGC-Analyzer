@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://djo828t817ppn"]
+
+[ext_resource type="Resource" uid="uid://d0e6t51gsfedq" path="res://Ressourcen/Abilities/Teraform_Zero.tres" id="1_50r38"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_4x8gq"]
+
+[resource]
+script = ExtResource("2_4x8gq")
+name = "Terapagos"
+texture_id = 0
+texture_x = 9
+texture_y = 12
+main_type = "Normal"
+secondary_type = "None"
+ability1 = ExtResource("1_50r38")
+hp = 160
+atk = 105
+def = 110
+spa = 130
+spd = 110
+spe = 85
+weight = 77.0

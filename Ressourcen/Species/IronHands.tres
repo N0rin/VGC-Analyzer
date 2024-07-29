@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://mfnqt1ob5u35"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_es1h7"]
+[ext_resource type="Resource" uid="uid://ba12wkxydij5v" path="res://Ressourcen/Abilities/Quark_Drive.tres" id="1_hcxqs"]
+
+[resource]
+script = ExtResource("1_es1h7")
+name = "Iron Hands"
+texture_id = 0
+texture_x = 2
+texture_y = 7
+main_type = "Fighting"
+secondary_type = "Electric"
+ability1 = ExtResource("1_hcxqs")
+hp = 154
+atk = 140
+def = 108
+spa = 50
+spd = 68
+spe = 50
+weight = 380.7

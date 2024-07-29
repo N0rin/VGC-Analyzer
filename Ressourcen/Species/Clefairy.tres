@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dqolwd12dsr0d"]
+
+[ext_resource type="Resource" uid="uid://tt4v6pc68dqx" path="res://Ressourcen/Abilities/Cute_Charm.tres" id="1_jglip"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_w151e"]
+[ext_resource type="Resource" uid="uid://df56owuadghnb" path="res://Ressourcen/Abilities/Magic_Guard.tres" id="2_hogvj"]
+[ext_resource type="Resource" uid="uid://bq1owdg7gucfk" path="res://Ressourcen/Abilities/Friend_Guard.tres" id="3_vdwol"]
+
+[resource]
+script = ExtResource("1_w151e")
+name = "Clefairy"
+texture_id = 4
+texture_x = 19
+texture_y = 1
+main_type = "Fairy"
+secondary_type = "None"
+ability1 = ExtResource("1_jglip")
+ability2 = ExtResource("2_hogvj")
+ability3 = ExtResource("3_vdwol")
+hp = 70
+atk = 45
+def = 48
+spa = 60
+spd = 65
+spe = 35
+weight = 7.5

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://nuy3qdp7qre2"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ero32"]
+[ext_resource type="Resource" uid="uid://bgqix5y5l47s8" path="res://Ressourcen/Abilities/Commander.tres" id="1_v6b0u"]
+[ext_resource type="Resource" uid="uid://b6ud7sqk7lb8w" path="res://Ressourcen/Abilities/Storm_Drain.tres" id="2_b2b5w"]
+
+[resource]
+script = ExtResource("1_ero32")
+name = "Tatsugiri"
+texture_id = 0
+texture_x = 0
+texture_y = 6
+main_type = "Dragon"
+secondary_type = "Water"
+ability1 = ExtResource("1_v6b0u")
+ability3 = ExtResource("2_b2b5w")
+hp = 68
+atk = 50
+def = 60
+spa = 120
+spd = 95
+spe = 82
+weight = 8.0

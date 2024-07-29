@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b6peuhg1ox0rv"]
+
+[ext_resource type="Resource" uid="uid://cutbs0drj7ofl" path="res://Ressourcen/Abilities/Orichalcum_Pulse.tres" id="1_6r3tl"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_aun6w"]
+
+[resource]
+script = ExtResource("1_aun6w")
+name = "Koraidon"
+texture_id = 0
+texture_x = 5
+texture_y = 8
+main_type = "Fighting"
+secondary_type = "Dragon"
+ability1 = ExtResource("1_6r3tl")
+hp = 100
+atk = 135
+def = 115
+spa = 85
+spd = 100
+spe = 135
+weight = 303.0

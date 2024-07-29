@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://dotbl6e1v6rcv"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_mjkuu"]
+
+[resource]
+script = ExtResource("1_mjkuu")
+name = "Inner Focus"

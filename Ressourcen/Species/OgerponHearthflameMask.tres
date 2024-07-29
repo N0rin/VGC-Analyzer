@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://inas6l8ed5em"]
+
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="1_wgb1u"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_p87hv"]
+
+[resource]
+script = ExtResource("2_p87hv")
+name = "Ogerpon Hearthflame"
+texture_id = 0
+texture_x = 5
+texture_y = 12
+main_type = "Grass"
+secondary_type = "Fire"
+ability1 = ExtResource("1_wgb1u")
+hp = 80
+atk = 120
+def = 84
+spa = 60
+spd = 96
+spe = 110
+weight = 39.8

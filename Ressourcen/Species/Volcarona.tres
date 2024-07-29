@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://bb4tagcqn6mo"]
+
+[ext_resource type="Resource" uid="uid://bbb6eoj4w8s77" path="res://Ressourcen/Abilities/Flame_Body.tres" id="1_s6agv"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_t2f0i"]
+[ext_resource type="Resource" uid="uid://cqgmgk01tktyp" path="res://Ressourcen/Abilities/Swarm.tres" id="2_6tpox"]
+
+[resource]
+script = ExtResource("1_t2f0i")
+name = "Volcarona"
+texture_id = 4
+texture_x = 36
+texture_y = 18
+main_type = "Bug"
+secondary_type = "Fire"
+ability1 = ExtResource("1_s6agv")
+ability3 = ExtResource("2_6tpox")
+hp = 85
+atk = 60
+def = 65
+spa = 135
+spd = 105
+spe = 100
+weight = 46.0

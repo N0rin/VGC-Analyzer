@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://bgqix5y5l47s8"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_q5ndy"]
+
+[resource]
+script = ExtResource("1_q5ndy")
+name = "Commander"

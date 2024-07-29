@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://ciu4lbgotugel"]
+
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="1_rf3ny"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_w5xdc"]
+[ext_resource type="Resource" uid="uid://dseyy3mu26wfx" path="res://Ressourcen/Abilities/Infiltrator.tres" id="2_dvin7"]
+[ext_resource type="Resource" uid="uid://boiy12hj12168" path="res://Ressourcen/Abilities/Chlorophyl.tres" id="3_vax3y"]
+
+[resource]
+script = ExtResource("1_w5xdc")
+name = "Whimsicott"
+texture_id = 4
+texture_x = 13
+texture_y = 16
+main_type = "Grass"
+secondary_type = "Fairy"
+ability1 = ExtResource("1_rf3ny")
+ability2 = ExtResource("2_dvin7")
+ability3 = ExtResource("3_vax3y")
+hp = 60
+atk = 67
+def = 85
+spa = 77
+spd = 75
+spe = 116
+weight = 6.6

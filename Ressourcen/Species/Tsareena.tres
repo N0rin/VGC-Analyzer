@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bkolycod8b6e4"]
+
+[ext_resource type="Resource" uid="uid://bm03dsl73igb6" path="res://Ressourcen/Abilities/Leaf_Guard.tres" id="1_a5qva"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_rdtga"]
+[ext_resource type="Resource" uid="uid://ccowsfqkdw7ky" path="res://Ressourcen/Abilities/Queenly_Majesty.tres" id="2_62ur2"]
+[ext_resource type="Resource" uid="uid://l2aj6kkxs2qc" path="res://Ressourcen/Abilities/Sweet_Veil.tres" id="3_5lhas"]
+
+[resource]
+script = ExtResource("1_rdtga")
+name = "Tsareena"
+texture_id = 4
+texture_x = 13
+texture_y = 23
+main_type = "Grass"
+secondary_type = "None"
+ability1 = ExtResource("1_a5qva")
+ability2 = ExtResource("2_62ur2")
+ability3 = ExtResource("3_5lhas")
+hp = 72
+atk = 120
+def = 98
+spa = 50
+spd = 98
+spe = 72
+weight = 21.4

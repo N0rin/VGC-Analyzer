@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bc5vptqi30i8x"]
+
+[ext_resource type="Resource" uid="uid://qcia266nbc1l" path="res://Ressourcen/Abilities/Hadron_Engine.tres" id="1_feprb"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_xe4f5"]
+
+[resource]
+script = ExtResource("1_xe4f5")
+name = "Miraidon"
+texture_id = 0
+texture_x = 6
+texture_y = 8
+main_type = "Electric"
+secondary_type = "Dragon"
+ability1 = ExtResource("1_feprb")
+hp = 100
+atk = 85
+def = 100
+spa = 135
+spd = 115
+spe = 135
+weight = 240.0

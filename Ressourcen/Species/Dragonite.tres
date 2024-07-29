@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dfma3wyqn6d88"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_h8j0y"]
+[ext_resource type="Resource" uid="uid://dotbl6e1v6rcv" path="res://Ressourcen/Abilities/Inner_Focus.tres" id="1_v8a60"]
+[ext_resource type="Resource" uid="uid://ben4x55xw1vi0" path="res://Ressourcen/Abilities/Multiscale.tres" id="2_lk4i1"]
+
+[resource]
+script = ExtResource("1_h8j0y")
+name = "Dragonite"
+texture_id = 4
+texture_x = 2
+texture_y = 5
+main_type = "Dragon"
+secondary_type = "Flying"
+ability1 = ExtResource("1_v8a60")
+ability3 = ExtResource("2_lk4i1")
+hp = 91
+atk = 134
+def = 95
+spa = 100
+spd = 100
+spe = 80
+weight = 210.0

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://cms3wgos0ptj4"]
+
+[ext_resource type="Resource" uid="uid://b7hfnvco28cda" path="res://Ressourcen/Abilities/Limber.tres" id="1_p14pr"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_t0ume"]
+[ext_resource type="Resource" uid="uid://b6qrxb4g0ap7j" path="res://Ressourcen/Abilities/Imposter.tres" id="2_n5pq3"]
+
+[resource]
+script = ExtResource("1_t0ume")
+name = "Ditto"
+texture_id = 4
+texture_x = 23
+texture_y = 4
+main_type = "Normal"
+secondary_type = "None"
+ability1 = ExtResource("1_p14pr")
+ability3 = ExtResource("2_n5pq3")
+hp = 48
+atk = 48
+def = 48
+spa = 48
+spd = 48
+spe = 48
+weight = 4.0

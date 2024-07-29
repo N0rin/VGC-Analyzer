@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://ug8ofupow25u"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_4bn63"]
+
+[resource]
+script = ExtResource("1_4bn63")
+name = "Tera Shell"

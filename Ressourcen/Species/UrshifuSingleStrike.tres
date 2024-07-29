@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b81yaexbiwwlx"]
+
+[ext_resource type="Resource" uid="uid://breep8i1w1qkh" path="res://Ressourcen/Abilities/Unseen_Fist.tres" id="1_2u5fe"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_pfm1v"]
+
+[resource]
+script = ExtResource("2_pfm1v")
+name = "Urshifu - Single Strike"
+texture_id = 4
+texture_x = 12
+texture_y = 27
+main_type = "Fighting"
+secondary_type = "Dark"
+ability1 = ExtResource("1_2u5fe")
+hp = 100
+atk = 130
+def = 100
+spa = 36
+spd = 60
+spe = 97
+weight = 105.0

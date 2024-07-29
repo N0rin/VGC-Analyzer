@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://c12loa80emb8k"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_c5tx7"]
+
+[resource]
+script = ExtResource("1_c5tx7")
+name = "Vital Spirit"

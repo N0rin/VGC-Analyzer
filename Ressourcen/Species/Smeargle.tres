@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://ce17jbc7r800p"]
+
+[ext_resource type="Resource" uid="uid://d4cs6wcf06hpr" path="res://Ressourcen/Abilities/Own_Tempo.tres" id="1_6t8ku"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_18ijh"]
+[ext_resource type="Resource" uid="uid://briwdwdehcaie" path="res://Ressourcen/Abilities/Technician.tres" id="2_v8ykt"]
+[ext_resource type="Resource" uid="uid://by32dh61fbd3" path="res://Ressourcen/Abilities/Moody.tres" id="3_nljan"]
+
+[resource]
+script = ExtResource("1_18ijh")
+name = "Smeargle"
+texture_id = 4
+texture_x = 40
+texture_y = 7
+main_type = "Normal"
+secondary_type = "None"
+ability1 = ExtResource("1_6t8ku")
+ability2 = ExtResource("2_v8ykt")
+ability3 = ExtResource("3_nljan")
+hp = 55
+atk = 20
+def = 35
+spa = 20
+spd = 45
+spe = 75
+weight = 58.0

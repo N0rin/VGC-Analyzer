@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://cfbtxcc02os72"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_8i6q4"]
+
+[resource]
+script = ExtResource("1_8i6q4")
+name = "Water Veil"

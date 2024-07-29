@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://btfay6wmm02rf"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_briex"]
+[ext_resource type="Resource" uid="uid://06x5bt1cwkv6" path="res://Ressourcen/Abilities/Minds_Eye.tres" id="1_vjywl"]
+
+[resource]
+script = ExtResource("1_briex")
+name = "Ursaluna Bloodmoon"
+texture_id = 0
+texture_x = 4
+texture_y = 11
+main_type = "Ground"
+secondary_type = "Normal"
+ability1 = ExtResource("1_vjywl")
+hp = 113
+atk = 70
+def = 120
+spa = 135
+spd = 65
+spe = 52
+weight = 330.0

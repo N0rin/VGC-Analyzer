@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://bh8ospbylo7wl"]
+
+[ext_resource type="Resource" uid="uid://dk875363fr8cy" path="res://Ressourcen/Abilities/Sand_Force.tres" id="1_ehhx1"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_m5hri"]
+[ext_resource type="Resource" uid="uid://dd1v3sr2mnmvw" path="res://Ressourcen/Abilities/Sheer_Force.tres" id="2_wck6a"]
+
+[resource]
+script = ExtResource("1_m5hri")
+name = "Landorus - Incarnate"
+texture_id = 4
+texture_x = 2
+texture_y = 19
+main_type = "Ground"
+secondary_type = "Flying"
+ability1 = ExtResource("1_ehhx1")
+ability3 = ExtResource("2_wck6a")
+hp = 89
+atk = 125
+def = 90
+spa = 115
+spd = 80
+spe = 101
+weight = 68.0

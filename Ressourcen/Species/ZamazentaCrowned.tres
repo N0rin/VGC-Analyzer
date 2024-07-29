@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://8vpt11cgj2wn"]
+
+[ext_resource type="Resource" uid="uid://bck5mjpetqkxs" path="res://Ressourcen/Abilities/Dauntless_Shield.tres" id="1_qrakq"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_jlo5b"]
+
+[resource]
+script = ExtResource("2_jlo5b")
+name = "Zamazenta"
+texture_id = 4
+texture_x = 8
+texture_y = 27
+main_type = "Fighting"
+secondary_type = "Steel"
+ability1 = ExtResource("1_qrakq")
+hp = 92
+atk = 120
+def = 140
+spa = 80
+spd = 140
+spe = 128
+weight = 785.0

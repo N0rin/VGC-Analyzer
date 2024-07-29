@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://l2aj6kkxs2qc"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_pmiwv"]
+
+[resource]
+script = ExtResource("1_pmiwv")
+name = "Sweet Veil"

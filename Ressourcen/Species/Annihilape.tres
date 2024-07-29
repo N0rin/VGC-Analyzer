@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dwa7tkmfgvce0"]
+
+[ext_resource type="Resource" uid="uid://c12loa80emb8k" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="1_g63g0"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_mh3vv"]
+[ext_resource type="Resource" uid="uid://dotbl6e1v6rcv" path="res://Ressourcen/Abilities/Inner_Focus.tres" id="2_kbedm"]
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="3_xyod2"]
+
+[resource]
+script = ExtResource("1_mh3vv")
+name = "Annihilape"
+texture_id = 0
+texture_x = 1
+texture_y = 6
+main_type = "Fighting"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_g63g0")
+ability2 = ExtResource("2_kbedm")
+ability3 = ExtResource("3_xyod2")
+hp = 110
+atk = 115
+def = 80
+spa = 50
+spd = 90
+spe = 90
+weight = 56.0

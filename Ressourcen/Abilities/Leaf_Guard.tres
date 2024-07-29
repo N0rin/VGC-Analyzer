@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://bm03dsl73igb6"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_qk2pm"]
+
+[resource]
+script = ExtResource("1_qk2pm")
+name = "Leaf Guard"

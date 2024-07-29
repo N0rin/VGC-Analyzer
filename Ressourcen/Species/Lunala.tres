@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://43wik35lrd3r"]
+
+[ext_resource type="Resource" uid="uid://cf845pncdpbmr" path="res://Ressourcen/Abilities/Shadow_Shield.tres" id="1_eq40t"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_u0fmx"]
+
+[resource]
+script = ExtResource("1_u0fmx")
+name = "Lunala"
+texture_id = 4
+texture_x = 5
+texture_y = 24
+main_type = "Psychic"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_eq40t")
+hp = 137
+atk = 113
+def = 89
+spa = 137
+spd = 107
+spe = 97
+weight = 120.0

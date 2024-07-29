@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://c5hero3kndexg"]
+
+[ext_resource type="Resource" uid="uid://pagqo5a14ui0" path="res://Ressourcen/Abilities/Water_Absorb.tres" id="1_beebc"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_1dpam"]
+
+[resource]
+script = ExtResource("2_1dpam")
+name = "Ogerpon Wellspring"
+texture_id = 0
+texture_x = 6
+texture_y = 12
+main_type = "Grass"
+secondary_type = "Water"
+ability1 = ExtResource("1_beebc")
+hp = 80
+atk = 120
+def = 84
+spa = 60
+spd = 96
+spe = 110
+weight = 39.8
