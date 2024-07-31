@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://wk22jmqhdn2r"]
 
 [ext_resource type="Script" path="res://Scene/UserInterface/bank_display.gd" id="1_47afg"]
-[ext_resource type="TileSet" uid="uid://c8gr6wfavimsj" path="res://Scene/pokemon_sprites.tres" id="2_gup7u"]
+[ext_resource type="TileSet" uid="uid://c8gr6wfavimsj" path="res://Ressourcen/pokemon_sprites.tres" id="2_gup7u"]
 [ext_resource type="Texture2D" uid="uid://kkqs3yaqtiux" path="res://Assets/Icons/brn.png" id="3_r4hb4"]
 [ext_resource type="Texture2D" uid="uid://05ww7lyowy7n" path="res://Assets/Icons/frz.png" id="4_dr0md"]
 [ext_resource type="Texture2D" uid="uid://cdmlt24ha5150" path="res://Assets/Icons/par.png" id="5_oywyl"]

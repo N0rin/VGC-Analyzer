@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=3 uid="uid://dftqa5yhvy5s1"]
+
+[ext_resource type="StyleBox" uid="uid://c05r2rcv5ur6s" path="res://Ressourcen/Styles/black_border.tres" id="1_amax6"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/pokemon_overview_item.gd" id="2_6no76"]
+[ext_resource type="TileSet" uid="uid://c8gr6wfavimsj" path="res://Ressourcen/pokemon_sprites.tres" id="3_lrtsf"]
+
+[node name="PokemonOverviewItem" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -824.0
+offset_bottom = -1014.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_amax6")
+script = ExtResource("2_6no76")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Icon" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TileMap" type="TileMap" parent="MarginContainer/HBoxContainer/Icon"]
+tile_set = ExtResource("3_lrtsf")
+format = 2
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Flutter Mane"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Offense" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "RelOff"
+horizontal_alignment = 2
+
+[node name="Defense" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "RelDef"
+
+[node name="Speed" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "RelSpe"
+
+[node name="Total" type="Label" parent="MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Total"
+
+[node name="Separator5" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="RawOffense" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Separator" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="RawDefense" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Separator2" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="RawSpecialDefense" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Separator3" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="RawSpeed" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Separator4" type="ColorRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="RawTotal" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2

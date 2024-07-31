@@ -29,3 +29,8 @@ func _on_analyzer_continue_to_board():
 func _on_calculations_to_meta():
 	$Calculations/MetaCalcs.show()
 	$Calculations/MetaCalcs.load_saved_pokemon_data()
+
+
+func _on_calculations_to_overview():
+	$Calculations/CalcOverview.show()
+	

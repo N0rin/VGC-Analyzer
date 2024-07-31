@@ -1,19 +1,21 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bax1s61r2pdpx"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bax1s61r2pdpx"]
 
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="1_ugy8u"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_y28x4"]
 
 [resource]
 script = ExtResource("1_y28x4")
-name = ""
+name = "Ogerpon"
 texture_id = 0
-texture_x = 0
-texture_y = 0
-main_type = "Normal"
+texture_x = 3
+texture_y = 9
+main_type = "Grass"
 secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+ability1 = ExtResource("1_ugy8u")
+hp = 80
+atk = 120
+def = 84
+spa = 60
+spd = 96
+spe = 110
+weight = 39.8

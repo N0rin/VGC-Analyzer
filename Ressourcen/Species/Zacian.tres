@@ -1,19 +1,21 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bluybr8qppt7j"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bluybr8qppt7j"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_7m6x0"]
+[ext_resource type="Resource" uid="uid://by4dtx8oemlml" path="res://Ressourcen/Abilities/Intrepid_Sword.tres" id="1_owgmv"]
 
 [resource]
 script = ExtResource("1_7m6x0")
-name = ""
-texture_id = 0
-texture_x = 0
-texture_y = 0
-main_type = "Normal"
+name = "Zacian"
+texture_id = 4
+texture_x = 5
+texture_y = 27
+main_type = "Fairy"
 secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+ability1 = ExtResource("1_owgmv")
+hp = 92
+atk = 120
+def = 115
+spa = 80
+spd = 115
+spe = 138
+weight = 110.0

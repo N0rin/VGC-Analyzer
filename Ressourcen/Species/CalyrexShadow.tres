@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_nfocm")
-name = "Shadow Rrider Calyrex"
+name = "Shadow Rider Calyrex"
 texture_id = 4
 texture_x = 23
 texture_y = 27
