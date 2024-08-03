@@ -40,10 +40,15 @@ func clear_list():
 		child.queue_free()
 
 func sort_item_list(method: String, item_list: Array):
+	var factors = [1,1,1,1]
+	factors[0] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorOffense.value
+	factors[1] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorDefense.value
+	factors[2] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpDefense.value
+	factors[3] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpeed.value
 	var compare_func : Callable
 	match method:
 		"Total":
-			compare_func = func(a,b): return a.get_total() > b.get_total()
+			compare_func = func(a,b): return a.get_total(factors) > b.get_total(factors)
 		"Offense":
 			compare_func = func(a,b): return a.get_offense() > b.get_offense()
 		"PhysicalDefense":
@@ -74,3 +79,14 @@ func _on_filter_4_pressed():
 
 func _on_filter_5_pressed():
 	update_list("Total")
+
+
+func _on_factor_value_changed(value): # Sehr hässliche Lösung, um Label zu setzen und ready Schwierigkeit zu umgehen
+	var factors = [1,1,1,1]
+	factors[0] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorOffense.value
+	factors[1] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorDefense.value
+	factors[2] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpDefense.value
+	factors[3] = $MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpeed.value
+	update_list("Total")
+	for item in list.get_children():
+		item.set_total(item.get_total(factors))

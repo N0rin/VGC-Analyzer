@@ -93,4 +93,5 @@ theme_override_styles/normal = ExtResource("1_bilao")
 theme_override_styles/hover = ExtResource("2_qo857")
 text = "Go Back"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonSet" to="." method="_on_button_set_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

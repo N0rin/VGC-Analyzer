@@ -391,7 +391,7 @@ layout_mode = 2
 [node name="Extras" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
 layout_mode = 2
 
-[node name="Continue" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Extras"]
+[node name="Terastalize" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left/Extras"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8

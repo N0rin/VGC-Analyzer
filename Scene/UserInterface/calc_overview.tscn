@@ -96,7 +96,51 @@ size_flags_stretch_ratio = 1.5
 layout_mode = 2
 alignment = 2
 
-[node name="Filter" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="FactorOffense" type="SpinBox" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(109, 0)
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+custom_arrow_step = 1.0
+
+[node name="FactorDefense" type="SpinBox" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(109, 0)
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+custom_arrow_step = 1.0
+
+[node name="FactorSpDefense" type="SpinBox" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(109, 0)
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+custom_arrow_step = 1.0
+
+[node name="FactorSpeed" type="SpinBox" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(109, 0)
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+custom_arrow_step = 1.0
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(109, 0)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+layout_mode = 2
+alignment = 2
+
+[node name="Filter" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(109, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -112,7 +156,7 @@ theme_override_styles/pressed = ExtResource("5_i67u1")
 theme_override_styles/focus = ExtResource("5_i67u1")
 text = "Offense"
 
-[node name="Filter2" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="Filter2" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(109, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -128,7 +172,7 @@ theme_override_styles/pressed = ExtResource("5_i67u1")
 theme_override_styles/focus = ExtResource("5_i67u1")
 text = "Defense"
 
-[node name="Filter3" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="Filter3" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(109, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -144,7 +188,7 @@ theme_override_styles/pressed = ExtResource("5_i67u1")
 theme_override_styles/focus = ExtResource("5_i67u1")
 text = "Sp. Defense"
 
-[node name="Filter4" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="Filter4" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(109, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -160,7 +204,7 @@ theme_override_styles/pressed = ExtResource("5_i67u1")
 theme_override_styles/focus = ExtResource("5_i67u1")
 text = "Speed"
 
-[node name="Filter5" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="Filter5" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(109, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -176,7 +220,7 @@ theme_override_styles/pressed = ExtResource("5_i67u1")
 theme_override_styles/focus = ExtResource("5_i67u1")
 text = "Total"
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer"]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2"]
 custom_minimum_size = Vector2(4, 0)
 layout_mode = 2
 
@@ -213,8 +257,12 @@ text = "Go Back"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/Filter" to="." method="_on_filter_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/Filter2" to="." method="_on_filter_2_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/Filter3" to="." method="_on_filter_3_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/Filter4" to="." method="_on_filter_4_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/Filter5" to="." method="_on_filter_5_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorOffense" to="." method="_on_factor_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorDefense" to="." method="_on_factor_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpDefense" to="." method="_on_factor_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpeed" to="." method="_on_factor_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter" to="." method="_on_filter_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter2" to="." method="_on_filter_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter3" to="." method="_on_filter_3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter4" to="." method="_on_filter_4_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter5" to="." method="_on_filter_5_pressed"]

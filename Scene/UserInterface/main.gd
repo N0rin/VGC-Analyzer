@@ -34,3 +34,7 @@ func _on_calculations_to_meta():
 func _on_calculations_to_overview():
 	$Calculations/CalcOverview.show()
 	
+
+
+func _on_metasets_create_set():
+	$Metasets/PokemonSetCreator.show()
