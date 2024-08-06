@@ -337,7 +337,7 @@ func clear():
 
 func _on_stats_gui_input(event):
 	var container_node = $"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Stats"
-	var remaining_ev_total = 510
+	var remaining_ev_total = 508
 
 	remaining_ev_total -= container_node.get_node("HpEv").value
 	remaining_ev_total -= container_node.get_node("AtkEv").value

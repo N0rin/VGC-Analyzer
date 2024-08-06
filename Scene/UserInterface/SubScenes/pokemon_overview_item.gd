@@ -23,9 +23,9 @@ func load_pokemon():
 
 func get_offense(factor = 1) -> float:
 	if pokemon_data.atk < pokemon_data.spa:
-		return pokemon_data.spa * factor
+		return (pokemon_data.spa + 20) * factor
 	
-	return pokemon_data.atk * factor
+	return (pokemon_data.atk + 20) * factor
 
 func get_physical_defense(factor = 1) -> float:
 	return round(((pokemon_data.hp +75)*(pokemon_data.def + 20)) /210) * factor
@@ -34,7 +34,7 @@ func get_special_defense(factor = 1) -> float:
 	return round(((pokemon_data.hp +75)*(pokemon_data.spd + 20)) /210) * factor
 
 func get_speed(factor = 1) -> float:
-	return pokemon_data.spe * factor
+	return (pokemon_data.spe + 20) * factor
 
 func get_total(factors = [1,1,1,1]) -> float:
 	var multiplicator = 0
