@@ -38,3 +38,4 @@ func _on_calculations_to_overview():
 
 func _on_metasets_create_set():
 	$Metasets/PokemonSetCreator.show()
+	$Metasets/PokemonSetCreator.load_saved_pokemon_data()

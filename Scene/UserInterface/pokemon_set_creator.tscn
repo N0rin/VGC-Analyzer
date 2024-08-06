@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmgcdfp6setox"]
+[gd_scene load_steps=7 format=3 uid="uid://cwuevu46j5mmr"]
 
 [ext_resource type="PackedScene" uid="uid://cueqqi8r12cud" path="res://Scene/UserInterface/SubScenes/search_option_button.tscn" id="1_lab0p"]
 [ext_resource type="Script" path="res://Scene/UserInterface/pokemon_set_creator.gd" id="1_lh40e"]
@@ -25,9 +25,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 50
@@ -44,11 +47,11 @@ layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "New Pokemon Set"
+text = "Set Creator"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 40)
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 
 [node name="CoreUI" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -78,7 +81,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="SetSelect" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Set"]
-custom_minimum_size = Vector2(100, 30)
+custom_minimum_size = Vector2(100, 31)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -93,11 +96,8 @@ theme_override_styles/hover = ExtResource("3_obsqf")
 theme_override_styles/pressed = ExtResource("4_btta0")
 fit_to_longest_item = false
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Set"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-
 [node name="Tera" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit"]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Tera"]
@@ -105,7 +105,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Tera Type:  "
 
-[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Tera"]
+[node name="TeraSelect" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Tera"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -308,6 +308,23 @@ popup/item_3/id = 3
 popup/item_4/text = "- SPE"
 popup/item_4/id = 4
 
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/NatureSelector"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/NatureSelector"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Remaining EVs:"
+horizontal_alignment = 2
+
+[node name="EVCountLabel" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/NatureSelector"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "508"
+horizontal_alignment = 2
+
 [node name="AbilitySelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit"]
 layout_mode = 2
 
@@ -317,15 +334,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ability: "
 
 [node name="AbilityOption" type="OptionButton" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/AbilitySelector"]
-visible = false
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = ExtResource("2_5s4lw")
-
-[node name="FullAbilityOption" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/AbilitySelector" instance=ExtResource("1_lab0p")]
-layout_mode = 2
 
 [node name="ItemSelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit"]
 layout_mode = 2
@@ -394,6 +407,9 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("2_5s4lw")
 theme_override_styles/hover = ExtResource("3_obsqf")
 theme_override_styles/pressed = ExtResource("4_btta0")
-text = "Save"
+text = "Save Set"
 
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Species" to="." method="_on_species_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Set/SetSelect" to="." method="_on_set_select_item_selected"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Stats" to="." method="_on_stats_gui_input"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]

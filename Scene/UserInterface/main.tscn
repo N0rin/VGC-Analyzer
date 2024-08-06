@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddf8ofme5gq66" path="res://Scene/UserInterface/meta_calcs.tscn" id="7_8c61r"]
 [ext_resource type="PackedScene" uid="uid://c3q80r0510w6m" path="res://Scene/UserInterface/analyze_board.tscn" id="7_rfm26"]
 [ext_resource type="PackedScene" uid="uid://bjkutpl10vy6w" path="res://Scene/UserInterface/calc_overview.tscn" id="8_ejx5b"]
-[ext_resource type="PackedScene" uid="uid://dmgcdfp6setox" path="res://Scene/UserInterface/pokemon_set_creator.tscn" id="10_3tmmo"]
+[ext_resource type="PackedScene" uid="uid://cwuevu46j5mmr" path="res://Scene/UserInterface/pokemon_set_creator.tscn" id="10_3tmmo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -130,9 +130,11 @@ visible = false
 layout_mode = 1
 
 [node name="Metasets" parent="." instance=ExtResource("6_12fql")]
+visible = false
 layout_mode = 1
 
 [node name="PokemonSetCreator" parent="Metasets" instance=ExtResource("10_3tmmo")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="Main/MarginContainer/VBoxContainer/ButtonAnalyzer" to="." method="_on_button_analyzer_pressed"]
