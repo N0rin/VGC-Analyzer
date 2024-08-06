@@ -45,9 +45,6 @@ func update_pokemon_selector():
 	for pokemon in pokemon_list:
 		pokemon_selector.add_item(pokemon.name)
 
-func update_ability_selector():
-	ability_selector #TODO
-
 func update_item_selector():
 	item_selector.clear()
 	for item in item_list:
@@ -62,7 +59,7 @@ func update_move_selector():
 func get_pokemon_data() -> PokemonData:
 	var data = PokemonData.new()
 	data.species = find_by_name(pokemon_list, pokemon_selector.selected)
-	#TODO data.ability = find_by_name(ability_list, ability_selector.selected)
+	data.ability = find_by_name(ability_list, ability_selector.get_item_text(ability_selector.selected))
 	data.item = find_by_name(item_list, item_selector.selected)
 	data.tera_type = get_selected_tera_type()
 	data.increased_stat = get_modified_stat($"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/NatureSelector/NatureIncrease".selected)
@@ -85,6 +82,13 @@ func get_pokemon_data() -> PokemonData:
 	data.move4 = find_by_name(move_list, move_selector4.selected)
 	return data
 
+func save_set(set_name: String):
+	var pokemon_set : PokemonData = get_pokemon_data()
+	pokemon_set.set_name = set_name
+	var resource_path = "%sPokemonSets/%s_%s.tres" % [DATA_PATH, pokemon_set.species.name.format("_", " "), set_name.format("_", " ")]
+	var result = ResourceSaver.save(pokemon_set, resource_path)
+	assert(result == OK)
+
 func find_by_name(list: Array, name: String):
 	for thing in list:
 		if thing.name == name:
@@ -105,7 +109,7 @@ func get_modified_stat(index: int) -> String:
 	return ""
 
 func get_selected_tera_type() -> String:
-	var index = $"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Tera/OptionButton".selected
+	var index = $"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/Tera/TeraSelect".selected
 	match(index):
 		0:
 			return "Bug"
@@ -347,3 +351,17 @@ func _on_stats_gui_input(event):
 	remaining_ev_total -= container_node.get_node("SpeEv").value
 
 	$"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit/NatureSelector/EVCountLabel".text = "%s" % remaining_ev_total
+
+
+func _on_save_pressed():
+	$PopupPanel.show()
+
+
+func _on_confirm_pressed():
+	if $PopupPanel/VBoxContainer/TextEdit.text != "":
+		save_set($PopupPanel/VBoxContainer/TextEdit.text)
+		$PopupPanel.hide()
+
+
+func _on_cancel_pressed():
+	$PopupPanel.hide()
