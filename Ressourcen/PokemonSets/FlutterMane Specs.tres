@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("1_o5tti")
 set_name = "Specs"
+format = 4
 species = ExtResource("2_e0vo0")
 ability = ExtResource("1_4ih6e")
 item = ExtResource("2_n7b2a")

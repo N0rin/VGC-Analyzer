@@ -11,6 +11,7 @@
 [resource]
 script = ExtResource("1_tjfw5")
 set_name = "Defensive"
+format = 4
 species = ExtResource("2_vts7s")
 ability = ExtResource("1_um0o3")
 item = ExtResource("2_ak4ov")

@@ -69,6 +69,7 @@ theme_override_styles/hover = ExtResource("2_qo857")
 text = "Create Team"
 
 [node name="ButtonMetagame" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(300, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -94,4 +95,5 @@ theme_override_styles/hover = ExtResource("2_qo857")
 text = "Go Back"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonSet" to="." method="_on_button_set_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonTeam" to="." method="_on_button_team_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

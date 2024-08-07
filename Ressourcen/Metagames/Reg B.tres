@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Metagame" load_steps=2 format=3 uid="uid://bl030mja4u5q5"]
+
+[ext_resource type="Script" path="res://Ressourcen/Metagame.gd" id="1_hdc7s"]
+
+[resource]
+script = ExtResource("1_hdc7s")
+name = "Reg B"
+format = 2
+included_pokemon = Array[Resource("res://Ressourcen/Species.gd")]([])

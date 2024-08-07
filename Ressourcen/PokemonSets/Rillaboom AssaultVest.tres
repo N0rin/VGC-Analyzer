@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("1_54ynr")
 set_name = "Assault Vest"
+format = 4
 species = ExtResource("2_6deje")
 ability = ExtResource("1_nfm0v")
 item = ExtResource("2_k4y1v")

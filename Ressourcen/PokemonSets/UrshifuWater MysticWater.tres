@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("1_m8g42")
 set_name = "Mystic Water"
+format = 4
 species = ExtResource("2_8df2x")
 ability = ExtResource("1_cndit")
 item = ExtResource("2_f43ux")

@@ -26,3 +26,4 @@ class_name Species
 @export var spe = 0
 @export_group("Other")
 @export var weight = 60.0
+@export_enum("Regular", "Paradox", "Legendary", "Restricted", "Mythical") var restriction = 0

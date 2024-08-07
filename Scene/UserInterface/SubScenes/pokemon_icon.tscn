@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhfrq2r64ae21"]
+
+[ext_resource type="TileSet" uid="uid://c8gr6wfavimsj" path="res://Ressourcen/pokemon_sprites.tres" id="1_0hwfj"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/pokemon_icon.gd" id="1_gc241"]
+
+[node name="PokemonIcon" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_gc241")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_0hwfj")
+format = 2

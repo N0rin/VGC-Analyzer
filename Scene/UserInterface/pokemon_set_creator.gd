@@ -85,9 +85,12 @@ func get_pokemon_data() -> PokemonData:
 func save_set(set_name: String):
 	var pokemon_set : PokemonData = get_pokemon_data()
 	pokemon_set.set_name = set_name
+	pokemon_set.format = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/FormatSelect.selected
 	var resource_path = "%sPokemonSets/%s_%s.tres" % [DATA_PATH, pokemon_set.species.name.format("_", " "), set_name.format("_", " ")]
 	var result = ResourceSaver.save(pokemon_set, resource_path)
 	assert(result == OK)
+	
+	pokemon_set_list.append(pokemon_set)
 
 func find_by_name(list: Array, name: String):
 	for thing in list:
@@ -176,9 +179,30 @@ func _on_species_item_selected(name):
 	
 	var id = 1
 	for pokemon_set in get_pokemon_set_from_species(name):
-		set_selector.add_item(pokemon_set.set_name, id)
+		set_selector.add_item(get_format(pokemon_set.format) +" - "+ pokemon_set.set_name, id)
 		set_selector.set_item_metadata(id, pokemon_set)
 		id += 1
+
+func get_format(value : int) -> String:
+	match (value):
+		1:
+			return "Reg A"
+		2:
+			return "Reg B"
+		3:
+			return "Reg C"
+		4:
+			return "Reg D"
+		5:
+			return "Reg E"
+		6:
+			return "Reg F"
+		7:
+			return "Reg G"
+		8:
+			return "Reg H"
+	
+	return "All"
 
 func clear_set():
 	set_tera_type("Normal")

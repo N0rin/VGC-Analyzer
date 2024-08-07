@@ -130,7 +130,6 @@ visible = false
 layout_mode = 1
 
 [node name="Metasets" parent="." instance=ExtResource("6_12fql")]
-visible = false
 layout_mode = 1
 
 [node name="PokemonSetCreator" parent="Metasets" instance=ExtResource("10_3tmmo")]

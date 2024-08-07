@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("1_ew27j")
 set_name = "Heavy Rain"
+format = 4
 species = ExtResource("2_j5rsq")
 ability = ExtResource("1_4xnkh")
 item = ExtResource("2_acq7c")
