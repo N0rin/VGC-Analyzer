@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://depxr4svowq7k"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_qyw0k"]
+
+[resource]
+script = ExtResource("1_qyw0k")
+name = "Gastrodon"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Water"
+secondary_type = "Ground"
+hp = 111
+atk = 83
+def = 68
+spa = 92
+spd = 82
+spe = 39
+weight = 29.9
+restriction = 0

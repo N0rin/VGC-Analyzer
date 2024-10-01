@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cuiubxfvylvrb"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n6qd5"]
+
+[resource]
+script = ExtResource("1_n6qd5")
+name = "Kommo-O"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dragon"
+secondary_type = "Fighting"
+hp = 75
+atk = 110
+def = 125
+spa = 100
+spd = 105
+spe = 85
+weight = 78.2
+restriction = 0

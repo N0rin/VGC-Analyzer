@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://ox7if7be1ggy"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_823gy"]
+
+[resource]
+script = ExtResource("1_823gy")
+name = "Jumpluff"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Grass"
+secondary_type = "Flying"
+hp = 75
+atk = 55
+def = 70
+spa = 55
+spd = 95
+spe = 110
+weight = 3.0
+restriction = 0

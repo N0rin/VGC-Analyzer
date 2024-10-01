@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c4p7b2imnm8gi"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_qdumh"]
+
+[resource]
+script = ExtResource("1_qdumh")
+name = "Sinistcha"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Grass"
+secondary_type = "Ghost"
+hp = 71
+atk = 60
+def = 106
+spa = 121
+spd = 80
+spe = 70
+weight = 2.2
+restriction = 0

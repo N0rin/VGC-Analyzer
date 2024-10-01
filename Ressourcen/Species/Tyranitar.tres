@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://duj6y6s1j6tbx"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_52x8a"]
+
+[resource]
+script = ExtResource("1_52x8a")
+name = "Tyranitar"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dark"
+secondary_type = "Rock"
+hp = 100
+atk = 134
+def = 110
+spa = 95
+spd = 100
+spe = 61
+weight = 202.0
+restriction = 0

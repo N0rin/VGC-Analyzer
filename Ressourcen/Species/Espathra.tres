@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://06n852tjffmw"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_cffto"]
+
+[resource]
+script = ExtResource("1_cffto")
+name = "Espathra"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Psychic"
+secondary_type = "None"
+hp = 95
+atk = 60
+def = 60
+spa = 101
+spd = 60
+spe = 105
+weight = 90.0
+restriction = 0

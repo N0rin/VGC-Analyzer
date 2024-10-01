@@ -25,6 +25,8 @@ func update_list(method: String):
 	
 	var item_list : Array[PokemonOverviewItem]
 	for pokemon in pokemon_list:
+		if pokemon.restriction >= 1:
+			continue
 		var list_item = overview_item_scene.instantiate()
 		list_item.pokemon_data = pokemon
 		item_list.append(list_item)

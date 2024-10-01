@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dmhhd7ktm5gc2"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_u0cr5"]
+
+[resource]
+script = ExtResource("1_u0cr5")
+name = "Ninetales-Alola"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Ice"
+secondary_type = "Fairy"
+hp = 73
+atk = 67
+def = 75
+spa = 81
+spd = 100
+spe = 109
+weight = 19.9
+restriction = 0

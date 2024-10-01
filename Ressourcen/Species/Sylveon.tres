@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cycwgsqe3116r"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_lu3vp"]
+
+[resource]
+script = ExtResource("1_lu3vp")
+name = "Sylveon"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fairy"
+secondary_type = "None"
+hp = 95
+atk = 65
+def = 65
+spa = 110
+spd = 130
+spe = 60
+weight = 23.5
+restriction = 0

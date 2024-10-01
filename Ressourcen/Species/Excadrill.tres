@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bgotn0xa7vtal"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_hwtqd"]
+
+[resource]
+script = ExtResource("1_hwtqd")
+name = "Excadrill"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Ground"
+secondary_type = "Steel"
+hp = 110
+atk = 135
+def = 60
+spa = 50
+spd = 65
+spe = 88
+weight = 40.4
+restriction = 0

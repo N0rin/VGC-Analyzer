@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://mwxft1mslunj"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ew1ak"]
+
+[resource]
+script = ExtResource("1_ew1ak")
+name = "Pawmot"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "Fighting"
+hp = 70
+atk = 115
+def = 70
+spa = 70
+spd = 60
+spe = 105
+weight = 41.0
+restriction = 0

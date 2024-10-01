@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://26tlxow1mvmr"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_6ux1t"]
+
+[resource]
+script = ExtResource("1_6ux1t")
+name = "Garchomp"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dragon"
+secondary_type = "Ground"
+hp = 108
+atk = 130
+def = 95
+spa = 80
+spd = 85
+spe = 102
+weight = 95.0
+restriction = 0

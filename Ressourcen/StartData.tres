@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=12 format=3 uid="uid://b6oxte8t7toqs"]
+[gd_resource type="Resource" script_class="GameData" load_steps=13 format=3 uid="uid://b6oxte8t7toqs"]
 
 [ext_resource type="Script" path="res://Ressourcen/GameData.gd" id="1_ged0d"]
 [ext_resource type="Script" path="res://Ressourcen/GameStateData.gd" id="1_ntdag"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="2_o2570"]
 [ext_resource type="Resource" uid="uid://dhnidj2bdyup4" path="res://Ressourcen/PokemonSets/Barraskewda VR.tres" id="2_y0s8t"]
 [ext_resource type="Resource" uid="uid://dk60flvyurg2u" path="res://Ressourcen/PokemonSets/Pelipper VR.tres" id="3_qp5lp"]
 [ext_resource type="Resource" uid="uid://c1vpsuwbomo4n" path="res://Ressourcen/PokemonSets/Basculegion VR.tres" id="4_k8cye"]
@@ -17,6 +18,6 @@ script = ExtResource("1_ntdag")
 [resource]
 script = ExtResource("1_ged0d")
 version = 1
-upper_team = Array[Resource("res://Ressourcen/PokemonData.gd")]([ExtResource("7_ugc62"), ExtResource("8_kgvrm"), ExtResource("9_ter2p"), ExtResource("10_8iecs"), null, null])
-lower_team = Array[Resource("res://Ressourcen/PokemonData.gd")]([ExtResource("2_y0s8t"), ExtResource("3_qp5lp"), ExtResource("4_k8cye"), ExtResource("5_5h81q"), null, null])
+upper_team = Array[ExtResource("2_o2570")]([ExtResource("7_ugc62"), ExtResource("8_kgvrm"), ExtResource("9_ter2p"), ExtResource("10_8iecs"), null, null])
+lower_team = Array[ExtResource("2_o2570")]([ExtResource("2_y0s8t"), ExtResource("3_qp5lp"), ExtResource("4_k8cye"), ExtResource("5_5h81q"), null, null])
 game_state_data = SubResource("Resource_p28wv")

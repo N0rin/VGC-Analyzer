@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://v7e2gw3tx1yl"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_pj1oj"]
+
+[resource]
+script = ExtResource("1_pj1oj")
+name = "Talonflame"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Flying"
+hp = 78
+atk = 81
+def = 71
+spa = 74
+spd = 69
+spe = 126
+weight = 24.5
+restriction = 0

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c2ejadmx4k3cp"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_161eu"]
+
+[resource]
+script = ExtResource("1_161eu")
+name = "Dragapult"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dragon"
+secondary_type = "Ghost"
+hp = 88
+atk = 120
+def = 75
+spa = 100
+spd = 75
+spe = 142
+weight = 50.0
+restriction = 0

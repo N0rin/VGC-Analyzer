@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://m0nfe2w10re5"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_3dlsg"]
+
+[resource]
+script = ExtResource("1_3dlsg")
+name = "Typhlosion-Hisui"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Ghost"
+hp = 73
+atk = 84
+def = 78
+spa = 119
+spd = 85
+spe = 95
+weight = 69.8
+restriction = 0

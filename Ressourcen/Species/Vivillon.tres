@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://3mau6qg0fp6o"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_8a2vo"]
+
+[resource]
+script = ExtResource("1_8a2vo")
+name = "Vivillon"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Bug"
+secondary_type = "Flying"
+hp = 80
+atk = 52
+def = 50
+spa = 90
+spd = 50
+spe = 89
+weight = 17.0
+restriction = 0

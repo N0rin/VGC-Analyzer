@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cica6e53shv0a"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_4uqs3"]
+
+[resource]
+script = ExtResource("1_4uqs3")
+name = "Archaludon"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Steel"
+secondary_type = "Dragon"
+hp = 90
+atk = 105
+def = 130
+spa = 125
+spd = 65
+spe = 85
+weight = 60.0
+restriction = 0

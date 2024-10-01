@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bj8m03hct0qtw"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_0ubpx"]
+
+[resource]
+script = ExtResource("1_0ubpx")
+name = "Gallade"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Psychic"
+secondary_type = "Fighting"
+hp = 68
+atk = 125
+def = 65
+spa = 65
+spd = 115
+spe = 80
+weight = 52.0
+restriction = 0

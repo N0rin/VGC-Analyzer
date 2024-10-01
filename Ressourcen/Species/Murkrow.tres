@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cu5b84qwuooik"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_0el0o"]
+
+[resource]
+script = ExtResource("1_0el0o")
+name = "Murkrow"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dark"
+secondary_type = "Flying"
+hp = 60
+atk = 85
+def = 42
+spa = 85
+spd = 42
+spe = 91
+weight = 2.1
+restriction = 0

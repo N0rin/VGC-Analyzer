@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://5dj733ork7v8"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_bveri"]
+
+[resource]
+script = ExtResource("1_bveri")
+name = "Clefable"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fairy"
+secondary_type = "None"
+hp = 95
+atk = 70
+def = 73
+spa = 95
+spd = 90
+spe = 60
+weight = 40.0
+restriction = 0

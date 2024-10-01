@@ -62,20 +62,19 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(250, 40)
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = ExtResource("1_hkcfj")
 theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
-item_count = 1
+theme_override_styles/normal = ExtResource("1_hkcfj")
 selected = 0
-popup/item_0/text = "Regulation F"
-popup/item_0/id = 0
+item_count = 1
+popup/item_0/text = "Regulation H"
 
 [node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/VSplitContainer"]
 layout_mode = 2
@@ -94,13 +93,13 @@ layout_mode = 2
 custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_hkcfj")
 theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
+theme_override_styles/normal = ExtResource("1_hkcfj")
 text = "Go Back"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
@@ -112,13 +111,13 @@ custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_hkcfj")
 theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
+theme_override_styles/normal = ExtResource("1_hkcfj")
 text = "Continue"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]

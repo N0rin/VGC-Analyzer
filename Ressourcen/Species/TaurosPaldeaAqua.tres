@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://b5eanljhly10q"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_1ogdc"]
+
+[resource]
+script = ExtResource("1_1ogdc")
+name = "Tauros-Paldea-Aqua"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fighting"
+secondary_type = "Water"
+hp = 75
+atk = 110
+def = 105
+spa = 30
+spd = 70
+spe = 100
+weight = 110.0
+restriction = 0

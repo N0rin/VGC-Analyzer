@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://gpsalh0av2y"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_afcva"]
+
+[resource]
+script = ExtResource("1_afcva")
+name = "Chandelure"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Ghost"
+secondary_type = "Fire"
+hp = 60
+atk = 55
+def = 90
+spa = 145
+spd = 90
+spe = 80
+weight = 34.3
+restriction = 0

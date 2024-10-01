@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://kfj4tlbpx0i3"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_rwnsy"]
+
+[resource]
+script = ExtResource("1_rwnsy")
+name = "Delphox"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Psychic"
+hp = 75
+atk = 69
+def = 72
+spa = 114
+spd = 100
+spe = 104
+weight = 39.0
+restriction = 0

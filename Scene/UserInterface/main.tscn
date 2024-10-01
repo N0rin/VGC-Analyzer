@@ -70,8 +70,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_k1rlv")
 theme_override_styles/hover = ExtResource("2_anaoc")
+theme_override_styles/normal = ExtResource("1_k1rlv")
 text = "Analyzer"
 
 [node name="ButtonCalculations" type="Button" parent="Main/MarginContainer/VBoxContainer"]
@@ -80,8 +80,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_k1rlv")
 theme_override_styles/hover = ExtResource("2_anaoc")
+theme_override_styles/normal = ExtResource("1_k1rlv")
 text = "Calculations"
 
 [node name="ButtonMetasets" type="Button" parent="Main/MarginContainer/VBoxContainer"]
@@ -90,8 +90,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_k1rlv")
 theme_override_styles/hover = ExtResource("2_anaoc")
+theme_override_styles/normal = ExtResource("1_k1rlv")
 text = "Metasets"
 
 [node name="Control3" type="Control" parent="Main/MarginContainer/VBoxContainer"]
@@ -105,8 +105,8 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_k1rlv")
 theme_override_styles/hover = ExtResource("2_anaoc")
+theme_override_styles/normal = ExtResource("1_k1rlv")
 text = "Quit"
 
 [node name="Analyzer" parent="." instance=ExtResource("3_nrylc")]
@@ -130,6 +130,7 @@ visible = false
 layout_mode = 1
 
 [node name="Metasets" parent="." instance=ExtResource("6_12fql")]
+visible = false
 layout_mode = 1
 
 [node name="PokemonSetCreator" parent="Metasets" instance=ExtResource("10_3tmmo")]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c882xrf2d655t"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ri2wd"]
+
+[resource]
+script = ExtResource("1_ri2wd")
+name = "Maushold"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Normal"
+secondary_type = "None"
+hp = 74
+atk = 75
+def = 70
+spa = 65
+spd = 75
+spe = 111
+weight = 2.8
+restriction = 0

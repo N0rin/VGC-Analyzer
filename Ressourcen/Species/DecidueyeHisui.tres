@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://8k02hlr0fxp0"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_50323"]
+
+[resource]
+script = ExtResource("1_50323")
+name = "Decidueye"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Grass"
+secondary_type = "Fighting"
+hp = 88
+atk = 112
+def = 80
+spa = 95
+spd = 95
+spe = 60
+weight = 37.0
+restriction = 0

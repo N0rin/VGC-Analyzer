@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhfrq2r64ae21"]
+[gd_scene load_steps=4 format=3 uid="uid://dhfrq2r64ae21"]
 
 [ext_resource type="TileSet" uid="uid://c8gr6wfavimsj" path="res://Ressourcen/pokemon_sprites.tres" id="1_0hwfj"]
 [ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/pokemon_icon.gd" id="1_gc241"]
+[ext_resource type="TileSet" uid="uid://lyp6r7c5yvo3" path="res://gen9sprites.tres" id="2_ln515"]
 
 [node name="PokemonIcon" type="Control"]
 custom_minimum_size = Vector2(64, 64)
@@ -11,6 +12,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_gc241")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Gen9List" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_set = ExtResource("2_ln515")
+
+[node name="NationalList" type="TileMapLayer" parent="."]
+position = Vector2(1, 5)
 tile_set = ExtResource("1_0hwfj")
-format = 2

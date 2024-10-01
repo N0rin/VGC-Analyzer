@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bpv8rf3ko4x8a"]
+
+[ext_resource type="Resource" uid="uid://dmtoae3e5djpm" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_2crka"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_7qqn6"]
+
+[resource]
+script = ExtResource("1_7qqn6")
+name = "Gholdengo"
+texture_id = 0
+texture_x = 10
+texture_y = 7
+main_type = "Steel"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_2crka")
+hp = 87
+atk = 60
+def = 95
+spa = 133
+spd = 91
+spe = 84
+weight = 30.0
+restriction = 0

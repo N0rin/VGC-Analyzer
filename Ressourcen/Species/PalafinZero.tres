@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://0fw36s6ecq1r"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ccqxq"]
+
+[resource]
+script = ExtResource("1_ccqxq")
+name = "Palafin"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Water"
+secondary_type = "None"
+hp = 100
+atk = 160
+def = 97
+spa = 106
+spd = 87
+spe = 100
+weight = 97.4
+restriction = 0

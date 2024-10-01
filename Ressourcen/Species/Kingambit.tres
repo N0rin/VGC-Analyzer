@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cd8ef74lh00oo"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_k50i7"]
+
+[resource]
+script = ExtResource("1_k50i7")
+name = "Kingambit"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dark"
+secondary_type = "Steel"
+hp = 100
+atk = 135
+def = 120
+spa = 60
+spd = 85
+spe = 50
+weight = 120.0
+restriction = 0

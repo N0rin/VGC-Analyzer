@@ -12,7 +12,7 @@ config_version=5
 
 config/name="VGC Analyzer"
 run/main_scene="res://Scene/UserInterface/main.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -23,11 +23,12 @@ AttackDescription="*res://Ressourcen/Global/attack_description.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=2
+window/size/viewport_width=1728
+window/size/viewport_height=972
 window/size/initial_position_type=2
 window/size/initial_screen=1
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [rendering]
 

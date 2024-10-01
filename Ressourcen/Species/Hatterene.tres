@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dkn8h3qs62ekm"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_yj3s8"]
+
+[resource]
+script = ExtResource("1_yj3s8")
+name = "Hatterene"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Psychic"
+secondary_type = "Fairy"
+hp = 57
+atk = 90
+def = 95
+spa = 136
+spd = 103
+spe = 29
+weight = 5.1
+restriction = 0

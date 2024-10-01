@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bo35bo4tpm84"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_p0n4c"]
+
+[resource]
+script = ExtResource("1_p0n4c")
+name = "Electabuzz"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "None"
+hp = 65
+atk = 83
+def = 57
+spa = 95
+spd = 85
+spe = 105
+weight = 30.0
+restriction = 0

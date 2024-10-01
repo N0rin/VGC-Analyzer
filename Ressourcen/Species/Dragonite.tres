@@ -21,3 +21,4 @@ spa = 100
 spd = 100
 spe = 80
 weight = 210.0
+restriction = 0

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cr3wrgb35cqva"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ybl7d"]
+
+[resource]
+script = ExtResource("1_ybl7d")
+name = "Sneasler"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fighting"
+secondary_type = "Poison"
+hp = 80
+atk = 130
+def = 60
+spa = 40
+spd = 80
+spe = 120
+weight = 43.0
+restriction = 0

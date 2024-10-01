@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://d1jr2hregir67"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5l74b"]
+
+[resource]
+script = ExtResource("1_5l74b")
+name = "Lilligant-Hisui"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Grass"
+secondary_type = "Fighting"
+hp = 70
+atk = 105
+def = 75
+spa = 50
+spd = 75
+spe = 105
+weight = 19.2
+restriction = 0

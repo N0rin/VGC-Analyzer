@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://6qu8dfxr78c8"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_4huwv"]
+
+[resource]
+script = ExtResource("1_4huwv")
+name = "Toedscruel"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Ground"
+secondary_type = "Grass"
+hp = 80
+atk = 70
+def = 65
+spa = 80
+spd = 120
+spe = 100
+weight = 58.0
+restriction = 0
