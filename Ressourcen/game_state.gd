@@ -11,8 +11,10 @@ func set_data(state_data:GameStateData) -> void:
 	refresh_from_data()
 
 func set_teams(upper_data:Array[PokemonData], lower_data:Array[PokemonData]) -> void:
-	upper_pokemon_data = upper_data
-	lower_pokemon_data = lower_data
+	if not upper_data.is_empty():
+		upper_pokemon_data = upper_data
+	if not lower_data.is_empty():
+		lower_pokemon_data = lower_data
 
 func get_pokemon(slot:int, is_upper_team:bool) -> Pokemon:
 	var pokemon:= Pokemon.new()

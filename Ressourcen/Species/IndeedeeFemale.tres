@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_dblle")
-name = "Indeedee"
+name = "Indeedee-Female"
 texture_id = 4
 texture_x = 34
 texture_y = 26

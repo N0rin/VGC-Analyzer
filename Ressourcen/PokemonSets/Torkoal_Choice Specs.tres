@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Drought.tres" id="1_u24ey"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Specs.tres" id="2_q1w17"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Eruption.tres" id="3_6vbor"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Heat_Wave.tres" id="4_mptf1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Weather_Ball.tres" id="5_qkog7"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Earth_Power.tres" id="6_p6ney"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_gru5e"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Torkoal.tres" id="8_mvog3"]
+
+[resource]
+script = ExtResource("7_gru5e")
+name = "Choice Specs"
+format = 0
+species = ExtResource("8_mvog3")
+ability = ExtResource("1_u24ey")
+item = ExtResource("2_q1w17")
+tera_type = "Fire"
+increased_stat = "SpA"
+reduced_stat = "Spe"
+hp_evs = 252.0
+atk_evs = 0.0
+def_evs = 4.0
+spa_evs = 252.0
+spd_evs = 0.0
+spe_evs = 0.0
+hp_ivs = 31.0
+atk_ivs = 0.0
+def_ivs = 31.0
+spa_ivs = 31.0
+spd_ivs = 31.0
+spe_ivs = 0.0
+move1 = ExtResource("3_6vbor")
+move2 = ExtResource("4_mptf1")
+move3 = ExtResource("5_qkog7")
+move4 = ExtResource("6_p6ney")

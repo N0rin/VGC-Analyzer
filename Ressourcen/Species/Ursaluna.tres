@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://duvfvcgt7vieh"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://duvfvcgt7vieh"]
 
+[ext_resource type="Resource" uid="uid://ergk7bwvp8r2" path="res://Ressourcen/Abilities/Guts.tres" id="1_u0sx2"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ujx1a"]
+[ext_resource type="Resource" uid="uid://bvqubyfd8n5bi" path="res://Ressourcen/Abilities/Bulletproof.tres" id="2_vp7kd"]
+[ext_resource type="Resource" uid="uid://8qetacoxp0yh" path="res://Ressourcen/Abilities/Unnerve.tres" id="3_x4412"]
 
 [resource]
 script = ExtResource("1_ujx1a")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Ground"
 secondary_type = "Normal"
+ability1 = ExtResource("1_u0sx2")
+ability2 = ExtResource("2_vp7kd")
+ability3 = ExtResource("3_x4412")
 hp = 130
 atk = 140
 def = 105

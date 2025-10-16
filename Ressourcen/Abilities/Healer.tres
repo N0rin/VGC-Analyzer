@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_u512u")
-name = ""
+name = "Healer"

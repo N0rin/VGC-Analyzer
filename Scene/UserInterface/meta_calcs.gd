@@ -152,7 +152,7 @@ func _on_species_item_selected(name):
 	
 	var id = 1
 	for pokemon_set in get_pokemon_set_from_species(name):
-		set_selector.add_item(pokemon_set.set_name, id)
+		set_selector.add_item(pokemon_set.name, id)
 		set_selector.set_item_metadata(id, pokemon_set)
 		id += 1
 

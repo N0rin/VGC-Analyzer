@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://d3gsoq1yetkcm"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_bv12s"]
+
+[resource]
+script = ExtResource("1_bv12s")
+name = "Psychic"
+base_damage = 90
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Psychic"
+makes_contact = false
+added_effect = "-Spd"
+added_effect_chance = 10
+crit_bonus = 0

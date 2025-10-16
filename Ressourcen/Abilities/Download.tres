@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_bf4vn")
-name = ""
+name = "Download"

@@ -1,7 +1,7 @@
 extends Resource
 class_name PokemonData
 
-@export var set_name : String = "new Set"
+@export var name : String = "new Set"
 @export_enum("All", "Reg A", "Reg B", "Reg C", "Reg D", "Reg E",
 	"Reg F", "Reg G", "Reg H") var format = 0
 

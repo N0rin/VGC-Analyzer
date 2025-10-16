@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dkn8h3qs62ekm"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://dkn8h3qs62ekm"]
 
+[ext_resource type="Resource" uid="uid://dly3ud40r4lfu" path="res://Ressourcen/Abilities/Healer.tres" id="1_d7bvf"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_yj3s8"]
+[ext_resource type="Resource" uid="uid://d1g86g2vtiu1b" path="res://Ressourcen/Abilities/Anticipation.tres" id="2_n2s0j"]
+[ext_resource type="Resource" uid="uid://ckuiddl16j63l" path="res://Ressourcen/Abilities/Magic_Bounce.tres" id="3_dty1i"]
 
 [resource]
 script = ExtResource("1_yj3s8")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Psychic"
 secondary_type = "Fairy"
+ability1 = ExtResource("1_d7bvf")
+ability2 = ExtResource("2_n2s0j")
+ability3 = ExtResource("3_dty1i")
 hp = 57
 atk = 90
 def = 95

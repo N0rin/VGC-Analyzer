@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://wq2fawdy3x0n"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_qwpcj"]
+
+[resource]
+script = ExtResource("1_qwpcj")
+name = "Headlong Rush"
+base_damage = 120
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Ground"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

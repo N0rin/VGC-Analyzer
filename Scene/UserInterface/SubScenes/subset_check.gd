@@ -7,7 +7,7 @@ var set_data: PokemonData
 
 func set_pokemon_data(pokemon_data: PokemonData):
 	set_data = pokemon_data
-	$Label.text = pokemon_data.set_name
+	$Label.text = pokemon_data.name
 
 func get_set_data() -> PokemonData:
 	if $CheckBox.button_pressed:

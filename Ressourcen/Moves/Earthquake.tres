@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://d4fvxnrcjgs78"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_vncm7"]
+
+[resource]
+script = ExtResource("1_vncm7")
+name = "Earthquake"
+base_damage = 100
+accuracy = 100
+priority = 0
+targeting = "All"
+category = "Physical"
+type = "Ground"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

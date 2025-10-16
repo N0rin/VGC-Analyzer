@@ -1,16 +1,8 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=13 format=3 uid="uid://b6oxte8t7toqs"]
+[gd_resource type="Resource" script_class="GameData" load_steps=5 format=3 uid="uid://b6oxte8t7toqs"]
 
 [ext_resource type="Script" path="res://Ressourcen/GameData.gd" id="1_ged0d"]
 [ext_resource type="Script" path="res://Ressourcen/GameStateData.gd" id="1_ntdag"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="2_o2570"]
-[ext_resource type="Resource" uid="uid://dhnidj2bdyup4" path="res://Ressourcen/PokemonSets/Barraskewda VR.tres" id="2_y0s8t"]
-[ext_resource type="Resource" uid="uid://dk60flvyurg2u" path="res://Ressourcen/PokemonSets/Pelipper VR.tres" id="3_qp5lp"]
-[ext_resource type="Resource" uid="uid://c1vpsuwbomo4n" path="res://Ressourcen/PokemonSets/Basculegion VR.tres" id="4_k8cye"]
-[ext_resource type="Resource" uid="uid://do2dejmy0goxs" path="res://Ressourcen/PokemonSets/SandyShocks VR.tres" id="5_5h81q"]
-[ext_resource type="Resource" uid="uid://b2d8prfr3quax" path="res://Ressourcen/PokemonSets/FlutterMane Specs.tres" id="7_ugc62"]
-[ext_resource type="Resource" uid="uid://bmuthejlpj1il" path="res://Ressourcen/PokemonSets/Tornadus Defensive.tres" id="8_kgvrm"]
-[ext_resource type="Resource" uid="uid://54q7nox87c06" path="res://Ressourcen/PokemonSets/Rillaboom AssaultVest.tres" id="9_ter2p"]
-[ext_resource type="Resource" uid="uid://dtbc8jspskrgb" path="res://Ressourcen/PokemonSets/UrshifuWater MysticWater.tres" id="10_8iecs"]
 
 [sub_resource type="Resource" id="Resource_p28wv"]
 script = ExtResource("1_ntdag")
@@ -18,6 +10,6 @@ script = ExtResource("1_ntdag")
 [resource]
 script = ExtResource("1_ged0d")
 version = 1
-upper_team = Array[ExtResource("2_o2570")]([ExtResource("7_ugc62"), ExtResource("8_kgvrm"), ExtResource("9_ter2p"), ExtResource("10_8iecs"), null, null])
-lower_team = Array[ExtResource("2_o2570")]([ExtResource("2_y0s8t"), ExtResource("3_qp5lp"), ExtResource("4_k8cye"), ExtResource("5_5h81q"), null, null])
+upper_team = Array[ExtResource("2_o2570")]([])
+lower_team = Array[ExtResource("2_o2570")]([])
 game_state_data = SubResource("Resource_p28wv")

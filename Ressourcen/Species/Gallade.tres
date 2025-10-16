@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bj8m03hct0qtw"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bj8m03hct0qtw"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_0ubpx"]
+[ext_resource type="Resource" uid="uid://cpp1sc8btr06l" path="res://Ressourcen/Abilities/Steadfast.tres" id="1_fogil"]
+[ext_resource type="Resource" uid="uid://d0xnqsdt0g0ea" path="res://Ressourcen/Abilities/Sharpness.tres" id="2_7dtc5"]
+[ext_resource type="Resource" uid="uid://53qlrqnglwuf" path="res://Ressourcen/Abilities/Justified.tres" id="3_py1kw"]
 
 [resource]
 script = ExtResource("1_0ubpx")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Psychic"
 secondary_type = "Fighting"
+ability1 = ExtResource("1_fogil")
+ability2 = ExtResource("2_7dtc5")
+ability3 = ExtResource("3_py1kw")
 hp = 68
 atk = 125
 def = 65

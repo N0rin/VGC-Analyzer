@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bvlqmdldtq8qy"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_eolk5"]
+
+[resource]
+script = ExtResource("1_eolk5")
+name = "Sacred Sword"
+base_damage = 90
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Fighting"
+makes_contact = true
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Psychic_Surge.tres" id="1_f0rss"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Rocky_Helmet.tres" id="2_sbf08"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Psychic.tres" id="3_54d06"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Follow_Me.tres" id="4_h1hhv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Helping_Hand.tres" id="5_nu550"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick_Room.tres" id="6_iwygx"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_hw1ch"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/IndeedeeFemale.tres" id="8_a7mhs"]
+
+[resource]
+script = ExtResource("7_hw1ch")
+name = "Rocky Support"
+format = 8
+species = ExtResource("8_a7mhs")
+ability = ExtResource("1_f0rss")
+item = ExtResource("2_sbf08")
+tera_type = "Grass"
+increased_stat = "Def"
+reduced_stat = "Spe"
+hp_evs = 252.0
+atk_evs = 0.0
+def_evs = 252.0
+spa_evs = 0.0
+spd_evs = 4.0
+spe_evs = 0.0
+hp_ivs = 31.0
+atk_ivs = 0.0
+def_ivs = 31.0
+spa_ivs = 31.0
+spd_ivs = 31.0
+spe_ivs = 0.0
+move1 = ExtResource("3_54d06")
+move2 = ExtResource("4_h1hhv")
+move3 = ExtResource("5_nu550")
+move4 = ExtResource("6_iwygx")

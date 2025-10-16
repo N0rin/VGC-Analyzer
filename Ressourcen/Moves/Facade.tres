@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b5o773kldpbas"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_868bx"]
+
+[resource]
+script = ExtResource("1_868bx")
+name = "Facade"
+base_damage = 70
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Normal"
+makes_contact = true
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

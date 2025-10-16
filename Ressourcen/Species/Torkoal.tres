@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://be61dacc6uuby"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://be61dacc6uuby"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_acidi"]
+[ext_resource type="Resource" uid="uid://b3usqqyrhpqxb" path="res://Ressourcen/Abilities/White_Smoke.tres" id="1_qo6en"]
+[ext_resource type="Resource" uid="uid://bs6nq0r3j0ntm" path="res://Ressourcen/Abilities/Drought.tres" id="2_aoubg"]
+[ext_resource type="Resource" uid="uid://d3q0oloe2lrit" path="res://Ressourcen/Abilities/Shell_Armor.tres" id="3_pdu0f"]
 
 [resource]
 script = ExtResource("1_acidi")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Fire"
 secondary_type = "None"
+ability1 = ExtResource("1_qo6en")
+ability2 = ExtResource("2_aoubg")
+ability3 = ExtResource("3_pdu0f")
 hp = 70
 atk = 85
 def = 140

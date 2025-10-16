@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bvdi4ccrb4a62"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_wdlcn"]
+
+[resource]
+script = ExtResource("1_wdlcn")
+name = "Trick Room"
+base_damage = 0
+accuracy = 100
+priority = -6
+targeting = "All"
+category = "Status"
+type = "Psychic"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0
