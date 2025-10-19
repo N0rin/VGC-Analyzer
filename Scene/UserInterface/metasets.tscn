@@ -54,8 +54,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_bilao")
 theme_override_styles/hover = ExtResource("2_qo857")
+theme_override_styles/normal = ExtResource("1_bilao")
 text = "Create Set"
 
 [node name="ButtonTeam" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -64,8 +64,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_bilao")
 theme_override_styles/hover = ExtResource("2_qo857")
+theme_override_styles/normal = ExtResource("1_bilao")
 text = "Create Team"
 
 [node name="ButtonMetagame" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -75,8 +75,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_bilao")
 theme_override_styles/hover = ExtResource("2_qo857")
+theme_override_styles/normal = ExtResource("1_bilao")
 text = "Create Metagame"
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -90,8 +90,8 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_bilao")
 theme_override_styles/hover = ExtResource("2_qo857")
+theme_override_styles/normal = ExtResource("1_bilao")
 text = "Go Back"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonSet" to="." method="_on_button_set_pressed"]

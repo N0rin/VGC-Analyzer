@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://brblw4w444pbj"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/pokemon_button.gd" id="1_kaxox"]
+[ext_resource type="PackedScene" uid="uid://dhfrq2r64ae21" path="res://Scene/UserInterface/SubScenes/pokemon_icon.tscn" id="2_ic0pw"]
+
+[node name="PokemonButton" type="Button"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("1_kaxox")
+
+[node name="PokemonIcon" parent="." instance=ExtResource("2_ic0pw")]
+offset_left = 35.0
+offset_top = 31.0
+offset_right = 99.0
+offset_bottom = 95.0
+scale = Vector2(2, 2)
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,6 +1,8 @@
 extends VBoxContainer
 class_name SetEdit
 
+signal pokemon_selected(Species)
+
 @onready var pokemon_selector = $"Species"
 @onready var set_selector = $"Set/SetSelect"
 @onready var tera_selector = $"Tera/TeraSelect"
@@ -14,6 +16,7 @@ class_name SetEdit
 
 @onready var pokemon_list: Array[Species]
 @onready var item_list: Array[Item]
+@onready var ability_list: Array[Ability]
 @onready var move_list: Array[Move]
 @onready var pokemon_set_list: Array[PokemonData]
 
@@ -144,13 +147,44 @@ func get_format(value : int) -> String:
 	
 	return "All"
 
+func get_pokemon_data() -> PokemonData:
+	var data = PokemonData.new()
+	data.species = find_by_name(pokemon_list, pokemon_selector.selected)
+	data.ability = find_by_name(ability_list, ability_selector.get_item_text(ability_selector.selected))
+	data.item = find_by_name(item_list, item_selector.selected)
+	data.tera_type = get_selected_tera_type()
+	data.increased_stat = get_increased_stat()
+	data.reduced_stat = get_decreased_stat()
+	data.hp_evs = get_evs(0)
+	data.atk_evs = get_evs(1)
+	data.def_evs = get_evs(2)
+	data.spa_evs = get_evs(3)
+	data.spd_evs = get_evs(4)
+	data.spe_evs = get_evs(5)
+	data.hp_ivs = get_ivs(0)
+	data.atk_ivs = get_ivs(1)
+	data.def_ivs = get_ivs(2)
+	data.spa_ivs = get_ivs(3)
+	data.spd_ivs = get_ivs(4)
+	data.spe_ivs = get_ivs(5)
+	data.move1 = find_by_name(move_list, move_selector1.selected)
+	data.move2 = find_by_name(move_list, move_selector2.selected)
+	data.move3 = find_by_name(move_list, move_selector3.selected)
+	data.move4 = find_by_name(move_list, move_selector4.selected)
+	return data
+
+func find_by_name(list: Array, name: String):
+	for thing in list:
+		if thing.name == name:
+			return thing
 
 #Interface Updates
-func update_interface(new_pokemon_list:Array[Species], new_item_list:Array[Item], new_move_list:Array[Move], new_pokemon_set_list:Array[PokemonData]):
+func update_interface(new_pokemon_list:Array[Species], new_item_list:Array[Item], new_ability_list:Array[Ability], new_move_list:Array[Move], new_pokemon_set_list:Array[PokemonData]):
 	pokemon_list = new_pokemon_list
 	item_list = new_item_list
 	move_list = new_move_list
 	pokemon_set_list = new_pokemon_set_list
+	ability_list = new_ability_list
 	update_pokemon_selector(new_pokemon_list)
 	update_item_selector(new_item_list)
 	update_move_selector(new_move_list)
@@ -345,6 +379,7 @@ func _on_species_item_selected(name):
 	
 	for species in pokemon_list:
 		if name in species.name:
+			emit_signal("pokemon_selected", species)
 			set_tera_type(species.main_type)
 			if species.ability1:
 				ability_selector.add_item(species.ability1.name)
