@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://b5eanljhly10q"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://b5eanljhly10q"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_1ogdc"]
+[ext_resource type="Resource" uid="uid://d4b55n2x3fqg3" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_l25ed"]
+[ext_resource type="Resource" uid="uid://bg4nl6jssmqho" path="res://Ressourcen/Abilities/Anger_Point.tres" id="2_ax0b1"]
+[ext_resource type="Resource" uid="uid://ifpvp67kdc6b" path="res://Ressourcen/Abilities/Cud_Chew.tres" id="3_m3w32"]
 
 [resource]
 script = ExtResource("1_1ogdc")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Fighting"
 secondary_type = "Water"
+ability1 = ExtResource("1_l25ed")
+ability2 = ExtResource("2_ax0b1")
+ability3 = ExtResource("3_m3w32")
 hp = 75
 atk = 110
 def = 105

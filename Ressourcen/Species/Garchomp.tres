@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://26tlxow1mvmr"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://26tlxow1mvmr"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_6ux1t"]
+[ext_resource type="Resource" uid="uid://dd18tvmfsxibt" path="res://Ressourcen/Abilities/Sand_Veil.tres" id="1_k300f"]
+[ext_resource type="Resource" uid="uid://bbh71ba6bukq7" path="res://Ressourcen/Abilities/Rough_Skin.tres" id="2_2lufu"]
 
 [resource]
 script = ExtResource("1_6ux1t")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Dragon"
 secondary_type = "Ground"
+ability1 = ExtResource("1_k300f")
+ability3 = ExtResource("2_2lufu")
 hp = 108
 atk = 130
 def = 95

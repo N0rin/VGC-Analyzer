@@ -1,4 +1,4 @@
-extends Button
+extends Control
 class_name PokemonButton
 signal id_pressed(int)
 
@@ -8,5 +8,5 @@ func set_pokemon(pokemon:Species):
 	$PokemonIcon.set_sprite(pokemon.texture_x, pokemon.texture_y, pokemon.texture_id)
 
 
-func _on_pressed() -> void:
+func _on_button_pressed() -> void:
 	emit_signal("id_pressed", id)

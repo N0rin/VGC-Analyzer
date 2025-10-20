@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://gpsalh0av2y"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://gpsalh0av2y"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_afcva"]
+[ext_resource type="Resource" uid="uid://b0dj1fsttoc5b" path="res://Ressourcen/Abilities/Flash_Fire.tres" id="1_qo0y0"]
+[ext_resource type="Resource" uid="uid://bbb6eoj4w8s77" path="res://Ressourcen/Abilities/Flame_Body.tres" id="2_7llh2"]
+[ext_resource type="Resource" uid="uid://dseyy3mu26wfx" path="res://Ressourcen/Abilities/Infiltrator.tres" id="3_m0krt"]
 
 [resource]
 script = ExtResource("1_afcva")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Ghost"
 secondary_type = "Fire"
+ability1 = ExtResource("1_qo0y0")
+ability2 = ExtResource("2_7llh2")
+ability3 = ExtResource("3_m0krt")
 hp = 60
 atk = 55
 def = 90

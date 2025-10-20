@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c052442k5dlg8"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://c052442k5dlg8"]
 
+[ext_resource type="Resource" uid="uid://dtvktd76ho8ol" path="res://Ressourcen/Abilities/Thermal_Exchange.tres" id="1_3fenq"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_o5ejc"]
+[ext_resource type="Resource" uid="uid://divy7yug8pp0j" path="res://Ressourcen/Abilities/Ice_Body.tres" id="2_ade0m"]
 
 [resource]
 script = ExtResource("1_o5ejc")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Dragon"
 secondary_type = "Ice"
+ability1 = ExtResource("1_3fenq")
+ability3 = ExtResource("2_ade0m")
 hp = 115
 atk = 145
 def = 92

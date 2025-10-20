@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://dmhhd7ktm5gc2"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dmhhd7ktm5gc2"]
 
+[ext_resource type="Resource" uid="uid://c42ber6m478yn" path="res://Ressourcen/Abilities/Snow_Cloak.tres" id="1_j7fxd"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_u0cr5"]
+[ext_resource type="Resource" uid="uid://d246l6g4uerw5" path="res://Ressourcen/Abilities/Snow_Warning.tres" id="2_r2gua"]
 
 [resource]
 script = ExtResource("1_u0cr5")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Ice"
 secondary_type = "Fairy"
+ability1 = ExtResource("1_j7fxd")
+ability3 = ExtResource("2_r2gua")
 hp = 73
 atk = 67
 def = 75

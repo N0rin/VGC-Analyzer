@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c882xrf2d655t"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://c882xrf2d655t"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ri2wd"]
+[ext_resource type="Resource" uid="uid://bq1owdg7gucfk" path="res://Ressourcen/Abilities/Friend_Guard.tres" id="1_upv2e"]
+[ext_resource type="Resource" uid="uid://dnxfr3dosxqqo" path="res://Ressourcen/Abilities/Cheek_Pouch.tres" id="2_tdlcb"]
+[ext_resource type="Resource" uid="uid://briwdwdehcaie" path="res://Ressourcen/Abilities/Technician.tres" id="3_xxrse"]
 
 [resource]
 script = ExtResource("1_ri2wd")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Normal"
 secondary_type = "None"
+ability1 = ExtResource("1_upv2e")
+ability2 = ExtResource("2_tdlcb")
+ability3 = ExtResource("3_xxrse")
 hp = 74
 atk = 75
 def = 70

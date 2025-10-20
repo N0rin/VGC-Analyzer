@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bb2mplewib02p"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://bb2mplewib02p"]
 
+[ext_resource type="Resource" uid="uid://b0dj1fsttoc5b" path="res://Ressourcen/Abilities/Flash_Fire.tres" id="1_hjf1q"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_o210n"]
+[ext_resource type="Resource" uid="uid://c7v0rwm8v04i" path="res://Ressourcen/Abilities/Weak_Armor.tres" id="2_glmde"]
 
 [resource]
 script = ExtResource("1_o210n")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Psychic"
+ability1 = ExtResource("1_hjf1q")
+ability3 = ExtResource("2_glmde")
 hp = 85
 atk = 60
 def = 100

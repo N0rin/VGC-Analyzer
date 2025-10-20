@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://b3gawlo5wf84g"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_07gyj"]
+
+[resource]
+script = ExtResource("1_07gyj")
+name = "Compund Eyes"

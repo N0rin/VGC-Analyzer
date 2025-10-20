@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c7tegs71mcve2"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://c7tegs71mcve2"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_h50cj"]
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_jg3ot"]
+[ext_resource type="Resource" uid="uid://djk3hsmuddp0x" path="res://Ressourcen/Abilities/Neutralizing_Gas.tres" id="2_gi57t"]
+[ext_resource type="Resource" uid="uid://ct8culhsppuxr" path="res://Ressourcen/Abilities/Misty_Surge.tres" id="3_secje"]
 
 [resource]
 script = ExtResource("1_h50cj")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Poison"
 secondary_type = "Fairy"
+ability1 = ExtResource("1_jg3ot")
+ability2 = ExtResource("2_gi57t")
+ability3 = ExtResource("3_secje")
 hp = 65
 atk = 90
 def = 120

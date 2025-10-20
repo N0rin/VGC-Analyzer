@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://iuke2llt0hdj"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://iuke2llt0hdj"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_d8op6"]
+[ext_resource type="Resource" uid="uid://dnr04pss5wu78" path="res://Ressourcen/Abilities/Illuminate.tres" id="1_vu13k"]
+[ext_resource type="Resource" uid="uid://cqgmgk01tktyp" path="res://Ressourcen/Abilities/Swarm.tres" id="2_v2vjm"]
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="3_w2b2e"]
 
 [resource]
 script = ExtResource("1_d8op6")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Bug"
 secondary_type = "None"
+ability1 = ExtResource("1_vu13k")
+ability2 = ExtResource("2_v2vjm")
+ability3 = ExtResource("3_w2b2e")
 hp = 65
 atk = 73
 def = 75

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c4p7b2imnm8gi"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://c4p7b2imnm8gi"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_qdumh"]
+[ext_resource type="Resource" uid="uid://cpc31djtcuiv" path="res://Ressourcen/Abilities/Hospitality.tres" id="1_r2pic"]
+[ext_resource type="Resource" uid="uid://d06rqai34tuiy" path="res://Ressourcen/Abilities/Heatproof.tres" id="2_wilbp"]
 
 [resource]
 script = ExtResource("1_qdumh")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Ghost"
+ability1 = ExtResource("1_r2pic")
+ability3 = ExtResource("2_wilbp")
 hp = 71
 atk = 60
 def = 106

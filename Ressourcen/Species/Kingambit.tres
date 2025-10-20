@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cd8ef74lh00oo"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cd8ef74lh00oo"]
 
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="1_1lj2j"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_k50i7"]
+[ext_resource type="Resource" uid="uid://bh60pqjw74lry" path="res://Ressourcen/Abilities/Supreme_Overlord.tres" id="2_v8asl"]
+[ext_resource type="Resource" uid="uid://cqu4ks4x3vrin" path="res://Ressourcen/Abilities/Pressure.tres" id="3_yo77r"]
 
 [resource]
 script = ExtResource("1_k50i7")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Dark"
 secondary_type = "Steel"
+ability1 = ExtResource("1_1lj2j")
+ability2 = ExtResource("2_v8asl")
+ability3 = ExtResource("3_yo77r")
 hp = 100
 atk = 135
 def = 120

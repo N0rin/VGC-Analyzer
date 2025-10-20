@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cycwgsqe3116r"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://cycwgsqe3116r"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_lu3vp"]
+[ext_resource type="Resource" uid="uid://tt4v6pc68dqx" path="res://Ressourcen/Abilities/Cute_Charm.tres" id="1_w4yl3"]
+[ext_resource type="Resource" uid="uid://bo5mxbmfxrgap" path="res://Ressourcen/Abilities/Pixilate.tres" id="2_2ppm1"]
 
 [resource]
 script = ExtResource("1_lu3vp")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Fairy"
 secondary_type = "None"
+ability1 = ExtResource("1_w4yl3")
+ability3 = ExtResource("2_2ppm1")
 hp = 95
 atk = 65
 def = 65

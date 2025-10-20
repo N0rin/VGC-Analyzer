@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cuiubxfvylvrb"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cuiubxfvylvrb"]
 
+[ext_resource type="Resource" uid="uid://bvqubyfd8n5bi" path="res://Ressourcen/Abilities/Bulletproof.tres" id="1_b8yg7"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n6qd5"]
+[ext_resource type="Resource" uid="uid://bypu4074ym87b" path="res://Ressourcen/Abilities/Soundproof.tres" id="2_rdhr2"]
+[ext_resource type="Resource" uid="uid://rixgwug4hlhy" path="res://Ressourcen/Abilities/Overcoat.tres" id="3_l6rcr"]
 
 [resource]
 script = ExtResource("1_n6qd5")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Dragon"
 secondary_type = "Fighting"
+ability1 = ExtResource("1_b8yg7")
+ability2 = ExtResource("2_rdhr2")
+ability3 = ExtResource("3_l6rcr")
 hp = 75
 atk = 110
 def = 125

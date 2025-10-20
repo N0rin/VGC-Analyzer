@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://mwxft1mslunj"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://mwxft1mslunj"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ew1ak"]
+[ext_resource type="Resource" uid="uid://cq2w74h8tavjv" path="res://Ressourcen/Abilities/Volt_Absorb.tres" id="1_io1ku"]
+[ext_resource type="Resource" uid="uid://deepa2omihjcx" path="res://Ressourcen/Abilities/Natural_Cure.tres" id="2_x2hip"]
+[ext_resource type="Resource" uid="uid://coat3n3rp1bj1" path="res://Ressourcen/Abilities/Iron_Fist.tres" id="3_qhh4g"]
 
 [resource]
 script = ExtResource("1_ew1ak")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Electric"
 secondary_type = "Fighting"
+ability1 = ExtResource("1_io1ku")
+ability2 = ExtResource("2_x2hip")
+ability3 = ExtResource("3_qhh4g")
 hp = 70
 atk = 115
 def = 70

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://duj6y6s1j6tbx"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://duj6y6s1j6tbx"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_52x8a"]
+[ext_resource type="Resource" uid="uid://bvfmx4htg0mqr" path="res://Ressourcen/Abilities/Sand_Stream.tres" id="1_jxp6i"]
+[ext_resource type="Resource" uid="uid://8qetacoxp0yh" path="res://Ressourcen/Abilities/Unnerve.tres" id="2_bjw5d"]
 
 [resource]
 script = ExtResource("1_52x8a")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Dark"
 secondary_type = "Rock"
+ability1 = ExtResource("1_jxp6i")
+ability3 = ExtResource("2_bjw5d")
 hp = 100
 atk = 134
 def = 110

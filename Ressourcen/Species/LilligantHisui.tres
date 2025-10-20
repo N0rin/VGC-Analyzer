@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://d1jr2hregir67"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://d1jr2hregir67"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5l74b"]
+[ext_resource type="Resource" uid="uid://boiy12hj12168" path="res://Ressourcen/Abilities/Chlorophyl.tres" id="1_i5vmp"]
+[ext_resource type="Resource" uid="uid://brsukjcncxbuf" path="res://Ressourcen/Abilities/Hustle.tres" id="2_ax1gl"]
+[ext_resource type="Resource" uid="uid://bm03dsl73igb6" path="res://Ressourcen/Abilities/Leaf_Guard.tres" id="3_yob05"]
 
 [resource]
 script = ExtResource("1_5l74b")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Fighting"
+ability1 = ExtResource("1_i5vmp")
+ability2 = ExtResource("2_ax1gl")
+ability3 = ExtResource("3_yob05")
 hp = 70
 atk = 105
 def = 75

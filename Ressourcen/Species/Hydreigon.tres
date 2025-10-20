@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bxaipra75jtby"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bxaipra75jtby"]
 
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_dasq7"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_grqnm"]
 
 [resource]
@@ -10,6 +11,7 @@ texture_x = 0
 texture_y = 0
 main_type = "Dark"
 secondary_type = "Dragon"
+ability1 = ExtResource("1_dasq7")
 hp = 92
 atk = 105
 def = 90

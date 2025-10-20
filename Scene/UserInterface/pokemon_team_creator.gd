@@ -2,6 +2,7 @@ extends Control
 
 const DATA_PATH = "res://Ressourcen/"
 
+var team_name = "Testing"
 var selected_member = 0
 
 var pokemon_list: Array[Species]
@@ -15,6 +16,9 @@ var ability_list: Array[Ability]
 var team_members: Array[PokemonData] = [null, null, null, null, null, null]
 
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Right/Set Edit"
+
+func _ready() -> void:
+	$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton/Button.button_pressed = true
 
 func load_saved_pokemon_data():
 	load_into_list(pokemon_list, "Species")
@@ -37,25 +41,34 @@ func _on_set_edit_pokemon_selected(pokemon: Species) -> void:
 	match selected_member:
 		0:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton.button_pressed = false
 		1:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton2.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton2.button_pressed = false
 		2:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton3.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton3.button_pressed = false
 		3:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton4.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton4.button_pressed = false
 		4:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton5.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton5.button_pressed = false
 		5:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6.set_pokemon(pokemon)
-			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6.button_pressed = false
 
 
 func _on_pokemon_button_id_pressed(id) -> void:
+	match selected_member:
+		0:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton/Button.button_pressed = false
+		1:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton2/Button.button_pressed = false
+		2:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton3/Button.button_pressed = false
+		3:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton4/Button.button_pressed = false
+		4:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton5/Button.button_pressed = false
+		5:
+			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6/Button.button_pressed = false
+	
 	team_members[selected_member] = set_edit.get_pokemon_data()
+	team_members[selected_member].name = "Current"
 	selected_member = id
 	set_edit.set_pokemon_data(team_members[id])

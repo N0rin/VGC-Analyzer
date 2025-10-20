@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://djs6omel4irhg"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://djs6omel4irhg"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_8ujbb"]
+[ext_resource type="Resource" uid="uid://d3j2pbmnxo4mc" path="res://Ressourcen/Abilities/Trace.tres" id="1_31kb8"]
+[ext_resource type="Resource" uid="uid://v1y4aevdgpj4" path="res://Ressourcen/Abilities/Download.tres" id="2_8wv0r"]
+[ext_resource type="Resource" uid="uid://3nmqox66fg0b" path="res://Ressourcen/Abilities/Analytic.tres" id="3_l5uwr"]
 
 [resource]
 script = ExtResource("1_8ujbb")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Normal"
 secondary_type = "None"
+ability1 = ExtResource("1_31kb8")
+ability2 = ExtResource("2_8wv0r")
+ability3 = ExtResource("3_l5uwr")
 hp = 85
 atk = 80
 def = 90

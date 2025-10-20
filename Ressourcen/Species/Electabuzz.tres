@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bo35bo4tpm84"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://bo35bo4tpm84"]
 
+[ext_resource type="Resource" uid="uid://ch8wacedfqus4" path="res://Ressourcen/Abilities/Static.tres" id="1_l2b22"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_p0n4c"]
+[ext_resource type="Resource" uid="uid://c12loa80emb8k" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="2_wvb7t"]
 
 [resource]
 script = ExtResource("1_p0n4c")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Electric"
 secondary_type = "None"
+ability1 = ExtResource("1_l2b22")
+ability3 = ExtResource("2_wvb7t")
 hp = 65
 atk = 83
 def = 57

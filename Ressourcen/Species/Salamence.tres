@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://botr42dg5qi71"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://botr42dg5qi71"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_evafq"]
+[ext_resource type="Resource" uid="uid://d4b55n2x3fqg3" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_oe4yi"]
+[ext_resource type="Resource" uid="uid://cf1xpmgopwvoa" path="res://Ressourcen/Abilities/Moxie.tres" id="2_0eucu"]
 
 [resource]
 script = ExtResource("1_evafq")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Dragon"
 secondary_type = "Flying"
+ability1 = ExtResource("1_oe4yi")
+ability3 = ExtResource("2_0eucu")
 hp = 95
 atk = 135
 def = 80

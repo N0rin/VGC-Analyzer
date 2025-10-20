@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bb615ya06jbw2"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://bb615ya06jbw2"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ljno2"]
+[ext_resource type="Resource" uid="uid://dotbl6e1v6rcv" path="res://Ressourcen/Abilities/Inner_Focus.tres" id="1_obqp3"]
+[ext_resource type="Resource" uid="uid://268ahikws470" path="res://Ressourcen/Abilities/Synchronize.tres" id="2_atwgx"]
+[ext_resource type="Resource" uid="uid://b5uw2im3yweax" path="res://Ressourcen/Abilities/Psychic_Surge.tres" id="3_mf0yd"]
 
 [resource]
 script = ExtResource("1_ljno2")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Psychic"
 secondary_type = "Normal"
+ability1 = ExtResource("1_obqp3")
+ability2 = ExtResource("2_atwgx")
+ability3 = ExtResource("3_mf0yd")
 hp = 60
 atk = 65
 def = 55

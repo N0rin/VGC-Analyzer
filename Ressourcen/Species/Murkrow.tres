@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cu5b84qwuooik"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cu5b84qwuooik"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_0el0o"]
+[ext_resource type="Resource" uid="uid://46qe328rpsw0" path="res://Ressourcen/Abilities/Insomnia.tres" id="1_3tmdj"]
+[ext_resource type="Resource" uid="uid://d25aw4x3wrl71" path="res://Ressourcen/Abilities/Super_Luck.tres" id="2_3t2tg"]
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="3_rgli3"]
 
 [resource]
 script = ExtResource("1_0el0o")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Dark"
 secondary_type = "Flying"
+ability1 = ExtResource("1_3tmdj")
+ability2 = ExtResource("2_3t2tg")
+ability3 = ExtResource("3_rgli3")
 hp = 60
 atk = 85
 def = 42

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://v7e2gw3tx1yl"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://v7e2gw3tx1yl"]
 
+[ext_resource type="Resource" uid="uid://bbb6eoj4w8s77" path="res://Ressourcen/Abilities/Flame_Body.tres" id="1_lish3"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_pj1oj"]
+[ext_resource type="Resource" uid="uid://v8yhlfmbr8ie" path="res://Ressourcen/Abilities/Gale_Wings.tres" id="2_lyxdi"]
 
 [resource]
 script = ExtResource("1_pj1oj")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Flying"
+ability1 = ExtResource("1_lish3")
+ability3 = ExtResource("2_lyxdi")
 hp = 78
 atk = 81
 def = 71

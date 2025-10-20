@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://8k02hlr0fxp0"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://8k02hlr0fxp0"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_50323"]
+[ext_resource type="Resource" uid="uid://ccwtr87yhf6xq" path="res://Ressourcen/Abilities/Overgrow.tres" id="1_qwclf"]
+[ext_resource type="Resource" uid="uid://b17xyt1gw44um" path="res://Ressourcen/Abilities/Scrappy.tres" id="2_qt201"]
 
 [resource]
 script = ExtResource("1_50323")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Fighting"
+ability1 = ExtResource("1_qwclf")
+ability3 = ExtResource("2_qt201")
 hp = 88
 atk = 112
 def = 80

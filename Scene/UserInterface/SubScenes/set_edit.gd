@@ -206,7 +206,7 @@ func update_move_selector(move_list:Array[Move]):
 			move_selector.add_item(move.name)
 
 func clear_set():
-	set_tera_type("Normal")
+	set_tera_type("")
 	for node in $"Stats".get_children():
 		if node is EvSpinBox:
 			node.value = 0
@@ -218,6 +218,12 @@ func clear_set():
 	item_selector.select("")
 	for move_selector in move_selectors:
 		move_selector.select("")
+
+func clear_species():
+	pokemon_selector.select("")
+	clear_set()
+	set_selector.clear()
+	ability_selector.clear()
 
 func clear():
 	pokemon_list.clear()
@@ -238,15 +244,42 @@ func clear():
 
 #Setter
 func set_pokemon_data(pokemon_data: PokemonData):
+	if pokemon_data == null:
+		clear_species()
+		return
+	if pokemon_data.species == null:
+		clear_species()
+		return
+	pokemon_selector.select(pokemon_data.species.name)
 	set_tera_type(pokemon_data.tera_type)
 	set_training_values(pokemon_data)
 	set_nature(pokemon_data)
-	set_ability(pokemon_data)
 	set_item(pokemon_data)
 	set_moves(pokemon_data)
+	
+	set_selector.clear()
+	set_selector.add_item("New Set", 0)
+	set_selector.set_item_metadata(0, null)
+	set_selector.add_item("Current", 1)
+	set_selector.set_item_metadata(1, pokemon_data)
+	var id = 2
+	for pokemon_set in get_pokemon_set_from_species(pokemon_data.species.name):
+		set_selector.add_item(get_format(pokemon_set.format) +" - "+ pokemon_set.name, id)
+		set_selector.set_item_metadata(id, pokemon_set)
+		id += 1
+	set_selector.select(1)
+	
+
+	if pokemon_data.species.ability1:
+		ability_selector.add_item(pokemon_data.species.ability1.name)
+	if pokemon_data.species.ability2:
+		ability_selector.add_item(pokemon_data.species.ability2.name)
+	if pokemon_data.species.ability3:
+		ability_selector.add_item(pokemon_data.species.ability3.name)
+	set_ability(pokemon_data)
 
 func set_tera_type(type_name:String):
-	var index = 0
+	var index = -1
 	match(type_name):
 		"Bug":
 			index = 0
@@ -336,17 +369,35 @@ func set_ability(pokemon_data: PokemonData):
 	if pokemon_data.ability.name == ability_selector.get_item_text(1):
 		select_value = 1
 	if pokemon_data.ability.name == ability_selector.get_item_text(2):
-		select_value = 1
+		select_value = 2
 	ability_selector.select(select_value)
 
 func set_item(pokemon_data: PokemonData):
-	item_selector.select(pokemon_data.item.name)
+	if pokemon_data.item == null:
+		item_selector.select("")
+	else:
+		item_selector.select(pokemon_data.item.name)
 
 func set_moves(pokemon_data: PokemonData):
-	move_selector1.select(pokemon_data.move1.name)
-	move_selector2.select(pokemon_data.move2.name)
-	move_selector3.select(pokemon_data.move3.name)
-	move_selector4.select(pokemon_data.move4.name)
+	if pokemon_data.move1 == null:
+		move_selector1.select("")
+	else:
+		move_selector1.select(pokemon_data.move1.name)
+		
+	if pokemon_data.move2 == null:
+		move_selector2.select("")
+	else:
+		move_selector2.select(pokemon_data.move2.name)
+	
+	if pokemon_data.move3 == null:
+		move_selector3.select("")
+	else:
+		move_selector3.select(pokemon_data.move3.name)
+	
+	if pokemon_data.move4 == null:
+		move_selector4.select("")
+	else:
+		move_selector4.select(pokemon_data.move4.name)
 
 
 #Signal Reaktions

@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c2ejadmx4k3cp"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://c2ejadmx4k3cp"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_161eu"]
+[ext_resource type="Resource" uid="uid://o72t5k27gfqo" path="res://Ressourcen/Abilities/Clear_Body.tres" id="1_s7w8w"]
+[ext_resource type="Resource" uid="uid://dseyy3mu26wfx" path="res://Ressourcen/Abilities/Infiltrator.tres" id="2_o8vel"]
+[ext_resource type="Resource" uid="uid://bci027cnepcit" path="res://Ressourcen/Abilities/Cursed_Body.tres" id="3_4ktpd"]
 
 [resource]
 script = ExtResource("1_161eu")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Dragon"
 secondary_type = "Ghost"
+ability1 = ExtResource("1_s7w8w")
+ability2 = ExtResource("2_o8vel")
+ability3 = ExtResource("3_4ktpd")
 hp = 88
 atk = 120
 def = 75

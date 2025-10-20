@@ -1,13 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://brblw4w444pbj"]
+[gd_scene load_steps=7 format=3 uid="uid://brblw4w444pbj"]
 
 [ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/pokemon_button.gd" id="1_kaxox"]
 [ext_resource type="PackedScene" uid="uid://dhfrq2r64ae21" path="res://Scene/UserInterface/SubScenes/pokemon_icon.tscn" id="2_ic0pw"]
 
-[node name="PokemonButton" type="Button"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vdug"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14t03"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfsvy"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsmoc"]
+bg_color = Color(0.870588, 0.870588, 0.870588, 0)
+
+[node name="PokemonButton" type="Control"]
 custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 200.0
 offset_bottom = 200.0
 script = ExtResource("1_kaxox")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.685062, 0.841969, 0.686575, 1)
 
 [node name="PokemonIcon" parent="." instance=ExtResource("2_ic0pw")]
 offset_left = 35.0
@@ -16,4 +49,17 @@ offset_right = 99.0
 offset_bottom = 95.0
 scale = Vector2(2, 2)
 
-[connection signal="pressed" from="." to="." method="_on_pressed"]
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_7vdug")
+theme_override_styles/hover = SubResource("StyleBoxFlat_14t03")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mfsvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsmoc")
+toggle_mode = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

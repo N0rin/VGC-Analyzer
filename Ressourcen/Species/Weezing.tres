@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://b2g8qkva5b1jh"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://b2g8qkva5b1jh"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_2jr4y"]
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_vl5rt"]
+[ext_resource type="Resource" uid="uid://djk3hsmuddp0x" path="res://Ressourcen/Abilities/Neutralizing_Gas.tres" id="2_wruj7"]
+[ext_resource type="Resource" uid="uid://m1tiahgljqid" path="res://Ressourcen/Abilities/Stench.tres" id="3_bcwc0"]
 
 [resource]
 script = ExtResource("1_2jr4y")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Poison"
 secondary_type = "None"
+ability1 = ExtResource("1_vl5rt")
+ability2 = ExtResource("2_wruj7")
+ability3 = ExtResource("3_bcwc0")
 hp = 65
 atk = 90
 def = 120

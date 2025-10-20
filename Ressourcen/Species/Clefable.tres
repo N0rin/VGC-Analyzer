@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://5dj733ork7v8"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://5dj733ork7v8"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_bveri"]
+[ext_resource type="Resource" uid="uid://tt4v6pc68dqx" path="res://Ressourcen/Abilities/Cute_Charm.tres" id="1_tys18"]
+[ext_resource type="Resource" uid="uid://df56owuadghnb" path="res://Ressourcen/Abilities/Magic_Guard.tres" id="2_fwsua"]
+[ext_resource type="Resource" uid="uid://bjgucgys8j2f" path="res://Ressourcen/Abilities/Unaware.tres" id="3_nn6ky"]
 
 [resource]
 script = ExtResource("1_bveri")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Fairy"
 secondary_type = "None"
+ability1 = ExtResource("1_tys18")
+ability2 = ExtResource("2_fwsua")
+ability3 = ExtResource("3_nn6ky")
 hp = 95
 atk = 70
 def = 73

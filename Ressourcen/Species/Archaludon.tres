@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://cica6e53shv0a"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cica6e53shv0a"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_4uqs3"]
+[ext_resource type="Resource" uid="uid://bqvxrvj7ng3hb" path="res://Ressourcen/Abilities/Stamina.tres" id="1_mxg8b"]
+[ext_resource type="Resource" uid="uid://blmy6q7drcm0q" path="res://Ressourcen/Abilities/Sturdy.tres" id="2_vdvjv"]
+[ext_resource type="Resource" uid="uid://bdimw6vhh80pa" path="res://Ressourcen/Abilities/Stalwart.tres" id="3_k3jni"]
 
 [resource]
 script = ExtResource("1_4uqs3")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Steel"
 secondary_type = "Dragon"
+ability1 = ExtResource("1_mxg8b")
+ability2 = ExtResource("2_vdvjv")
+ability3 = ExtResource("3_k3jni")
 hp = 90
 atk = 105
 def = 130

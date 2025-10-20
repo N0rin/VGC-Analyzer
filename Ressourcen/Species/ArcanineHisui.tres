@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c24gj0lgyjomw"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://c24gj0lgyjomw"]
 
+[ext_resource type="Resource" uid="uid://d4b55n2x3fqg3" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_gokj2"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_wnt3a"]
+[ext_resource type="Resource" uid="uid://b0dj1fsttoc5b" path="res://Ressourcen/Abilities/Flash_Fire.tres" id="2_fi8fy"]
+[ext_resource type="Resource" uid="uid://bcrm8t6umigdb" path="res://Ressourcen/Abilities/Rock_Head.tres" id="3_5fkcw"]
 
 [resource]
 script = ExtResource("1_wnt3a")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Rock"
+ability1 = ExtResource("1_gokj2")
+ability2 = ExtResource("2_fi8fy")
+ability3 = ExtResource("3_5fkcw")
 hp = 95
 atk = 115
 def = 80

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://kfj4tlbpx0i3"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://kfj4tlbpx0i3"]
 
+[ext_resource type="Resource" uid="uid://duci0ks4doxp7" path="res://Ressourcen/Abilities/Blaze.tres" id="1_46p28"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_rwnsy"]
+[ext_resource type="Resource" uid="uid://dk5w1hjsgv16s" path="res://Ressourcen/Abilities/Magician.tres" id="2_bjcqq"]
 
 [resource]
 script = ExtResource("1_rwnsy")
@@ -10,6 +12,8 @@ texture_x = 0
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Psychic"
+ability1 = ExtResource("1_46p28")
+ability3 = ExtResource("2_bjcqq")
 hp = 75
 atk = 69
 def = 72

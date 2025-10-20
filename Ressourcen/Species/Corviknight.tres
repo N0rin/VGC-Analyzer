@@ -1,6 +1,9 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://o8nrli4xyv0e"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://o8nrli4xyv0e"]
 
+[ext_resource type="Resource" uid="uid://cqu4ks4x3vrin" path="res://Ressourcen/Abilities/Pressure.tres" id="1_bbt7b"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_pfx42"]
+[ext_resource type="Resource" uid="uid://8qetacoxp0yh" path="res://Ressourcen/Abilities/Unnerve.tres" id="2_mnnli"]
+[ext_resource type="Resource" uid="uid://2ri7t8lx0xm4" path="res://Ressourcen/Abilities/Mirror_Armor.tres" id="3_xposy"]
 
 [resource]
 script = ExtResource("1_pfx42")
@@ -10,6 +13,9 @@ texture_x = 0
 texture_y = 0
 main_type = "Flying"
 secondary_type = "Steel"
+ability1 = ExtResource("1_bbt7b")
+ability2 = ExtResource("2_mnnli")
+ability3 = ExtResource("3_xposy")
 hp = 98
 atk = 87
 def = 105

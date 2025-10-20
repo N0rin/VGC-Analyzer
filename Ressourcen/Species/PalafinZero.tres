@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://0fw36s6ecq1r"]
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://0fw36s6ecq1r"]
 
+[ext_resource type="Resource" uid="uid://c0wypqwqx5fbx" path="res://Ressourcen/Abilities/Zero_To_Hero.tres" id="1_0v0t6"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_ccqxq"]
 
 [resource]
@@ -10,6 +11,7 @@ texture_x = 0
 texture_y = 0
 main_type = "Water"
 secondary_type = "None"
+ability1 = ExtResource("1_0v0t6")
 hp = 100
 atk = 160
 def = 97
