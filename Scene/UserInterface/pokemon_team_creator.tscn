@@ -78,12 +78,14 @@ layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Team Name"
 
 [node name="TeamName" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+visible = false
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -162,6 +164,7 @@ text = "Save Team"
 auto_translate_mode = 1
 initial_position = 1
 size = Vector2i(500, 153)
+visible = true
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupPanel"]
 offset_left = 4.0
@@ -180,7 +183,7 @@ theme_override_constants/separation = 10
 [node name="Label" type="Label" parent="PopupPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Save Pokemon Set"
+text = "Save Pokemon Team"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="PopupPanel/MarginContainer/VBoxContainer"]
@@ -201,25 +204,24 @@ text = "  in  "
 
 [node name="FormatSelect" type="OptionButton" parent="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-selected = 0
-item_count = 9
-popup/item_0/text = "All"
-popup/item_1/text = "Reg A"
-popup/item_1/id = 1
-popup/item_2/text = "Reg B"
-popup/item_2/id = 2
-popup/item_3/text = "Reg C"
-popup/item_3/id = 3
-popup/item_4/text = "Reg D"
-popup/item_4/id = 4
-popup/item_5/text = "Reg E"
-popup/item_5/id = 5
-popup/item_6/text = "Reg F"
-popup/item_6/id = 6
-popup/item_7/text = "Reg G"
-popup/item_7/id = 7
-popup/item_8/text = "Reg H"
-popup/item_8/id = 8
+selected = 7
+item_count = 8
+popup/item_0/text = "Reg A"
+popup/item_0/id = 1
+popup/item_1/text = "Reg B"
+popup/item_1/id = 2
+popup/item_2/text = "Reg C"
+popup/item_2/id = 3
+popup/item_3/text = "Reg D"
+popup/item_3/id = 4
+popup/item_4/text = "Reg E"
+popup/item_4/id = 5
+popup/item_5/text = "Reg F"
+popup/item_5/id = 6
+popup/item_6/text = "Reg G"
+popup/item_6/id = 7
+popup/item_7/text = "Reg H"
+popup/item_7/id = 8
 
 [node name="Control2" type="Control" parent="PopupPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -246,3 +248,7 @@ text = "Confirm"
 [connection signal="id_pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton5" to="." method="_on_pokemon_button_id_pressed"]
 [connection signal="id_pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6" to="." method="_on_pokemon_button_id_pressed"]
 [connection signal="pokemon_selected" from="MarginContainer/VBoxContainer/CoreUI/Right/Set Edit" to="." method="_on_set_edit_pokemon_selected"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]

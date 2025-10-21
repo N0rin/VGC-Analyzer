@@ -6,4 +6,7 @@ func set_sprite(x: int, y: int, source_id: int = 4):
 		0:
 			$Gen9List.set_cell(Vector2i.ZERO, source_id, Vector2i(x, y), 0)
 		4:
-			$NationalList.set_cell(Vector2i.ZERO, source_id, Vector2i(x, y), 0)
+			$NationalList.set_cell(Vector2i.ZERO, source_id, Vector2i(x, y), 0)		
+
+func clear():
+	set_sprite(30, 30, 4)

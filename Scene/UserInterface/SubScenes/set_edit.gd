@@ -269,7 +269,7 @@ func set_pokemon_data(pokemon_data: PokemonData):
 		id += 1
 	set_selector.select(1)
 	
-
+	ability_selector.clear()
 	if pokemon_data.species.ability1:
 		ability_selector.add_item(pokemon_data.species.ability1.name)
 	if pokemon_data.species.ability2:
