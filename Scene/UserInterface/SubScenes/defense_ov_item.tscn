@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn83agteq4r8b"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/defense_ov_item.gd" id="1_ms31s"]
+
+[node name="DefenseOVItem" type="PanelContainer"]
+script = ExtResource("1_ms31s")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Species" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Gallade"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DamageType" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Physical"
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ":"
+
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "79"

@@ -3,6 +3,8 @@ class_name SetEdit
 
 signal pokemon_selected(Species)
 
+const DATA_PATH = "res://Ressourcen/"
+
 @onready var pokemon_selector = $"Species"
 @onready var set_selector = $"Set/SetSelect"
 @onready var tera_selector = $"Tera/TeraSelect"
@@ -20,6 +22,25 @@ signal pokemon_selected(Species)
 @onready var move_list: Array[Move]
 @onready var pokemon_set_list: Array[PokemonData]
 
+func _ready() -> void:
+	load_saved_pokemon_data()
+
+#Loading
+func load_saved_pokemon_data():
+	load_into_list(pokemon_list, "Species")
+	load_into_list(pokemon_set_list, "PokemonSets")
+	load_into_list(move_list, "Moves")
+	load_into_list(item_list, "Items")
+	load_into_list(ability_list, "Abilities")
+	
+	update_interface(pokemon_list,item_list,ability_list,move_list,pokemon_set_list)
+
+func load_into_list(list: Array, dirname: String):
+	var dir = DirAccess.open(DATA_PATH)
+	var file_list = dir.get_files_at(DATA_PATH + dirname)
+	
+	for filename in file_list:
+		list.append(load(DATA_PATH + dirname + "/" + filename))
 
 #Getter
 func get_evs(index:int) -> int:

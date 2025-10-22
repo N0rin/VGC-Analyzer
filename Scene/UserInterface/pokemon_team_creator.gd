@@ -38,6 +38,8 @@ func load_into_list(list: Array, dirname: String):
 		list.append(load(DATA_PATH + dirname + "/" + filename))
 
 func save_team(team_name: String):
+	team_members[selected_member] = set_edit.get_pokemon_data()
+	
 	var pokemon_team = TeamData.new()
 	pokemon_team.team_members = team_members
 	pokemon_team.format = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/FormatSelect.selected

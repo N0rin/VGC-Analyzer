@@ -164,7 +164,6 @@ text = "Save Team"
 auto_translate_mode = 1
 initial_position = 1
 size = Vector2i(500, 153)
-visible = true
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupPanel"]
 offset_left = 4.0
