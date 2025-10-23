@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dr8nt3eemluli"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_6k4bg"]
+
+[resource]
+script = ExtResource("1_6k4bg")
+name = "Kowtow Cleave"
+base_damage = 85
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Dark"
+makes_contact = true
+added_effect = "No miss"
+added_effect_chance = 0
+crit_bonus = 0

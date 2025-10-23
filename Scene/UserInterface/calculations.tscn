@@ -65,8 +65,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
 text = "Meta Calcs"
 
 [node name="ButtonMatchup" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -75,8 +75,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
 text = "Matchup Calcs"
 
 [node name="ButtonDamage" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -85,8 +85,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
 text = "Damage Calcs"
 
 [node name="ButtonOverview" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -95,9 +95,19 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
 text = "Overview"
+
+[node name="ButtonTeamOverview" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
+text = "Team Overview"
 
 [node name="Control3" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
@@ -110,12 +120,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("1_rrjc4")
 theme_override_styles/hover = ExtResource("2_sx3js")
+theme_override_styles/normal = ExtResource("1_rrjc4")
 text = "Go Back"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMeta" to="." method="_on_button_meta_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonMatchup" to="." method="_on_button_matchup_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonDamage" to="." method="_on_button_damage_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonOverview" to="." method="_on_button_overview_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonTeamOverview" to="." method="_on_button_team_overview_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]

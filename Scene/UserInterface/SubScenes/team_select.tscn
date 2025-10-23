@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm0m5np8j0cco"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/team_select.gd" id="1_pwpo3"]
+[ext_resource type="PackedScene" uid="uid://cueqqi8r12cud" path="res://Scene/UserInterface/SubScenes/search_option_button.tscn" id="2_8xfkj"]
+
+[node name="TeamSelect" type="Control"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pwpo3")
+
+[node name="TeamSelector" parent="." instance=ExtResource("2_8xfkj")]
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[connection signal="item_selected" from="TeamSelector" to="." method="_on_team_selector_item_selected"]

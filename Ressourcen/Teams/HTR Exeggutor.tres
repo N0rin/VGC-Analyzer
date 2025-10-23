@@ -204,5 +204,6 @@ move4 = ExtResource("38_2wql3")
 
 [resource]
 script = ExtResource("1_d2o6k")
+name = "HTR Exeggutor"
 format = 7
 team_members = Array[ExtResource("2_aiqdr")]([SubResource("Resource_mknxn"), SubResource("Resource_lb8cb"), SubResource("Resource_6scep"), SubResource("Resource_i2h4w"), SubResource("Resource_f0eg5"), SubResource("Resource_vtv3w")])

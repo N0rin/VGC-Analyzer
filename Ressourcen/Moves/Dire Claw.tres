@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b7lxb7hr2lxp3"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_1a7ow"]
+
+[resource]
+script = ExtResource("1_1a7ow")
+name = "Dire Claw"
+base_damage = 80
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Poison"
+makes_contact = true
+added_effect = "Random Status Condition"
+added_effect_chance = 50
+crit_bonus = 0

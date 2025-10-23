@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://caue67yq6y8qy"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_o5lq3"]
+
+[resource]
+script = ExtResource("1_o5lq3")
+name = "Sucker Punch"
+base_damage = 70
+accuracy = 100
+priority = 1
+targeting = "Single"
+category = "Physical"
+type = "Dark"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -33,13 +33,14 @@ func _on_calculations_to_meta():
 
 func _on_calculations_to_overview():
 	$Calculations/CalcOverview.show()
-	
 
 
 func _on_metasets_create_set():
 	$Metasets/PokemonSetCreator.show()
-	$Metasets/PokemonSetCreator.load_saved_pokemon_data()
 
 func _on_metasets_create_team() -> void:
 	$Metasets/PokemonTeamCreator.show()
-	$Metasets/PokemonTeamCreator.load_saved_pokemon_data()
+
+
+func _on_calculations_to_team_overview() -> void:
+	$Calculations/TeamOverview.show()

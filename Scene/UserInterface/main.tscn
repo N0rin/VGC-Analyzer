@@ -120,6 +120,7 @@ visible = false
 layout_mode = 1
 
 [node name="Calculations" parent="." instance=ExtResource("5_doh50")]
+visible = false
 layout_mode = 1
 
 [node name="MetaCalcs" parent="Calculations" instance=ExtResource("7_8c61r")]
@@ -131,6 +132,7 @@ visible = false
 layout_mode = 1
 
 [node name="TeamOverview" parent="Calculations" instance=ExtResource("9_1fsil")]
+visible = false
 layout_mode = 1
 
 [node name="Metasets" parent="." instance=ExtResource("6_12fql")]
@@ -154,6 +156,7 @@ layout_mode = 1
 [connection signal="back_to_main" from="Calculations" to="." method="_on_signal_back_to_main"]
 [connection signal="to_meta" from="Calculations" to="." method="_on_calculations_to_meta"]
 [connection signal="to_overview" from="Calculations" to="." method="_on_calculations_to_overview"]
+[connection signal="to_team_overview" from="Calculations" to="." method="_on_calculations_to_team_overview"]
 [connection signal="back_to_main" from="Metasets" to="." method="_on_signal_back_to_main"]
 [connection signal="create_set" from="Metasets" to="." method="_on_metasets_create_set"]
 [connection signal="create_team" from="Metasets" to="." method="_on_metasets_create_team"]

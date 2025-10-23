@@ -18,3 +18,6 @@ func set_value(pokemon_data: PokemonData):
 	
 	$MarginContainer/HBoxContainer/Species.text = pokemon_data.species.name
 	$MarginContainer/HBoxContainer/Value.text = str(value)
+
+func set_value_team(pokemon_team: TeamData):
+	set_value(pokemon_team.team_members[id])
