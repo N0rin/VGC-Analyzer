@@ -8,9 +8,9 @@
 [resource]
 script = ExtResource("1_hwtqd")
 name = "Excadrill"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 39
+texture_y = 15
 main_type = "Ground"
 secondary_type = "Steel"
 ability1 = ExtResource("1_fd7wj")

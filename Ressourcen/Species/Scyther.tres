@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://2elx14etm2vn"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_1as6e"]
+[ext_resource type="Resource" uid="uid://cqgmgk01tktyp" path="res://Ressourcen/Abilities/Swarm.tres" id="1_iq84w"]
+[ext_resource type="Resource" uid="uid://briwdwdehcaie" path="res://Ressourcen/Abilities/Technician.tres" id="2_dgs8v"]
+[ext_resource type="Resource" uid="uid://cpp1sc8btr06l" path="res://Ressourcen/Abilities/Steadfast.tres" id="3_obbht"]
+
+[resource]
+script = ExtResource("1_1as6e")
+name = "Scyther"
+texture_id = 4
+texture_x = 8
+texture_y = 4
+main_type = "Bug"
+secondary_type = "Flying"
+ability1 = ExtResource("1_iq84w")
+ability2 = ExtResource("2_dgs8v")
+ability3 = ExtResource("3_obbht")
+hp = 70
+atk = 110
+def = 80
+spa = 55
+spd = 80
+spe = 105
+weight = 56.0
+restriction = 0

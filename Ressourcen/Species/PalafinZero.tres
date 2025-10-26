@@ -7,8 +7,8 @@
 script = ExtResource("1_ccqxq")
 name = "Palafin"
 texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_x = 10
+texture_y = 4
 main_type = "Water"
 secondary_type = "None"
 ability1 = ExtResource("1_0v0t6")

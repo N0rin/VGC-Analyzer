@@ -1,0 +1,208 @@
+[gd_resource type="Resource" script_class="TeamData" load_steps=46 format=3]
+
+[ext_resource type="Script" path="res://Ressourcen/Team.gd" id="1_8tcuy"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="2_rof3i"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Purifying_Salt.tres" id="3_twipj"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Maranga_Berry.tres" id="4_43pqx"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Salt_Cure.tres" id="5_e4rld"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Stealth Rock.tres" id="6_54cq0"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Recover.tres" id="7_tpgd0"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="8_is3px"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Garganacl.tres" id="9_2n18n"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="10_iu4q4"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Scarf.tres" id="11_k7qot"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="12_p557o"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="13_enyy8"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Power_Gem.tres" id="14_xiq8l"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick.tres" id="15_227dy"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Gholdengo.tres" id="16_ljex4"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Snow_Warning.tres" id="17_skbjo"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="18_6d4gf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Blizzard.tres" id="19_dapyd"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Freeze_Dry.tres" id="20_1belf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Aurora_Veil.tres" id="21_bckec"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/NinetalesAlola.tres" id="22_bphkb"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="23_ow5hn"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Assault_Vest.tres" id="24_67oi3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="25_aagk2"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Knock_Off.tres" id="26_7xs1o"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="27_idoq5"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/U-Turn.tres" id="28_xdiex"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Incineroar.tres" id="29_e382r"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Technician.tres" id="30_npr8s"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Eviolite.tres" id="31_yesd4"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dual_Wingbeat.tres" id="32_vqvnq"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="33_swtkg"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Scyther.tres" id="34_s3xlj"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Pixilate.tres" id="35_8qsc6"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Throat_Spray.tres" id="36_48ta0"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Wish.tres" id="37_37t1l"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Yawn.tres" id="38_r63dw"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Sylveon.tres" id="39_44yfx"]
+
+[sub_resource type="Resource" id="Resource_ar0ku"]
+script = ExtResource("2_rof3i")
+name = "Current"
+format = 0
+species = ExtResource("9_2n18n")
+ability = ExtResource("3_twipj")
+item = ExtResource("4_43pqx")
+tera_type = "Flying"
+increased_stat = "SpD"
+reduced_stat = "SpA"
+hp_evs = 252
+atk_evs = 0
+def_evs = 4
+spa_evs = 0
+spd_evs = 252
+spe_evs = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("5_e4rld")
+move2 = ExtResource("6_54cq0")
+move3 = ExtResource("7_tpgd0")
+move4 = ExtResource("8_is3px")
+
+[sub_resource type="Resource" id="Resource_wunqw"]
+script = ExtResource("2_rof3i")
+name = "Current"
+format = 0
+species = ExtResource("16_ljex4")
+ability = ExtResource("10_iu4q4")
+item = ExtResource("11_k7qot")
+tera_type = "Steel"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_evs = 4
+atk_evs = 0
+def_evs = 0
+spa_evs = 252
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("12_p557o")
+move2 = ExtResource("13_enyy8")
+move3 = ExtResource("14_xiq8l")
+move4 = ExtResource("15_227dy")
+
+[sub_resource type="Resource" id="Resource_x22hj"]
+script = ExtResource("2_rof3i")
+name = "Current"
+format = 0
+species = ExtResource("22_bphkb")
+ability = ExtResource("17_skbjo")
+item = ExtResource("18_6d4gf")
+tera_type = "Ice"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_evs = 36
+atk_evs = 0
+def_evs = 4
+spa_evs = 212
+spd_evs = 4
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("19_dapyd")
+move2 = ExtResource("20_1belf")
+move3 = ExtResource("21_bckec")
+move4 = ExtResource("8_is3px")
+
+[sub_resource type="Resource" id="Resource_pmv7m"]
+script = ExtResource("2_rof3i")
+name = "Current"
+format = 0
+species = ExtResource("29_e382r")
+ability = ExtResource("23_ow5hn")
+item = ExtResource("24_67oi3")
+tera_type = "Fire"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_evs = 180
+atk_evs = 124
+def_evs = 4
+spa_evs = 0
+spd_evs = 4
+spe_evs = 196
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("25_aagk2")
+move2 = ExtResource("26_7xs1o")
+move3 = ExtResource("27_idoq5")
+move4 = ExtResource("28_xdiex")
+
+[sub_resource type="Resource" id="Resource_k2lda"]
+script = ExtResource("2_rof3i")
+name = "Current"
+format = 0
+species = ExtResource("34_s3xlj")
+ability = ExtResource("30_npr8s")
+item = ExtResource("31_yesd4")
+tera_type = "Steel"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_evs = 252
+atk_evs = 4
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("32_vqvnq")
+move2 = ExtResource("33_swtkg")
+move3 = ExtResource("28_xdiex")
+move4 = ExtResource("8_is3px")
+
+[sub_resource type="Resource" id="Resource_uv677"]
+script = ExtResource("2_rof3i")
+name = "new Set"
+format = 0
+species = ExtResource("39_44yfx")
+ability = ExtResource("35_8qsc6")
+item = ExtResource("36_48ta0")
+tera_type = "Poison"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 252
+atk_evs = 0
+def_evs = 4
+spa_evs = 252
+spd_evs = 0
+spe_evs = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move2 = ExtResource("37_37t1l")
+move3 = ExtResource("38_r63dw")
+move4 = ExtResource("8_is3px")
+
+[resource]
+script = ExtResource("1_8tcuy")
+name = "Pengys Garg-Scyther Team"
+format = 7
+team_members = Array[ExtResource("2_rof3i")]([SubResource("Resource_ar0ku"), SubResource("Resource_wunqw"), SubResource("Resource_x22hj"), SubResource("Resource_pmv7m"), SubResource("Resource_k2lda"), SubResource("Resource_uv677")])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://c1b1orlvq0xvv"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_8w438"]
+
+[resource]
+script = ExtResource("1_8w438")
+name = "Salt Cure"
+base_damage = 40
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Rock"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -9,8 +9,8 @@
 script = ExtResource("1_cffto")
 name = "Espathra"
 texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_x = 2
+texture_y = 4
 main_type = "Psychic"
 secondary_type = "None"
 ability1 = ExtResource("1_wmcx6")

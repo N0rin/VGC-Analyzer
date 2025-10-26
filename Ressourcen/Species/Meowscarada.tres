@@ -8,7 +8,7 @@
 script = ExtResource("1_yvvg7")
 name = "Meowscarada"
 texture_id = 0
-texture_x = 0
+texture_x = 2
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Dark"

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ccv6jh4pdbr6a"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_skdcn"]
+
+[resource]
+script = ExtResource("1_skdcn")
+name = "Throat Spray"

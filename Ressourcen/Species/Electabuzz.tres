@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_p0n4c")
 name = "Electabuzz"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 10
+texture_y = 4
 main_type = "Electric"
 secondary_type = "None"
 ability1 = ExtResource("1_l2b22")

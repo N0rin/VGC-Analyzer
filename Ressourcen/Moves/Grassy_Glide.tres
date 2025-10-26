@@ -11,3 +11,7 @@ priority = 0
 targeting = "Single"
 category = "Physical"
 type = "Grass"
+makes_contact = true
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_a0pgl")
 name = "Exeggutor"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 27
+texture_y = 3
 main_type = "Grass"
 secondary_type = "Psychic"
 ability1 = ExtResource("1_xt2uo")

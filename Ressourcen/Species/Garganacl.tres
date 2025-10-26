@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://27xxeqvro4j4"]
+
+[ext_resource type="Resource" uid="uid://46qkx1fsy24l" path="res://Ressourcen/Abilities/Purifying_Salt.tres" id="1_2mpnk"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_x0hbq"]
+[ext_resource type="Resource" uid="uid://blmy6q7drcm0q" path="res://Ressourcen/Abilities/Sturdy.tres" id="2_xh1fb"]
+[ext_resource type="Resource" uid="uid://o72t5k27gfqo" path="res://Ressourcen/Abilities/Clear_Body.tres" id="3_ae0h4"]
+
+[resource]
+script = ExtResource("1_x0hbq")
+name = "Garganacl"
+texture_id = 0
+texture_x = 4
+texture_y = 2
+main_type = "Rock"
+secondary_type = "None"
+ability1 = ExtResource("1_2mpnk")
+ability2 = ExtResource("2_xh1fb")
+ability3 = ExtResource("3_ae0h4")
+hp = 100
+atk = 100
+def = 130
+spa = 45
+spd = 90
+spe = 35
+weight = 240.0
+restriction = 0

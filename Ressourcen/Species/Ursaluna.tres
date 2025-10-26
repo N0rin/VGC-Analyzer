@@ -8,9 +8,9 @@
 [resource]
 script = ExtResource("1_ujx1a")
 name = "Ursaluna"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 26
+texture_y = 24
 main_type = "Ground"
 secondary_type = "Normal"
 ability1 = ExtResource("1_u0sx2")

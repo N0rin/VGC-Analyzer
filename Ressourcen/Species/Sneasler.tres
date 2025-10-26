@@ -8,9 +8,9 @@
 [resource]
 script = ExtResource("1_ybl7d")
 name = "Sneasler"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 29
+texture_y = 27
 main_type = "Fighting"
 secondary_type = "Poison"
 ability1 = ExtResource("1_bbyd0")

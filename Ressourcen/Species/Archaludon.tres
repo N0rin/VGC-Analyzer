@@ -9,8 +9,8 @@
 script = ExtResource("1_4uqs3")
 name = "Archaludon"
 texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_x = 4
+texture_y = 9
 main_type = "Steel"
 secondary_type = "Dragon"
 ability1 = ExtResource("1_mxg8b")

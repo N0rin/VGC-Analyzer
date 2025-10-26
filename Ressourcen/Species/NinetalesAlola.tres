@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_u0cr5")
 name = "Ninetales-Alola"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 24
+texture_y = 1
 main_type = "Ice"
 secondary_type = "Fairy"
 ability1 = ExtResource("1_j7fxd")

@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_lu3vp")
 name = "Sylveon"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 23
+texture_y = 21
 main_type = "Fairy"
 secondary_type = "None"
 ability1 = ExtResource("1_w4yl3")

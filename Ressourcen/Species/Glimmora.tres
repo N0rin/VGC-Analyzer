@@ -8,8 +8,8 @@
 script = ExtResource("1_dquyj")
 name = "Glimmora"
 texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_x = 4
+texture_y = 5
 main_type = "Rock"
 secondary_type = "Poison"
 ability1 = ExtResource("1_v2run")

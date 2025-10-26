@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://donev6yienkrd"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_c2gou"]
+
+[resource]
+script = ExtResource("1_c2gou")
+name = "Blizzard"
+base_damage = 110
+accuracy = 70
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Ice"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

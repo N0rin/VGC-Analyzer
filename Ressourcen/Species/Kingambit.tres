@@ -9,8 +9,8 @@
 script = ExtResource("1_k50i7")
 name = "Kingambit"
 texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_x = 5
+texture_y = 6
 main_type = "Dark"
 secondary_type = "Steel"
 ability1 = ExtResource("1_1lj2j")
