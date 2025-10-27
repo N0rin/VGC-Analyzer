@@ -9,7 +9,7 @@
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="5_cnotr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xkve"]
-bg_color = Color(0.339419, 0.684663, 0.463586, 1)
+bg_color = Color(0.341176, 0.686275, 0.462745, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2vld"]
 bg_color = Color(0.341176, 0.686275, 0.462745, 1)
@@ -101,10 +101,6 @@ size_flags_stretch_ratio = 0.4
 
 [node name="TeamSelect" parent="MarginContainer/VBoxContainer/CoreUI/Left" instance=ExtResource("3_8g86i")]
 layout_mode = 2
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
-layout_mode = 2
-text = "Test"
 
 [node name="Middle" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
@@ -224,4 +220,3 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [connection signal="team_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/TeamSelect" to="." method="_on_team_select_team_selected"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Left/Button" to="." method="_on_button_pressed"]

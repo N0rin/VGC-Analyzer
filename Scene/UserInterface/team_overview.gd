@@ -13,19 +13,13 @@ func _ready() -> void:
 	defender.data.ability = Ability.new()
 	defender.data.item = Item.new()
 
-func _on_button_pressed() -> void:
-	for item in $MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer.get_children():
-		
-		item.set_value_team(team_select.get_team())
-		update_middle()
-
 func update_middle():
 	clear_middle_selection()
 	var context = AttackContext.new()
-	
+	var team_index = 0
 	var team_move_list: Array[TeamMoveItem]
 	for team_member_data: PokemonData in get_team_data():
-
+	
 		var test_pokemon = Pokemon.new()
 		test_pokemon.state = PokemonState.new()
 		test_pokemon.data = team_member_data
@@ -37,10 +31,14 @@ func update_middle():
 				if context.get_move():
 					match(context.get_move().category):
 						"Physical", "Special":
-							var team_move_item = team_move_item_scene.instantiate()
-							team_move_item.load_attack(context)
-							team_move_list.append(team_move_item)
+							for attack_variant in get_attack_variants(context):
+								var team_move_item = team_move_item_scene.instantiate()
+								team_move_item.modulate = get_member_color(team_index)
+								team_move_item.load_attack(context)
+								team_move_list.append(team_move_item)
+		team_index += 1
 	team_move_list.sort_custom(func(a,b): return a.value > b.value)
+	
 	for team_move_item in team_move_list:
 		move_list.add_child(team_move_item)
 
@@ -58,3 +56,21 @@ func _on_team_select_team_selected(team: TeamData) -> void:
 		
 		item.set_value_team(team)
 		update_middle()
+
+func get_member_color(index : int) -> Color:
+	match(index):
+		1:
+			return Color("57af76")
+		2:
+			return Color("ed6196")
+		3:
+			return Color("669ae6")
+		4:
+			return Color("da7e4b")
+		5:
+			return Color("af7ceb")
+		_:
+			return Color("999999")
+
+func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
+	return [context]
