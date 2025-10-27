@@ -1,6 +1,6 @@
 extends Node
 
-func create_description(context: AttackContext):
+func create_description(context: AttackContext) -> String:
 	var attacker_boost = get_attack_boost(context)
 	var attacker_training = get_attacker_training(context)
 	var attacker_item = get_attacker_item(context)
@@ -29,6 +29,27 @@ func create_description(context: AttackContext):
 	var environment = screen + friend_guard + terrain + weather
 	
 	var description = attacker + attack + "vs. " + defender + environment
+	return description
+
+func create_team_overview_description(context: AttackContext) -> String:
+	var attacker_boost = get_attack_boost(context)
+	var offensive_ruin = get_offensive_ruin(context)
+	var attacker_tera = get_attacker_tera(context)
+	var attacker_name = context.attacker.data.species.name + " "
+	var attacker = attacker_boost + attacker_tera + attacker_name
+	
+	var helping_hand = get_helping_hand(context)
+	var attack_name = context.get_move().name + " "
+	var attack_extra = get_extra_attack_info(context)
+	var attack = helping_hand + attack_name + attack_extra
+	
+	var screen = get_screen(context)
+	var friend_guard = get_friend_guard(context)
+	var terrain = get_terrain(context)
+	var weather = get_weather(context)
+	var environment = screen + friend_guard + terrain + weather
+	
+	var description = attacker + attack + environment
 	return description
 
 func get_attack_boost(context: AttackContext) -> String:
@@ -76,7 +97,9 @@ func get_attacker_training(context: AttackContext) -> String:
 	return text + " " + stat + " "
 
 func get_attacker_item(context: AttackContext) -> String:
-	var item = context.attacker.data.item.name
+	var item = ""
+	if context.attacker.data.item:
+		item = context.attacker.data.item.name
 	match([item, context.get_move().category]):
 		["Choice Band", "Physical"], ["Choice Specs", "Special"], ["Life Orb", _]:
 			return item + " "

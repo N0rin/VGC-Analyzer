@@ -223,4 +223,5 @@ text = "Go Back"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[connection signal="team_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/TeamSelect" to="." method="_on_team_select_team_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Left/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://mb0ob8bo07ap"]
+
+[ext_resource type="Script" path="res://team_move_item.gd" id="1_li5ro"]
+
+[node name="TeamMoveItem" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1035.0
+offset_bottom = -909.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_li5ro")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Exeggutor Expanding Force (Psychic Terrain, Spread)"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "230"
+
+[node name="RemoveButton" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "X"

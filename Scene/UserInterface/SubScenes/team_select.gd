@@ -1,5 +1,6 @@
 extends Control
 class_name TeamSelect
+signal team_selected(team: TeamData)
 
 const DATA_PATH = "res://Ressourcen/"
 
@@ -32,6 +33,7 @@ func update_interface():
 
 func _on_team_selector_item_selected(name: String) -> void:
 	selected_team = find_by_name(team_list, name)
+	emit_signal("team_selected", selected_team)
 
 func get_team() -> TeamData:
 	return selected_team

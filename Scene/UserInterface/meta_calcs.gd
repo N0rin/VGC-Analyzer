@@ -101,7 +101,7 @@ func update_middle():
 				context.attacker = meta_pokemon
 				context.defender = test_pokemon
 			
-			for move_value in range(1,4):
+			for move_value in range(1,5):
 				context.used_attack = move_value
 				if context.get_move():
 					match(context.get_move().category):
@@ -138,6 +138,7 @@ func get_left_pokemon_data() -> PokemonData:
 	data.move3 = find_by_name(move_list, move_selector3.selected)
 	data.move4 = find_by_name(move_list, move_selector4.selected)
 	return data
+	pass
 
 func _on_species_item_selected(name):
 	clear_set()
