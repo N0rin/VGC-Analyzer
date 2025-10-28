@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cu70acfsnr8rp"]
+[gd_scene load_steps=15 format=3 uid="uid://cu70acfsnr8rp"]
 
 [ext_resource type="Script" path="res://search_option_button.gd" id="1_1qutd"]
 [ext_resource type="Script" path="res://Scene/UserInterface/team_overview.gd" id="1_mu6yw"]
@@ -6,37 +6,14 @@
 [ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="3_3uc2i"]
 [ext_resource type="PackedScene" uid="uid://bm0m5np8j0cco" path="res://Scene/UserInterface/SubScenes/team_select.tscn" id="3_8g86i"]
 [ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="4_o2e7t"]
+[ext_resource type="StyleBox" uid="uid://cknj8hdob4o23" path="res://Ressourcen/Styles/MemberColor1.tres" id="5_83pyp"]
 [ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="5_cnotr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xkve"]
-bg_color = Color(0.341176, 0.686275, 0.462745, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2vld"]
-bg_color = Color(0.341176, 0.686275, 0.462745, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7qvf"]
-bg_color = Color(0.929142, 0.379401, 0.587209, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3n4i"]
-bg_color = Color(0.929412, 0.380392, 0.588235, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inmsu"]
-bg_color = Color(0.398453, 0.605079, 0.901976, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjs37"]
-bg_color = Color(0.4, 0.603922, 0.901961, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8fjc"]
-bg_color = Color(0.855016, 0.492569, 0.293882, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj0n5"]
-bg_color = Color(0.854902, 0.494118, 0.294118, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q5pu"]
-bg_color = Color(0.686885, 0.486513, 0.920271, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sajtf"]
-bg_color = Color(0.686275, 0.486275, 0.921569, 1)
+[ext_resource type="PackedScene" uid="uid://b5bkfpwtydq04" path="res://Scene/UserInterface/SubScenes/speed_ov_item.tscn" id="5_ugin3"]
+[ext_resource type="StyleBox" uid="uid://vrtkb8fhda5t" path="res://Ressourcen/Styles/MemberColor2.tres" id="6_lg54h"]
+[ext_resource type="StyleBox" uid="uid://bftouo1iaj78v" path="res://Ressourcen/Styles/MemberColor3.tres" id="7_pug5l"]
+[ext_resource type="StyleBox" uid="uid://ddwgxjd4fyyrd" path="res://Ressourcen/Styles/MemberColor4.tres" id="8_i0tos"]
+[ext_resource type="StyleBox" uid="uid://idbg7gqm40ka" path="res://Ressourcen/Styles/MemberColor5.tres" id="9_ho3ps"]
+[ext_resource type="StyleBox" uid="uid://k05hs54bks6i" path="res://Ressourcen/Styles/MemberColor6.tres" id="10_7whtr"]
 
 [node name="TeamOverview" type="Control"]
 layout_mode = 3
@@ -139,65 +116,99 @@ size_flags_vertical = 3
 
 [node name="DefenseOVItem-0P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("5_83pyp")
 
 [node name="DefenseOVItem-0S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("5_83pyp")
 special = true
 
 [node name="DefenseOVItem-1P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2xkve")
+theme_override_styles/panel = ExtResource("6_lg54h")
 id = 1
 
 [node name="DefenseOVItem-1S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_y2vld")
+theme_override_styles/panel = ExtResource("6_lg54h")
 id = 1
 special = true
 
 [node name="DefenseOVItem-2P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_d7qvf")
+theme_override_styles/panel = ExtResource("7_pug5l")
 id = 2
 
 [node name="DefenseOVItem-2S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_m3n4i")
+theme_override_styles/panel = ExtResource("7_pug5l")
 id = 2
 special = true
 
 [node name="DefenseOVItem-3P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_inmsu")
+theme_override_styles/panel = ExtResource("8_i0tos")
 id = 3
 
 [node name="DefenseOVItem-3S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_mjs37")
+theme_override_styles/panel = ExtResource("8_i0tos")
 id = 3
 special = true
 
 [node name="DefenseOVItem-4P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_w8fjc")
+theme_override_styles/panel = ExtResource("9_ho3ps")
 id = 4
 
 [node name="DefenseOVItem-4S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yj0n5")
+theme_override_styles/panel = ExtResource("9_ho3ps")
 id = 4
 special = true
 
 [node name="DefenseOVItem-5P" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8q5pu")
+theme_override_styles/panel = ExtResource("10_7whtr")
 id = 5
 
 [node name="DefenseOVItem-5S" parent="MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer" instance=ExtResource("2_4ymcy")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_sajtf")
+theme_override_styles/panel = ExtResource("10_7whtr")
 id = 5
 special = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
+layout_mode = 2
+
+[node name="SpeedOVItem" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("5_83pyp")
+
+[node name="SpeedOVItem2" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("6_lg54h")
+id = 1
+
+[node name="SpeedOVItem3" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("7_pug5l")
+id = 2
+
+[node name="SpeedOVItem4" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_i0tos")
+id = 3
+
+[node name="SpeedOVItem5" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("9_ho3ps")
+id = 4
+
+[node name="SpeedOVItem6" parent="MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer" instance=ExtResource("5_ugin3")]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("10_7whtr")
+id = 5
 
 [node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

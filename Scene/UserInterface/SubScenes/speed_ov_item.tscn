@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5bkfpwtydq04"]
+
+[ext_resource type="Script" path="res://speed_ov_item.gd" id="1_8hy80"]
+
+[node name="SpeedOVItem" type="PanelContainer"]
+script = ExtResource("1_8hy80")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Species" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Volcarona"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Value" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "158"
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "("
+
+[node name="SpeedyBase" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "106"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "-"
+
+[node name="StrongBase" type="Label" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "92"
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ")"

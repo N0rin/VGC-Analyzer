@@ -50,12 +50,25 @@ func clear_middle_selection():
 func get_team_data() -> Array[PokemonData]:
 	return team_select.get_team().team_members
 
+func sort_items(container: Container):
+	var list = container.get_children()
+	list.sort_custom(func(a,b): return a.value > b.value)
+	var index = 0
+	for item in list:
+		container.move_child(item, index)
+		index += 1
+	
 
 func _on_team_select_team_selected(team: TeamData) -> void:
+	update_middle()
+	
 	for item in $MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer.get_children():
-		
 		item.set_value_team(team)
-		update_middle()
+	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer)
+	
+	for item in $MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer.get_children():
+		item.set_value_team(team)
+	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer)
 
 func get_member_color(index : int) -> Color:
 	match(index):
