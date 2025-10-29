@@ -34,7 +34,7 @@ func update_middle():
 							for attack_variant in get_attack_variants(context):
 								var team_move_item = team_move_item_scene.instantiate()
 								team_move_item.modulate = get_member_color(team_index)
-								team_move_item.load_attack(context)
+								team_move_item.load_attack(attack_variant)
 								team_move_list.append(team_move_item)
 		team_index += 1
 	team_move_list.sort_custom(func(a,b): return a.value > b.value)
@@ -86,4 +86,76 @@ func get_member_color(index : int) -> Color:
 			return Color("999999")
 
 func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
-	return [context]
+	var context_list : Array[AttackContext]
+	context_list.append(context)
+	var move : Move = context.get_move()
+	
+	#Sonne
+	if move.type == "Fire" or move.type == "Water" or move.name == "Weather Ball":
+		if has_team_ability("Drought") or has_team_ability("Orichalcum Pulse"):
+			var new_context = context.duplicate(false)
+			new_context.weather = "Sun"
+			context_list.append(new_context)
+	
+	#Regen
+	if move.type == "Fire" or move.type == "Water" or move.name == "Weather Ball":
+		if has_team_ability("Drizzle"):
+			var new_context = context.duplicate(false)
+			new_context.weather = "Rain"
+			context_list.append(new_context)
+	
+	#Terrain
+	if move.type == "Grass":
+		if has_team_ability("Grassy Surge"):
+			var new_context = context.duplicate(false)
+			new_context.terrain = "Grassy"
+			context_list.append(new_context)
+	
+	if move.type == "Electric":
+		if has_team_ability("Electric Surge"):
+			var new_context = context.duplicate(false)
+			new_context.terrain = "Electric"
+			context_list.append(new_context)
+	
+	if move.type == "Psychic":
+		if has_team_ability("Psychic Surge"):
+			var new_context = context.duplicate(false)
+			new_context.terrain = "Psychic"
+			context_list.append(new_context)
+			if move.name == "Expanding Force":
+				new_context = new_context.duplicate()
+				new_context.is_spread = true
+				context_list.append(new_context)
+	
+	if move.type == "Dragon":
+		if has_team_ability("Misty Surge"):
+			var new_context = context.duplicate(false)
+			new_context.terrain = "Misty"
+			context_list.append(new_context)
+	
+	
+	#Spread
+	var spread_variants : Array[AttackContext]
+	if move.targeting == "Enemies" or move.targeting == "All":
+		for variant in context_list:
+			var new_context = variant.duplicate()
+			new_context.is_spread = true
+			spread_variants.append(new_context)
+	context_list =  context_list + spread_variants
+	
+	#Tera
+	var tera_variants : Array[AttackContext]	
+	for variant in context_list:
+		if variant.get_move().type == context.attacker.data.tera_type:
+			var new_context = variant.duplicate(true)
+			new_context.attacker.state.terracrystalized = true
+			tera_variants.append(new_context)
+	context_list = context_list + tera_variants
+	
+	return context_list
+
+func has_team_ability(name: String) -> bool:
+	for team_member in get_team_data():
+		if team_member.ability.name == name:
+			return true
+	return false

@@ -11,9 +11,12 @@ func create_description(context: AttackContext) -> String:
 	var attacker = attacker_boost + attacker_training + attacker_item + attacker_tera + attacker_name
 	
 	var helping_hand = get_helping_hand(context)
-	var attack_name = context.get_move().name + " "
+	var attack_name = context.get_move().name
+	var spread = " "
+	if context.is_spread:
+		spread = "(Spread) "
 	var attack_extra = get_extra_attack_info(context)
-	var attack = helping_hand + attack_name + attack_extra
+	var attack = helping_hand + attack_name + spread + attack_extra
 	
 	var defender_boost = get_defense_boost(context)
 	var defender_training = get_defender_training(context)
@@ -39,9 +42,12 @@ func create_team_overview_description(context: AttackContext) -> String:
 	var attacker = attacker_boost + attacker_tera + attacker_name
 	
 	var helping_hand = get_helping_hand(context)
-	var attack_name = context.get_move().name + " "
+	var attack_name = context.get_move().name
+	var spread = " "
+	if context.is_spread:
+		spread = "(Spread) "
 	var attack_extra = get_extra_attack_info(context)
-	var attack = helping_hand + attack_name + attack_extra
+	var attack = helping_hand + attack_name + spread + attack_extra
 	
 	var screen = get_screen(context)
 	var friend_guard = get_friend_guard(context)

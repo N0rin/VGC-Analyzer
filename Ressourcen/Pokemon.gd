@@ -1,8 +1,8 @@
 extends Resource
 class_name Pokemon
 
-var data:PokemonData
-var state:PokemonState
+@export var data:PokemonData
+@export var state:PokemonState
 
 func get_typing() -> Array[String]:
 	if state.terracrystalized and data.tera_type != "Stellar":
