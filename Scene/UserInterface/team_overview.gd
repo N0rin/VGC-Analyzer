@@ -90,16 +90,23 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	context_list.append(context)
 	var move : Move = context.get_move()
 	
+	#Flame Orb
+	if context.attacker.data.item.name == "Flame Orb" and move.category == "Physical":
+		var new_context : AttackContext = context.duplicate(true)
+		new_context.attacker.state.condition = "Burn"
+		context_list.append(new_context)
+	
+	
 	#Sonne
 	if move.type == "Fire" or move.type == "Water" or move.name == "Weather Ball":
-		if has_team_ability("Drought") or has_team_ability("Orichalcum Pulse"):
+		if has_team_ability("Drought") or has_team_ability("Orichalcum Pulse") or has_team_move("Sunndy Day"):
 			var new_context = context.duplicate(false)
 			new_context.weather = "Sun"
 			context_list.append(new_context)
 	
 	#Regen
 	if move.type == "Fire" or move.type == "Water" or move.name == "Weather Ball":
-		if has_team_ability("Drizzle"):
+		if has_team_ability("Drizzle") or has_team_move("Rain Dance"):
 			var new_context = context.duplicate(false)
 			new_context.weather = "Rain"
 			context_list.append(new_context)
@@ -133,7 +140,6 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 			new_context.terrain = "Misty"
 			context_list.append(new_context)
 	
-	
 	#Spread
 	var spread_variants : Array[AttackContext]
 	if move.targeting == "Enemies" or move.targeting == "All":
@@ -152,10 +158,31 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 			tera_variants.append(new_context)
 	context_list = context_list + tera_variants
 	
+	#Helping Hand
+	if has_team_move("Helping Hand"):
+		var hand_variants : Array[AttackContext]
+		for variant in context_list:
+			var new_context = variant.duplicate()
+			new_context.helping_hand = true
+			hand_variants.append(new_context)
+		context_list = context_list + hand_variants
+	
 	return context_list
 
 func has_team_ability(name: String) -> bool:
 	for team_member in get_team_data():
 		if team_member.ability.name == name:
+			return true
+	return false
+
+func has_team_move(name: String) -> bool:
+	for team_member in get_team_data():
+		if team_member.move1.name == name:
+			return true
+		if team_member.move2.name == name:
+			return true
+		if team_member.move3.name == name:
+			return true
+		if team_member.move4.name == name:
 			return true
 	return false

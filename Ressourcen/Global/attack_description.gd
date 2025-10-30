@@ -43,11 +43,14 @@ func create_team_overview_description(context: AttackContext) -> String:
 	
 	var helping_hand = get_helping_hand(context)
 	var attack_name = context.get_move().name
+	var burn = ""
+	if context.attacker.state.condition == "Burn" and context.get_move().category == "Physical":
+		burn = "(Burn)"
 	var spread = " "
 	if context.is_spread:
 		spread = "(Spread) "
 	var attack_extra = get_extra_attack_info(context)
-	var attack = helping_hand + attack_name + spread + attack_extra
+	var attack = helping_hand + attack_name + burn + spread + attack_extra
 	
 	var screen = get_screen(context)
 	var friend_guard = get_friend_guard(context)

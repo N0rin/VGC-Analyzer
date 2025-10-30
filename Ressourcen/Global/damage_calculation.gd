@@ -33,6 +33,8 @@ func calculate_base_power(context: AttackContext):
 			move_power = get_heavy_slam_power(context.attacker.get_weight(), context.defender.get_weight())
 		"Low Kick", "Grass Knot":
 			move_power == get_low_kick_power(context.defender.get_weight())
+		"Facade" when context.attacker.state.condition != "":
+			move_power = 140
 	
 	#Type-Boost-Items
 	var item = context.attacker.data.item.name
@@ -188,6 +190,10 @@ func calculate_attack_value(context: AttackContext) -> int:
 		"Torrent" when context.get_move().type == "Water":
 			if context.attacker.get_current_hp() <= floor(context.attacker.data.get_hp_value() /3):
 				attack_modifier = combine_modifier(attack_modifier, 6144)
+		"Guts" when context.attacker.state.condition == "Burn":
+			if context.get_move().category == "Physical":
+				attack_modifier = combine_modifier(attack_modifier, 6144)
+				
 	#Choice Items
 	match([context.attacker.data.item.name, is_special]):
 			["Choice Band", false], ["Choice Specs", true]:
@@ -420,7 +426,8 @@ func calculate_complete_damage(context: AttackContext) -> int:
 	#Burn
 	match([context.attacker.state.condition, context.get_move().category]):
 		["Burn", "Physical"]:
-			damage = apply_modifier(damage, 2048)
+			if context.attacker.data.ability.name != "Guts" and context.get_move().name != "Facade":
+				damage = apply_modifier(damage, 2048)
 	
 	#Final Modifiers
 	var final_modifier = calculate_final_modifier(context)
@@ -646,7 +653,8 @@ func calculate_move_power(context: AttackContext) -> int:
 	#Burn
 	match([context.attacker.state.condition, context.get_move().category]):
 		["Burn", "Physical"]:
-			damage = apply_modifier(damage, 2048)
+			if context.attacker.data.ability.name != "Guts" and context.get_move().name != "Facade":
+				damage = apply_modifier(damage, 2048)
 	
 	#Final Modifiers
 	var final_modifier = calculate_final_modifier(context)
