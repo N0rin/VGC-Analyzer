@@ -72,7 +72,7 @@ func get_attack_boost(context: AttackContext) -> String:
 			boost_value = context.attacker.state.special_attack_stack
 	
 	if boost_value != 0:
-		return str(boost_value) + " "
+		return "%+d " % boost_value
 	
 	return ""
 

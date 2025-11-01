@@ -16,6 +16,7 @@ func _ready() -> void:
 func update_middle():
 	clear_middle_selection()
 	var context = AttackContext.new()
+	context.damage_roll = 15
 	var team_index = 0
 	var team_move_list: Array[TeamMoveItem]
 	for team_member_data: PokemonData in get_team_data():
@@ -113,19 +114,19 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	
 	#Terrain
 	if move.type == "Grass":
-		if has_team_ability("Grassy Surge"):
+		if has_team_ability("Grassy Surge") or has_team_move("Grassy Terrain"):
 			var new_context = context.duplicate(false)
 			new_context.terrain = "Grassy"
 			context_list.append(new_context)
 	
 	if move.type == "Electric":
-		if has_team_ability("Electric Surge"):
+		if has_team_ability("Electric Surge") or has_team_move("Electric Terrain"):
 			var new_context = context.duplicate(false)
 			new_context.terrain = "Electric"
 			context_list.append(new_context)
 	
 	if move.type == "Psychic":
-		if has_team_ability("Psychic Surge"):
+		if has_team_ability("Psychic Surge") or has_team_move("Psychic Terrain"):
 			var new_context = context.duplicate(false)
 			new_context.terrain = "Psychic"
 			context_list.append(new_context)
@@ -135,22 +136,18 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 				context_list.append(new_context)
 	
 	if move.type == "Dragon":
-		if has_team_ability("Misty Surge"):
+		if has_team_ability("Misty Surge") or has_team_move("Misty Terrain"):
 			var new_context = context.duplicate(false)
 			new_context.terrain = "Misty"
 			context_list.append(new_context)
 	
 	#Spread
-	var spread_variants : Array[AttackContext]
 	if move.targeting == "Enemies" or move.targeting == "All":
-		for variant in context_list:
-			var new_context = variant.duplicate()
-			new_context.is_spread = true
-			spread_variants.append(new_context)
-	context_list =  context_list + spread_variants
+		create_variants(context_list, func(context: AttackContext):
+			context.is_spread = true)
 	
 	#Tera
-	var tera_variants : Array[AttackContext]	
+	var tera_variants : Array[AttackContext]
 	for variant in context_list:
 		if variant.get_move().type == context.attacker.data.tera_type:
 			var new_context = variant.duplicate(true)
@@ -158,15 +155,26 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 			tera_variants.append(new_context)
 	context_list = context_list + tera_variants
 	
-	#Helping Hand
-	if has_team_move("Helping Hand"):
-		var hand_variants : Array[AttackContext]
-		for variant in context_list:
-			var new_context = variant.duplicate()
-			new_context.helping_hand = true
-			hand_variants.append(new_context)
-		context_list = context_list + hand_variants
+	#Support Options
+	if has_partner_move("Helping Hand", context.attacker.data):
+		create_variants(context_list, func(context: AttackContext):
+			context.helping_hand = true)
 	
+	if has_partner_move("Coaching", context.attacker.data) and context.get_move().category == "Physical":
+		create_variants(context_list, func(context: AttackContext):
+			context.attacker.state.attack_stack += 1
+			context.attacker.state.defense_stack += 1
+			, true)
+	
+	#Setup Options
+	if has_move("Quiver Dance", context.attacker.data) and context.get_move().category == "Special":
+		create_variants(context_list, func (context: AttackContext): 
+			context.attacker.state.special_attack_stack +=1, true)
+	
+	if has_move("Swords Dance", context.attacker.data):
+		create_variants(context_list, func(context: AttackContext):
+			context.attacker.state.attack_stack += 2, true)
+		
 	return context_list
 
 func has_team_ability(name: String) -> bool:
@@ -186,3 +194,36 @@ func has_team_move(name: String) -> bool:
 		if team_member.move4.name == name:
 			return true
 	return false
+
+func has_partner_move(name: String, pokemon_data: PokemonData) -> bool:
+	var team_members: Array = get_team_data().duplicate()
+	team_members.erase(pokemon_data)
+	for team_member in team_members:
+		if team_member.move1.name == name:
+			return true
+		if team_member.move2.name == name:
+			return true
+		if team_member.move3.name == name:
+			return true
+		if team_member.move4.name == name:
+			return true
+	return false
+
+func has_move(name: String, pokemon_data: PokemonData):
+	if pokemon_data.move1.name == name:
+		return true
+	if pokemon_data.move2.name == name:
+		return true
+	if pokemon_data.move3.name == name:
+		return true
+	if pokemon_data.move4.name == name:
+		return true
+	return false
+
+func create_variants(context_list: Array[AttackContext], context_change: Callable, subresources = false):
+	var context_variants : Array[AttackContext]
+	for variant in context_list:
+		var new_context: AttackContext = variant.duplicate(subresources)
+		context_change.call(new_context)
+		context_variants.append(new_context)
+	context_list.append_array(context_variants)
