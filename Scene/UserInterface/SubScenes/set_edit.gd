@@ -2,6 +2,7 @@ extends VBoxContainer
 class_name SetEdit
 
 signal pokemon_selected(Species)
+signal set_selected(PokemonData)
 
 const DATA_PATH = "res://Ressourcen/"
 
@@ -22,8 +23,6 @@ const DATA_PATH = "res://Ressourcen/"
 @onready var move_list: Array[Move]
 @onready var pokemon_set_list: Array[PokemonData]
 
-func _ready() -> void:
-	load_saved_pokemon_data()
 
 #Loading
 func load_saved_pokemon_data():
@@ -219,6 +218,7 @@ func update_item_selector(item_list:Array[Item]):
 	item_selector.clear()
 	for item in item_list:
 		item_selector.add_item(item.name)
+	item_selector.select("No Item")
 
 func update_move_selector(move_list:Array[Move]):
 	for move_selector in move_selectors:
@@ -236,7 +236,7 @@ func clear_set():
 	$"NatureSelector/NatureIncrease".select(0)
 	$"NatureSelector/NatureDecrease".select(2)
 	ability_selector.select(0)
-	item_selector.select("")
+	item_selector.select("No Item")
 	for move_selector in move_selectors:
 		move_selector.select("")
 
@@ -421,11 +421,12 @@ func set_moves(pokemon_data: PokemonData):
 		move_selector4.select(pokemon_data.move4.name)
 
 
-#Signal Reaktions
+#Signal Reactions
 func _on_set_select_item_selected(index):
 	var pokemon_set: PokemonData = set_selector.get_item_metadata(index)
 	if pokemon_set:
 		set_pokemon_data(pokemon_set)
+		emit_signal("set_selected", pokemon_set)
 	else:
 		clear_set()
 

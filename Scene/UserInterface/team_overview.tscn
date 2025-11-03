@@ -63,8 +63,13 @@ text = "Team Overview"
 horizontal_alignment = 1
 
 [node name="SearchOptionButton" type="Control" parent="MarginContainer/VBoxContainer/Top"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 script = ExtResource("1_1qutd")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="CoreUI" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -74,24 +79,36 @@ theme_override_constants/separation = 150
 [node name="Left" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.4
+size_flags_stretch_ratio = 0.3
 
 [node name="TeamSelect" parent="MarginContainer/VBoxContainer/CoreUI/Left" instance=ExtResource("3_8g86i")]
 layout_mode = 2
 
-[node name="Middle" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+[node name="Middle" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
-custom_minimum_size = Vector2(0, 50)
+[node name="PhysicalScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
 layout_mode = 2
-
-[node name="MiddleScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
-layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MoveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
+[node name="MoveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/PhysicalScroll"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="SpecialScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MoveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/SpecialScroll"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -100,7 +117,7 @@ size_flags_vertical = 3
 [node name="Right" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.35
+size_flags_stretch_ratio = 0.2
 
 [node name="Scroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
 layout_mode = 2

@@ -8,9 +8,10 @@ var team_members: Array[PokemonData] = [null, null, null, null, null, null]
 @onready var team_name = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Right/Set Edit"
 
-func _ready() -> void:
+func startup():
 	$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton/Button.button_pressed = true
-
+	set_edit.load_saved_pokemon_data()
+	show()
 
 func load_into_list(list: Array, dirname: String):
 	var dir = DirAccess.open(DATA_PATH)

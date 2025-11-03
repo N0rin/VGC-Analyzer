@@ -1,0 +1,146 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx7qtbsfwxrk0"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/factors.gd" id="1_4unam"]
+[ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="1_mjf5w"]
+
+[node name="ContextModifierSelection" type="VBoxContainer"]
+script = ExtResource("1_4unam")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+text = "Add Modifier"
+
+[node name="Modifier Type" type="OptionButton" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 7
+popup/item_0/text = "Weather"
+popup/item_1/text = "Terrain"
+popup/item_1/id = 1
+popup/item_2/text = "Ruin Ability"
+popup/item_2/id = 2
+popup/item_3/text = "Helping Hand"
+popup/item_3/id = 3
+popup/item_4/text = "Stat Boosts"
+popup/item_4/id = 4
+popup/item_5/text = "Screens"
+popup/item_5/id = 5
+popup/item_6/text = "Friend Guard"
+popup/item_6/id = 6
+
+[node name="Weather Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 4
+popup/item_0/text = "Sun"
+popup/item_1/text = "Rain"
+popup/item_1/id = 1
+popup/item_2/text = "Snow"
+popup/item_2/id = 2
+popup/item_3/text = "Sand"
+popup/item_3/id = 3
+
+[node name="Terrain Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 4
+popup/item_0/text = "Grassy"
+popup/item_1/text = "Electric"
+popup/item_1/id = 1
+popup/item_2/text = "Psychic"
+popup/item_2/id = 2
+popup/item_3/text = "Misty"
+popup/item_3/id = 3
+
+[node name="Ruin Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 4
+popup/item_0/text = "Sword"
+popup/item_1/text = "Beads"
+popup/item_1/id = 1
+popup/item_2/text = "Vessel"
+popup/item_2/id = 2
+popup/item_3/text = "Tablets"
+popup/item_3/id = 3
+
+[node name="Stat Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 4
+popup/item_0/text = "ATK"
+popup/item_1/text = "DEF"
+popup/item_1/id = 1
+popup/item_2/text = "SPA"
+popup/item_2/id = 2
+popup/item_3/text = "SPD"
+popup/item_3/id = 3
+
+[node name="Stat Strength Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 12
+popup/item_0/text = "+6"
+popup/item_1/text = "+5"
+popup/item_1/id = 1
+popup/item_2/text = "+4"
+popup/item_2/id = 2
+popup/item_3/text = "+3"
+popup/item_3/id = 3
+popup/item_4/text = "+2"
+popup/item_4/id = 4
+popup/item_5/text = "+1"
+popup/item_5/id = 5
+popup/item_6/text = "-1"
+popup/item_6/id = 6
+popup/item_7/text = "-2"
+popup/item_7/id = 7
+popup/item_8/text = "-3"
+popup/item_8/id = 8
+popup/item_9/text = "-4"
+popup/item_9/id = 9
+popup/item_10/text = "-5"
+popup/item_10/id = 10
+popup/item_11/text = "-6"
+popup/item_11/id = 11
+
+[node name="Screen Select" type="OptionButton" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_mjf5w")
+item_count = 3
+popup/item_0/text = "Aurora Veil"
+popup/item_1/text = "Light Screen"
+popup/item_1/id = 1
+popup/item_2/text = "Reflect"
+popup/item_2/id = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 3
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="item_selected" from="HBoxContainer/Modifier Type" to="." method="_on_modifier_type_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Weather Select" to="." method="_on_weather_select_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Terrain Select" to="." method="_on_terrain_select_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Ruin Select" to="." method="_on_ruin_select_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Stat Select" to="." method="_on_stat_select_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Stat Strength Select" to="." method="_on_stat_strength_select_item_selected"]
+[connection signal="item_selected" from="HBoxContainer/Screen Select" to="." method="_on_screen_select_item_selected"]

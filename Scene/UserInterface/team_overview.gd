@@ -1,7 +1,8 @@
 extends Control
 
 @onready var team_select = $MarginContainer/VBoxContainer/CoreUI/Left/TeamSelect
-@onready var move_list = $MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll/MoveList
+@onready var physical_list = $MarginContainer/VBoxContainer/CoreUI/Middle/PhysicalScroll/MoveList
+@onready var special_list = $MarginContainer/VBoxContainer/CoreUI/Middle/SpecialScroll/MoveList
 @onready var defender = Pokemon.new()
 
 @onready var team_move_item_scene = preload("res://Scene/UserInterface/SubScenes/team_move_item.tscn")
@@ -18,7 +19,8 @@ func update_middle():
 	var context = AttackContext.new()
 	context.damage_roll = 15
 	var team_index = 0
-	var team_move_list: Array[TeamMoveItem]
+	var physical_move_list: Array[TeamMoveItem]
+	var special_move_list: Array[TeamMoveItem]
 	for team_member_data: PokemonData in get_team_data():
 	
 		var test_pokemon = Pokemon.new()
@@ -31,21 +33,33 @@ func update_middle():
 				context.used_attack = move_value
 				if context.get_move():
 					match(context.get_move().category):
-						"Physical", "Special":
+						"Physical":
 							for attack_variant in get_attack_variants(context):
 								var team_move_item = team_move_item_scene.instantiate()
 								team_move_item.modulate = get_member_color(team_index)
 								team_move_item.load_attack(attack_variant)
-								team_move_list.append(team_move_item)
+								physical_move_list.append(team_move_item)
+						"Special":
+							for attack_variant in get_attack_variants(context):
+								var team_move_item = team_move_item_scene.instantiate()
+								team_move_item.modulate = get_member_color(team_index)
+								team_move_item.load_attack(attack_variant)
+								special_move_list.append(team_move_item)
 		team_index += 1
-	team_move_list.sort_custom(func(a,b): return a.value > b.value)
+	physical_move_list.sort_custom(func(a,b): return a.value > b.value)
+	special_move_list.sort_custom(func(a,b): return a.value > b.value)
 	
-	for team_move_item in team_move_list:
-		move_list.add_child(team_move_item)
+	for team_move_item in physical_move_list:
+		physical_list.add_child(team_move_item)
+	for team_move_item in special_move_list:
+		special_list.add_child(team_move_item)
 
 func clear_middle_selection():
-	for child in move_list.get_children():
-		move_list.remove_child(child)
+	for child in physical_list.get_children():
+		physical_list.remove_child(child)
+		child.queue_free()
+	for child in special_list.get_children():
+		special_list.remove_child(child)
 		child.queue_free()
 
 func get_team_data() -> Array[PokemonData]:
@@ -58,7 +72,6 @@ func sort_items(container: Container):
 	for item in list:
 		container.move_child(item, index)
 		index += 1
-	
 
 func _on_team_select_team_selected(team: TeamData) -> void:
 	update_middle()

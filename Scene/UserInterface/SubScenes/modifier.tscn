@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ce10khqhsu0mo"]
+[gd_scene load_steps=3 format=3 uid="uid://ce10khqhsu0mo"]
 
 [ext_resource type="StyleBox" uid="uid://c05r2rcv5ur6s" path="res://Ressourcen/Styles/black_border.tres" id="1_tdqa7"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/modifier.gd" id="2_8m5dh"]
 
 [node name="Modifier" type="PanelContainer"]
 theme_override_styles/panel = ExtResource("1_tdqa7")
+script = ExtResource("2_8m5dh")
 
 [node name="Components" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -16,3 +18,5 @@ text = "Sword of Ruin"
 [node name="Button" type="Button" parent="Components"]
 layout_mode = 2
 text = "X"
+
+[connection signal="pressed" from="Components/Button" to="." method="_on_button_pressed"]

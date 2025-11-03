@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="1_r3k2f"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Eviolite.tres" id="2_dgfvn"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Thunderbolt.tres" id="3_4ajon"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Follow_Me.tres" id="4_tynva"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="5_gdwov"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_yo4fx"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_mjcv0"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Electabuzz.tres" id="8_jtntd"]
+
+[resource]
+script = ExtResource("7_mjcv0")
+name = "Bulky"
+format = 8
+species = ExtResource("8_jtntd")
+ability = ExtResource("1_r3k2f")
+item = ExtResource("2_dgfvn")
+tera_type = "Ghost"
+increased_stat = "Def"
+reduced_stat = "Atk"
+hp_evs = 244
+atk_evs = 0
+def_evs = 180
+spa_evs = 4
+spd_evs = 20
+spe_evs = 60
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_4ajon")
+move2 = ExtResource("4_tynva")
+move3 = ExtResource("5_gdwov")
+move4 = ExtResource("6_yo4fx")

@@ -19,6 +19,9 @@ class_name AttackContext
 @export var is_spread = false
 
 func get_move() -> Move:
+	if not attacker.data.get_move(used_attack):
+		return null
+	
 	if attacker.data.get_move(used_attack).name == "Weather Ball":
 		var move_variant: Move = attacker.data.get_move(used_attack).duplicate()
 		match(weather):

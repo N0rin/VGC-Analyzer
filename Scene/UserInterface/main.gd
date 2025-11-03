@@ -27,8 +27,7 @@ func _on_analyzer_continue_to_board():
 
 
 func _on_calculations_to_meta():
-	$Calculations/MetaCalcs.show()
-	$Calculations/MetaCalcs.load_saved_pokemon_data()
+	$Calculations/MetaCalcs.startup()
 
 
 func _on_calculations_to_overview():
@@ -36,10 +35,10 @@ func _on_calculations_to_overview():
 
 
 func _on_metasets_create_set():
-	$Metasets/PokemonSetCreator.show()
+	$Metasets/PokemonSetCreator.startup()
 
 func _on_metasets_create_team() -> void:
-	$Metasets/PokemonTeamCreator.show()
+	$Metasets/PokemonTeamCreator.startup()
 
 
 func _on_calculations_to_team_overview() -> void:

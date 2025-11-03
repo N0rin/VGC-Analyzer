@@ -2,11 +2,12 @@ extends Control
 
 const DATA_PATH = "res://Ressourcen/"
 
-
-
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit"
 @onready var new_set_name = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit
 
+func startup():
+	set_edit.load_saved_pokemon_data()
+	show()
 
 func save_set(set_name: String):
 	var pokemon_set : PokemonData = set_edit.get_pokemon_data()
