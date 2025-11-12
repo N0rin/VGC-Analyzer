@@ -14,6 +14,11 @@ func _ready() -> void:
 	defender.data.ability = Ability.new()
 	defender.data.item = Item.new()
 
+#Loading
+func startup() -> void:
+	show()
+
+#Interface
 func update_middle():
 	clear_middle_selection()
 	var context = AttackContext.new()
@@ -40,10 +45,15 @@ func update_middle():
 								team_move_item.load_attack(attack_variant)
 								physical_move_list.append(team_move_item)
 						"Special":
-							for attack_variant in get_attack_variants(context):
+							var test_list = get_attack_variants(context) #Debug
+							for attack_variant in test_list:
+								
 								var team_move_item = team_move_item_scene.instantiate()
 								team_move_item.modulate = get_member_color(team_index)
 								team_move_item.load_attack(attack_variant)
+								if attack_variant.get_move().name == "Tera Blast" and attack_variant.attacker.state.terracrystalized:
+									if attack_variant.attacker.get_field_atk() > attack_variant.attacker.get_field_spa():
+										physical_move_list.append(team_move_item)
 								special_move_list.append(team_move_item)
 		team_index += 1
 	physical_move_list.sort_custom(func(a,b): return a.value > b.value)
@@ -62,27 +72,12 @@ func clear_middle_selection():
 		special_list.remove_child(child)
 		child.queue_free()
 
+func clear() -> void:
+	pass #TODO
+
+#Getter
 func get_team_data() -> Array[PokemonData]:
 	return team_select.get_team().team_members
-
-func sort_items(container: Container):
-	var list = container.get_children()
-	list.sort_custom(func(a,b): return a.value > b.value)
-	var index = 0
-	for item in list:
-		container.move_child(item, index)
-		index += 1
-
-func _on_team_select_team_selected(team: TeamData) -> void:
-	update_middle()
-	
-	for item in $MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer.get_children():
-		item.set_value_team(team)
-	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/Scroll/VBoxContainer)
-	
-	for item in $MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer.get_children():
-		item.set_value_team(team)
-	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/VBoxContainer)
 
 func get_member_color(index : int) -> Color:
 	match(index):
@@ -103,6 +98,25 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	var context_list : Array[AttackContext]
 	context_list.append(context)
 	var move : Move = context.get_move()
+	
+	#Low Kick
+	match move.name:
+		"Low Kick", "Grass Knot":
+			var new_context : AttackContext= context.duplicate(true)
+			new_context.defender.data.species.weight = 1
+			context_list.append(new_context)
+			new_context = context.duplicate(true)
+			new_context.defender.data.species.weight = 10
+			context_list.append(new_context)
+			new_context = context.duplicate(true)
+			new_context.defender.data.species.weight = 25
+			context_list.append(new_context)
+			new_context = context.duplicate(true)
+			new_context.defender.data.species.weight = 100
+			context_list.append(new_context)
+			new_context = context.duplicate(true)
+			new_context.defender.data.species.weight = 200
+			context_list.append(new_context)
 	
 	#Flame Orb
 	if context.attacker.data.item.name == "Flame Orb" and move.category == "Physical":
@@ -162,7 +176,7 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	#Tera
 	var tera_variants : Array[AttackContext]
 	for variant in context_list:
-		if variant.get_move().type == context.attacker.data.tera_type:
+		if move.type == context.attacker.data.tera_type or move.name == "Tera Blast":
 			var new_context = variant.duplicate(true)
 			new_context.attacker.state.terracrystalized = true
 			tera_variants.append(new_context)
@@ -190,6 +204,7 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 		
 	return context_list
 
+#Checks
 func has_team_ability(name: String) -> bool:
 	for team_member in get_team_data():
 		if team_member.ability.name == name:
@@ -233,6 +248,15 @@ func has_move(name: String, pokemon_data: PokemonData):
 		return true
 	return false
 
+#Utility
+func sort_items(container: Container):
+	var list = container.get_children()
+	list.sort_custom(func(a,b): return a.value > b.value)
+	var index = 0
+	for item in list:
+		container.move_child(item, index)
+		index += 1
+
 func create_variants(context_list: Array[AttackContext], context_change: Callable, subresources = false):
 	var context_variants : Array[AttackContext]
 	for variant in context_list:
@@ -240,3 +264,23 @@ func create_variants(context_list: Array[AttackContext], context_change: Callabl
 		context_change.call(new_context)
 		context_variants.append(new_context)
 	context_list.append_array(context_variants)
+
+#Signal Reactions
+func _on_team_select_team_selected(team: TeamData) -> void:
+	update_middle()
+	
+	for item in $MarginContainer/VBoxContainer/CoreUI/Right/Defense.get_children():
+		item.set_value_team(team)
+	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/Defense)
+	
+	for item in $MarginContainer/VBoxContainer/CoreUI/Right/HP.get_children():
+		item.set_value_team(team)
+	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/HP)
+	
+	for item in $MarginContainer/VBoxContainer/CoreUI/Right/Speed.get_children():
+		item.set_value_team(team)
+	sort_items($MarginContainer/VBoxContainer/CoreUI/Right/Speed)
+
+func _on_back_pressed() -> void:
+	hide()
+	clear()

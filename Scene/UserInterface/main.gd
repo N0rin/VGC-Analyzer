@@ -21,25 +21,21 @@ func _on_signal_back_to_main():
 	$Metasets.hide()
 	$Main.show()
 
-func _on_analyzer_continue_to_board():
+func _on_analyzer_continue_to_board() -> void:
 	$Analyzer.hide()
 	$AnalyzeBoard.show()
 
-
-func _on_calculations_to_meta():
+func _on_calculations_to_meta() -> void:
 	$Calculations/MetaCalcs.startup()
 
+func _on_calculations_to_overview() -> void:
+	$Calculations/CalcOverview.startup()
 
-func _on_calculations_to_overview():
-	$Calculations/CalcOverview.show()
+func _on_calculations_to_team_overview() -> void:
+	$Calculations/TeamOverview.startup()
 
-
-func _on_metasets_create_set():
+func _on_metasets_create_set() -> void:
 	$Metasets/PokemonSetCreator.startup()
 
 func _on_metasets_create_team() -> void:
 	$Metasets/PokemonTeamCreator.startup()
-
-
-func _on_calculations_to_team_overview() -> void:
-	$Calculations/TeamOverview.show()

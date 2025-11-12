@@ -7,11 +7,13 @@ var selected_type = ""
 var selected_modifier = ""
 var selected_strength = 0
 
+#Function
 func modify_context(context: AttackContext) -> AttackContext:
 	for item in $GridContainer.get_children():
 		context = item.modify_context(context)
 	return context
 
+#Interface
 func clear_extras() -> void:
 	reset_option($"HBoxContainer/Weather Select")
 	reset_option($"HBoxContainer/Terrain Select")
@@ -26,7 +28,13 @@ func reset_option(option_button: OptionButton):
 	option_button.hide()
 	option_button.selected = -1
 
+func clear():
+	clear_extras()
+	for child in $GridContainer.get_children():
+		$GridContainer.remove_child(child)
+		child.queue_free()
 
+#Signal Reactions
 func _on_modifier_type_item_selected(index: int) -> void:
 	match index:
 		0:
@@ -117,7 +125,6 @@ func _on_screen_select_item_selected(index: int) -> void:
 			selected_modifier = "Light Screen"
 		2:
 			selected_modifier = "Reflect"
-
 
 func _on_button_pressed() -> void:
 	if selected_modifier == "":

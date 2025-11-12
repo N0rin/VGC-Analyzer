@@ -7,6 +7,11 @@ signal toggled(toggled_on:bool)
 @onready var subset_container = $MarginContainer/VBoxContainer/Subsets/SubsetContainer
 @onready var species_label = $MarginContainer/VBoxContainer/Species/Label
 
+#Loading
+func load_data(species_name: String, pokemon_set_list: Array[PokemonData]):
+	species_label.text = species_name
+	create_subsets(pokemon_set_list)
+
 func create_subsets(pokemon_set_list: Array[PokemonData]):
 	for pokemon_set in pokemon_set_list:
 		var subset = subset_check_scene.instantiate()
@@ -14,10 +19,7 @@ func create_subsets(pokemon_set_list: Array[PokemonData]):
 		subset_container.add_child(subset)
 		subset.toggled.connect(_on_subset_toggled)
 
-func load_data(species_name: String, pokemon_set_list: Array[PokemonData]):
-	species_label.text = species_name
-	create_subsets(pokemon_set_list)
-
+#Getter
 func get_sets() -> Array[PokemonData]:
 	if not $MarginContainer/VBoxContainer/Species/CheckBox.button_pressed:
 		return []
@@ -29,6 +31,17 @@ func get_sets() -> Array[PokemonData]:
 	
 	return pokemon_sets
 
+func get_toggle_state() -> bool:
+	return $MarginContainer/VBoxContainer/Species/CheckBox.button_pressed
+
+func get_species_name() -> String:
+	return $MarginContainer/VBoxContainer/Species/Label.text
+
+#Setter
+func set_toggle_state(button_pressed: bool):
+	$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = button_pressed
+
+#Signal Reactions
 func _on_check_box_toggled(toggled_on):
 	for child in subset_container.get_children():
 		child.set_toggle_state(toggled_on)
@@ -47,9 +60,3 @@ func _on_subset_toggled():
 		$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = true
 	if all_unpressed:
 		$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = false
-
-func get_toggle_state():
-	return $MarginContainer/VBoxContainer/Species/CheckBox.button_pressed
-
-func set_toggle_state(button_pressed: bool):
-	$MarginContainer/VBoxContainer/Species/CheckBox.button_pressed = button_pressed

@@ -265,3 +265,4 @@ size_flags_horizontal = 3
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter3" to="." method="_on_filter_3_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter4" to="." method="_on_filter_4_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer2/Filter5" to="." method="_on_filter_5_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]

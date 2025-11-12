@@ -32,7 +32,8 @@ func calculate_base_power(context: AttackContext):
 		"Heavy Slam", "Heat Crash":
 			move_power = get_heavy_slam_power(context.attacker.get_weight(), context.defender.get_weight())
 		"Low Kick", "Grass Knot":
-			move_power == get_low_kick_power(context.defender.get_weight())
+			move_power = get_low_kick_power(context.defender.get_weight())
+
 		"Facade" when context.attacker.state.condition != "":
 			move_power = 140
 	
@@ -149,6 +150,10 @@ func calculate_attack_value(context: AttackContext) -> int:
 	
 	if context.get_move().category == "Special":
 		is_special = true
+	
+	if context.get_move().name == "Tera Blast" and context.attacker.state.terracrystalized:
+		if context.attacker.get_field_atk() > context.attacker.get_field_spa():
+			is_special = false
 	
 	match([is_special, context.get_move().name]):
 		[true, _]:
@@ -366,10 +371,12 @@ func calculate_final_modifier(context: AttackContext) -> int:
 					
 	return modifier_value
 
-func calculate_complete_damage(context: AttackContext) -> int:
+func calculate_complete_damage(context: AttackContext, no_defender = false) -> int:
 	var base_power = calculate_base_power(context)
 	var attack = calculate_attack_value(context)
-	var defense = calculate_defense_value(context)
+	var defense = 100
+	if not no_defender:
+		defense = calculate_defense_value(context)
 	
 	var damage:int = calculate_base_damage(base_power, attack, defense)
 	
@@ -415,14 +422,15 @@ func calculate_complete_damage(context: AttackContext) -> int:
 			damage = apply_modifier(damage, 9216)
 	
 	#Type Matchup
-	var type_shift = check_type_matchup(context.get_move(), context.defender.get_typing())
-	if type_shift == -10:
-		damage = 0
-	if type_shift > 0:
-		damage = floor(damage * (2 ** type_shift))
-	if type_shift < 0:
-		damage = floor(damage / (2 ** -type_shift))
-	
+	if not no_defender:
+		var type_shift = check_type_matchup(context.get_move(), context.defender.get_typing())
+		if type_shift == -10:
+			damage = 0
+		if type_shift > 0:
+			damage = floor(damage * (2 ** type_shift))
+		if type_shift < 0:
+			damage = floor(damage / (2 ** -type_shift))
+		
 	#Burn
 	match([context.attacker.state.condition, context.get_move().category]):
 		["Burn", "Physical"]:
@@ -432,6 +440,10 @@ func calculate_complete_damage(context: AttackContext) -> int:
 	#Final Modifiers
 	var final_modifier = calculate_final_modifier(context)
 	damage = apply_modifier(damage, final_modifier)
+	
+	#Special Cases
+	if context.get_move().name == "Final Gambit":
+		return context.attacker.get_current_hp()
 	
 	return damage
 
@@ -601,63 +613,3 @@ func check_type_matchup(move:Move, defense_types:Array[String]) -> int:
 					"Fighting", "Dragon", "Dark":
 						type_shifter += 1
 	return type_shifter
-
-func calculate_move_power(context: AttackContext) -> int:
-	var base_power = calculate_base_power(context)
-	var attack = calculate_attack_value(context)
-	var defense = 100
-	
-	var damage:int = calculate_base_damage(base_power, attack, defense)
-	
-	#Spread Reduction
-	if context.is_spread:
-		damage = apply_modifier(damage, 3072)
-	
-	#Weather
-	match([context.weather, context.get_move().type]):
-			["Sun", "Fire"], ["Rain", "Water"]:
-				damage = apply_modifier(damage, 6144)
-			["Sun", "Water"], ["Rain", "Fire"]:
-				damage = apply_modifier(damage, 2048)
-	
-	#Critical Hit
-	if context.critical_hit:
-		damage = pokeRound((damage *3)/2)
-	
-	#Damage Roll
-	var damage_roll = context.damage_roll
-	if damage_roll < 0:
-		damage_roll = 0
-	if damage_roll > 15:
-		damage_roll = 15
-	damage = floor( (damage * (100 - damage_roll)) /100)
-	
-	#Stab
-	var is_stab = false
-	if context.get_move().type == context.attacker.data.species.main_type:
-		is_stab = true
-	if context.get_move().type == context.attacker.data.species.secondary_type:
-		is_stab = true
-	var is_tera_boosted = context.attacker.state.terracrystalized and context.get_move().type == context.attacker.data.tera_type
-	var has_adaptability = context.attacker.data.ability.name == "Adaptability"
-	match([is_stab, is_tera_boosted, has_adaptability]):
-		[true, false, false], [false, true, false]: #normaler Stab
-			damage = apply_modifier(damage, 6144)
-		[true, false, true] when not context.attacker.state.terracrystalized: #Adaptability Stab
-			damage = apply_modifier(damage, 8192)
-		[false, true, true], [true, true, false]: #Tera Adaptability Stab
-			damage = apply_modifier(damage, 8192)
-		[true, true, true]: #Megacombo
-			damage = apply_modifier(damage, 9216)
-	
-	#Burn
-	match([context.attacker.state.condition, context.get_move().category]):
-		["Burn", "Physical"]:
-			if context.attacker.data.ability.name != "Guts" and context.get_move().name != "Facade":
-				damage = apply_modifier(damage, 2048)
-	
-	#Final Modifiers
-	var final_modifier = calculate_final_modifier(context)
-	damage = apply_modifier(damage, final_modifier)
-	
-	return damage

@@ -45,3 +45,6 @@ func get_modified_stat(value: float, stack: float) -> int:
 	if stack < 0:
 		return floor(value * 2/(-stack+2) )
 	return value
+
+func get_weight() -> float:
+	return data.species.weight

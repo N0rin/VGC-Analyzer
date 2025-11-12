@@ -8,10 +8,12 @@ var pokemon_list: Array[Species]
 
 @onready var list = $MarginContainer/VBoxContainer/CoreUI/Middle/ScrollContainer/VBoxContainer
 
-func _ready():
+
+#Loading
+func startup():
 	load_into_list(pokemon_list, "Species")
 	update_list("Total")
-
+	show()
 
 func load_into_list(list: Array, dirname: String):
 	var dir = DirAccess.open(DATA_PATH)
@@ -20,6 +22,7 @@ func load_into_list(list: Array, dirname: String):
 	for filename in file_list:
 		list.append(load(DATA_PATH + dirname + "/" + filename))
 
+#Interface
 func update_list(method: String):
 	clear_list()
 	
@@ -62,26 +65,29 @@ func sort_item_list(method: String, item_list: Array):
 		
 	item_list.sort_custom(compare_func)
 
+func clear():
+	pokemon_list.clear()
+	clear_list()
+	$MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorOffense.value = 1
+	$MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorDefense.value = 1
+	$MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpDefense.value = 1
+	$MarginContainer/VBoxContainer/CoreUI/Middle/HBoxContainer/FactorSpeed.value = 1
 
+#Signal Reactions
 func _on_filter_pressed():
 	update_list("Offense")
-
 
 func _on_filter_2_pressed():
 	update_list("PhysicalDefense")
 
-
 func _on_filter_3_pressed():
 	update_list("SpecialDefense")
-
 
 func _on_filter_4_pressed():
 	update_list("Speed")
 
-
 func _on_filter_5_pressed():
 	update_list("Total")
-
 
 func _on_factor_value_changed(value): # Sehr hässliche Lösung, um Label zu setzen und ready Schwierigkeit zu umgehen
 	var factors = [1,1,1,1]
@@ -92,3 +98,7 @@ func _on_factor_value_changed(value): # Sehr hässliche Lösung, um Label zu set
 	update_list("Total")
 	for item in list.get_children():
 		item.set_total(item.get_total(factors))
+
+func _on_back_pressed() -> void:
+	hide()
+	clear()

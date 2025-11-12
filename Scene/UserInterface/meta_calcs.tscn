@@ -104,6 +104,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/hover = ExtResource("2_4okmv")
 theme_override_styles/pressed = ExtResource("3_6qvp8")
 theme_override_styles/normal = ExtResource("1_2hhlj")
+toggle_mode = true
 text = "Terastalize"
 
 [node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
@@ -135,6 +136,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.35
+
+[node name="Search" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+placeholder_text = "Search"
 
 [node name="AllCheck" type="CheckBox" parent="MarginContainer/VBoxContainer/CoreUI/Right"]
 layout_mode = 2
@@ -192,6 +198,7 @@ theme_override_styles/normal = ExtResource("1_2hhlj")
 text = "Offense"
 
 [connection signal="set_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/Set Edit" to="." method="_on_set_edit_set_selected"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/CoreUI/Right/Search" to="." method="_on_search_text_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/CoreUI/Right/AllCheck" to="." method="_on_all_check_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/ToggleAttacker" to="." method="_on_toggle_attacker_pressed"]

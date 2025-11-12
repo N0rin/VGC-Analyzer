@@ -39,4 +39,12 @@ func get_move() -> Move:
 				move_variant.base_damage = 100
 		return move_variant
 	
+	if attacker.data.get_move(used_attack).name == "Tera Blast":
+		if attacker.state.terracrystalized:
+			var move_variant: Move = attacker.data.get_move(used_attack).duplicate()
+			move_variant.type = attacker.data.tera_type
+			if attacker.get_field_atk() > attacker.get_field_spa():
+				move_variant.category = "Physical"
+			return move_variant
+	
 	return attacker.data.get_move(used_attack)

@@ -5,10 +5,12 @@ const DATA_PATH = "res://Ressourcen/"
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Middle/Set Edit"
 @onready var new_set_name = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit
 
+#Loading
 func startup():
 	set_edit.load_saved_pokemon_data()
 	show()
 
+#Saving
 func save_set(set_name: String):
 	var pokemon_set : PokemonData = set_edit.get_pokemon_data()
 	pokemon_set.name = set_name
@@ -19,6 +21,7 @@ func save_set(set_name: String):
 	
 	set_edit.pokemon_set_list.append(pokemon_set)
 
+#Signal Reactions
 func _on_back_pressed():
 	hide()
 	set_edit.clear()

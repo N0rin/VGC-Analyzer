@@ -46,6 +46,8 @@ func update_move_calcs(only_strongest = true):
 	var test_pokemon = Pokemon.new()
 	test_pokemon.state = PokemonState.new()
 	test_pokemon.data = set_edit.get_pokemon_data()
+	if $MarginContainer/VBoxContainer/CoreUI/Left/Extras/Terastalize.button_pressed:
+		test_pokemon.state.terracrystalized = true
 	var context = AttackContext.new()
 	
 	var move_calc_list: Array[MoveCalcItem]
@@ -94,6 +96,8 @@ func clear():
 	pokemon_list.clear()
 	pokemon_set_list.clear()
 	set_edit.clear()
+	$MarginContainer/VBoxContainer/CoreUI/Left/Extras/Terastalize.button_pressed = false
+	$MarginContainer/VBoxContainer/CoreUI/Left/Factors.clear()
 	
 	clear_right_selection()
 	clear_move_calcs()
@@ -169,3 +173,18 @@ func _on_toggle_attacker_pressed():
 func _on_back_pressed():
 	hide()
 	clear()
+
+func _on_search_text_changed() -> void:
+	var new_text = $MarginContainer/VBoxContainer/CoreUI/Right/Search.text
+	right_set_selection.get_children()
+	if new_text == "":
+		for right_set_item in right_set_selection.get_children():
+			right_set_item.show()
+		return
+	
+	var matches: Array[String]
+	for right_set_item in right_set_selection.get_children():
+		if new_text.to_lower() in right_set_item.get_species_name().to_lower():
+			right_set_item.show()
+		else:
+			right_set_item.hide()

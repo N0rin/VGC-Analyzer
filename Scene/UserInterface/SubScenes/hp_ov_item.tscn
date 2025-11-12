@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5bkfpwtydq04"]
+[gd_scene load_steps=2 format=3 uid="uid://dk0rnerg8auyi"]
 
-[ext_resource type="Script" path="res://speed_ov_item.gd" id="1_8hy80"]
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/hp_ov_item.gd" id="1_8t7pw"]
 
-[node name="SpeedOVItem" type="PanelContainer"]
-script = ExtResource("1_8hy80")
+[node name="HPOVItem" type="PanelContainer"]
+script = ExtResource("1_8t7pw")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -31,7 +31,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "("
 
-[node name="SpeedyBase" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="1_8" type="Label" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -42,7 +42,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "-"
 
-[node name="StrongBase" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="1_16" type="Label" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

@@ -8,6 +8,7 @@ var team_members: Array[PokemonData] = [null, null, null, null, null, null]
 @onready var team_name = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Right/Set Edit"
 
+#Loading
 func startup():
 	$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton/Button.button_pressed = true
 	set_edit.load_saved_pokemon_data()
@@ -20,6 +21,7 @@ func load_into_list(list: Array, dirname: String):
 	for filename in file_list:
 		list.append(load(DATA_PATH + dirname + "/" + filename))
 
+#Saving
 func save_team(team_name: String):
 	team_members[selected_member] = set_edit.get_pokemon_data()
 	
@@ -32,6 +34,7 @@ func save_team(team_name: String):
 	var result = ResourceSaver.save(pokemon_team, resource_path)
 	assert(result == OK)
 
+#Reset
 func clear():
 	team_members = [null, null, null, null, null, null]
 	selected_member = 0
@@ -44,6 +47,7 @@ func clear():
 	$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6.clear()
 	$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton/Button.button_pressed = true
 
+#Signal Reactions
 func _on_set_edit_pokemon_selected(pokemon: Species) -> void:
 	match selected_member:
 		0:
@@ -58,7 +62,6 @@ func _on_set_edit_pokemon_selected(pokemon: Species) -> void:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton5.set_pokemon(pokemon)
 		5:
 			$MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton6.set_pokemon(pokemon)
-
 
 func _on_pokemon_button_id_pressed(id) -> void:
 	match selected_member:
