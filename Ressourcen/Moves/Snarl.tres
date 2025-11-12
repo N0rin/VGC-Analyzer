@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ckfku6sgb3w3b"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_v3c1i"]
+
+[resource]
+script = ExtResource("1_v3c1i")
+name = "Snarl"
+base_damage = 55
+accuracy = 95
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Dark"
+makes_contact = false
+added_effect = "-SpA"
+added_effect_chance = 100
+crit_bonus = 0

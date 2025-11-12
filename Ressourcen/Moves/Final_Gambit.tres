@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://g4glf7fgf5x5"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_eq0ju"]
+
+[resource]
+script = ExtResource("1_eq0ju")
+name = "Final Gambit"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Fighting"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

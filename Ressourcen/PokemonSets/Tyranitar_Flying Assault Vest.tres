@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Sand_Stream.tres" id="1_vcqr1"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Assault_Vest.tres" id="2_rup4f"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rock_Slide.tres" id="3_7k1et"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Knock_Off.tres" id="4_ayys1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Tera_Blast.tres" id="5_yvojs"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Low_Kick.tres" id="6_ypkol"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_sibx5"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Tyranitar.tres" id="8_abt3q"]
+
+[resource]
+script = ExtResource("7_sibx5")
+name = "Flying Assault Vest"
+format = 8
+species = ExtResource("8_abt3q")
+ability = ExtResource("1_vcqr1")
+item = ExtResource("2_rup4f")
+tera_type = "Flying"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_evs = 116
+atk_evs = 204
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 188
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_7k1et")
+move2 = ExtResource("4_ayys1")
+move3 = ExtResource("5_yvojs")
+move4 = ExtResource("6_ypkol")

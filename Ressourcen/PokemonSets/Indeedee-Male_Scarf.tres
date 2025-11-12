@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Psychic_Surge.tres" id="1_t0xti"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Scarf.tres" id="2_ujd4u"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Expanding_Force.tres" id="3_yttu3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Tera_Blast.tres" id="4_4mpkv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick.tres" id="5_3k2xj"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dazzling_Gleam.tres" id="6_ifrov"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_eikrm"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/IndeedeeMale.tres" id="8_7pwl2"]
+
+[resource]
+script = ExtResource("7_eikrm")
+name = "Scarf"
+format = 8
+species = ExtResource("8_7pwl2")
+ability = ExtResource("1_t0xti")
+item = ExtResource("2_ujd4u")
+tera_type = "Fire"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 4
+atk_evs = 0
+def_evs = 0
+spa_evs = 252
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_yttu3")
+move2 = ExtResource("4_4mpkv")
+move3 = ExtResource("5_3k2xj")
+move4 = ExtResource("6_ifrov")

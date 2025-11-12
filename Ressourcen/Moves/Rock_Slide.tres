@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://cmsg88i46jkft"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_jyam5"]
+
+[resource]
+script = ExtResource("1_jyam5")
+name = "Rock Slide"
+base_damage = 75
+accuracy = 90
+priority = 0
+targeting = "Enemies"
+category = "Physical"
+type = "Rock"
+makes_contact = false
+added_effect = "Flinch"
+added_effect_chance = 30
+crit_bonus = 0

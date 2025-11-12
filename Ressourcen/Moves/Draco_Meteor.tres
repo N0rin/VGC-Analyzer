@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ccye8wvx7kl4m"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_2x40u"]
+
+[resource]
+script = ExtResource("1_2x40u")
+name = "Draco Meteor"
+base_damage = 130
+accuracy = 90
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Dragon"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

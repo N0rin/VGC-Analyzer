@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Defiant.tres" id="1_jl43u"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_g57hg"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="3_ofvyf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rage_Fist.tres" id="4_0tfur"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="5_yy2fm"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Final_Gambit.tres" id="6_bt7to"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_b3pnv"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Annihilape.tres" id="8_d0lf5"]
+
+[resource]
+script = ExtResource("7_b3pnv")
+name = "Utility"
+format = 8
+species = ExtResource("8_d0lf5")
+ability = ExtResource("1_jl43u")
+item = ExtResource("2_g57hg")
+tera_type = "Water"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_evs = 188
+atk_evs = 68
+def_evs = 0
+spa_evs = 0
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_ofvyf")
+move2 = ExtResource("4_0tfur")
+move3 = ExtResource("5_yy2fm")
+move4 = ExtResource("6_bt7to")
