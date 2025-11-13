@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_lwq8o"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Life_Orb.tres" id="2_ec1fs"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="3_clsn8"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="4_r5v7p"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Nasty_Plot.tres" id="5_klj5n"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_vfj3p"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_ua4x4"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Gholdengo.tres" id="8_ga0wj"]
+
+[resource]
+script = ExtResource("7_ua4x4")
+name = "Life Orb Nasty Plot"
+format = 8
+species = ExtResource("8_ga0wj")
+ability = ExtResource("1_lwq8o")
+item = ExtResource("2_ec1fs")
+tera_type = "Water"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 4
+atk_evs = 0
+def_evs = 0
+spa_evs = 252
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_clsn8")
+move2 = ExtResource("4_r5v7p")
+move3 = ExtResource("5_klj5n")
+move4 = ExtResource("6_vfj3p")

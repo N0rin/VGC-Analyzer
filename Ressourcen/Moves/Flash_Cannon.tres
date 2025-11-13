@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://cvxd3vxp43mbe"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_5vjwu"]
+
+[resource]
+script = ExtResource("1_5vjwu")
+name = "Flash Cannon"
+base_damage = 80
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Steel"
+makes_contact = false
+added_effect = "-SpD"
+added_effect_chance = 10
+crit_bonus = 0

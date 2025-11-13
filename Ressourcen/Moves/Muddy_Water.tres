@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bxt5edjbd6s1j"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_j71tk"]
+
+[resource]
+script = ExtResource("1_j71tk")
+name = "Muddy Water"
+base_damage = 90
+accuracy = 85
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Water"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

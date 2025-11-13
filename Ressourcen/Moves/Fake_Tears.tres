@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b7k3t0b4ujrl1"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_sktwf"]
+
+[resource]
+script = ExtResource("1_sktwf")
+name = "Fake Tears"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Status"
+type = "Dark"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

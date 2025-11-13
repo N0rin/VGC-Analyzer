@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Minds_Eye.tres" id="1_y4w0t"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Assault_Vest.tres" id="2_lqjhc"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Blood_Moon.tres" id="3_2lnfe"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Hyper_Voice.tres" id="4_8tyq4"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Earth_Power.tres" id="5_d33nd"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Vacuum_Wave.tres" id="6_cyuuk"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_y2oqp"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/UrsalunaBloodmoon.tres" id="8_yol72"]
+
+[resource]
+script = ExtResource("7_y2oqp")
+name = "Assault Vest T-Fighting"
+format = 8
+species = ExtResource("8_yol72")
+ability = ExtResource("1_y4w0t")
+item = ExtResource("2_lqjhc")
+tera_type = "Fighting"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 4
+atk_evs = 0
+def_evs = 0
+spa_evs = 252
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_2lnfe")
+move2 = ExtResource("4_8tyq4")
+move3 = ExtResource("5_d33nd")
+move4 = ExtResource("6_cyuuk")
