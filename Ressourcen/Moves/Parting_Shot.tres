@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ooh8ts328qxn"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_67yj1"]
+
+[resource]
+script = ExtResource("1_67yj1")
+name = "Parting Shot"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Status"
+type = "Dark"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

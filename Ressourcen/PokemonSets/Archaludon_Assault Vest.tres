@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Stamina.tres" id="1_pourf"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Assault_Vest.tres" id="2_x6sau"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_phdc5"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dragon_Pulse.tres" id="4_tgbgv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="5_3eyqv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Body_Press.tres" id="6_f041o"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_f4ele"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Archaludon.tres" id="8_lpeyx"]
+
+[resource]
+script = ExtResource("7_f4ele")
+name = "Assault Vest"
+format = 8
+species = ExtResource("8_lpeyx")
+ability = ExtResource("1_pourf")
+item = ExtResource("2_x6sau")
+tera_type = "Bug"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_evs = 252
+atk_evs = 0
+def_evs = 4
+spa_evs = 164
+spd_evs = 68
+spe_evs = 20
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_phdc5")
+move2 = ExtResource("4_tgbgv")
+move3 = ExtResource("5_3eyqv")
+move4 = ExtResource("6_f041o")

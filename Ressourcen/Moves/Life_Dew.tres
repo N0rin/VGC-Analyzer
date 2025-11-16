@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dsg1njip48wdu"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_tyxfj"]
+
+[resource]
+script = ExtResource("1_tyxfj")
+name = "Life Dew"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Allies"
+category = "Status"
+type = "Water"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

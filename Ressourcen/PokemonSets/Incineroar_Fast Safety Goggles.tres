@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_uesv2"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_4rn7r"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Knock_Off.tres" id="3_tp0a2"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="4_6bugi"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="5_hl5v1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Parting_Shot.tres" id="6_dmqvo"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_m5q41"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Incineroar.tres" id="8_q7uqv"]
+
+[resource]
+script = ExtResource("7_m5q41")
+name = "Fast Safety Goggles"
+format = 8
+species = ExtResource("8_q7uqv")
+ability = ExtResource("1_uesv2")
+item = ExtResource("2_4rn7r")
+tera_type = "Ghost"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_evs = 244
+atk_evs = 4
+def_evs = 4
+spa_evs = 0
+spd_evs = 4
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_tp0a2")
+move2 = ExtResource("4_6bugi")
+move3 = ExtResource("5_hl5v1")
+move4 = ExtResource("6_dmqvo")
