@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3 uid="uid://pn2kdqo8vw8i"]
+
+[ext_resource type="Script" path="res://matchup_calcs.gd" id="1_u7glk"]
+[ext_resource type="StyleBox" uid="uid://cepxar0wi7s6g" path="res://Ressourcen/Styles/menue_hover_style_box_flat.tres" id="2_h71tq"]
+[ext_resource type="StyleBox" uid="uid://cafjxm53n17na" path="res://Ressourcen/Styles/menue_pressed_style_box_flat.tres" id="3_jd4s7"]
+[ext_resource type="StyleBox" uid="uid://b1bvdnbgalbwm" path="res://Ressourcen/Styles/menue_style_box_flat.tres" id="4_wxveq"]
+[ext_resource type="PackedScene" uid="uid://bm0m5np8j0cco" path="res://Scene/UserInterface/SubScenes/team_select.tscn" id="5_oarfa"]
+
+[node name="MatchupCalcs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7glk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Top" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Top"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Top"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Meta Calcs"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/Top"]
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("2_h71tq")
+theme_override_styles/pressed = ExtResource("3_jd4s7")
+theme_override_styles/normal = ExtResource("4_wxveq")
+selected = 0
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "Regulation F"
+
+[node name="CoreUI" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 150
+
+[node name="Left" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="TeamSelect" parent="MarginContainer/VBoxContainer/CoreUI/Left" instance=ExtResource("5_oarfa")]
+layout_mode = 2
+
+[node name="Middle" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MiddleScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MoveList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI/Middle/MiddleScroll"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Right" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="TeamSelect" parent="MarginContainer/VBoxContainer/CoreUI/Right" instance=ExtResource("5_oarfa")]
+layout_mode = 2
+
+[node name="Bottom" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_h71tq")
+theme_override_styles/pressed = ExtResource("3_jd4s7")
+theme_override_styles/normal = ExtResource("4_wxveq")
+text = "Go Back"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/Bottom"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ToggleAttacker" type="Button" parent="MarginContainer/VBoxContainer/Bottom"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_h71tq")
+theme_override_styles/pressed = ExtResource("3_jd4s7")
+theme_override_styles/normal = ExtResource("4_wxveq")
+text = "Offense"
+
+[connection signal="team_selected" from="MarginContainer/VBoxContainer/CoreUI/Left/TeamSelect" to="." method="_on_team_select_team_selected"]
+[connection signal="team_selected" from="MarginContainer/VBoxContainer/CoreUI/Right/TeamSelect" to="." method="_on_team_select_team_selected"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Bottom/ToggleAttacker" to="." method="_on_toggle_attacker_pressed"]

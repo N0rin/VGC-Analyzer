@@ -87,7 +87,6 @@ func update_move_calcs(only_strongest = true):
 			else:
 				move_calc_list.append_array(move_list)
 	
-	
 	move_calc_list.sort_custom(func(a,b): return a.max_damage > b.max_damage)
 	for move_calc_item in move_calc_list:
 		middle_move_list.add_child(move_calc_item)

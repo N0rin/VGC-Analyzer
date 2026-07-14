@@ -1,6 +1,6 @@
 extends Node
 
-func create_description(context: AttackContext) -> String:
+func create_description(context: AttackContext, bb_code = false) -> String:
 	var attacker_boost = get_attack_boost(context)
 	var attacker_training = get_attacker_training(context)
 	var attacker_item = get_attacker_item(context)
@@ -8,7 +8,7 @@ func create_description(context: AttackContext) -> String:
 	var offensive_ruin = get_offensive_ruin(context)
 	var attacker_tera = get_attacker_tera(context)
 	var attacker_name = context.attacker.data.species.name + " "
-	var attacker = attacker_boost + attacker_training + attacker_item + attacker_tera + attacker_name
+	var attacker_pretext = attacker_boost + attacker_training + attacker_item + attacker_tera
 	
 	var helping_hand = get_helping_hand(context)
 	var attack_name = context.get_move().name
@@ -16,14 +16,15 @@ func create_description(context: AttackContext) -> String:
 	if context.is_spread:
 		spread = "(Spread) "
 	var attack_extra = get_extra_attack_info(context)
-	var attack = helping_hand + attack_name + spread + attack_extra
+	var attack_pretext = helping_hand
+	var attack_posttext = spread + attack_extra
 	
 	var defender_boost = get_defense_boost(context)
 	var defender_training = get_defender_training(context)
 	var defender_item = get_defender_item(context)
 	var defender_tera = get_defender_tera(context)
 	var defender_name = context.defender.data.species.name + " "
-	var defender = defender_boost + defender_training + defender_item + defender_tera + defender_name
+	var defender_pretext = defender_boost + defender_training + defender_item + defender_tera
 	
 	var screen = get_screen(context)
 	var friend_guard = get_friend_guard(context)
@@ -31,8 +32,14 @@ func create_description(context: AttackContext) -> String:
 	var weather = get_weather(context)
 	var environment = screen + friend_guard + terrain + weather
 	
-	var description = attacker + attack + "vs. " + defender + environment
-	return description
+	if bb_code:
+		var attacker = "[color=slate_gray]%s[/color]%s" % [attacker_pretext, attacker_name]
+		var attack = "[color=slate_gray]%s[/color][color=dark_red]%s%s[/color]" % [attack_pretext, attack_name, attack_posttext]
+		var defender = "VS [color=slate_gray]%s[/color]%s[color=slate_gray]%s[/color]" % [defender_pretext, defender_name, environment]
+		return attacker + attack + defender
+	
+	return attacker_pretext + attacker_name + attack_pretext + attack_name + attack_posttext + "vs. " + defender_pretext + defender_name + environment
+	
 
 func create_team_overview_description(context: AttackContext) -> String:
 	var attacker_boost = get_attack_boost(context)

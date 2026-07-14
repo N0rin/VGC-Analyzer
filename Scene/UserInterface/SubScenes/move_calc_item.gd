@@ -5,7 +5,7 @@ var max_damage = 0
 var min_damage = 0
 
 func load_attack(context: AttackContext):
-	$MarginContainer/HBoxContainer/Description.text = AttackDescription.create_description(context)
+	$MarginContainer/HBoxContainer/Description.text = AttackDescription.create_description(context, true)
 	context.damage_roll = 0
 	max_damage = damage_calculation.calculate_percentage(context)
 	context.damage_roll = 15

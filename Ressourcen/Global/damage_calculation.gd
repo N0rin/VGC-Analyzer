@@ -37,6 +37,7 @@ func calculate_base_power(context: AttackContext):
 		"Facade" when context.attacker.state.condition != "":
 			move_power = 140
 	
+	
 	#Type-Boost-Items
 	var item = context.attacker.data.item.name
 	match(context.get_move().type):
@@ -409,8 +410,16 @@ func calculate_complete_damage(context: AttackContext, no_defender = false) -> i
 		is_stab = true
 	if context.get_move().type == context.attacker.data.species.secondary_type:
 		is_stab = true
+	
 	var is_tera_boosted = context.attacker.state.terracrystalized and context.get_move().type == context.attacker.data.tera_type
+	if context.attacker.data.tera_type == "Stellar" and context.is_stellar_boosted:
+		if is_stab:
+			is_tera_boosted = true
+		else:
+			damage = apply_modifier(damage, 4915)
+	
 	var has_adaptability = context.attacker.data.ability.name == "Adaptability"
+	
 	match([is_stab, is_tera_boosted, has_adaptability]):
 		[true, false, false], [false, true, false]: #normaler Stab
 			damage = apply_modifier(damage, 6144)

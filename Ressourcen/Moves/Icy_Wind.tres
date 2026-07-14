@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b1oksm6voxt5g"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_s5tbe"]
+
+[resource]
+script = ExtResource("1_s5tbe")
+name = "Icy Wind"
+base_damage = 55
+accuracy = 95
+priority = 0
+targeting = "Enemies"
+category = "Special"
+type = "Ice"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

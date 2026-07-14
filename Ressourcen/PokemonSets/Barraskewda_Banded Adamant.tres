@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_018xm"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Band.tres" id="2_dn5ae"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Liquidation.tres" id="3_v3cgb"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_ktn77"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flip_Turn.tres" id="5_fot3w"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Aqua Jet.tres" id="6_b2nfc"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_a1rlu"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/Barraskewda.tres" id="8_ba4vi"]
+
+[resource]
+script = ExtResource("7_a1rlu")
+name = "Banded Adamant"
+format = 8
+species = ExtResource("8_ba4vi")
+ability = ExtResource("1_018xm")
+item = ExtResource("2_dn5ae")
+tera_type = "Stellar"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_evs = 0
+atk_evs = 252
+def_evs = 4
+spa_evs = 0
+spd_evs = 0
+spe_evs = 252
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_v3cgb")
+move2 = ExtResource("4_ktn77")
+move3 = ExtResource("5_fot3w")
+move4 = ExtResource("6_b2nfc")

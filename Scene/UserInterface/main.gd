@@ -39,3 +39,6 @@ func _on_metasets_create_set() -> void:
 
 func _on_metasets_create_team() -> void:
 	$Metasets/PokemonTeamCreator.startup()
+
+func _on_calculations_to_matchup() -> void:
+	$Calculations/MatchupCalcs.startup()

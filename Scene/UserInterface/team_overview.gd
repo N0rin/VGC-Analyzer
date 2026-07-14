@@ -99,7 +99,7 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	context_list.append(context)
 	var move : Move = context.get_move()
 	
-	#Low Kick
+	#Low Kick, Grass Knot
 	match move.name:
 		"Low Kick", "Grass Knot":
 			var new_context : AttackContext= context.duplicate(true)
@@ -176,9 +176,11 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	#Tera
 	var tera_variants : Array[AttackContext]
 	for variant in context_list:
-		if move.type == context.attacker.data.tera_type or move.name == "Tera Blast":
+		if move.type == context.attacker.data.tera_type or move.name == "Tera Blast" or context.attacker.data.tera_type == "Stellar":
 			var new_context = variant.duplicate(true)
 			new_context.attacker.state.terracrystalized = true
+			if new_context.attacker.data.tera_type == "Stellar":
+				new_context.is_stellar_boosted = true
 			tera_variants.append(new_context)
 	context_list = context_list + tera_variants
 	

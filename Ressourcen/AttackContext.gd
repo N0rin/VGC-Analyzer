@@ -17,6 +17,7 @@ class_name AttackContext
 @export var helping_hand = false
 @export var friend_guard = false
 @export var is_spread = false
+@export var is_stellar_boosted = false
 
 func get_move() -> Move:
 	if not attacker.data.get_move(used_attack):
