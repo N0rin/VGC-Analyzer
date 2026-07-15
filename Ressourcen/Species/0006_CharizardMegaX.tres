@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dgspaej51u8cd"]
+
+[ext_resource type="Resource" uid="uid://tyn36rjtsk63" path="res://Ressourcen/Abilities/Tough_Claws.tres" id="1_cntb0"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_0gkb8"]
+
+[resource]
+script = ExtResource("2_0gkb8")
+name = "Mega Charizard X"
+texture_id = 4
+texture_x = 6
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Dragon"
+ability1 = ExtResource("1_cntb0")
+hp = 78
+atk = 130
+def = 111
+spa = 130
+spd = 85
+spe = 100
+weight = 110.5
+restriction = 5

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://b7645n7u3l2j7"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_7so7i"]
+[ext_resource type="Resource" uid="uid://cc5hmm4sv0em6" path="res://Ressourcen/Abilities/Flower_Veil.tres" id="1_wumah"]
+[ext_resource type="Resource" uid="uid://c0k8wy75ibr1b" path="res://Ressourcen/Abilities/Symbiosis.tres" id="2_1vmac"]
+
+[resource]
+script = ExtResource("1_7so7i")
+name = "Eternal Floette"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fairy"
+secondary_type = "None"
+ability1 = ExtResource("1_wumah")
+ability3 = ExtResource("2_1vmac")
+hp = 74
+atk = 65
+def = 67
+spa = 125
+spd = 128
+spe = 92
+weight = 0.9
+restriction = 0

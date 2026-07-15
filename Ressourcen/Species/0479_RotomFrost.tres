@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cx04632x02r2u"]
+
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_a7tme"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_5o2of"]
+
+[resource]
+script = ExtResource("2_5o2of")
+name = "Frost Rotom"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "Ice"
+ability1 = ExtResource("1_a7tme")
+hp = 50
+atk = 65
+def = 107
+spa = 105
+spd = 107
+spe = 86
+weight = 60.0
+restriction = 0

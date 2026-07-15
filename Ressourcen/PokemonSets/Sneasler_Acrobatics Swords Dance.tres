@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Unburden.tres" id="1_uivda"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Grassy_Seed.tres" id="2_0xrwf"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Acrobatics.tres" id="3_w0qiq"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_yx8dx"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Swords_Dance.tres" id="5_bkevx"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_ti81n"]
+[ext_resource type="Resource" uid="uid://qaga20cu8efm" path="res://Ressourcen/Abilities/Unburden.tres" id="1_uivda"]
+[ext_resource type="Resource" uid="uid://bjurbj5gtspwj" path="res://Ressourcen/Items/Grassy_Seed.tres" id="2_0xrwf"]
+[ext_resource type="Resource" uid="uid://1kmpohhbinei" path="res://Ressourcen/Moves/Acrobatics.tres" id="3_w0qiq"]
+[ext_resource type="Resource" uid="uid://yt7wv8ah8eup" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_yx8dx"]
+[ext_resource type="Resource" uid="uid://drst4kgwt6o3s" path="res://Ressourcen/Moves/Swords_Dance.tres" id="5_bkevx"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_ti81n"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_t5ab8"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Sneasler.tres" id="8_35y1g"]
+[ext_resource type="Resource" uid="uid://cr3wrgb35cqva" path="res://Ressourcen/Species/0903_Sneasler.tres" id="8_35y1g"]
 
 [resource]
 script = ExtResource("7_t5ab8")

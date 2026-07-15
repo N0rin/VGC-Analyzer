@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Sturdy.tres" id="1_3wlln"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Power_Herb.tres" id="2_f7f7o"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_wvvjc"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Draco_Meteor.tres" id="4_i47p0"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="5_cq2rr"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_nxsv1"]
+[ext_resource type="Resource" uid="uid://blmy6q7drcm0q" path="res://Ressourcen/Abilities/Sturdy.tres" id="1_3wlln"]
+[ext_resource type="Resource" uid="uid://dss3cqqjoiedu" path="res://Ressourcen/Items/Power_Herb.tres" id="2_f7f7o"]
+[ext_resource type="Resource" uid="uid://0eudxrhma3nv" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_wvvjc"]
+[ext_resource type="Resource" uid="uid://ccye8wvx7kl4m" path="res://Ressourcen/Moves/Draco_Meteor.tres" id="4_i47p0"]
+[ext_resource type="Resource" uid="uid://cvxd3vxp43mbe" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="5_cq2rr"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_nxsv1"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_i6dxm"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Archaludon.tres" id="8_x1hab"]
+[ext_resource type="Resource" uid="uid://cica6e53shv0a" path="res://Ressourcen/Species/1018_Archaludon.tres" id="8_x1hab"]
 
 [resource]
 script = ExtResource("7_i6dxm")

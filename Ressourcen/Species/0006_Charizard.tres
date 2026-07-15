@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://b5ju3uxglau17"]
+
+[ext_resource type="Resource" uid="uid://duci0ks4doxp7" path="res://Ressourcen/Abilities/Blaze.tres" id="1_s6tah"]
+[ext_resource type="Resource" uid="uid://6ai82x64afql" path="res://Ressourcen/Abilities/Solar_Power.tres" id="2_cqvbs"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_khdl4"]
+
+[resource]
+script = ExtResource("2_khdl4")
+name = "Charizard"
+texture_id = 4
+texture_x = 6
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Flying"
+ability1 = ExtResource("1_s6tah")
+ability3 = ExtResource("2_cqvbs")
+hp = 78
+atk = 84
+def = 78
+spa = 109
+spd = 85
+spe = 100
+weight = 90.5
+restriction = 0

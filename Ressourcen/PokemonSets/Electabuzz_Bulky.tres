@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="1_r3k2f"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Eviolite.tres" id="2_dgfvn"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Thunderbolt.tres" id="3_4ajon"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Follow_Me.tres" id="4_tynva"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="5_gdwov"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_yo4fx"]
+[ext_resource type="Resource" uid="uid://c12loa80emb8k" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="1_r3k2f"]
+[ext_resource type="Resource" uid="uid://bf5iitagun6fq" path="res://Ressourcen/Items/Eviolite.tres" id="2_dgfvn"]
+[ext_resource type="Resource" uid="uid://dtiou34d62nul" path="res://Ressourcen/Moves/Thunderbolt.tres" id="3_4ajon"]
+[ext_resource type="Resource" uid="uid://c2c8228ef3ni2" path="res://Ressourcen/Moves/Follow_Me.tres" id="4_tynva"]
+[ext_resource type="Resource" uid="uid://x4h1hw8dqqn" path="res://Ressourcen/Moves/Taunt.tres" id="5_gdwov"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_yo4fx"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_mjcv0"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Electabuzz.tres" id="8_jtntd"]
+[ext_resource type="Resource" uid="uid://bo35bo4tpm84" path="res://Ressourcen/Species/0125_Electabuzz.tres" id="8_jtntd"]
 
 [resource]
 script = ExtResource("7_mjcv0")

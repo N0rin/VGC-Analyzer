@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Drizzle.tres" id="1_vt8w6"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_17ig7"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Hurricane.tres" id="3_hpd2n"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Weather_Ball.tres" id="4_511l6"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Tailwind.tres" id="5_ik5ix"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_rtu45"]
+[ext_resource type="Resource" uid="uid://bax8amm3k186m" path="res://Ressourcen/Abilities/Drizzle.tres" id="1_vt8w6"]
+[ext_resource type="Resource" uid="uid://do3fobu43466g" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_17ig7"]
+[ext_resource type="Resource" uid="uid://lvjrgfcvptbx" path="res://Ressourcen/Moves/Hurricane.tres" id="3_hpd2n"]
+[ext_resource type="Resource" uid="uid://do3g8322crcgs" path="res://Ressourcen/Moves/Weather_Ball.tres" id="4_511l6"]
+[ext_resource type="Resource" uid="uid://crgu5vwlkwviy" path="res://Ressourcen/Moves/Tailwind.tres" id="5_ik5ix"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_rtu45"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_amg70"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Pelipper.tres" id="8_j8y2x"]
+[ext_resource type="Resource" uid="uid://dkssojvbfbmq3" path="res://Ressourcen/Species/0279_Pelipper.tres" id="8_j8y2x"]
 
 [resource]
 script = ExtResource("7_amg70")

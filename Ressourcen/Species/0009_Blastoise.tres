@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://dxn6453ypiabe"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_5rb1b"]
+[ext_resource type="Resource" uid="uid://bn05al72u40lm" path="res://Ressourcen/Abilities/Torrent.tres" id="1_sloyn"]
+[ext_resource type="Resource" uid="uid://7sswfkt2j3w8" path="res://Ressourcen/Abilities/Rain_Dish.tres" id="2_dnbw1"]
+
+[resource]
+script = ExtResource("1_5rb1b")
+name = "Blastoise"
+texture_id = 4
+texture_x = 9
+texture_y = 0
+main_type = "Water"
+secondary_type = "None"
+ability1 = ExtResource("1_sloyn")
+ability3 = ExtResource("2_dnbw1")
+hp = 79
+atk = 83
+def = 100
+spa = 85
+spd = 105
+spe = 78
+weight = 85.5
+restriction = 0

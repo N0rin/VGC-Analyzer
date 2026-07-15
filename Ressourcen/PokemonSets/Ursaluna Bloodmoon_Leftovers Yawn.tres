@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Minds_Eye.tres" id="1_1l7wn"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Leftovers.tres" id="2_e5600"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Blood_Moon.tres" id="3_m3syt"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Earth_Power.tres" id="4_lwgkm"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Yawn.tres" id="5_6jtlh"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_qrvx0"]
+[ext_resource type="Resource" uid="uid://06x5bt1cwkv6" path="res://Ressourcen/Abilities/Minds_Eye.tres" id="1_1l7wn"]
+[ext_resource type="Resource" uid="uid://c271ys4y0lr4r" path="res://Ressourcen/Items/Leftovers.tres" id="2_e5600"]
+[ext_resource type="Resource" uid="uid://djr03fhigucrp" path="res://Ressourcen/Moves/Blood_Moon.tres" id="3_m3syt"]
+[ext_resource type="Resource" uid="uid://cwwohcmclsgx" path="res://Ressourcen/Moves/Earth_Power.tres" id="4_lwgkm"]
+[ext_resource type="Resource" uid="uid://bu0f8mkfoh22t" path="res://Ressourcen/Moves/Yawn.tres" id="5_6jtlh"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_qrvx0"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_j74si"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/UrsalunaBloodmoon.tres" id="8_33cqn"]
+[ext_resource type="Resource" uid="uid://btfay6wmm02rf" path="res://Ressourcen/Species/0901_UrsalunaBloodmoon.tres" id="8_33cqn"]
 
 [resource]
 script = ExtResource("7_j74si")

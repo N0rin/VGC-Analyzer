@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Purifying_Salt.tres" id="1_2lf6q"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Maranga_Berry.tres" id="2_dq3vp"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Salt_Cure.tres" id="3_fvvv4"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Recover.tres" id="4_p3swy"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Stealth Rock.tres" id="5_txvr7"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_pvf3b"]
+[ext_resource type="Resource" uid="uid://46qkx1fsy24l" path="res://Ressourcen/Abilities/Purifying_Salt.tres" id="1_2lf6q"]
+[ext_resource type="Resource" uid="uid://7vuxk184tacf" path="res://Ressourcen/Items/Maranga_Berry.tres" id="2_dq3vp"]
+[ext_resource type="Resource" uid="uid://c1b1orlvq0xvv" path="res://Ressourcen/Moves/Salt_Cure.tres" id="3_fvvv4"]
+[ext_resource type="Resource" uid="uid://bchl023y1fr4q" path="res://Ressourcen/Moves/Recover.tres" id="4_p3swy"]
+[ext_resource type="Resource" uid="uid://06mjwsxo4b7o" path="res://Ressourcen/Moves/Stealth Rock.tres" id="5_txvr7"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_pvf3b"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_w1xtu"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Garganacl.tres" id="8_3lc7f"]
+[ext_resource type="Resource" uid="uid://27xxeqvro4j4" path="res://Ressourcen/Species/0934_Garganacl.tres" id="8_3lc7f"]
 
 [resource]
 script = ExtResource("7_w1xtu")

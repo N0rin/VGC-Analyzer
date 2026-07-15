@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Prankster.tres" id="1_wyqpe"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Covert_Cloak.tres" id="2_gtjt3"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Moonblast.tres" id="3_3dky6"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="4_uycl2"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Tears.tres" id="5_5vajd"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Tailwind.tres" id="6_4j7nm"]
+[ext_resource type="Resource" uid="uid://cevu2faa3jm83" path="res://Ressourcen/Abilities/Prankster.tres" id="1_wyqpe"]
+[ext_resource type="Resource" uid="uid://m3ndekoaxinq" path="res://Ressourcen/Items/Covert_Cloak.tres" id="2_gtjt3"]
+[ext_resource type="Resource" uid="uid://j72gn7ut26tf" path="res://Ressourcen/Moves/Moonblast.tres" id="3_3dky6"]
+[ext_resource type="Resource" uid="uid://x4h1hw8dqqn" path="res://Ressourcen/Moves/Taunt.tres" id="4_uycl2"]
+[ext_resource type="Resource" uid="uid://b7k3t0b4ujrl1" path="res://Ressourcen/Moves/Fake_Tears.tres" id="5_5vajd"]
+[ext_resource type="Resource" uid="uid://crgu5vwlkwviy" path="res://Ressourcen/Moves/Tailwind.tres" id="6_4j7nm"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_a4v3h"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Whimsicott.tres" id="8_h2w8p"]
+[ext_resource type="Resource" uid="uid://ciu4lbgotugel" path="res://Ressourcen/Species/0547_Whimsicott.tres" id="8_h2w8p"]
 
 [resource]
 script = ExtResource("7_a4v3h")

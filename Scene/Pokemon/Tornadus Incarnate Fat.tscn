@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_08ryc"]
-[ext_resource type="Resource" uid="uid://dpjcaaffrdl70" path="res://Ressourcen/Species/TornadusIncarnate.tres" id="2_2vi6o"]
+[ext_resource type="PackedScene" uid="uid://cockjvxva2wfc" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_08ryc"]
+[ext_resource type="Resource" uid="uid://dpjcaaffrdl70" path="res://Ressourcen/Species/0641_TornadusIncarnate.tres" id="2_2vi6o"]
 
 [node name="PokemonTemplate" instance=ExtResource("1_08ryc")]
 species = ExtResource("2_2vi6o")

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://ccjbeo7v3fi77"]
+
+[ext_resource type="Resource" uid="uid://ckuiddl16j63l" path="res://Ressourcen/Abilities/Magic_Bounce.tres" id="1_q5ik5"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_o15jf"]
+
+[resource]
+script = ExtResource("4_o15jf")
+name = "Mega Sableye"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dark"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_q5ik5")
+hp = 50
+atk = 85
+def = 125
+spa = 85
+spd = 115
+spe = 20
+weight = 161.0
+restriction = 5

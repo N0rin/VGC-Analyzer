@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Drought.tres" id="1_u24ey"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Specs.tres" id="2_q1w17"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Eruption.tres" id="3_6vbor"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Heat_Wave.tres" id="4_mptf1"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Weather_Ball.tres" id="5_qkog7"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Earth_Power.tres" id="6_p6ney"]
+[ext_resource type="Resource" uid="uid://bs6nq0r3j0ntm" path="res://Ressourcen/Abilities/Drought.tres" id="1_u24ey"]
+[ext_resource type="Resource" uid="uid://bdhqvok1k33pu" path="res://Ressourcen/Items/Choice_Specs.tres" id="2_q1w17"]
+[ext_resource type="Resource" uid="uid://dbael4v6vu68n" path="res://Ressourcen/Moves/Eruption.tres" id="3_6vbor"]
+[ext_resource type="Resource" uid="uid://dr4s8mtl51l5w" path="res://Ressourcen/Moves/Heat_Wave.tres" id="4_mptf1"]
+[ext_resource type="Resource" uid="uid://do3g8322crcgs" path="res://Ressourcen/Moves/Weather_Ball.tres" id="5_qkog7"]
+[ext_resource type="Resource" uid="uid://cwwohcmclsgx" path="res://Ressourcen/Moves/Earth_Power.tres" id="6_p6ney"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_gru5e"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Torkoal.tres" id="8_mvog3"]
+[ext_resource type="Resource" uid="uid://be61dacc6uuby" path="res://Ressourcen/Species/0324_Torkoal.tres" id="8_mvog3"]
 
 [resource]
 script = ExtResource("7_gru5e")

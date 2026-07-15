@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bguubcqjfxv4c"]
+
+[ext_resource type="Resource" uid="uid://ben4x55xw1vi0" path="res://Ressourcen/Abilities/Multiscale.tres" id="2_kgrwb"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_7m6dp"]
+
+[resource]
+script = ExtResource("3_7m6dp")
+name = "Mega Dragonite"
+texture_id = 4
+texture_x = 2
+texture_y = 5
+main_type = "Dragon"
+secondary_type = "Flying"
+ability1 = ExtResource("2_kgrwb")
+hp = 91
+atk = 124
+def = 115
+spa = 145
+spd = 125
+spe = 100
+weight = 290.0
+restriction = 5

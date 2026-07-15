@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://doanehhpwhyak"]
+
+[ext_resource type="Resource" uid="uid://bs6nq0r3j0ntm" path="res://Ressourcen/Abilities/Drought.tres" id="1_gvaon"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_4d25n"]
+
+[resource]
+script = ExtResource("2_4d25n")
+name = "Mega  Charizard Y"
+texture_id = 4
+texture_x = 6
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Flying"
+ability1 = ExtResource("1_gvaon")
+hp = 78
+atk = 104
+def = 78
+spa = 159
+spd = 115
+spe = 100
+weight = 100.5
+restriction = 5

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Guts.tres" id="1_grksy"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Flame_Orb.tres" id="2_sgyjm"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Headlong_Rush.tres" id="3_kvkew"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Facade.tres" id="4_tx7x1"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Earthquake.tres" id="5_r7oqa"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_ksxfe"]
+[ext_resource type="Resource" uid="uid://ergk7bwvp8r2" path="res://Ressourcen/Abilities/Guts.tres" id="1_grksy"]
+[ext_resource type="Resource" uid="uid://vk0m8doovnx4" path="res://Ressourcen/Items/Flame_Orb.tres" id="2_sgyjm"]
+[ext_resource type="Resource" uid="uid://wq2fawdy3x0n" path="res://Ressourcen/Moves/Headlong_Rush.tres" id="3_kvkew"]
+[ext_resource type="Resource" uid="uid://b5o773kldpbas" path="res://Ressourcen/Moves/Facade.tres" id="4_tx7x1"]
+[ext_resource type="Resource" uid="uid://d4fvxnrcjgs78" path="res://Ressourcen/Moves/Earthquake.tres" id="5_r7oqa"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_ksxfe"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_1pslk"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Ursaluna.tres" id="8_m5117"]
+[ext_resource type="Resource" uid="uid://duvfvcgt7vieh" path="res://Ressourcen/Species/0901_Ursaluna.tres" id="8_m5117"]
 
 [resource]
 script = ExtResource("7_1pslk")

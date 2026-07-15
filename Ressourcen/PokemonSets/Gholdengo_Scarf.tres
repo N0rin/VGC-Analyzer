@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_me7mf"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Scarf.tres" id="2_5j5p0"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="3_goxei"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="4_soawu"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick.tres" id="5_1wtu1"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Power_Gem.tres" id="6_asnle"]
+[ext_resource type="Resource" uid="uid://dmtoae3e5djpm" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_me7mf"]
+[ext_resource type="Resource" uid="uid://dcgm5k0l4uc4w" path="res://Ressourcen/Items/Choice_Scarf.tres" id="2_5j5p0"]
+[ext_resource type="Resource" uid="uid://bcq852k20m03w" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="3_goxei"]
+[ext_resource type="Resource" uid="uid://cisb26l2h0e6l" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="4_soawu"]
+[ext_resource type="Resource" uid="uid://5gljd5ehowes" path="res://Ressourcen/Moves/Trick.tres" id="5_1wtu1"]
+[ext_resource type="Resource" uid="uid://d20ntfthhgkud" path="res://Ressourcen/Moves/Power_Gem.tres" id="6_asnle"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_c785c"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Gholdengo.tres" id="8_e8qf5"]
+[ext_resource type="Resource" uid="uid://bpv8rf3ko4x8a" path="res://Ressourcen/Species/1000_Gholdengo.tres" id="8_e8qf5"]
 
 [resource]
 script = ExtResource("7_c785c")

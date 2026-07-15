@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Defiant.tres" id="1_ea1bw"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Black_Glasses.tres" id="2_hqnhg"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Kowtow_Cleave.tres" id="3_xa1yh"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Sucker_Punch.tres" id="4_y7361"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Swords_Dance.tres" id="5_vn0x7"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_nnlpv"]
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="1_ea1bw"]
+[ext_resource type="Resource" uid="uid://b8arng43apl4c" path="res://Ressourcen/Items/Black_Glasses.tres" id="2_hqnhg"]
+[ext_resource type="Resource" uid="uid://dr8nt3eemluli" path="res://Ressourcen/Moves/Kowtow_Cleave.tres" id="3_xa1yh"]
+[ext_resource type="Resource" uid="uid://caue67yq6y8qy" path="res://Ressourcen/Moves/Sucker_Punch.tres" id="4_y7361"]
+[ext_resource type="Resource" uid="uid://drst4kgwt6o3s" path="res://Ressourcen/Moves/Swords_Dance.tres" id="5_vn0x7"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_nnlpv"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_wqmb4"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Kingambit.tres" id="8_vpjtg"]
+[ext_resource type="Resource" uid="uid://cd8ef74lh00oo" path="res://Ressourcen/Species/0983_Kingambit.tres" id="8_vpjtg"]
 
 [resource]
 script = ExtResource("7_wqmb4")

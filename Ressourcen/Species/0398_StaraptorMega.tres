@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dxjaaw440v0q7"]
+
+[ext_resource type="Resource" uid="uid://b5lf11v4a16jh" path="res://Ressourcen/Abilities/Contrary.tres" id="1_1mada"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_56phg"]
+
+[resource]
+script = ExtResource("3_56phg")
+name = "Mega Staraptor"
+texture_id = 4
+texture_x = 14
+texture_y = 12
+main_type = "Fighting"
+secondary_type = "Flying"
+ability1 = ExtResource("1_1mada")
+hp = 85
+atk = 140
+def = 100
+spa = 60
+spd = 90
+spe = 110
+weight = 50.0
+restriction = 5

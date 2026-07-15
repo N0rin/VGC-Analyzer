@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://dh8v8mktj5805"]
+
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_7mpxr"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_c3u12"]
+
+[resource]
+script = ExtResource("2_c3u12")
+name = "Mow Rotom"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "Grass"
+ability1 = ExtResource("1_7mpxr")
+hp = 50
+atk = 65
+def = 107
+spa = 105
+spd = 107
+spe = 86
+weight = 60.0
+restriction = 0

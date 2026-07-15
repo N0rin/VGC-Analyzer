@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://c6o366aiu4lbd"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_l7e37"]
+[ext_resource type="Resource" uid="uid://15ugbrriqwo0" path="res://Ressourcen/Abilities/Marvel_Scale.tres" id="1_xfl7x"]
+[ext_resource type="Resource" uid="uid://tt4v6pc68dqx" path="res://Ressourcen/Abilities/Cute_Charm.tres" id="2_g2txq"]
+[ext_resource type="Resource" uid="uid://dp6n0dt1btlog" path="res://Ressourcen/Abilities/Competitive.tres" id="3_bnp0s"]
+
+[resource]
+script = ExtResource("1_l7e37")
+name = "Milotic"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Water"
+secondary_type = "None"
+ability1 = ExtResource("1_xfl7x")
+ability2 = ExtResource("2_g2txq")
+ability3 = ExtResource("3_bnp0s")
+hp = 95
+atk = 60
+def = 79
+spa = 100
+spd = 125
+spe = 81
+weight = 162.0
+restriction = 0

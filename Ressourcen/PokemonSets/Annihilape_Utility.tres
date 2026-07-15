@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Defiant.tres" id="1_jl43u"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_g57hg"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="3_ofvyf"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Rage_Fist.tres" id="4_0tfur"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="5_yy2fm"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Final_Gambit.tres" id="6_bt7to"]
+[ext_resource type="Resource" uid="uid://bsj14wqosggnc" path="res://Ressourcen/Abilities/Defiant.tres" id="1_jl43u"]
+[ext_resource type="Resource" uid="uid://besfxsjmk8bd8" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_g57hg"]
+[ext_resource type="Resource" uid="uid://yt7wv8ah8eup" path="res://Ressourcen/Moves/Close_Combat.tres" id="3_ofvyf"]
+[ext_resource type="Resource" uid="uid://c6e0tudn1bywc" path="res://Ressourcen/Moves/Rage_Fist.tres" id="4_0tfur"]
+[ext_resource type="Resource" uid="uid://x4h1hw8dqqn" path="res://Ressourcen/Moves/Taunt.tres" id="5_yy2fm"]
+[ext_resource type="Resource" uid="uid://g4glf7fgf5x5" path="res://Ressourcen/Moves/Final_Gambit.tres" id="6_bt7to"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_b3pnv"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Annihilape.tres" id="8_d0lf5"]
+[ext_resource type="Resource" uid="uid://dwa7tkmfgvce0" path="res://Ressourcen/Species/0979_Annihilape.tres" id="8_d0lf5"]
 
 [resource]
 script = ExtResource("7_b3pnv")

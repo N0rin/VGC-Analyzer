@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://clodyjuerhncb"]
+
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_qcd2x"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_7os4s"]
+
+[resource]
+script = ExtResource("3_7os4s")
+name = "Mega Delphox"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Fire"
+secondary_type = "Psychic"
+ability1 = ExtResource("1_qcd2x")
+hp = 75
+atk = 69
+def = 72
+spa = 159
+spd = 125
+spe = 134
+weight = 39.0
+restriction = 5

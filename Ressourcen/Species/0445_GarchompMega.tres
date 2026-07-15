@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://ddaq633qeqyj4"]
+
+[ext_resource type="Resource" uid="uid://dk875363fr8cy" path="res://Ressourcen/Abilities/Sand_Force.tres" id="1_q85jf"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_fptk6"]
+
+[resource]
+script = ExtResource("3_fptk6")
+name = "Mega Garchomp"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Dragon"
+secondary_type = "Ground"
+ability1 = ExtResource("1_q85jf")
+hp = 108
+atk = 170
+def = 115
+spa = 120
+spd = 95
+spe = 92
+weight = 95.0
+restriction = 5

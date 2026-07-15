@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b6k65veaymu6g"]
+
+[ext_resource type="Resource" uid="uid://tyn36rjtsk63" path="res://Ressourcen/Abilities/Tough_Claws.tres" id="1_h4yw6"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_6twex"]
+
+[resource]
+script = ExtResource("4_6twex")
+name = "Mega Aerodactyl"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Rock"
+secondary_type = "Flying"
+ability1 = ExtResource("1_h4yw6")
+hp = 80
+atk = 135
+def = 85
+spa = 70
+spd = 95
+spe = 150
+weight = 79.0
+restriction = 5

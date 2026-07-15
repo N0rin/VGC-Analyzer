@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bkc60snxa1ut"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_eqmpe"]
+
+[resource]
+script = ExtResource("1_eqmpe")
+name = ""
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Normal"
+secondary_type = "None"
+hp = 0
+atk = 0
+def = 0
+spa = 0
+spd = 0
+spe = 0
+weight = 60.0
+restriction = 0

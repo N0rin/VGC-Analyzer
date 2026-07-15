@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Sharpness.tres" id="1_pcu6j"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Clear_Amulet.tres" id="2_0mwag"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Psycho_Cut.tres" id="3_vf026"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Sacred_Sword.tres" id="4_ie6d5"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Wide_Guard.tres" id="5_nr6to"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick_Room.tres" id="6_pe52q"]
+[ext_resource type="Resource" uid="uid://d0xnqsdt0g0ea" path="res://Ressourcen/Abilities/Sharpness.tres" id="1_pcu6j"]
+[ext_resource type="Resource" uid="uid://b0pdfbmjl75wf" path="res://Ressourcen/Items/Clear_Amulet.tres" id="2_0mwag"]
+[ext_resource type="Resource" uid="uid://cx3qxs5roipaf" path="res://Ressourcen/Moves/Psycho_Cut.tres" id="3_vf026"]
+[ext_resource type="Resource" uid="uid://bvlqmdldtq8qy" path="res://Ressourcen/Moves/Sacred_Sword.tres" id="4_ie6d5"]
+[ext_resource type="Resource" uid="uid://bw1hgw5b4hc5u" path="res://Ressourcen/Moves/Wide_Guard.tres" id="5_nr6to"]
+[ext_resource type="Resource" uid="uid://bvdi4ccrb4a62" path="res://Ressourcen/Moves/Trick_Room.tres" id="6_pe52q"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_276eq"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Gallade.tres" id="8_x2e71"]
+[ext_resource type="Resource" uid="uid://bj8m03hct0qtw" path="res://Ressourcen/Species/0475_Gallade.tres" id="8_x2e71"]
 
 [resource]
 script = ExtResource("7_276eq")

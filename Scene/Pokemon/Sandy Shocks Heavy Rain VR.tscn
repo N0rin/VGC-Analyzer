@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_3yl1q"]
-[ext_resource type="Resource" uid="uid://bs1esxggwhgwg" path="res://Ressourcen/Species/SandyShocks.tres" id="2_qdikc"]
+[ext_resource type="PackedScene" uid="uid://cockjvxva2wfc" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_3yl1q"]
+[ext_resource type="Resource" uid="uid://bs1esxggwhgwg" path="res://Ressourcen/Species/0989_SandyShocks.tres" id="2_qdikc"]
 
 [node name="PokemonTemplate" instance=ExtResource("1_3yl1q")]
 species = ExtResource("2_qdikc")

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_018xm"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Band.tres" id="2_dn5ae"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Liquidation.tres" id="3_v3cgb"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_ktn77"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Flip_Turn.tres" id="5_fot3w"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Aqua Jet.tres" id="6_b2nfc"]
+[ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_018xm"]
+[ext_resource type="Resource" uid="uid://ds0iujuf4eire" path="res://Ressourcen/Items/Choice_Band.tres" id="2_dn5ae"]
+[ext_resource type="Resource" uid="uid://ctn35lb5ucq2q" path="res://Ressourcen/Moves/Liquidation.tres" id="3_v3cgb"]
+[ext_resource type="Resource" uid="uid://yt7wv8ah8eup" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_ktn77"]
+[ext_resource type="Resource" uid="uid://pyumijp066tw" path="res://Ressourcen/Moves/Flip_Turn.tres" id="5_fot3w"]
+[ext_resource type="Resource" uid="uid://qu2abmdk7kqo" path="res://Ressourcen/Moves/Aqua Jet.tres" id="6_b2nfc"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_a1rlu"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Barraskewda.tres" id="8_ba4vi"]
+[ext_resource type="Resource" uid="uid://djagrai67tui1" path="res://Ressourcen/Species/0847_Barraskewda.tres" id="8_ba4vi"]
 
 [resource]
 script = ExtResource("7_a1rlu")

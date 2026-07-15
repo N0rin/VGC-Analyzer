@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_x6dmg"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_f2uav"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Knock_Off.tres" id="3_badue"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="4_wjk30"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="5_mudk6"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Parting_Shot.tres" id="6_c16ti"]
+[ext_resource type="Resource" uid="uid://d4b55n2x3fqg3" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_x6dmg"]
+[ext_resource type="Resource" uid="uid://besfxsjmk8bd8" path="res://Ressourcen/Items/Safety_Goggles.tres" id="2_f2uav"]
+[ext_resource type="Resource" uid="uid://rqn7o2yhjliw" path="res://Ressourcen/Moves/Knock_Off.tres" id="3_badue"]
+[ext_resource type="Resource" uid="uid://du0sr0buxrja6" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="4_wjk30"]
+[ext_resource type="Resource" uid="uid://kmireexpth0h" path="res://Ressourcen/Moves/Fake_Out.tres" id="5_mudk6"]
+[ext_resource type="Resource" uid="uid://ooh8ts328qxn" path="res://Ressourcen/Moves/Parting_Shot.tres" id="6_c16ti"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_o7w7k"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Incineroar.tres" id="8_vcveq"]
+[ext_resource type="Resource" uid="uid://c1qg70hve3fna" path="res://Ressourcen/Species/0727_Incineroar.tres" id="8_vcveq"]
 
 [resource]
 script = ExtResource("7_o7w7k")

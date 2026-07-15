@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="PackedScene" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_dpup4"]
-[ext_resource type="Resource" uid="uid://b42vjc7aangu7" path="res://Ressourcen/Species/BasculegionMale.tres" id="2_mc8dj"]
+[ext_resource type="PackedScene" uid="uid://cockjvxva2wfc" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_dpup4"]
+[ext_resource type="Resource" uid="uid://b42vjc7aangu7" path="res://Ressourcen/Species/0902_BasculegionMale.tres" id="2_mc8dj"]
 
 [node name="Basculegion" instance=ExtResource("1_dpup4")]
 species = ExtResource("2_mc8dj")

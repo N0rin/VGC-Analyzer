@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Multiscale.tres" id="1_h5e3e"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Loaded_Dice.tres" id="2_fgjoi"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Scale_Shot.tres" id="3_p7irr"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Extreme_Speed.tres" id="4_6deiv"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Haze.tres" id="5_mkt6p"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_2q16s"]
+[ext_resource type="Resource" uid="uid://ben4x55xw1vi0" path="res://Ressourcen/Abilities/Multiscale.tres" id="1_h5e3e"]
+[ext_resource type="Resource" uid="uid://brbb5u4seqi01" path="res://Ressourcen/Items/Loaded_Dice.tres" id="2_fgjoi"]
+[ext_resource type="Resource" uid="uid://3rxjdi703chl" path="res://Ressourcen/Moves/Scale_Shot.tres" id="3_p7irr"]
+[ext_resource type="Resource" uid="uid://ch61vv8w1ou8c" path="res://Ressourcen/Moves/Extreme_Speed.tres" id="4_6deiv"]
+[ext_resource type="Resource" uid="uid://c36qoclbngia2" path="res://Ressourcen/Moves/Haze.tres" id="5_mkt6p"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_2q16s"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_olps4"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Dragonite.tres" id="8_jakv3"]
+[ext_resource type="Resource" uid="uid://dfma3wyqn6d88" path="res://Ressourcen/Species/0149_Dragonite.tres" id="8_jakv3"]
 
 [resource]
 script = ExtResource("7_olps4")

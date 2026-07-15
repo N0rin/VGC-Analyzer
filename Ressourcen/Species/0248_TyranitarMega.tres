@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://sx2db3n77bv1"]
+
+[ext_resource type="Resource" uid="uid://bvfmx4htg0mqr" path="res://Ressourcen/Abilities/Sand_Stream.tres" id="1_eyphd"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_f2jhr"]
+
+[resource]
+script = ExtResource("3_f2jhr")
+name = "Mega Tyranitar"
+texture_id = 4
+texture_x = 9
+texture_y = 8
+main_type = "Dark"
+secondary_type = "Rock"
+ability1 = ExtResource("1_eyphd")
+hp = 100
+atk = 164
+def = 150
+spa = 95
+spd = 120
+spe = 71
+weight = 255.0
+restriction = 5

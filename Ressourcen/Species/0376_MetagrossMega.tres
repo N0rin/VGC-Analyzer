@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://jl6omyvgq7o0"]
+
+[ext_resource type="Resource" uid="uid://tyn36rjtsk63" path="res://Ressourcen/Abilities/Tough_Claws.tres" id="1_4ok01"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_jpxgj"]
+
+[resource]
+script = ExtResource("3_jpxgj")
+name = "Mega Metagross"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Steel"
+secondary_type = "Psychic"
+ability1 = ExtResource("1_4ok01")
+hp = 80
+atk = 145
+def = 150
+spa = 105
+spd = 110
+spe = 110
+weight = 942.9
+restriction = 5

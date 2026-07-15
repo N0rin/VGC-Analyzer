@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://kx0i1mfn0bwu"]
+
+[ext_resource type="Resource" uid="uid://dvqn14qrip4hn" path="res://Ressourcen/Abilities/Thick_Fat.tres" id="1_pnwi1"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_uxsia"]
+
+[resource]
+script = ExtResource("2_uxsia")
+name = "Mega Venusaur"
+texture_id = 4
+texture_x = 3
+texture_y = 0
+main_type = "Grass"
+secondary_type = "Poison"
+ability1 = ExtResource("1_pnwi1")
+hp = 80
+atk = 100
+def = 123
+spa = 122
+spd = 120
+spe = 80
+weight = 155.5
+restriction = 5

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://di4q5l8gpvikq"]
+
+[ext_resource type="Resource" uid="uid://rxtdo5dpq0gm" path="res://Ressourcen/Abilities/Levitate.tres" id="1_x4kgy"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_b6f67"]
+
+[resource]
+script = ExtResource("2_b6f67")
+name = "Rotom"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_x4kgy")
+hp = 50
+atk = 50
+def = 77
+spa = 95
+spd = 77
+spe = 91
+weight = 60.0
+restriction = 0

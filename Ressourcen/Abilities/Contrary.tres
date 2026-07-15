@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=2 format=3 uid="uid://b5lf11v4a16jh"]
+
+[ext_resource type="Script" path="res://Ressourcen/Ability.gd" id="1_k5125"]
+
+[resource]
+script = ExtResource("1_k5125")
+name = "Contrary"

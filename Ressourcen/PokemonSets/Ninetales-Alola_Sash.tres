@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Snow_Warning.tres" id="1_h3iff"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_ni12t"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Blizzard.tres" id="3_um8bd"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Icy_Wind.tres" id="4_efegn"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Disable.tres" id="5_k734w"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_bgi2o"]
+[ext_resource type="Resource" uid="uid://d246l6g4uerw5" path="res://Ressourcen/Abilities/Snow_Warning.tres" id="1_h3iff"]
+[ext_resource type="Resource" uid="uid://do3fobu43466g" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_ni12t"]
+[ext_resource type="Resource" uid="uid://donev6yienkrd" path="res://Ressourcen/Moves/Blizzard.tres" id="3_um8bd"]
+[ext_resource type="Resource" uid="uid://b1oksm6voxt5g" path="res://Ressourcen/Moves/Icy_Wind.tres" id="4_efegn"]
+[ext_resource type="Resource" uid="uid://i8p552uhilnm" path="res://Ressourcen/Moves/Disable.tres" id="5_k734w"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_bgi2o"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_sg77u"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/NinetalesAlola.tres" id="8_l2pu8"]
+[ext_resource type="Resource" uid="uid://dmhhd7ktm5gc2" path="res://Ressourcen/Species/0038_NinetalesAlola.tres" id="8_l2pu8"]
 
 [resource]
 script = ExtResource("7_sg77u")

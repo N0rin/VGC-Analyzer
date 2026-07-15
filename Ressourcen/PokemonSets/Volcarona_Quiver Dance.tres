@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Flame_Body.tres" id="1_qckx4"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Covert_Cloak.tres" id="2_nwn07"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Heat_Wave.tres" id="3_nk0d4"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Tera_Blast.tres" id="4_cnsln"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Quiver_Dance.tres" id="5_iu8ol"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_daf0d"]
+[ext_resource type="Resource" uid="uid://bbb6eoj4w8s77" path="res://Ressourcen/Abilities/Flame_Body.tres" id="1_qckx4"]
+[ext_resource type="Resource" uid="uid://m3ndekoaxinq" path="res://Ressourcen/Items/Covert_Cloak.tres" id="2_nwn07"]
+[ext_resource type="Resource" uid="uid://dr4s8mtl51l5w" path="res://Ressourcen/Moves/Heat_Wave.tres" id="3_nk0d4"]
+[ext_resource type="Resource" uid="uid://75rdhphqsk68" path="res://Ressourcen/Moves/Tera_Blast.tres" id="4_cnsln"]
+[ext_resource type="Resource" uid="uid://bxpmj1wfbe7dr" path="res://Ressourcen/Moves/Quiver_Dance.tres" id="5_iu8ol"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_daf0d"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_dpl7p"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Volcarona.tres" id="8_78d6v"]
+[ext_resource type="Resource" uid="uid://bb4tagcqn6mo" path="res://Ressourcen/Species/0637_Volcarona.tres" id="8_78d6v"]
 
 [resource]
 script = ExtResource("7_dpl7p")

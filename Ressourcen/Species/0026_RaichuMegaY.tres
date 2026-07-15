@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://cvb14yrgsptp2"]
+
+[ext_resource type="Resource" uid="uid://18q050h86j50" path="res://Ressourcen/Abilities/No_Guard.tres" id="1_ipugt"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_8oy6s"]
+
+[resource]
+script = ExtResource("3_8oy6s")
+name = "Mega Raichu Y"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Electric"
+secondary_type = "None"
+ability1 = ExtResource("1_ipugt")
+hp = 60
+atk = 100
+def = 55
+spa = 160
+spd = 80
+spe = 130
+weight = 26.0
+restriction = 5

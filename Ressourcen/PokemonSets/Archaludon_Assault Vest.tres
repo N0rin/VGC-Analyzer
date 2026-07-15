@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Stamina.tres" id="1_pourf"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Assault_Vest.tres" id="2_x6sau"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_phdc5"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Dragon_Pulse.tres" id="4_tgbgv"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="5_3eyqv"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Body_Press.tres" id="6_f041o"]
+[ext_resource type="Resource" uid="uid://bqvxrvj7ng3hb" path="res://Ressourcen/Abilities/Stamina.tres" id="1_pourf"]
+[ext_resource type="Resource" uid="uid://jbjn04p0o1iy" path="res://Ressourcen/Items/Assault_Vest.tres" id="2_x6sau"]
+[ext_resource type="Resource" uid="uid://0eudxrhma3nv" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_phdc5"]
+[ext_resource type="Resource" uid="uid://df4kvh55hapqq" path="res://Ressourcen/Moves/Dragon_Pulse.tres" id="4_tgbgv"]
+[ext_resource type="Resource" uid="uid://cvxd3vxp43mbe" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="5_3eyqv"]
+[ext_resource type="Resource" uid="uid://dcqyowf0lwhvx" path="res://Ressourcen/Moves/Body_Press.tres" id="6_f041o"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_f4ele"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Archaludon.tres" id="8_lpeyx"]
+[ext_resource type="Resource" uid="uid://cica6e53shv0a" path="res://Ressourcen/Species/1018_Archaludon.tres" id="8_lpeyx"]
 
 [resource]
 script = ExtResource("7_f4ele")

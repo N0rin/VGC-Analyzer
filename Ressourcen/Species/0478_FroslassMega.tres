@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://b0loa0vhtmvh0"]
+
+[ext_resource type="Resource" uid="uid://d246l6g4uerw5" path="res://Ressourcen/Abilities/Snow_Warning.tres" id="1_ls0ed"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_8lrg2"]
+
+[resource]
+script = ExtResource("3_8lrg2")
+name = "Mega Froslass"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Ice"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_ls0ed")
+hp = 70
+atk = 80
+def = 70
+spa = 140
+spd = 100
+spe = 120
+weight = 29.6
+restriction = 5

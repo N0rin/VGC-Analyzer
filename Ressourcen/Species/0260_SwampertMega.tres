@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://sgouqoag8jeu"]
+
+[ext_resource type="Resource" uid="uid://dw2txtp184yr2" path="res://Ressourcen/Abilities/Swift_Swim.tres" id="1_dfqbu"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="3_h3pfa"]
+
+[resource]
+script = ExtResource("3_h3pfa")
+name = "Mega Swampert"
+texture_id = 0
+texture_x = 0
+texture_y = 0
+main_type = "Water"
+secondary_type = "Ground"
+ability1 = ExtResource("1_dfqbu")
+hp = 100
+atk = 150
+def = 110
+spa = 95
+spd = 100
+spe = 70
+weight = 102.0
+restriction = 5

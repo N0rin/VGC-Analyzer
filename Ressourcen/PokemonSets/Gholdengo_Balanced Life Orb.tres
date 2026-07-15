@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_1v8r6"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Life_Orb.tres" id="2_ugcio"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="3_idoup"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="4_iva7y"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Nasty_Plot.tres" id="5_lacv4"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_1h87b"]
+[ext_resource type="Resource" uid="uid://dmtoae3e5djpm" path="res://Ressourcen/Abilities/Good_As_Gold.tres" id="1_1v8r6"]
+[ext_resource type="Resource" uid="uid://b4wxy6xg8mwdb" path="res://Ressourcen/Items/Life_Orb.tres" id="2_ugcio"]
+[ext_resource type="Resource" uid="uid://bcq852k20m03w" path="res://Ressourcen/Moves/Make_It_Rain.tres" id="3_idoup"]
+[ext_resource type="Resource" uid="uid://cisb26l2h0e6l" path="res://Ressourcen/Moves/Shadow_Ball.tres" id="4_iva7y"]
+[ext_resource type="Resource" uid="uid://csgdv6si3wd1w" path="res://Ressourcen/Moves/Nasty_Plot.tres" id="5_lacv4"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_1h87b"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_y1rr4"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Gholdengo.tres" id="8_xvp7h"]
+[ext_resource type="Resource" uid="uid://bpv8rf3ko4x8a" path="res://Ressourcen/Species/1000_Gholdengo.tres" id="8_xvp7h"]
 
 [resource]
 script = ExtResource("7_y1rr4")

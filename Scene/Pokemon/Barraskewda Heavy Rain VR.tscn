@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyh2ulq61gxcf"]
 
-[ext_resource type="PackedScene" uid="uid://drtns3m7sf0p" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_o7ymg"]
-[ext_resource type="Resource" uid="uid://djagrai67tui1" path="res://Ressourcen/Species/Barraskewda.tres" id="2_bu7nt"]
+[ext_resource type="PackedScene" uid="uid://cockjvxva2wfc" path="res://Scene/Pokemon/_PokemonTemplate.tscn" id="1_o7ymg"]
+[ext_resource type="Resource" uid="uid://djagrai67tui1" path="res://Ressourcen/Species/0847_Barraskewda.tres" id="2_bu7nt"]
 
 [node name="Barraskewda" instance=ExtResource("1_o7ymg")]
 species = ExtResource("2_bu7nt")

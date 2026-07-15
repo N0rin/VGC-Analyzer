@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" path="res://Ressourcen/Abilities/Unburden.tres" id="1_igpmk"]
-[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_njis5"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Dire Claw.tres" id="3_s4ep4"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_n7tf3"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Coaching.tres" id="5_lolq1"]
-[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_o37qc"]
+[ext_resource type="Resource" uid="uid://qaga20cu8efm" path="res://Ressourcen/Abilities/Unburden.tres" id="1_igpmk"]
+[ext_resource type="Resource" uid="uid://do3fobu43466g" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_njis5"]
+[ext_resource type="Resource" uid="uid://b7lxb7hr2lxp3" path="res://Ressourcen/Moves/Dire Claw.tres" id="3_s4ep4"]
+[ext_resource type="Resource" uid="uid://yt7wv8ah8eup" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_n7tf3"]
+[ext_resource type="Resource" uid="uid://b56w5bxu7rrwm" path="res://Ressourcen/Moves/Coaching.tres" id="5_lolq1"]
+[ext_resource type="Resource" uid="uid://brureoauqfwed" path="res://Ressourcen/Moves/Protect.tres" id="6_o37qc"]
 [ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_3jx5c"]
-[ext_resource type="Resource" path="res://Ressourcen/Species/Sneasler.tres" id="8_u4w1f"]
+[ext_resource type="Resource" uid="uid://cr3wrgb35cqva" path="res://Ressourcen/Species/0903_Sneasler.tres" id="8_u4w1f"]
 
 [resource]
 script = ExtResource("7_3jx5c")
