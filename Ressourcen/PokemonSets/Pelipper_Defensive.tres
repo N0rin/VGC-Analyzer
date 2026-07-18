@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Drizzle.tres" id="1_low3l"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Sitrus_Berry.tres" id="2_jiao3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Hurricane.tres" id="3_souga"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Weather_Ball.tres" id="4_uua66"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Tailwind.tres" id="5_i75v5"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Wide_Guard.tres" id="6_lml7g"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_qo153"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0279_Pelipper.tres" id="8_p6odb"]
+
+[resource]
+script = ExtResource("7_qo153")
+name = "Defensive"
+format = 0
+species = ExtResource("8_p6odb")
+ability = ExtResource("1_low3l")
+item = ExtResource("2_jiao3")
+tera_type = "Water"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 1
+spa_stat = 5
+spd_stat = 17
+spe_stat = 11
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_souga")
+move2 = ExtResource("4_uua66")
+move3 = ExtResource("5_i75v5")
+move4 = ExtResource("6_lml7g")

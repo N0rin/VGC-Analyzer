@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bylcxkq174qhq"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_mlapv"]
+
+[resource]
+script = ExtResource("1_mlapv")
+name = "Colbur Berry"

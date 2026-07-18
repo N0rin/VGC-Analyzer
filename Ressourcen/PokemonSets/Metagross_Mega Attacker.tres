@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Clear_Body.tres" id="1_ugixi"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Metagrossite.tres" id="2_rfoqs"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Iron_Head.tres" id="3_s8mmx"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Psychic_Fangs.tres" id="4_7w4ad"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Body_Press.tres" id="4_ima5v"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="5_t6lgl"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="6_7nbna"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0376_Metagross.tres" id="7_hknab"]
+
+[resource]
+script = ExtResource("6_7nbna")
+name = "Mega Attacker"
+format = 0
+species = ExtResource("7_hknab")
+ability = ExtResource("1_ugixi")
+item = ExtResource("2_rfoqs")
+tera_type = "Steel"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 14
+atk_stat = 27
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 25
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_s8mmx")
+move2 = ExtResource("4_7w4ad")
+move3 = ExtResource("4_ima5v")
+move4 = ExtResource("5_t6lgl")

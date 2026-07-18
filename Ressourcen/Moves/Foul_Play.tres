@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://buiy5h4g8dpk0"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_khilk"]
+
+[resource]
+script = ExtResource("1_khilk")
+name = "Foul Play"
+base_damage = 95
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Dark"
+makes_contact = true
+added_effect = "Uses Opponent Atk"
+added_effect_chance = 0
+crit_bonus = 0

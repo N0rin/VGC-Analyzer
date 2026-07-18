@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=6 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Tough_Claws.tres" id="1_p3qut"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="2_qttct"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Acrobatics.tres" id="3_gqlb8"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="4_pmkd0"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0006_CharizardMegaX.tres" id="5_2mu0i"]
+
+[resource]
+script = ExtResource("4_pmkd0")
+name = "tst"
+format = 0
+species = ExtResource("5_2mu0i")
+ability = ExtResource("1_p3qut")
+item = ExtResource("2_qttct")
+tera_type = "Fire"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 20
+atk_stat = 0
+def_stat = 8
+spa_stat = 0
+spd_stat = 0
+spe_stat = 30
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_gqlb8")

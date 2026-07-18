@@ -76,6 +76,10 @@ horizontal_alignment = 1
 [node name="RegulationSelector" parent="MarginContainer/VBoxContainer/CoreUI/Left" instance=ExtResource("2_6u1oh")]
 layout_mode = 2
 size_flags_horizontal = 0
+item_count = 2
+popup/item_0/text = "Regulation MB"
+popup/item_1/text = "Regulation MA"
+popup/item_1/id = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
 visible = false
@@ -203,24 +207,12 @@ text = "  in  "
 
 [node name="FormatSelect" type="OptionButton" parent="PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-selected = 7
-item_count = 8
-popup/item_0/text = "Reg A"
+selected = 0
+item_count = 2
+popup/item_0/text = "Reg MB"
 popup/item_0/id = 1
-popup/item_1/text = "Reg B"
+popup/item_1/text = "Reg MA"
 popup/item_1/id = 2
-popup/item_2/text = "Reg C"
-popup/item_2/id = 3
-popup/item_3/text = "Reg D"
-popup/item_3/id = 4
-popup/item_4/text = "Reg E"
-popup/item_4/id = 5
-popup/item_5/text = "Reg F"
-popup/item_5/id = 6
-popup/item_6/text = "Reg G"
-popup/item_6/id = 7
-popup/item_7/text = "Reg H"
-popup/item_7/id = 8
 
 [node name="Control2" type="Control" parent="PopupPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -127,7 +127,7 @@ func get_attack_variants(context: AttackContext) -> Array[AttackContext]:
 	
 	#Sonne
 	if move.type == "Fire" or move.type == "Water" or move.name == "Weather Ball":
-		if has_team_ability("Drought") or has_team_ability("Orichalcum Pulse") or has_team_move("Sunndy Day"):
+		if has_team_ability("Drought") or has_team_ability("Orichalcum Pulse") or has_team_move("Sunny Day"):
 			var new_context = context.duplicate(false)
 			new_context.weather = "Sun"
 			context_list.append(new_context)

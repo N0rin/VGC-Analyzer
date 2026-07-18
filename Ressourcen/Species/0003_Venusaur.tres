@@ -1,20 +1,24 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://iebsbuokxn4e"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://iebsbuokxn4e"]
 
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_nt06s"]
+[ext_resource type="Resource" uid="uid://ccwtr87yhf6xq" path="res://Ressourcen/Abilities/Overgrow.tres" id="1_y1bl0"]
+[ext_resource type="Resource" uid="uid://boiy12hj12168" path="res://Ressourcen/Abilities/Chlorophyl.tres" id="2_5igvg"]
 
 [resource]
 script = ExtResource("1_nt06s")
-name = ""
+name = "Venusaur"
 texture_id = 0
-texture_x = 0
+texture_x = 2
 texture_y = 0
-main_type = "Normal"
-secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+main_type = "Grass"
+secondary_type = "Poison"
+ability1 = ExtResource("1_y1bl0")
+ability3 = ExtResource("2_5igvg")
+hp = 80
+atk = 82
+def = 83
+spa = 100
+spd = 100
+spe = 80
+weight = 100.0
 restriction = 0

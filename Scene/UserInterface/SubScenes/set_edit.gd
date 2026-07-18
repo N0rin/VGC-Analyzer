@@ -42,6 +42,22 @@ func load_into_list(list: Array, dirname: String):
 		list.append(load(DATA_PATH + dirname + "/" + filename))
 
 #Getter
+func get_stat_points(index:int) -> int:
+	match index:
+		0:
+			return $"StatPoints/HP".value
+		1:
+			return $"StatPoints/Atk".value
+		2:
+			return $"StatPoints/Def".value
+		3:
+			return $"StatPoints/SpA".value
+		4:
+			return $"StatPoints/SpD".value
+		5:
+			return $"StatPoints/Spe".value
+	return 0
+
 func get_evs(index:int) -> int:
 	match index:
 		0:
@@ -175,12 +191,12 @@ func get_pokemon_data() -> PokemonData:
 	data.tera_type = get_selected_tera_type()
 	data.increased_stat = get_increased_stat()
 	data.reduced_stat = get_decreased_stat()
-	data.hp_evs = get_evs(0)
-	data.atk_evs = get_evs(1)
-	data.def_evs = get_evs(2)
-	data.spa_evs = get_evs(3)
-	data.spd_evs = get_evs(4)
-	data.spe_evs = get_evs(5)
+	data.hp_stat = get_stat_points(0)
+	data.atk_stat = get_stat_points(1)
+	data.def_stat = get_stat_points(2)
+	data.spa_stat = get_stat_points(3)
+	data.spd_stat = get_stat_points(4)
+	data.spe_stat = get_stat_points(5)
 	data.hp_ivs = get_ivs(0)
 	data.atk_ivs = get_ivs(1)
 	data.def_ivs = get_ivs(2)
@@ -351,12 +367,13 @@ func set_training_values(pokemon_data: PokemonData):
 	container_node.get_node("SpdIv").value = pokemon_data.spd_ivs
 	container_node.get_node("SpeIv").value = pokemon_data.spe_ivs
 	
-	container_node.get_node("HpEv").value = pokemon_data.hp_evs
-	container_node.get_node("AtkEv").value = pokemon_data.atk_evs
-	container_node.get_node("DefEv").value = pokemon_data.def_evs
-	container_node.get_node("SpaEv").value = pokemon_data.spa_evs
-	container_node.get_node("SpdEv").value = pokemon_data.spd_evs
-	container_node.get_node("SpeEv").value = pokemon_data.spe_evs
+	container_node = $StatPoints
+	container_node.get_node("HP").value = pokemon_data.hp_stat
+	container_node.get_node("Atk").value = pokemon_data.atk_stat
+	container_node.get_node("Def").value = pokemon_data.def_stat
+	container_node.get_node("SpA").value = pokemon_data.spa_stat
+	container_node.get_node("SpD").value = pokemon_data.spd_stat
+	container_node.get_node("Spe").value = pokemon_data.spe_stat
 
 func set_nature(pokemon_data: PokemonData):
 	var increase_selector = $"NatureSelector/NatureIncrease"
@@ -429,6 +446,30 @@ func _on_set_select_item_selected(index):
 		emit_signal("set_selected", pokemon_set)
 	else:
 		clear_set()
+	var container_node = $"Stats"
+	var remaining_ev_total = 508
+
+	remaining_ev_total -= container_node.get_node("HpEv").value
+	remaining_ev_total -= container_node.get_node("AtkEv").value
+	remaining_ev_total -= container_node.get_node("DefEv").value
+	remaining_ev_total -= container_node.get_node("SpaEv").value
+	remaining_ev_total -= container_node.get_node("SpdEv").value
+	remaining_ev_total -= container_node.get_node("SpeEv").value
+
+	$"NatureSelector/EVCountLabel".text = "%s" % remaining_ev_total
+
+func _on_stat_points_gui_input(event: InputEvent) -> void:
+	var container_node = $"StatPoints"
+	var remaining_ev_total = 66
+
+	remaining_ev_total -= container_node.get_node("HP").value
+	remaining_ev_total -= container_node.get_node("Atk").value
+	remaining_ev_total -= container_node.get_node("Def").value
+	remaining_ev_total -= container_node.get_node("SpA").value
+	remaining_ev_total -= container_node.get_node("SpD").value
+	remaining_ev_total -= container_node.get_node("Spe").value
+
+	$"NatureSelector/EVCountLabel".text = "%s" % remaining_ev_total
 
 func _on_stats_gui_input(event):
 	var container_node = $"Stats"
