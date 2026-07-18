@@ -1,20 +1,24 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://bkc60snxa1ut"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://bkc60snxa1ut"]
 
+[ext_resource type="Resource" uid="uid://bn05al72u40lm" path="res://Ressourcen/Abilities/Torrent.tres" id="1_7smqp"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_eqmpe"]
+[ext_resource type="Resource" uid="uid://ba5cfh4nry56f" path="res://Ressourcen/Abilities/Damp.tres" id="2_h5th1"]
 
 [resource]
 script = ExtResource("1_eqmpe")
-name = ""
+name = "Swampert"
 texture_id = 0
 texture_x = 0
 texture_y = 0
-main_type = "Normal"
-secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+main_type = "Water"
+secondary_type = "Ground"
+ability1 = ExtResource("1_7smqp")
+ability3 = ExtResource("2_h5th1")
+hp = 100
+atk = 110
+def = 90
+spa = 85
+spd = 90
+spe = 60
+weight = 81.9
 restriction = 0

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=5 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Rain_Dish.tres" id="1_j8icj"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Booster_Energy.tres" id="2_565c8"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="3_nfsgs"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0009_Blastoise.tres" id="4_xjyke"]
+
+[resource]
+script = ExtResource("3_nfsgs")
+name = "test"
+format = 0
+species = ExtResource("4_xjyke")
+ability = ExtResource("1_j8icj")
+item = ExtResource("2_565c8")
+tera_type = "Water"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 0
+atk_stat = 0
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31

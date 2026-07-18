@@ -35,6 +35,7 @@ theme_override_styles/normal = ExtResource("4_m8w5g")
 fit_to_longest_item = false
 
 [node name="Tera" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Tera"]
@@ -88,7 +89,71 @@ popup/item_18/text = "Stellar"
 popup/item_18/id = 18
 metadata/_edit_group_ = true
 
+[node name="Stat Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Stat Points"
+
+[node name="StatPoints" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 3
+
+[node name="HP Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "HP"
+
+[node name="Atk Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Atk"
+
+[node name="Def Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Def"
+
+[node name="HP" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
+[node name="Atk" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
+[node name="Def" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
+[node name="SpA Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SpA"
+
+[node name="SpD Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SpD"
+
+[node name="Spe Label" type="Label" parent="StatPoints"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Spe"
+
+[node name="SpA" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
+[node name="SpD" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
+[node name="Spe" type="SpinBox" parent="StatPoints"]
+layout_mode = 2
+max_value = 32.0
+
 [node name="Stats" type="GridContainer" parent="."]
+visible = false
 layout_mode = 2
 columns = 3
 
@@ -250,13 +315,13 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
-text = "Remaining EVs:"
+text = "Remaining Points:"
 horizontal_alignment = 2
 
 [node name="EVCountLabel" type="Label" parent="NatureSelector"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "508"
+text = "66"
 horizontal_alignment = 2
 
 [node name="AbilitySelector" type="HBoxContainer" parent="."]
@@ -307,4 +372,5 @@ layout_mode = 2
 
 [connection signal="item_selected" from="Species" to="." method="_on_species_item_selected"]
 [connection signal="item_selected" from="Set/SetSelect" to="." method="_on_set_select_item_selected"]
+[connection signal="gui_input" from="StatPoints" to="." method="_on_stat_points_gui_input"]
 [connection signal="gui_input" from="Stats" to="." method="_on_stats_gui_input"]

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Damp.tres" id="1_1685o"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Swampertite.tres" id="2_p5eml"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Wave Crash.tres" id="3_lyw06"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Earthquake.tres" id="4_hkb48"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Ice_Punch.tres" id="5_vlxir"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_xq31y"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_jg0f1"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0260_Swampert.tres" id="8_xr2qj"]
+
+[resource]
+script = ExtResource("7_jg0f1")
+name = "Mega Rain Sweeper"
+format = 0
+species = ExtResource("8_xr2qj")
+ability = ExtResource("1_1685o")
+item = ExtResource("2_p5eml")
+tera_type = "Water"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 18
+atk_stat = 30
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 18
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_lyw06")
+move2 = ExtResource("4_hkb48")
+move3 = ExtResource("5_vlxir")
+move4 = ExtResource("6_xq31y")

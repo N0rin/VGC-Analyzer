@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://5qv8rpxd4yjd"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_46xv3"]
+
+[resource]
+script = ExtResource("1_46xv3")
+name = "Light Screen"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Allies"
+category = "Status"
+type = "Psychic"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Stamina.tres" id="1_cukkj"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Leftovers.tres" id="2_n83lj"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Electro_Shot.tres" id="3_r74oq"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flash_Cannon.tres" id="4_2bcq1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dragon_Pulse.tres" id="5_ggr5t"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_05mft"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_ti3oa"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/1018_Archaludon.tres" id="8_wgcmx"]
+
+[resource]
+script = ExtResource("7_ti3oa")
+name = "Bulky"
+format = 0
+species = ExtResource("8_wgcmx")
+ability = ExtResource("1_cukkj")
+item = ExtResource("2_n83lj")
+tera_type = "Steel"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 0
+spa_stat = 1
+spd_stat = 29
+spe_stat = 4
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_r74oq")
+move2 = ExtResource("4_2bcq1")
+move3 = ExtResource("5_ggr5t")
+move4 = ExtResource("6_05mft")

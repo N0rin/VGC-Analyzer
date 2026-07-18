@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Prankster.tres" id="1_5erht"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Light_Clay.tres" id="2_kl3ux"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Foul_Play.tres" id="3_n7uad"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Light_Screen.tres" id="4_vdno7"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Reflect.tres" id="5_t7rnq"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Parting_Shot.tres" id="6_ewp0i"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_ccpdg"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0861_Grimmsnarl.tres" id="8_bypf3"]
+
+[resource]
+script = ExtResource("7_ccpdg")
+name = "Screens"
+format = 0
+species = ExtResource("8_bypf3")
+ability = ExtResource("1_5erht")
+item = ExtResource("2_kl3ux")
+tera_type = "Dark"
+increased_stat = "SpD"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 20
+spa_stat = 0
+spd_stat = 14
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_n7uad")
+move2 = ExtResource("4_vdno7")
+move3 = ExtResource("5_t7rnq")
+move4 = ExtResource("6_ewp0i")

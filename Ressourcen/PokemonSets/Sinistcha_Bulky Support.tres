@@ -1,37 +1,37 @@
 [gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
 
-[ext_resource type="Resource" uid="uid://cpc31djtcuiv" path="res://Ressourcen/Abilities/Hospitality.tres" id="1_k7kwj"]
-[ext_resource type="Resource" uid="uid://b1c0rlgugw668" path="res://Ressourcen/Items/Sitrus_Berry.tres" id="2_kjm5n"]
-[ext_resource type="Resource" uid="uid://cgd6v1ptlpe7m" path="res://Ressourcen/Moves/Rage_Powder.tres" id="3_ak7dg"]
-[ext_resource type="Resource" uid="uid://po7jdssa4vko" path="res://Ressourcen/Moves/Matcha_Gotcha.tres" id="3_ekxdb"]
-[ext_resource type="Resource" uid="uid://dsg1njip48wdu" path="res://Ressourcen/Moves/Life_Dew.tres" id="4_ef1yh"]
-[ext_resource type="Resource" uid="uid://bvdi4ccrb4a62" path="res://Ressourcen/Moves/Trick_Room.tres" id="5_kwlc3"]
-[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="6_5mckj"]
-[ext_resource type="Resource" uid="uid://c4p7b2imnm8gi" path="res://Ressourcen/Species/1013_Sinistcha.tres" id="7_l1b10"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Hospitality.tres" id="1_k4w5h"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Colbur_Berry.tres" id="2_b0ny3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Matcha_Gotcha.tres" id="3_6m1od"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rage_Powder.tres" id="4_qewhd"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick_Room.tres" id="5_an722"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_flrsq"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_2vnqq"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/1013_Sinistcha.tres" id="8_kxwgu"]
 
 [resource]
-script = ExtResource("6_5mckj")
+script = ExtResource("7_2vnqq")
 name = "Bulky Support"
-format = 8
-species = ExtResource("7_l1b10")
-ability = ExtResource("1_k7kwj")
-item = ExtResource("2_kjm5n")
-tera_type = "Water"
+format = 0
+species = ExtResource("8_kxwgu")
+ability = ExtResource("1_k4w5h")
+item = ExtResource("2_b0ny3")
+tera_type = "Grass"
 increased_stat = "Def"
-reduced_stat = "SpA"
-hp_evs = 252
-atk_evs = 0
-def_evs = 84
-spa_evs = 4
-spd_evs = 156
-spe_evs = 12
+reduced_stat = "Spe"
+hp_stat = 32
+atk_stat = 0
+def_stat = 4
+spa_stat = 0
+spd_stat = 30
+spe_stat = 0
 hp_ivs = 31
 atk_ivs = 31
 def_ivs = 31
 spa_ivs = 31
 spd_ivs = 31
 spe_ivs = 31
-move1 = ExtResource("3_ekxdb")
-move2 = ExtResource("3_ak7dg")
-move3 = ExtResource("4_ef1yh")
-move4 = ExtResource("5_kwlc3")
+move1 = ExtResource("3_6m1od")
+move2 = ExtResource("4_qewhd")
+move3 = ExtResource("5_an722")
+move4 = ExtResource("6_flrsq")
