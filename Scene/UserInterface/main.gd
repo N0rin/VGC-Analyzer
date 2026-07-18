@@ -21,9 +21,14 @@ func _on_signal_back_to_main():
 	$Metasets.hide()
 	$Main.show()
 
-func _on_analyzer_continue_to_board() -> void:
+func _on_analyzer_continue_to_board(team1, team2) -> void:
 	$Analyzer.hide()
+	$AnalyzeBoard.battle_data.upper_team = team1.team_members
+	$AnalyzeBoard.battle_data.lower_team = team2.team_members
+	$AnalyzeBoard.initialize_board()
+	$AnalyzeBoard.set_edit_names()
 	$AnalyzeBoard.show()
+	
 
 func _on_calculations_to_meta() -> void:
 	$Calculations/MetaCalcs.startup()
