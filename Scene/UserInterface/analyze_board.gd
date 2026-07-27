@@ -7,11 +7,6 @@ extends Control
 
 @export var battle_data:GameData
 
-func _ready():
-	initialize_board()
-	set_edit_names()
-	
-
 func initialize_board():
 	gamestate_interface.set_teams(battle_data.upper_team, battle_data.lower_team)
 	refresh_game_state()
@@ -42,9 +37,16 @@ func set_edit_names() -> void:
 	lower_edit.get_node("Slot7").set_menue(2, lower_team_names)
 	lower_edit.get_node("Slot8").set_menue(3, lower_team_names)
 
+func set_move_selection_names() -> void:
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[0]])
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[1]], false)
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[0]])
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[1]], false)
+
 func refresh_game_state() -> void:
 	gamestate_interface.set_data(active_game_state)
 	save_changes()
+	set_move_selection_names()
 
 func save_changes() -> void:
 	if gamestate_position.is_empty():
@@ -115,7 +117,8 @@ func refresh_navigation_buttons() -> void:
 
 func _on_pokemon_set(board_slot:int, is_upper:bool, team_slot:int, ):
 	active_game_state.switch_position(board_slot, team_slot, is_upper)
-	set_edit_names()
+	
+	set_move_selection_names()
 	refresh_game_state()
 
 func _on_health_set(board_slot:int, is_upper:bool, health:int):
