@@ -13,6 +13,8 @@ var upper_team_lineup:Array[int] = [0,1,2,3,4,5]
 var upper_team_states:Array[PokemonState] = [PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new()]
 var lower_team_lineup:Array[int] = [0,1,2,3,4,5]
 var lower_team_states:Array[PokemonState] = [PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new(),PokemonState.new()]
+var selected_upper_moves:Array[int] = [0,0]
+var selected_lower_moves:Array[int] = [0,0]
 
 func get_child_at_path(tree_path: Array[int]) -> GameStateData:
 	if tree_path.size() == 0:

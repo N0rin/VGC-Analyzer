@@ -85,9 +85,11 @@ func state_dic(gamestate: GameStateData):
 		"field_effects" = field_dic(gamestate.field_effects),
 		"upper_team_lineup" = gamestate.upper_team_lineup,
 		"upper_team_states" = poke_states_dic(gamestate.upper_team_states),
+		"selected_upper_moves" = gamestate.selected_upper_moves,
 		"lower_team_lineup" = gamestate.lower_team_lineup,
-		"lower_team_states" = poke_states_dic(gamestate.lower_team_states)
-	}
+		"lower_team_states" = poke_states_dic(gamestate.lower_team_states),
+		"selected_lower_moves" = gamestate.selected_lower_moves
+		}
 	
 	else:
 		var children = []
@@ -178,10 +180,12 @@ func read_gamestate_data(gamestate_data: Dictionary, parent = null):
 	gamestate.state_turn = gamestate_data["state_turn"]
 	gamestate.commentary = gamestate_data["commentary"]
 	gamestate.field_effects = read_field_effects(gamestate_data["field_effects"])
-	gamestate.upper_team_lineup = read_lineup(gamestate_data["upper_team_lineup"])
+	gamestate.upper_team_lineup = read_array(gamestate_data["upper_team_lineup"])
 	gamestate.upper_team_states = read_team_states(gamestate_data["upper_team_states"])
-	gamestate.lower_team_lineup = read_lineup(gamestate_data["lower_team_lineup"])
+	gamestate.selected_upper_moves = read_array(gamestate_data["selected_upper_moves"])
+	gamestate.lower_team_lineup = read_array(gamestate_data["lower_team_lineup"])
 	gamestate.lower_team_states = read_team_states(gamestate_data["lower_team_states"])
+	gamestate.selected_lower_moves = read_array(gamestate_data["selected_lower_moves"])
 	
 	gamestate.parent = parent
 	
@@ -203,12 +207,12 @@ func read_field_effects(effect_list: Array):
 	
 	return field_effects
 
-func read_lineup(lineup_data: Array) -> Array[int]:
-	var lineup: Array[int] = []
-	for value in lineup_data:
-		lineup.append(int(value))
+func read_array(array_data: Array) -> Array[int]:
+	var array: Array[int] = []
+	for value in array_data:
+		array.append(int(value))
 	
-	return lineup
+	return array
 
 func read_team_states(poke_state_data: Array):
 	var pokestates: Array[PokemonState] = []

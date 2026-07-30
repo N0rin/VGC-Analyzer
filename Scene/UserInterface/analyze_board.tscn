@@ -199,6 +199,8 @@ is_upper = false
 [connection signal="pressed" from="Interface/LeftMenu/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
 [connection signal="text_changed" from="Interface/Board/Title/TitleEdit" to="." method="_on_title_edit_text_changed"]
+[connection signal="move_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_move_selected"]
+[connection signal="move_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_move_selected"]
 [connection signal="lines_edited_from" from="Interface/Board/Commentary" to="." method="_on_commentary_lines_edited_from"]
 [connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_health_set"]

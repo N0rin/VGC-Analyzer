@@ -28,3 +28,6 @@ popup/item_2/text = "Move 3"
 popup/item_2/id = 2
 popup/item_3/text = "Move 4"
 popup/item_3/id = 3
+
+[connection signal="item_selected" from="LeftButton" to="." method="_on_item_selected"]
+[connection signal="item_selected" from="RightButton" to="." method="_on_item_selected"]
