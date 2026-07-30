@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Levitate.tres" id="1_f85v1"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Choice_Scarf.tres" id="2_chffp"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dark_Pulse.tres" id="3_cn1nt"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Draco_Meteor.tres" id="4_s484f"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Snarl.tres" id="5_ynnci"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/U-Turn.tres" id="6_uoofl"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_rbb1q"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0635_Hydreigon.tres" id="8_urfds"]
+
+[resource]
+script = ExtResource("7_rbb1q")
+name = "Scarf Attacker"
+format = 0
+species = ExtResource("8_urfds")
+ability = ExtResource("1_f85v1")
+item = ExtResource("2_chffp")
+tera_type = "Dark"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 2
+atk_stat = 0
+def_stat = 0
+spa_stat = 32
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_cn1nt")
+move2 = ExtResource("4_s484f")
+move3 = ExtResource("5_ynnci")
+move4 = ExtResource("6_uoofl")

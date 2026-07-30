@@ -1,20 +1,26 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://kaig3622dn0g"]
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://kaig3622dn0g"]
 
+[ext_resource type="Resource" uid="uid://cqu4ks4x3vrin" path="res://Ressourcen/Abilities/Pressure.tres" id="1_7unm8"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_mai7u"]
+[ext_resource type="Resource" uid="uid://bcrm8t6umigdb" path="res://Ressourcen/Abilities/Rock_Head.tres" id="2_yd53t"]
+[ext_resource type="Resource" uid="uid://8qetacoxp0yh" path="res://Ressourcen/Abilities/Unnerve.tres" id="3_wjyu1"]
 
 [resource]
 script = ExtResource("1_mai7u")
 name = ""
-texture_id = 0
-texture_x = 0
-texture_y = 0
-main_type = "Normal"
-secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+texture_id = 4
+texture_x = 34
+texture_y = 4
+main_type = "Rock"
+secondary_type = "Flying"
+ability1 = ExtResource("1_7unm8")
+ability2 = ExtResource("2_yd53t")
+ability3 = ExtResource("3_wjyu1")
+hp = 80
+atk = 105
+def = 65
+spa = 60
+spd = 75
+spe = 130
+weight = 59.0
 restriction = 0

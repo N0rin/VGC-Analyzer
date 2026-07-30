@@ -5,18 +5,18 @@
 
 [resource]
 script = ExtResource("2_b6f67")
-name = "Rotom"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+name = "Heat Rotom"
+texture_id = 4
+texture_x = 24
+texture_y = 14
 main_type = "Electric"
 secondary_type = "Ghost"
 ability1 = ExtResource("1_x4kgy")
 hp = 50
-atk = 50
-def = 77
-spa = 95
-spd = 77
-spe = 91
-weight = 60.0
+atk = 65
+def = 107
+spa = 105
+spd = 107
+spe = 86
+weight = 0.3
 restriction = 0

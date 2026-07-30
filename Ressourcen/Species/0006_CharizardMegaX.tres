@@ -7,7 +7,7 @@
 script = ExtResource("2_0gkb8")
 name = "Mega Charizard X"
 texture_id = 4
-texture_x = 6
+texture_x = 8
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Dragon"

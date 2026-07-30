@@ -8,9 +8,9 @@
 [resource]
 script = ExtResource("1_h50cj")
 name = "Weezing-Galar"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 37
+texture_y = 3
 main_type = "Poison"
 secondary_type = "Fairy"
 ability1 = ExtResource("1_jg3ot")

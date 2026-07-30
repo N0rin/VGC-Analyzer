@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://b27vtc5aw5ljx"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_715kq"]
+
+[resource]
+script = ExtResource("1_715kq")
+name = "Occa Berry"

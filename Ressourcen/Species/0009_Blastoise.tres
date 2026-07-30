@@ -8,7 +8,7 @@
 script = ExtResource("1_5rb1b")
 name = "Blastoise"
 texture_id = 4
-texture_x = 9
+texture_x = 13
 texture_y = 0
 main_type = "Water"
 secondary_type = "None"

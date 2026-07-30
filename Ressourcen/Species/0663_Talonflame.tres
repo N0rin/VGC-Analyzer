@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_pj1oj")
 name = "Talonflame"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 30
+texture_y = 19
 main_type = "Fire"
 secondary_type = "Flying"
 ability1 = ExtResource("1_lish3")

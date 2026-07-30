@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://c5dbv3shayjwb"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_lv3ng"]
+
+[resource]
+script = ExtResource("1_lv3ng")
+name = "Draining Kiss"
+base_damage = 50
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Fairy"
+makes_contact = true
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

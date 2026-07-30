@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Flower_Veil.tres" id="1_6regi"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="2_ysp1w"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Moonblast.tres" id="3_4n21b"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Draining_Kiss.tres" id="4_wlngv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Calm_Mind.tres" id="5_qlwc1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_y1sbd"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_jy38y"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0670_FloetteEternal.tres" id="8_phxed"]
+
+[resource]
+script = ExtResource("7_jy38y")
+name = "Calm Mind Vampire"
+format = 0
+species = ExtResource("8_phxed")
+ability = ExtResource("1_6regi")
+item = ExtResource("2_ysp1w")
+tera_type = "Fairy"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 26
+atk_stat = 0
+def_stat = 2
+spa_stat = 25
+spd_stat = 0
+spe_stat = 13
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_4n21b")
+move2 = ExtResource("4_wlngv")
+move3 = ExtResource("5_qlwc1")
+move4 = ExtResource("6_y1sbd")

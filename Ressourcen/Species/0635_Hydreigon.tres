@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("1_grqnm")
 name = "Hydreigon"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 34
+texture_y = 18
 main_type = "Dark"
 secondary_type = "Dragon"
 ability1 = ExtResource("1_dasq7")

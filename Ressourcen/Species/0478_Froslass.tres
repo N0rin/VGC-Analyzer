@@ -1,20 +1,24 @@
-[gd_resource type="Resource" script_class="Species" load_steps=2 format=3 uid="uid://c1hkkos6tehi1"]
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://c1hkkos6tehi1"]
 
+[ext_resource type="Resource" uid="uid://c42ber6m478yn" path="res://Ressourcen/Abilities/Snow_Cloak.tres" id="1_f1df6"]
 [ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_gl066"]
+[ext_resource type="Resource" uid="uid://bci027cnepcit" path="res://Ressourcen/Abilities/Cursed_Body.tres" id="2_4uqlt"]
 
 [resource]
 script = ExtResource("1_gl066")
-name = ""
-texture_id = 0
-texture_x = 0
-texture_y = 0
-main_type = "Normal"
-secondary_type = "None"
-hp = 0
-atk = 0
-def = 0
-spa = 0
-spd = 0
-spe = 0
-weight = 60.0
+name = "Froslass"
+texture_id = 4
+texture_x = 20
+texture_y = 14
+main_type = "Ice"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_f1df6")
+ability3 = ExtResource("2_4uqlt")
+hp = 70
+atk = 80
+def = 70
+spa = 80
+spd = 70
+spe = 110
+weight = 26.6
 restriction = 0

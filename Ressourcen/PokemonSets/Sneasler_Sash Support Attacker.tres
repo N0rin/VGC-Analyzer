@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Poison_Touch.tres" id="1_egdwr"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="2_6pg3g"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dire Claw.tres" id="3_n2r06"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="4_gt3qv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="5_hn760"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Quick_Guard.tres" id="6_yfs3i"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_xt2j6"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0903_Sneasler.tres" id="8_o06di"]
+
+[resource]
+script = ExtResource("7_xt2j6")
+name = "Sash Support Attacker"
+format = 0
+species = ExtResource("8_o06di")
+ability = ExtResource("1_egdwr")
+item = ExtResource("2_6pg3g")
+tera_type = "Fighting"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 2
+atk_stat = 32
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_n2r06")
+move2 = ExtResource("4_gt3qv")
+move3 = ExtResource("5_hn760")
+move4 = ExtResource("6_yfs3i")

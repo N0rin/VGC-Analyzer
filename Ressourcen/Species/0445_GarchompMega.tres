@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("3_fptk6")
 name = "Mega Garchomp"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 26
+texture_y = 13
 main_type = "Dragon"
 secondary_type = "Ground"
 ability1 = ExtResource("1_q85jf")

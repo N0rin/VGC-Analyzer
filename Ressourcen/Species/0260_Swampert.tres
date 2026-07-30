@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_eqmpe")
 name = "Swampert"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 24
+texture_y = 8
 main_type = "Water"
 secondary_type = "Ground"
 ability1 = ExtResource("1_7smqp")

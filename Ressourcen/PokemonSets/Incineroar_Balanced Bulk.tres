@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_vtqkh"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Sitrus_Berry.tres" id="2_optpx"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="3_sg2lk"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="4_l0704"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Helping_Hand.tres" id="5_rkb7m"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Parting_Shot.tres" id="6_qdm04"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_vacgv"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0727_Incineroar.tres" id="8_gcsux"]
+
+[resource]
+script = ExtResource("7_vacgv")
+name = "Balanced Bulk"
+format = 0
+species = ExtResource("8_gcsux")
+ability = ExtResource("1_vtqkh")
+item = ExtResource("2_optpx")
+tera_type = "Fire"
+increased_stat = "SpD"
+reduced_stat = "SpA"
+hp_stat = 32
+atk_stat = 0
+def_stat = 14
+spa_stat = 0
+spd_stat = 20
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_sg2lk")
+move2 = ExtResource("4_l0704")
+move3 = ExtResource("5_rkb7m")
+move4 = ExtResource("6_qdm04")

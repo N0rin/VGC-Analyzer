@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://0ftkjk5yeblg"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_7m5k1"]
+
+[resource]
+script = ExtResource("1_7m5k1")
+name = "Magnet"

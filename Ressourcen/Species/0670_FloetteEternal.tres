@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_7so7i")
 name = "Eternal Floette"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 22
+texture_y = 20
 main_type = "Fairy"
 secondary_type = "None"
 ability1 = ExtResource("1_wumah")

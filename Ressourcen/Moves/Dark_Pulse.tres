@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dcwew0edrvp0g"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_062m2"]
+
+[resource]
+script = ExtResource("1_062m2")
+name = "Dark Pulse"
+base_damage = 80
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Dark"
+makes_contact = false
+added_effect = "Flinch"
+added_effect_chance = 20
+crit_bonus = 0
