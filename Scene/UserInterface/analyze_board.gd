@@ -46,6 +46,7 @@ func set_move_selection_names() -> void:
 func refresh_game_state() -> void:
 	gamestate_interface.set_data(active_game_state)
 	save_changes()
+	set_edit_names()
 	set_move_selection_names()
 
 func save_changes() -> void:
