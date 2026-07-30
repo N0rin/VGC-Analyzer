@@ -7,11 +7,6 @@ extends Control
 
 @export var battle_data:GameData
 
-func _ready():
-	initialize_board()
-	set_edit_names()
-	
-
 func initialize_board():
 	gamestate_interface.set_teams(battle_data.upper_team, battle_data.lower_team)
 	refresh_game_state()
@@ -42,9 +37,19 @@ func set_edit_names() -> void:
 	lower_edit.get_node("Slot7").set_menue(2, lower_team_names)
 	lower_edit.get_node("Slot8").set_menue(3, lower_team_names)
 
+func set_move_selection() -> void:
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[0]])
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[1]], false)
+	$Interface/Board/InputUpper.set_selection(active_game_state.selected_upper_moves)
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[0]])
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[1]], false)
+	$Interface/Board/InputLower.set_selection(active_game_state.selected_lower_moves)
+
 func refresh_game_state() -> void:
 	gamestate_interface.set_data(active_game_state)
 	save_changes()
+	set_edit_names()
+	set_move_selection()
 
 func save_changes() -> void:
 	if gamestate_position.is_empty():
@@ -93,7 +98,8 @@ func load_gamestate(tree_path: Array[int]) -> void:
 	$Interface/Board/Title/TitleEdit.text = active_game_state.state_name
 	$Interface/Board/Title/Label2.text = str(active_game_state.state_turn)
 	$Interface/Board/Commentary.text = active_game_state.commentary
-	
+	$Interface/Board/InputUpper.set_selection(active_game_state.selected_upper_moves)
+	$Interface/Board/InputLower.set_selection(active_game_state.selected_lower_moves)
 	refresh_navigation_buttons()
 	refresh_game_state()
 
@@ -115,7 +121,8 @@ func refresh_navigation_buttons() -> void:
 
 func _on_pokemon_set(board_slot:int, is_upper:bool, team_slot:int, ):
 	active_game_state.switch_position(board_slot, team_slot, is_upper)
-	set_edit_names()
+	
+	set_move_selection()
 	refresh_game_state()
 
 func _on_health_set(board_slot:int, is_upper:bool, health:int):
@@ -193,7 +200,13 @@ func _on_save_pressed():
 	save_changes()
 	saveloader.save_data($Interface/LeftMenu/Filename.text, battle_data)
 
-
-
 func _on_button_pressed():
 	$"Interface/Board/GameState/Border/Mon-Field Split/VBoxContainer/MonGrid/FighterDisplay".set_sprite(38, 0)
+
+func _on_input_upper_move_selected() -> void:
+	active_game_state.selected_upper_moves = $Interface/Board/InputUpper.return_selection()
+	refresh_game_state()
+
+func _on_input_lower_move_selected() -> void:
+	active_game_state.selected_lower_moves = $Interface/Board/InputLower.return_selection()
+	refresh_game_state()

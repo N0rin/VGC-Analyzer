@@ -73,8 +73,10 @@ theme_override_styles/hover = ExtResource("2_b1lt6")
 theme_override_styles/pressed = ExtResource("3_oww6h")
 theme_override_styles/normal = ExtResource("1_hkcfj")
 selected = 0
-item_count = 1
-popup/item_0/text = "Regulation H"
+item_count = 2
+popup/item_0/text = "Regulation MB"
+popup/item_1/text = "Regulation MA"
+popup/item_1/id = 1
 
 [node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/VSplitContainer"]
 layout_mode = 2

@@ -60,6 +60,10 @@ text = "Load"
 layout_mode = 2
 text = "Save"
 
+[node name="Control" type="Control" parent="Interface"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
 [node name="Board" type="VBoxContainer" parent="Interface"]
 layout_mode = 2
 
@@ -88,6 +92,7 @@ layout_mode = 2
 
 [node name="GameState" parent="Interface/Board" instance=ExtResource("1_p6323")]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="InputLower" parent="Interface/Board" instance=ExtResource("1_r8m5f")]
 layout_mode = 2
@@ -97,14 +102,19 @@ layout_mode = 2
 size_flags_vertical = 3
 placeholder_text = "Commentary"
 
+[node name="Control2" type="Control" parent="Interface"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
 [node name="Right Menu" type="VBoxContainer" parent="Interface"]
 layout_mode = 2
-theme_override_constants/separation = 20
+size_flags_horizontal = 3
+theme_override_constants/separation = 150
 
 [node name="UpperTeamEdit" type="GridContainer" parent="Interface/Right Menu"]
 layout_mode = 2
-theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 10
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
 columns = 2
 
 [node name="Slot1" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
@@ -157,8 +167,8 @@ text = "Clear all"
 
 [node name="LowerTeamEdit" type="GridContainer" parent="Interface/Right Menu"]
 layout_mode = 2
-theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 10
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
 columns = 2
 
 [node name="Slot5" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
@@ -189,6 +199,8 @@ is_upper = false
 [connection signal="pressed" from="Interface/LeftMenu/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
 [connection signal="text_changed" from="Interface/Board/Title/TitleEdit" to="." method="_on_title_edit_text_changed"]
+[connection signal="move_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_move_selected"]
+[connection signal="move_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_move_selected"]
 [connection signal="lines_edited_from" from="Interface/Board/Commentary" to="." method="_on_commentary_lines_edited_from"]
 [connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_health_set"]

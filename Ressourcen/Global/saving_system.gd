@@ -51,43 +51,29 @@ func poke_dic(pokemon_data: PokemonData):
 		return null
 	
 	return {
-		"species_name" = pokemon_data.species.name,
-		#"ability" = pokemon_data.ability,
-		#"item" = pokemon_data.item,
+		"species_path" = pokemon_data.species.resource_path,
+		"ability_path" = pokemon_data.ability.resource_path,
+		"item_path" = pokemon_data.item.resource_path,
 		"tera_type" = pokemon_data.tera_type,
 		"increased_stat" = pokemon_data.increased_stat,
 		"reduced_stat" = pokemon_data.reduced_stat,
-		"hp_evs" = pokemon_data.hp_evs,
-		"atk_evs" = pokemon_data.atk_evs,
-		"def_evs" = pokemon_data.def_evs,
-		"spa_evs" = pokemon_data.spa_evs,
-		"spd_evs" = pokemon_data.spd_evs,
-		"spe_evs" = pokemon_data.spe_evs,
+		"hp_stat" = pokemon_data.hp_stat,
+		"atk_stat" = pokemon_data.atk_stat,
+		"def_stat" = pokemon_data.def_stat,
+		"spa_stat" = pokemon_data.spa_stat,
+		"spd_stat" = pokemon_data.spd_stat,
+		"spe_stat" = pokemon_data.spe_stat,
 		"hp_ivs" = pokemon_data.hp_ivs,
 		"atk_ivs" = pokemon_data.atk_ivs,
 		"def_ivs" = pokemon_data.def_ivs,
 		"spa_ivs" = pokemon_data.spa_ivs,
 		"spd_ivs" = pokemon_data.spd_ivs,
 		"spe_ivs" = pokemon_data.spe_ivs,
-		#"move1" = pokemon_data.move1,
-		#"move2" = pokemon_data.move2,
-		#"move3" = pokemon_data.move3,
-		#"move4" = pokemon_data.move4
+		"move1_path" = pokemon_data.move1.resource_path,
+		"move2_path" = pokemon_data.move2.resource_path,
+		"move3_path" = pokemon_data.move3.resource_path,
+		"move4_path" = pokemon_data.move4.resource_path
 	}
-
-#func species_dic(species: Species):
-#	return {
-#		"sprite" = species.sprite,
-#		"name" = species.name,
-#		"main_type" = species.main_type,
-#		"secondary_type" = species.secondary_type,
-#		"hp" = species.hp,
-#		"atk" = species.atk,
-#		"def" = species.def,
-#		"spa" = species.spa,
-#		"spd" = species.spd,
-#		"spe" = species.spe
-#	}
 
 func state_dic(gamestate: GameStateData):
 	
@@ -99,9 +85,11 @@ func state_dic(gamestate: GameStateData):
 		"field_effects" = field_dic(gamestate.field_effects),
 		"upper_team_lineup" = gamestate.upper_team_lineup,
 		"upper_team_states" = poke_states_dic(gamestate.upper_team_states),
+		"selected_upper_moves" = gamestate.selected_upper_moves,
 		"lower_team_lineup" = gamestate.lower_team_lineup,
-		"lower_team_states" = poke_states_dic(gamestate.lower_team_states)
-	}
+		"lower_team_states" = poke_states_dic(gamestate.lower_team_states),
+		"selected_lower_moves" = gamestate.selected_lower_moves
+		}
 	
 	else:
 		var children = []
@@ -160,45 +148,31 @@ func read_pokedata(pokedata: Array):
 			continue
 		
 		var real_pokedata = PokemonData.new()
-		real_pokedata.load_species(data["species_name"])
-		#real_pokedata.ability = data["ability"]
-		#real_pokedata.item = data["item"]
+		real_pokedata.species = load(data["species_path"])
+		real_pokedata.ability = load(data["ability_path"])
+		real_pokedata.item = load(data["item_path"])
 		real_pokedata.tera_type = data["tera_type"]
 		real_pokedata.increased_stat = data["increased_stat"]
 		real_pokedata.reduced_stat = data["reduced_stat"]
-		real_pokedata.hp_evs = data["hp_evs"]
-		real_pokedata.atk_evs = data["atk_evs"]
-		real_pokedata.def_evs = data["def_evs"]
-		real_pokedata.spa_evs = data["spa_evs"]
-		real_pokedata.spd_evs = data["spd_evs"]
-		real_pokedata.spe_evs = data["spe_evs"]
+		real_pokedata.hp_stat = data["hp_stat"]
+		real_pokedata.atk_stat = data["atk_stat"]
+		real_pokedata.def_stat = data["def_stat"]
+		real_pokedata.spa_stat = data["spa_stat"]
+		real_pokedata.spd_stat = data["spd_stat"]
+		real_pokedata.spe_stat = data["spe_stat"]
 		real_pokedata.hp_ivs = data["hp_ivs"]
 		real_pokedata.atk_ivs = data["atk_ivs"]
 		real_pokedata.def_ivs = data["def_ivs"]
 		real_pokedata.spa_ivs = data["spa_ivs"]
 		real_pokedata.spd_ivs = data["spd_ivs"]
 		real_pokedata.spe_ivs = data["spe_ivs"]
-		#real_pokedata.move1 = data["move1"]
-		#real_pokedata.move2 = data["move2"]
-		#real_pokedata.move3 = data["move3"]
-		#real_pokedata.move4 = data["move4"]
+		real_pokedata.move1 = load(data["move1_path"])
+		real_pokedata.move2 = load(data["move2_path"])
+		real_pokedata.move3 = load(data["move3_path"])
+		real_pokedata.move4 = load(data["move4_path"])
 		pokedata_list.append(real_pokedata)
 	
 	return pokedata_list
-
-#func read_species(species_data: Dictionary):
-#	var species = Species.new()
-#	species.sprite = load(species_data["sprite"])
-#	species.name = species_data["name"]
-#	species.main_type = species_data["main_type"]
-#	species.secondary_type = species_data["secondary_type"]
-#	species.hp = species_data["hp"]
-#	species.atk = species_data["atk"]
-#	species.def = species_data["def"]
-#	species.spa = species_data["spa"]
-#	species.spd = species_data["spd"]
-#	species.spe = species_data["spe"]
-#	return species
 
 func read_gamestate_data(gamestate_data: Dictionary, parent = null):
 	var gamestate = GameStateData.new()
@@ -206,10 +180,12 @@ func read_gamestate_data(gamestate_data: Dictionary, parent = null):
 	gamestate.state_turn = gamestate_data["state_turn"]
 	gamestate.commentary = gamestate_data["commentary"]
 	gamestate.field_effects = read_field_effects(gamestate_data["field_effects"])
-	gamestate.upper_team_lineup = read_lineup(gamestate_data["upper_team_lineup"])
+	gamestate.upper_team_lineup = read_array(gamestate_data["upper_team_lineup"])
 	gamestate.upper_team_states = read_team_states(gamestate_data["upper_team_states"])
-	gamestate.lower_team_lineup = read_lineup(gamestate_data["lower_team_lineup"])
+	gamestate.selected_upper_moves = read_array(gamestate_data["selected_upper_moves"])
+	gamestate.lower_team_lineup = read_array(gamestate_data["lower_team_lineup"])
 	gamestate.lower_team_states = read_team_states(gamestate_data["lower_team_states"])
+	gamestate.selected_lower_moves = read_array(gamestate_data["selected_lower_moves"])
 	
 	gamestate.parent = parent
 	
@@ -231,12 +207,12 @@ func read_field_effects(effect_list: Array):
 	
 	return field_effects
 
-func read_lineup(lineup_data: Array) -> Array[int]:
-	var lineup: Array[int] = []
-	for value in lineup_data:
-		lineup.append(int(value))
+func read_array(array_data: Array) -> Array[int]:
+	var array: Array[int] = []
+	for value in array_data:
+		array.append(int(value))
 	
-	return lineup
+	return array
 
 func read_team_states(poke_state_data: Array):
 	var pokestates: Array[PokemonState] = []

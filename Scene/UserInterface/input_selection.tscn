@@ -1,13 +1,15 @@
-[gd_scene format=3 uid="uid://buapsis7b6ks7"]
+[gd_scene load_steps=2 format=3 uid="uid://buapsis7b6ks7"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/input_selection.gd" id="1_mneno"]
 
 [node name="Input" type="HBoxContainer"]
+script = ExtResource("1_mneno")
 
-[node name="OptionButton2" type="OptionButton" parent="."]
+[node name="LeftButton" type="OptionButton" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 item_count = 4
 popup/item_0/text = "Move 1"
-popup/item_0/id = 0
 popup/item_1/text = "Move 2"
 popup/item_1/id = 1
 popup/item_2/text = "Move 3"
@@ -15,15 +17,17 @@ popup/item_2/id = 2
 popup/item_3/text = "Move 4"
 popup/item_3/id = 3
 
-[node name="OptionButton3" type="OptionButton" parent="."]
+[node name="RightButton" type="OptionButton" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 item_count = 4
 popup/item_0/text = "Move 1"
-popup/item_0/id = 0
 popup/item_1/text = "Move 2"
 popup/item_1/id = 1
 popup/item_2/text = "Move 3"
 popup/item_2/id = 2
 popup/item_3/text = "Move 4"
 popup/item_3/id = 3
+
+[connection signal="item_selected" from="LeftButton" to="." method="_on_item_selected"]
+[connection signal="item_selected" from="RightButton" to="." method="_on_item_selected"]
