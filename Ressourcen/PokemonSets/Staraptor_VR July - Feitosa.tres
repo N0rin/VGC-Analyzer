@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="1_hww7u"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="2_4afvx"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="3_hpw6v"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Roost.tres" id="4_ajvcl"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="5_m7ufv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Brave_Bird.tres" id="6_ie6fk"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_3pdev"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0398_Staraptor.tres" id="8_mydcp"]
+
+[resource]
+script = ExtResource("7_3pdev")
+name = "VR July - Feitosa"
+format = 0
+species = ExtResource("8_mydcp")
+ability = ExtResource("1_hww7u")
+item = ExtResource("2_4afvx")
+tera_type = "Fighting"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 29
+atk_stat = 5
+def_stat = 0
+spa_stat = 0
+spd_stat = 4
+spe_stat = 28
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_hpw6v")
+move2 = ExtResource("4_ajvcl")
+move3 = ExtResource("5_m7ufv")
+move4 = ExtResource("6_ie6fk")

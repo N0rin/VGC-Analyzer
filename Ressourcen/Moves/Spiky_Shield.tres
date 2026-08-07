@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://t26ii07k4c7c"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_atw6p"]
+
+[resource]
+script = ExtResource("1_atw6p")
+name = "Spiky Shield"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Self"
+category = "Status"
+type = "Grass"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

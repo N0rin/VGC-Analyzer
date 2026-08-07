@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Prankster.tres" id="1_3fag8"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Occa_Berry.tres" id="2_03orh"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Moonblast.tres" id="3_coehk"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Tailwind.tres" id="4_w1hwg"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Charm.tres" id="5_y7vuv"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Light_Screen.tres" id="6_3cdou"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_wy0yw"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0547_Whimsicott.tres" id="8_3ansq"]
+
+[resource]
+script = ExtResource("7_wy0yw")
+name = "Defensive Support"
+format = 0
+species = ExtResource("8_3ansq")
+ability = ExtResource("1_3fag8")
+item = ExtResource("2_03orh")
+tera_type = "Grass"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_stat = 20
+atk_stat = 0
+def_stat = 6
+spa_stat = 8
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_coehk")
+move2 = ExtResource("4_w1hwg")
+move3 = ExtResource("5_y7vuv")
+move4 = ExtResource("6_3cdou")

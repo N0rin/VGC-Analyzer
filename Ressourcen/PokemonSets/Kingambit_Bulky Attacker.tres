@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Defiant.tres" id="1_5u6q7"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Chople_Berry.tres" id="2_cog3t"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Sucker_Punch.tres" id="3_jlttf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Low_Kick.tres" id="4_a6kii"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Iron_Head.tres" id="5_7ei3q"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Kowtow_Cleave.tres" id="6_7vcb4"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_f3sti"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0983_Kingambit.tres" id="8_7jbp8"]
+
+[resource]
+script = ExtResource("7_f3sti")
+name = "Bulky Attacker"
+format = 0
+species = ExtResource("8_7jbp8")
+ability = ExtResource("1_5u6q7")
+item = ExtResource("2_cog3t")
+tera_type = "Dark"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 31
+atk_stat = 16
+def_stat = 0
+spa_stat = 0
+spd_stat = 18
+spe_stat = 1
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_jlttf")
+move2 = ExtResource("4_a6kii")
+move3 = ExtResource("5_7ei3q")
+move4 = ExtResource("6_7vcb4")
