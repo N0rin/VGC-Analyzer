@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3q80r0510w6m"]
 
-[ext_resource type="Script" path="res://Scene/UserInterface/analyze_board.gd" id="1_7e0nj"]
+[ext_resource type="Script" path="res://Scene/UserInterface/analysis_board.gd" id="1_7e0nj"]
 [ext_resource type="PackedScene" uid="uid://dpcjlt32d7ftl" path="res://Scene/UserInterface/game_state.tscn" id="1_p6323"]
 [ext_resource type="PackedScene" uid="uid://buapsis7b6ks7" path="res://Scene/UserInterface/input_selection.tscn" id="1_r8m5f"]
 [ext_resource type="Resource" uid="uid://b6oxte8t7toqs" path="res://Ressourcen/StartData.tres" id="2_1qnho"]
@@ -15,6 +15,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7e0nj")
 battle_data = ExtResource("2_1qnho")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.400698, 0.400698, 0.400698, 1)
 
 [node name="Interface" type="HBoxContainer" parent="."]
 layout_mode = 1

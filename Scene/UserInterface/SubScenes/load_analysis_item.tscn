@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnort2nwoskvi"]
+
+[ext_resource type="Script" path="res://load_analysis_item.gd" id="1_82cx2"]
+
+[node name="LoadAnalysisItem" type="Button"]
+offset_right = 72.0
+offset_bottom = 20.0
+script = ExtResource("1_82cx2")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -22,12 +22,12 @@ func _on_signal_back_to_main():
 	$Main.show()
 
 func _on_analyzer_continue_to_board(team1, team2) -> void:
-	$Analyzer.hide()
-	$AnalyzeBoard.battle_data.upper_team = team1.team_members
-	$AnalyzeBoard.battle_data.lower_team = team2.team_members
-	$AnalyzeBoard.initialize_board()
-	$AnalyzeBoard.set_edit_names()
-	$AnalyzeBoard.show()
+	$Analyzer/NewAnalysis.hide()
+	$Analyzer/AnalysisBoard.battle_data.upper_team = team1.team_members
+	$Analyzer/AnalysisBoard.battle_data.lower_team = team2.team_members
+	$Analyzer/AnalysisBoard.initialize_board()
+	$Analyzer/AnalysisBoard.set_edit_names()
+	$Analyzer/AnalysisBoard.show()
 	
 
 func _on_calculations_to_meta() -> void:
@@ -47,3 +47,18 @@ func _on_metasets_create_team() -> void:
 
 func _on_calculations_to_matchup() -> void:
 	$Calculations/MatchupCalcs.startup()
+
+
+func _on_analyzer_to_load_analysis() -> void:
+	$Analyzer/LoadAnalysis.startup()
+
+
+func _on_analyzer_to_new_analysis() -> void:
+	$Analyzer/NewAnalysis.startup()
+
+
+func _on_load_analysis_load_battle_data(battle_data: GameData) -> void:
+	$Analyzer/LoadAnalysis.hide()
+	$Analyzer/AnalysisBoard.battle_data = battle_data
+	#$Analyzer/AnalysisBoard.load_gamestate([])
+	$Analyzer/AnalysisBoard.show()
