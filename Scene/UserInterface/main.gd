@@ -60,5 +60,5 @@ func _on_analyzer_to_new_analysis() -> void:
 func _on_load_analysis_load_battle_data(battle_data: GameData) -> void:
 	$Analyzer/LoadAnalysis.hide()
 	$Analyzer/AnalysisBoard.battle_data = battle_data
-	#$Analyzer/AnalysisBoard.load_gamestate([])
+	$Analyzer/AnalysisBoard.load_gamestate([])
 	$Analyzer/AnalysisBoard.show()

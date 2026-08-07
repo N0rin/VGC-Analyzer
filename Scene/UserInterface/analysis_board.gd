@@ -76,6 +76,9 @@ func make_gamestate_child() -> GameStateData:
 		new_gamestate.field_effects.append(new_effect)
 	new_gamestate.upper_team_lineup = active_game_state.upper_team_lineup.duplicate()
 	new_gamestate.lower_team_lineup = active_game_state.lower_team_lineup.duplicate()
+	new_gamestate.selected_upper_moves = active_game_state.selected_upper_moves.duplicate()
+	new_gamestate.selected_lower_moves = active_game_state.selected_lower_moves.duplicate()
+	
 	for slot in range(6):
 		new_gamestate.upper_team_states[slot] = PokemonState.new()
 		new_gamestate.upper_team_states[slot].combat_data = active_game_state.upper_team_states[slot].combat_data

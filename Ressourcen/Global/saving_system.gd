@@ -104,8 +104,10 @@ func state_dic(gamestate: GameStateData):
 		"field_effects" = field_dic(gamestate.field_effects),
 		"upper_team_lineup" = gamestate.upper_team_lineup,
 		"upper_team_states" = poke_states_dic(gamestate.upper_team_states),
+		"selected_upper_moves" = gamestate.selected_upper_moves,
 		"lower_team_lineup" = gamestate.lower_team_lineup,
-		"lower_team_states" = poke_states_dic(gamestate.lower_team_states)
+		"lower_team_states" = poke_states_dic(gamestate.lower_team_states),
+		"selected_lower_moves" = gamestate.selected_lower_moves
 	}
 
 func field_dic(field_effects:Array[FieldEffectData]):
