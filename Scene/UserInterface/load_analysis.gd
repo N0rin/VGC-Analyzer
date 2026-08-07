@@ -43,6 +43,7 @@ func _on_file_chosen(filename: String):
 
 
 func _on_back_pressed() -> void:
+	file_list.clear()
 	hide()
 
 

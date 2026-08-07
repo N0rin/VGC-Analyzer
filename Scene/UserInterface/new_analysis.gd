@@ -20,6 +20,6 @@ func _on_team_select_team_selected(team: TeamData) -> void:
 		$MarginContainer/VBoxContainer/HBoxContainer/Continue.disabled = false
 	
 func _on_team_select_2_team_selected(team: TeamData) -> void:
-	team2 = $MarginContainer/VBoxContainer/VSplitContainer/HSplitContainer/Team1/TeamSelect/TeamSelect.selected_team
+	team2 = $MarginContainer/VBoxContainer/VSplitContainer/HSplitContainer/Team2/TeamSelect2/TeamSelect.selected_team
 	if team1:
 		$MarginContainer/VBoxContainer/HBoxContainer/Continue.disabled = false
