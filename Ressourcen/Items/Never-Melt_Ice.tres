@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c1u1iy8fde7x3"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_f08lf"]
+
+[resource]
+script = ExtResource("1_f08lf")
+name = "Never-Melt Ice"

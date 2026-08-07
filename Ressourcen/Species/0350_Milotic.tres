@@ -8,9 +8,9 @@
 [resource]
 script = ExtResource("1_l7e37")
 name = "Milotic"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 38
+texture_y = 10
 main_type = "Water"
 secondary_type = "None"
 ability1 = ExtResource("1_xfl7x")

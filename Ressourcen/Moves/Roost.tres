@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://cyvec6egkjdmb"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_03o3p"]
+
+[resource]
+script = ExtResource("1_03o3p")
+name = "Roost"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Self"
+category = "Status"
+type = "Flying"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

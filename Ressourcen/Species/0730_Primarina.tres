@@ -7,9 +7,9 @@
 [resource]
 script = ExtResource("1_iaghn")
 name = "Primarina"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 18
+texture_y = 22
 main_type = "Water"
 secondary_type = "Fairy"
 ability1 = ExtResource("1_2h2v5")

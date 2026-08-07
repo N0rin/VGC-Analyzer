@@ -7,7 +7,7 @@
 script = ExtResource("2_uxsia")
 name = "Mega Venusaur"
 texture_id = 4
-texture_x = 3
+texture_x = 4
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Poison"

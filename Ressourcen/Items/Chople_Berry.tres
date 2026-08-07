@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://3alvcvu8pi5w"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_ebbvx"]
+
+[resource]
+script = ExtResource("1_ebbvx")
+name = "Chople Berry"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://7c5d587uybj7"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_ntl5r"]
+
+[resource]
+script = ExtResource("1_ntl5r")
+name = "Shell Smash"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Self"
+category = "Status"
+type = "Normal"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

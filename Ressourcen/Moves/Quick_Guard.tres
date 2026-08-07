@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://db1agesb8lics"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_dx30h"]
+
+[resource]
+script = ExtResource("1_dx30h")
+name = "Quick Guard"
+base_damage = 0
+accuracy = 100
+priority = 3
+targeting = "Allies"
+category = "Status"
+type = "Fighting"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

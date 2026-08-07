@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Rough_Skin.tres" id="1_vrjga"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Life_Orb.tres" id="2_yxylm"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="3_d7p7u"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rock_Slide.tres" id="4_yau80"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Earthquake.tres" id="5_8ra8r"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dragon_Claw.tres" id="6_01xed"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_b550l"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0445_Garchomp.tres" id="8_7uyjg"]
+
+[resource]
+script = ExtResource("7_b550l")
+name = "Life Orb Attacker"
+format = 0
+species = ExtResource("8_7uyjg")
+ability = ExtResource("1_vrjga")
+item = ExtResource("2_yxylm")
+tera_type = "Dragon"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 0
+atk_stat = 30
+def_stat = 4
+spa_stat = 0
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_d7p7u")
+move2 = ExtResource("4_yau80")
+move3 = ExtResource("5_8ra8r")
+move4 = ExtResource("6_01xed")

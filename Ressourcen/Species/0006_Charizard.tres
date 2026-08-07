@@ -8,7 +8,7 @@
 script = ExtResource("2_khdl4")
 name = "Charizard"
 texture_id = 4
-texture_x = 6
+texture_x = 7
 texture_y = 0
 main_type = "Fire"
 secondary_type = "Flying"

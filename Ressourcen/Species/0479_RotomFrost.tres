@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("2_5o2of")
 name = "Frost Rotom"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 23
+texture_y = 14
 main_type = "Electric"
 secondary_type = "Ice"
 ability1 = ExtResource("1_a7tme")
@@ -18,5 +18,5 @@ def = 107
 spa = 105
 spd = 107
 spe = 86
-weight = 60.0
+weight = 0.3
 restriction = 0

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Rain_Dish.tres" id="1_tw8wx"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="2_jk6rd"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Water_Spout.tres" id="3_xptr2"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dark_Pulse.tres" id="4_ki4b4"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Shell_Smash.tres" id="5_argvi"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_7f3lk"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_mvqc3"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0009_Blastoise.tres" id="8_hdp0x"]
+
+[resource]
+script = ExtResource("7_mvqc3")
+name = "Attacker"
+format = 0
+species = ExtResource("8_hdp0x")
+ability = ExtResource("1_tw8wx")
+item = ExtResource("2_jk6rd")
+tera_type = "Water"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 2
+atk_stat = 0
+def_stat = 0
+spa_stat = 32
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_xptr2")
+move2 = ExtResource("4_ki4b4")
+move3 = ExtResource("5_argvi")
+move4 = ExtResource("6_7f3lk")

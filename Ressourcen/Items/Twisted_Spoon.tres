@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://crinamhajw81f"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_n1oy6"]
+
+[resource]
+script = ExtResource("1_n1oy6")
+name = "Twisted_Spoon"

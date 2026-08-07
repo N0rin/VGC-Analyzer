@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("3_8oy6s")
 name = "Mega Raichu Y"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 7
+texture_y = 1
 main_type = "Electric"
 secondary_type = "None"
 ability1 = ExtResource("1_ipugt")

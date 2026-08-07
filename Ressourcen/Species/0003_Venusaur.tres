@@ -7,8 +7,8 @@
 [resource]
 script = ExtResource("1_nt06s")
 name = "Venusaur"
-texture_id = 0
-texture_x = 2
+texture_id = 4
+texture_x = 3
 texture_y = 0
 main_type = "Grass"
 secondary_type = "Poison"

@@ -1,0 +1,208 @@
+[gd_resource type="Resource" script_class="TeamData" load_steps=45 format=3]
+
+[ext_resource type="Script" path="res://Ressourcen/Team.gd" id="1_2c3ty"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="2_nfy7k"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Flower_Veil.tres" id="3_y15ef"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="4_3rpay"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Moonblast.tres" id="5_v83v1"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Draining_Kiss.tres" id="6_er8hs"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Calm_Mind.tres" id="7_jl4c2"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="8_5u47g"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0670_FloetteEternal.tres" id="9_7edoc"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="10_b1sh5"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Sitrus_Berry.tres" id="11_skauo"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="12_mtff6"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="13_umbsl"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Helping_Hand.tres" id="14_gadur"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Parting_Shot.tres" id="15_0hl0p"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0727_Incineroar.tres" id="16_76nya"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Hospitality.tres" id="17_km0ae"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Occa_Berry.tres" id="18_27wi8"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Matcha_Gotcha.tres" id="19_dgpti"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rage_Powder.tres" id="20_vxiwj"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick_Room.tres" id="21_rqrck"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/1013_Sinistcha.tres" id="22_psdwu"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Friend_Guard.tres" id="23_shhmr"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Chople_Berry.tres" id="24_chvo4"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Taunt.tres" id="25_cg7rr"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Follow_Me.tres" id="26_4fiab"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0925_Maushold.tres" id="27_x8ohd"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Rain_Dish.tres" id="28_7dyrw"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Water_Spout.tres" id="29_tk4i7"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dark_Pulse.tres" id="30_r33n4"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Shell_Smash.tres" id="31_mhkf8"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0009_Blastoise.tres" id="32_b22la"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Poison_Touch.tres" id="33_ct8pl"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="34_snm3o"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dire Claw.tres" id="35_x76pk"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="36_2iho5"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Quick_Guard.tres" id="37_jc4vj"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0903_Sneasler.tres" id="38_jbqo1"]
+
+[sub_resource type="Resource" id="Resource_8lpl7"]
+script = ExtResource("2_nfy7k")
+name = "Current"
+format = "All"
+species = ExtResource("9_7edoc")
+ability = ExtResource("3_y15ef")
+item = ExtResource("4_3rpay")
+tera_type = "Fairy"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 26
+atk_stat = 0
+def_stat = 2
+spa_stat = 25
+spd_stat = 0
+spe_stat = 13
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("5_v83v1")
+move2 = ExtResource("6_er8hs")
+move3 = ExtResource("7_jl4c2")
+move4 = ExtResource("8_5u47g")
+
+[sub_resource type="Resource" id="Resource_gw488"]
+script = ExtResource("2_nfy7k")
+name = "Current"
+format = "All"
+species = ExtResource("16_76nya")
+ability = ExtResource("10_b1sh5")
+item = ExtResource("11_skauo")
+tera_type = "Fire"
+increased_stat = "SpD"
+reduced_stat = "SpA"
+hp_stat = 32
+atk_stat = 0
+def_stat = 14
+spa_stat = 0
+spd_stat = 20
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("12_mtff6")
+move2 = ExtResource("13_umbsl")
+move3 = ExtResource("14_gadur")
+move4 = ExtResource("15_0hl0p")
+
+[sub_resource type="Resource" id="Resource_8fhoq"]
+script = ExtResource("2_nfy7k")
+name = "Current"
+format = "All"
+species = ExtResource("22_psdwu")
+ability = ExtResource("17_km0ae")
+item = ExtResource("18_27wi8")
+tera_type = "Grass"
+increased_stat = "Def"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 14
+spa_stat = 0
+spd_stat = 20
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("19_dgpti")
+move2 = ExtResource("20_vxiwj")
+move3 = ExtResource("21_rqrck")
+move4 = ExtResource("8_5u47g")
+
+[sub_resource type="Resource" id="Resource_ux7mq"]
+script = ExtResource("2_nfy7k")
+name = "Current"
+format = "All"
+species = ExtResource("27_x8ohd")
+ability = ExtResource("23_shhmr")
+item = ExtResource("24_chvo4")
+tera_type = "Normal"
+increased_stat = "Def"
+reduced_stat = "SpA"
+hp_stat = 32
+atk_stat = 0
+def_stat = 32
+spa_stat = 0
+spd_stat = 2
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("14_gadur")
+move2 = ExtResource("25_cg7rr")
+move3 = ExtResource("26_4fiab")
+move4 = ExtResource("8_5u47g")
+
+[sub_resource type="Resource" id="Resource_bos5e"]
+script = ExtResource("2_nfy7k")
+name = "Current"
+format = "All"
+species = ExtResource("32_b22la")
+ability = ExtResource("28_7dyrw")
+item = ExtResource("4_3rpay")
+tera_type = "Water"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 2
+atk_stat = 0
+def_stat = 0
+spa_stat = 32
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("29_tk4i7")
+move2 = ExtResource("30_r33n4")
+move3 = ExtResource("31_mhkf8")
+move4 = ExtResource("8_5u47g")
+
+[sub_resource type="Resource" id="Resource_qm2wp"]
+script = ExtResource("2_nfy7k")
+name = "new Set"
+format = "All"
+species = ExtResource("38_jbqo1")
+ability = ExtResource("33_ct8pl")
+item = ExtResource("34_snm3o")
+tera_type = "Fighting"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 2
+atk_stat = 32
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("35_x76pk")
+move2 = ExtResource("36_2iho5")
+move3 = ExtResource("12_mtff6")
+move4 = ExtResource("37_jc4vj")
+
+[resource]
+script = ExtResource("1_2c3ty")
+name = "GemMei - Kaan Cobanoglu"
+format = 0
+team_members = Array[ExtResource("2_nfy7k")]([SubResource("Resource_8lpl7"), SubResource("Resource_gw488"), SubResource("Resource_8fhoq"), SubResource("Resource_ux7mq"), SubResource("Resource_bos5e"), SubResource("Resource_qm2wp")])

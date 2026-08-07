@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Hospitality.tres" id="1_3poet"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Occa_Berry.tres" id="2_h6nys"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Matcha_Gotcha.tres" id="3_fw43e"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Rage_Powder.tres" id="4_6dyj7"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Trick_Room.tres" id="5_vk3qf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="6_vp7tf"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_2ib8m"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/1013_Sinistcha.tres" id="8_iwyn3"]
+
+[resource]
+script = ExtResource("7_2ib8m")
+name = "Support"
+format = 0
+species = ExtResource("8_iwyn3")
+ability = ExtResource("1_3poet")
+item = ExtResource("2_h6nys")
+tera_type = "Grass"
+increased_stat = "Def"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 14
+spa_stat = 0
+spd_stat = 20
+spe_stat = 0
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_fw43e")
+move2 = ExtResource("4_6dyj7")
+move3 = ExtResource("5_vk3qf")
+move4 = ExtResource("6_vp7tf")

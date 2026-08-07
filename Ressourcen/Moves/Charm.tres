@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://07ttqqc80yup"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_255pc"]
+
+[resource]
+script = ExtResource("1_255pc")
+name = "Charm"
+base_damage = 0
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Status"
+type = "Fairy"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

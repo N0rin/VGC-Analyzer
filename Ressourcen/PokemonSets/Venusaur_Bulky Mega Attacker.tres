@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="PokemonData" load_steps=9 format=3]
+
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Chlorophyl.tres" id="1_8cglc"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/No_Item.tres" id="2_ktgo2"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="3_tb20n"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Giga_Drain.tres" id="4_lfj6w"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Sludge_Bomb.tres" id="5_8ks6u"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Earth_Power.tres" id="6_i3sv3"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="7_86aj2"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0003_Venusaur.tres" id="8_tor0b"]
+
+[resource]
+script = ExtResource("7_86aj2")
+name = "Bulky Mega Attacker"
+format = 0
+species = ExtResource("8_tor0b")
+ability = ExtResource("1_8cglc")
+item = ExtResource("2_ktgo2")
+tera_type = "Grass"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 3
+spa_stat = 28
+spd_stat = 0
+spe_stat = 3
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("3_tb20n")
+move2 = ExtResource("4_lfj6w")
+move3 = ExtResource("5_8ks6u")
+move4 = ExtResource("6_i3sv3")

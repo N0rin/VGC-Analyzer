@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("4_6twex")
 name = "Mega Aerodactyl"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 35
+texture_y = 4
 main_type = "Rock"
 secondary_type = "Flying"
 ability1 = ExtResource("1_h4yw6")

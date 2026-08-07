@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("3_7os4s")
 name = "Mega Delphox"
-texture_id = 0
-texture_x = 0
-texture_y = 0
+texture_id = 4
+texture_x = 21
+texture_y = 19
 main_type = "Fire"
 secondary_type = "Psychic"
 ability1 = ExtResource("1_qcd2x")

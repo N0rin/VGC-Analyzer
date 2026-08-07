@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://7mm02m2vudt1"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_2rgvb"]
+
+[resource]
+script = ExtResource("1_2rgvb")
+name = "Coba_Berry"
