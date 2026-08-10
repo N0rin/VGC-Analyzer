@@ -21,10 +21,89 @@ theme_override_styles/pressed = ExtResource("3_7yyqe")
 theme_override_styles/normal = ExtResource("1_v2j4r")
 text = "Import"
 
+[node name="Select" type="Button" parent="."]
+visible = false
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("2_rosuv")
+theme_override_styles/pressed = ExtResource("3_7yyqe")
+theme_override_styles/normal = ExtResource("1_v2j4r")
+text = "Select"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(250, 660)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Charizard @ Charizardite Y  
+Ability: Blaze  
+Modest Nature  
+- Ancient Power  
+- Protect  
+- Heat Wave  
+- Weather Ball  
+
+Venusaur @ Focus Sash  
+Ability: Chlorophyll  
+Modest Nature  
+- Protect  
+- Sludge Bomb  
+- Earth Power  
+- Giga Drain  
+
+Pelipper @ Sitrus Berry  
+Ability: Drizzle  
+Modest Nature  
+- Hurricane  
+- Weather Ball  
+- Tailwind  
+- Wide Guard  
+
+Grimmsnarl @ Light Clay  
+Ability: Prankster  
+Careful Nature  
+- Light Screen  
+- Reflect  
+- Spirit Break  
+- Parting Shot  
+
+Archaludon @ Leftovers  
+Ability: Stamina  
+Calm Nature  
+- Electro Shot  
+- Protect  
+- Flash Cannon  
+- Dragon Pulse  
+
+Swampert @ Swampertite  
+Ability: Torrent  
+Adamant Nature  
+- Protect  
+- Ice Punch  
+- Earthquake  
+- Wave Crash  
+
+"
+
+[node name="Save2" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/hover = ExtResource("2_rosuv")
+theme_override_styles/pressed = ExtResource("3_7yyqe")
+theme_override_styles/normal = ExtResource("1_v2j4r")
+text = "  Save  "
+
 [node name="TeamSelect" parent="." instance=ExtResource("1_0g3j2")]
+visible = false
+custom_minimum_size = Vector2(250, 30)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
 layout_mode = 2
 
 [node name="Edit" type="Button" parent="HBoxContainer"]
@@ -72,4 +151,5 @@ layout_mode = 2
 [node name="PokemonIcon6" parent="IconContainer" instance=ExtResource("5_isf4w")]
 layout_mode = 2
 
+[connection signal="pressed" from="Save2" to="." method="_on_save_2_pressed"]
 [connection signal="team_selected" from="TeamSelect" to="." method="_on_team_select_team_selected"]

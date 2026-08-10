@@ -24,7 +24,7 @@ offset_bottom = 150.0
 script = ExtResource("1_6wepb")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-25, -35)
+position = Vector2(-4, 0)
 scale = Vector2(3, 3)
 tile_set = ExtResource("2_tyw38")
 rendering_quadrant_size = 1

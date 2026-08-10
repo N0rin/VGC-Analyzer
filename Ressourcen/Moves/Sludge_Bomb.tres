@@ -4,13 +4,14 @@
 
 [resource]
 script = ExtResource("1_yjthn")
-name = "Sludge bomb"
+name = "Sludge Bomb"
 base_damage = 90
 accuracy = 100
 priority = 0
 targeting = "Single"
 category = "Special"
 type = "Poison"
+makes_contact = false
 added_effect = "Poison"
 added_effect_chance = 30
 crit_bonus = 0

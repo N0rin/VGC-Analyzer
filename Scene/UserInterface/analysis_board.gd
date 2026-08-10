@@ -108,8 +108,10 @@ func load_gamestate(tree_path: Array[int]) -> void:
 
 func refresh_navigation_buttons() -> void:
 	$Interface/LeftMenu/Previous.show()
+	$Interface/LeftMenu/PreviousFiller.hide()
 	if active_game_state.parent == null:
 		$Interface/LeftMenu/Previous.hide()
+		$Interface/LeftMenu/PreviousFiller.show()
 	
 	for button in $Interface/LeftMenu/NextSlots.get_children():
 		$Interface/LeftMenu/NextSlots.remove_child(button)
