@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_cb6nj")
-name = ""
-base_damage = 0
+name = "Clanging Scales"
+base_damage = 110
 accuracy = 100
 priority = 0
-targeting = "Single"
-category = "Physical"
-type = "Normal"
+targeting = "Enemies"
+category = "Special"
+type = "Dragon"
 makes_contact = false
 added_effect = ""
 added_effect_chance = 0

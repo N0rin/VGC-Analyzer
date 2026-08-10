@@ -1,21 +1,21 @@
 [gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cuiubxfvylvrb"]
 
-[ext_resource type="Resource" uid="uid://bvqubyfd8n5bi" path="res://Ressourcen/Abilities/Bulletproof.tres" id="1_b8yg7"]
-[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_n6qd5"]
-[ext_resource type="Resource" uid="uid://bypu4074ym87b" path="res://Ressourcen/Abilities/Soundproof.tres" id="2_rdhr2"]
-[ext_resource type="Resource" uid="uid://rixgwug4hlhy" path="res://Ressourcen/Abilities/Overcoat.tres" id="3_l6rcr"]
+[ext_resource type="Resource" uid="uid://bvqubyfd8n5bi" path="res://Ressourcen/Abilities/Bulletproof.tres" id="1_cip2y"]
+[ext_resource type="Resource" uid="uid://bypu4074ym87b" path="res://Ressourcen/Abilities/Soundproof.tres" id="2_04kg6"]
+[ext_resource type="Resource" uid="uid://rixgwug4hlhy" path="res://Ressourcen/Abilities/Overcoat.tres" id="3_8ukw6"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_v6aoe"]
 
 [resource]
-script = ExtResource("1_n6qd5")
-name = "Kommo-O"
+script = ExtResource("4_v6aoe")
+name = "Kommo-o"
 texture_id = 4
 texture_x = 41
 texture_y = 23
 main_type = "Dragon"
 secondary_type = "Fighting"
-ability1 = ExtResource("1_b8yg7")
-ability2 = ExtResource("2_rdhr2")
-ability3 = ExtResource("3_l6rcr")
+ability1 = ExtResource("1_cip2y")
+ability2 = ExtResource("2_04kg6")
+ability3 = ExtResource("3_8ukw6")
 hp = 75
 atk = 110
 def = 125

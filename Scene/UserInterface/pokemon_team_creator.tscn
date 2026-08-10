@@ -94,6 +94,24 @@ custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 0
 
+[node name="ImportEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Insert Teampaste"
+
+[node name="Import" type="Button" parent="MarginContainer/VBoxContainer/CoreUI/Left"]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = ExtResource("2_vnqu1")
+theme_override_styles/pressed = ExtResource("3_m8p6l")
+theme_override_styles/normal = ExtResource("4_gs20d")
+text = "Import"
+
 [node name="Middle" type="GridContainer" parent="MarginContainer/VBoxContainer/CoreUI"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -232,6 +250,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Confirm"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CoreUI/Left/Import" to="." method="_on_import_pressed"]
 [connection signal="id_pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton" to="." method="_on_pokemon_button_id_pressed"]
 [connection signal="id_pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton2" to="." method="_on_pokemon_button_id_pressed"]
 [connection signal="id_pressed" from="MarginContainer/VBoxContainer/CoreUI/Middle/PokemonButton3" to="." method="_on_pokemon_button_id_pressed"]

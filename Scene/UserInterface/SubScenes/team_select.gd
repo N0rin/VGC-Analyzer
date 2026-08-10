@@ -33,13 +33,6 @@ func update_interface():
 
 func _on_team_selector_item_selected(name: String) -> void:
 	selected_team = find_by_name(team_list, name)
-	var counter = 0
-	for icon: PokemonIcon in $"../IconContainer".get_children():
-		var sprite_x = selected_team.team_members[counter].species.texture_x
-		var sprite_y = selected_team.team_members[counter].species.texture_y
-		var sprite_source = selected_team.team_members[counter].species.texture_id
-		icon.set_sprite(sprite_x,sprite_y,sprite_source)
-		counter += 1
 	emit_signal("team_selected", selected_team)
 
 func get_team() -> TeamData:

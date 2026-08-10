@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_j7u4j")
-name = ""
-base_damage = 0
+name = "Solar Beam"
+base_damage = 120
 accuracy = 100
 priority = 0
 targeting = "Single"
-category = "Physical"
-type = "Normal"
+category = "Special"
+type = "Grass"
 makes_contact = false
 added_effect = ""
 added_effect_chance = 0

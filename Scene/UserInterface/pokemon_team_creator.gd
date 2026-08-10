@@ -7,6 +7,8 @@ var team_members: Array[PokemonData] = [null, null, null, null, null, null]
 
 @onready var team_name = $PopupPanel/MarginContainer/VBoxContainer/HBoxContainer2/TextEdit
 @onready var set_edit = $"MarginContainer/VBoxContainer/CoreUI/Right/Set Edit"
+@onready var paste_reader = PasteReader.new()
+
 
 #Loading
 func startup():
@@ -97,3 +99,8 @@ func _on_confirm_pressed() -> void:
 
 func _on_cancel_pressed() -> void:
 	$PopupPanel.hide()
+
+
+func _on_import_pressed() -> void:
+	team_members = paste_reader.convert_paste_data($MarginContainer/VBoxContainer/CoreUI/Left/ImportEdit.text).team_members
+	set_edit.set_pokemon_data(team_members[selected_member])

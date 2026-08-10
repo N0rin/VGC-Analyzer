@@ -4,13 +4,13 @@
 
 [resource]
 script = ExtResource("1_05b4h")
-name = ""
-base_damage = 0
+name = "Aura Sphere"
+base_damage = 80
 accuracy = 100
 priority = 0
 targeting = "Single"
-category = "Physical"
-type = "Normal"
+category = "Special"
+type = "Fighting"
 makes_contact = false
 added_effect = ""
 added_effect_chance = 0
