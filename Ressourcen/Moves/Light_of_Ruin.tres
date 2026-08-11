@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://2qsxaoryasab"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_xq31e"]
+
+[resource]
+script = ExtResource("1_xq31e")
+name = "Light of Ruin"
+base_damage = 140
+accuracy = 90
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Fairy"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

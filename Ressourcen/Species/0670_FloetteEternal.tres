@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_7so7i")
-name = "Eternal Floette"
+name = "Floette-Eternal"
 texture_id = 4
 texture_x = 22
 texture_y = 20

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Species" load_steps=4 format=3 uid="uid://cd1nj3sdcm660"]
+
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="1_8batb"]
+[ext_resource type="Resource" uid="uid://b0dj1fsttoc5b" path="res://Ressourcen/Abilities/Flash_Fire.tres" id="1_kc6vi"]
+[ext_resource type="Resource" uid="uid://c7v0rwm8v04i" path="res://Ressourcen/Abilities/Weak_Armor.tres" id="2_vb777"]
+
+[resource]
+script = ExtResource("1_8batb")
+name = "Ceruledge"
+texture_id = 0
+texture_x = 7
+texture_y = 2
+main_type = "Fire"
+secondary_type = "Ghost"
+ability1 = ExtResource("1_kc6vi")
+ability3 = ExtResource("2_vb777")
+hp = 75
+atk = 125
+def = 80
+spa = 60
+spd = 100
+spe = 85
+weight = 62.0
+restriction = 0

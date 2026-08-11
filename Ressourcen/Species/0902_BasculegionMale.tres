@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_16dp0")
-name = "Basculegion Male"
+name = "Basculegion (M)"
 texture_id = 4
 texture_x = 27
 texture_y = 27

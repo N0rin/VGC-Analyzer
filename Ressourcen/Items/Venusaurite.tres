@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://b72sa6fb4wbbg"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_nea82"]
+
+[resource]
+script = ExtResource("1_nea82")
+name = "Venusaurite"

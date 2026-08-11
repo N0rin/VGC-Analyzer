@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bl5wywyod7q0f"]
+
+[ext_resource type="Script" path="res://Ressourcen/Item.gd" id="1_cj8xn"]
+
+[resource]
+script = ExtResource("1_cj8xn")
+name = "Garchompite"
