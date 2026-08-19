@@ -33,6 +33,12 @@ func add_child_at_path(tree_path: Array[int], gamestate:GameStateData) -> void:
 	var parent : GameStateData = get_child_at_path(tree_path)
 	parent.children.append(gamestate)
 
+func remove_child(tree_path: Array[int])-> void:
+	var parent_path = tree_path.duplicate()
+	var slot = parent_path.pop_back()
+	var parent = get_child_at_path(parent_path)
+	var child = parent.children.pop_at(slot)
+
 func edit_child_at_path(tree_path: Array[int], gamestate:GameStateData) -> void:
 	var child_position:int = tree_path.pop_back()
 	var parent : GameStateData = get_child_at_path(tree_path)

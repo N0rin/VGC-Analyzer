@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://bvf1ruqqq6wdk"]
+
+[ext_resource type="Resource" uid="uid://tyn36rjtsk63" path="res://Ressourcen/Abilities/Tough_Claws.tres" id="1_ng70o"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_krgul"]
+
+[resource]
+script = ExtResource("2_krgul")
+name = "Lycanroc-Dusk"
+texture_id = 4
+texture_x = 38
+texture_y = 22
+main_type = "Rock"
+secondary_type = "None"
+ability1 = ExtResource("1_ng70o")
+hp = 75
+atk = 117
+def = 65
+spa = 55
+spd = 65
+spe = 110
+weight = 25.0
+restriction = 0

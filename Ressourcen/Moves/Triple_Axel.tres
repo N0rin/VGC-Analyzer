@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ba4og3bwy6c0y"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_p5d17"]
+
+[resource]
+script = ExtResource("1_p5d17")
+name = "Triple Axel"
+base_damage = 120
+accuracy = 73
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Ice"
+makes_contact = true
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

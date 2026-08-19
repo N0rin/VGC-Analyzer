@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://ccrurtbvtptlc"]
+
+[ext_resource type="Resource" uid="uid://boiy12hj12168" path="res://Ressourcen/Abilities/Chlorophyl.tres" id="1_73ali"]
+[ext_resource type="Resource" uid="uid://46qe328rpsw0" path="res://Ressourcen/Abilities/Insomnia.tres" id="2_a1jo3"]
+[ext_resource type="Resource" uid="uid://by32dh61fbd3" path="res://Ressourcen/Abilities/Moody.tres" id="3_u3wgc"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_4kond"]
+
+[resource]
+script = ExtResource("4_4kond")
+name = "Scovillain"
+texture_id = 0
+texture_x = 10
+texture_y = 3
+main_type = "Grass"
+secondary_type = "Fire"
+ability1 = ExtResource("1_73ali")
+ability2 = ExtResource("2_a1jo3")
+ability3 = ExtResource("3_u3wgc")
+hp = 65
+atk = 108
+def = 65
+spa = 108
+spd = 65
+spe = 75
+weight = 15.0
+restriction = 0

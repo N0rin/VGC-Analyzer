@@ -7,6 +7,17 @@ extends Control
 
 @export var battle_data:GameData
 
+func startup(data: GameData) -> void:
+	battle_data = data
+	active_game_state = battle_data.game_state_data
+	
+	initialize_board()
+	
+	var empty_array: Array[int]
+	load_gamestate(empty_array)
+	
+	show()
+
 func initialize_board():
 	gamestate_interface.set_teams(battle_data.upper_team, battle_data.lower_team)
 	refresh_game_state()
@@ -64,6 +75,11 @@ func add_new_state() -> void:
 	gamestate_position.append(children_position)
 	load_gamestate(gamestate_position)
 
+func remove_current_state() -> void:
+	battle_data.game_state_data.remove_child(gamestate_position)
+	gamestate_position.pop_back()
+	load_gamestate(gamestate_position)
+
 func make_gamestate_child() -> GameStateData:
 	var new_gamestate:= GameStateData.new()
 	new_gamestate.parent = active_game_state
@@ -92,8 +108,6 @@ func make_gamestate_child() -> GameStateData:
 		new_gamestate.lower_team_states[slot].health = active_game_state.lower_team_states[slot].health
 		new_gamestate.lower_team_states[slot].terracrystalized = active_game_state.lower_team_states[slot].terracrystalized
 	
-	new_gamestate.iterate_field()
-	
 	return new_gamestate
 
 func load_gamestate(tree_path: Array[int]) -> void:
@@ -116,6 +130,11 @@ func refresh_navigation_buttons() -> void:
 	for button in $Interface/LeftMenu/NextSlots.get_children():
 		$Interface/LeftMenu/NextSlots.remove_child(button)
 		button.queue_free()
+	
+	if active_game_state.children.is_empty() and active_game_state.parent != null:
+		$Interface/LeftMenu/DeleteState.show()
+	else:
+		$Interface/LeftMenu/DeleteState.hide()
 	
 	for index in range(active_game_state.children.size()):
 		var new_button = next_button_scene.instantiate()
@@ -158,6 +177,10 @@ func _on_terra_set(board_slot:int, is_upper:bool, is_terra:bool):
 		active_game_state.lower_team_states[board_slot].terracrystalized = is_terra
 	refresh_game_state()
 
+func _on_clear_all_pressed():
+	active_game_state.field_effects.clear()
+	refresh_game_state()
+
 func _on_add_field_effect_pressed():
 	var field_effect:= FieldEffectData.new()
 	field_effect.name = $"Interface/Right Menu/FieldEdit/LineEdit".text
@@ -170,14 +193,6 @@ func _on_add_field_effect_pressed():
 		return
 	
 	active_game_state.field_effects.append(field_effect)
-	refresh_game_state()
-
-func _on_iterate_pressed():
-	active_game_state.iterate_field()
-	refresh_game_state()
-
-func _on_clear_all_pressed():
-	active_game_state.field_effects.clear()
 	refresh_game_state()
 
 func _on_title_edit_text_changed(new_text):
@@ -215,3 +230,11 @@ func _on_input_upper_move_selected() -> void:
 func _on_input_lower_move_selected() -> void:
 	active_game_state.selected_lower_moves = $Interface/Board/InputLower.return_selection()
 	refresh_game_state()
+
+func _on_advance_turn_pressed() -> void:
+	active_game_state.iterate_field()
+	load_gamestate(gamestate_position)
+	refresh_game_state()
+
+func _on_delete_state_pressed() -> void:
+	remove_current_state()

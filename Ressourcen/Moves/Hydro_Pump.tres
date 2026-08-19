@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bg13beu613tqv"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_xxwvw"]
+
+[resource]
+script = ExtResource("1_xxwvw")
+name = "Hydro Pump"
+base_damage = 110
+accuracy = 80
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Water"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

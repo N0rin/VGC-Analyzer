@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://bkmjoo6df8p0u"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_5kkic"]
+
+[resource]
+script = ExtResource("1_5kkic")
+name = "Overheat"
+base_damage = 130
+accuracy = 90
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Fire"
+makes_contact = false
+added_effect = ""
+added_effect_chance = 0
+crit_bonus = 0

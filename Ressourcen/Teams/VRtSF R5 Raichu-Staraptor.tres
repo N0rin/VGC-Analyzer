@@ -1,0 +1,211 @@
+[gd_resource type="Resource" script_class="TeamData" load_steps=48 format=3]
+
+[ext_resource type="Script" path="res://Ressourcen/Team.gd" id="1_nr5tg"]
+[ext_resource type="Script" path="res://Ressourcen/PokemonData.gd" id="2_hylly"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Lightning_Rod.tres" id="3_i27ha"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Raichunite_Y.tres" id="4_t0sps"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Zap_Cannon.tres" id="5_u3l7x"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Focus_Blast.tres" id="6_s8ih5"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Fake_Out.tres" id="7_fugis"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Protect.tres" id="8_6d3t6"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0026_Raichu.tres" id="9_tbpfu"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Intimidate.tres" id="10_lc53y"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Staraptite.tres" id="11_sweyb"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Close_Combat.tres" id="12_8hkwf"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Dual_Wingbeat.tres" id="13_u3xx3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Tailwind.tres" id="14_8e7vc"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0398_Staraptor.tres" id="15_861g6"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Rock_Head.tres" id="16_b8b7y"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Focus_Sash.tres" id="17_1w0sr"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Flare_Blitz.tres" id="18_mha14"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Head_Smash.tres" id="19_cx7hp"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Extreme_Speed.tres" id="20_4lxnq"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0059_ArcanineHisui.tres" id="21_skbic"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Pixilate.tres" id="22_osx1n"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Fairy_Feather.tres" id="23_yjju3"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Hyper_Voice.tres" id="24_m6psw"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Quick_Attack.tres" id="25_3gm0o"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Hyper_Beam.tres" id="26_278cb"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Detect.tres" id="27_dwncd"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0700_Sylveon.tres" id="28_qmq1k"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Defiant.tres" id="29_6f171"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Chople_Berry.tres" id="30_6gsnj"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Kowtow_Cleave.tres" id="31_mhtrq"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Sucker_Punch.tres" id="32_rn0to"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Low_Kick.tres" id="33_plyyu"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Iron_Head.tres" id="34_qrje1"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0983_Kingambit.tres" id="35_gp0oy"]
+[ext_resource type="Resource" path="res://Ressourcen/Abilities/Adaptability.tres" id="36_257ok"]
+[ext_resource type="Resource" path="res://Ressourcen/Items/Life_Orb.tres" id="37_rh2fk"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Wave Crash.tres" id="38_j5guw"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Last_Respects.tres" id="39_lpakj"]
+[ext_resource type="Resource" path="res://Ressourcen/Moves/Aqua Jet.tres" id="40_nq6mc"]
+[ext_resource type="Resource" path="res://Ressourcen/Species/0902_BasculegionMale.tres" id="41_fvcet"]
+
+[sub_resource type="Resource" id="Resource_8ltng"]
+script = ExtResource("2_hylly")
+name = "Current"
+format = "All"
+species = ExtResource("9_tbpfu")
+ability = ExtResource("3_i27ha")
+item = ExtResource("4_t0sps")
+tera_type = "Normal"
+increased_stat = "Spe"
+reduced_stat = "Atk"
+hp_stat = 32
+atk_stat = 0
+def_stat = 0
+spa_stat = 2
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("5_u3l7x")
+move2 = ExtResource("6_s8ih5")
+move3 = ExtResource("7_fugis")
+move4 = ExtResource("8_6d3t6")
+
+[sub_resource type="Resource" id="Resource_qp2vv"]
+script = ExtResource("2_hylly")
+name = "Current"
+format = "All"
+species = ExtResource("15_861g6")
+ability = ExtResource("10_lc53y")
+item = ExtResource("11_sweyb")
+tera_type = "Normal"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 15
+atk_stat = 19
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("12_8hkwf")
+move2 = ExtResource("13_u3xx3")
+move3 = ExtResource("14_8e7vc")
+move4 = ExtResource("8_6d3t6")
+
+[sub_resource type="Resource" id="Resource_otpsm"]
+script = ExtResource("2_hylly")
+name = "Current"
+format = "All"
+species = ExtResource("21_skbic")
+ability = ExtResource("16_b8b7y")
+item = ExtResource("17_1w0sr")
+tera_type = "Normal"
+increased_stat = "Spe"
+reduced_stat = "SpA"
+hp_stat = 2
+atk_stat = 32
+def_stat = 0
+spa_stat = 0
+spd_stat = 0
+spe_stat = 32
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("18_mha14")
+move2 = ExtResource("19_cx7hp")
+move3 = ExtResource("20_4lxnq")
+move4 = ExtResource("8_6d3t6")
+
+[sub_resource type="Resource" id="Resource_ywjmg"]
+script = ExtResource("2_hylly")
+name = "new Set"
+format = "All"
+species = ExtResource("28_qmq1k")
+ability = ExtResource("22_osx1n")
+item = ExtResource("23_yjju3")
+tera_type = "Normal"
+increased_stat = "SpA"
+reduced_stat = "Atk"
+hp_stat = 13
+atk_stat = 0
+def_stat = 22
+spa_stat = 23
+spd_stat = 0
+spe_stat = 8
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("24_m6psw")
+move2 = ExtResource("25_3gm0o")
+move3 = ExtResource("26_278cb")
+move4 = ExtResource("27_dwncd")
+
+[sub_resource type="Resource" id="Resource_s3t0c"]
+script = ExtResource("2_hylly")
+name = "Current"
+format = "All"
+species = ExtResource("35_gp0oy")
+ability = ExtResource("29_6f171")
+item = ExtResource("30_6gsnj")
+tera_type = "Normal"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 31
+atk_stat = 16
+def_stat = 0
+spa_stat = 0
+spd_stat = 18
+spe_stat = 1
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("31_mhtrq")
+move2 = ExtResource("32_rn0to")
+move3 = ExtResource("33_plyyu")
+move4 = ExtResource("34_qrje1")
+
+[sub_resource type="Resource" id="Resource_heylt"]
+script = ExtResource("2_hylly")
+name = "Current"
+format = "All"
+species = ExtResource("41_fvcet")
+ability = ExtResource("36_257ok")
+item = ExtResource("37_rh2fk")
+tera_type = "Normal"
+increased_stat = "Atk"
+reduced_stat = "SpA"
+hp_stat = 10
+atk_stat = 18
+def_stat = 27
+spa_stat = 0
+spd_stat = 1
+spe_stat = 10
+hp_ivs = 31
+atk_ivs = 31
+def_ivs = 31
+spa_ivs = 31
+spd_ivs = 31
+spe_ivs = 31
+move1 = ExtResource("38_j5guw")
+move2 = ExtResource("39_lpakj")
+move3 = ExtResource("40_nq6mc")
+move4 = ExtResource("8_6d3t6")
+
+[resource]
+script = ExtResource("1_nr5tg")
+name = "VRtSF R5 Raichu-Staraptor"
+format = 0
+team_members = Array[ExtResource("2_hylly")]([SubResource("Resource_8ltng"), SubResource("Resource_qp2vv"), SubResource("Resource_otpsm"), SubResource("Resource_ywjmg"), SubResource("Resource_s3t0c"), SubResource("Resource_heylt")])

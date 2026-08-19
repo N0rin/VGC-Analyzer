@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://mj6vwn3trtko"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_7nscx"]
+
+[resource]
+script = ExtResource("1_7nscx")
+name = "Gunk Shot"
+base_damage = 120
+accuracy = 80
+priority = 0
+targeting = "Single"
+category = "Physical"
+type = "Poison"
+makes_contact = false
+added_effect = "Poison"
+added_effect_chance = 30
+crit_bonus = 0

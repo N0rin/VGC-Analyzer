@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Species" load_steps=3 format=3 uid="uid://kvgptollni5s"]
+
+[ext_resource type="Resource" uid="uid://bl1j8mnjknqkw" path="res://Ressourcen/Abilities/Spicy_Spray.tres" id="1_t7t0y"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="2_ix3sb"]
+
+[resource]
+script = ExtResource("2_ix3sb")
+name = "Mega Scovillain"
+texture_id = 0
+texture_x = 10
+texture_y = 3
+main_type = "Fire"
+secondary_type = "Grass"
+ability1 = ExtResource("1_t7t0y")
+hp = 65
+atk = 138
+def = 85
+spa = 138
+spd = 85
+spe = 75
+weight = 22.0
+restriction = 5

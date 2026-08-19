@@ -56,6 +56,15 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="DeleteState" type="Button" parent="Interface/LeftMenu"]
+visible = false
+layout_mode = 2
+text = "Delete this State"
+
+[node name="Spacing2" type="Control" parent="Interface/LeftMenu"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
 [node name="Filename" type="LineEdit" parent="Interface/LeftMenu"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -84,6 +93,14 @@ layout_mode = 2
 text = "0"
 
 [node name="Spacing" type="Control" parent="Interface/Board/Title"]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="AdvanceTurn" type="Button" parent="Interface/Board/Title"]
+layout_mode = 2
+text = " +1 "
+
+[node name="Spacing2" type="Control" parent="Interface/Board/Title"]
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 
@@ -161,11 +178,6 @@ popup/item_2/id = 2
 layout_mode = 2
 text = "Add"
 
-[node name="Iterate" type="Button" parent="Interface/Right Menu/FieldEdit"]
-visible = false
-layout_mode = 2
-text = "Iterate"
-
 [node name="ClearAll" type="Button" parent="Interface/Right Menu/FieldEdit"]
 layout_mode = 2
 text = "Clear all"
@@ -199,8 +211,10 @@ is_upper = false
 
 [connection signal="pressed" from="Interface/LeftMenu/Previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="Interface/LeftMenu/Add State" to="." method="_on_add_state_pressed"]
+[connection signal="pressed" from="Interface/LeftMenu/DeleteState" to="." method="_on_delete_state_pressed"]
 [connection signal="text_changed" from="Interface/LeftMenu/Filename" to="." method="_on_filename_text_changed"]
 [connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Interface/Board/Title/AdvanceTurn" to="." method="_on_advance_turn_pressed"]
 [connection signal="text_changed" from="Interface/Board/Title/TitleEdit" to="." method="_on_title_edit_text_changed"]
 [connection signal="move_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_move_selected"]
 [connection signal="move_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_move_selected"]

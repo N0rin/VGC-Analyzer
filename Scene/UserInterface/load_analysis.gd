@@ -49,3 +49,5 @@ func _on_back_pressed() -> void:
 
 func _on_load_pressed() -> void:
 	emit_signal("load_battle_data", loaded_save)
+	hide()
+	

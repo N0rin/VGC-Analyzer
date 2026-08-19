@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://cjouhsnerejnx"]
+
+[ext_resource type="Resource" uid="uid://bibicy2ivua7h" path="res://Ressourcen/Abilities/Keen_Eye.tres" id="1_ddfa4"]
+[ext_resource type="Resource" uid="uid://cxe350ujbt167" path="res://Ressourcen/Abilities/Sand_Rush.tres" id="2_fdqwy"]
+[ext_resource type="Resource" uid="uid://cpp1sc8btr06l" path="res://Ressourcen/Abilities/Steadfast.tres" id="3_mmfj0"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_hxew6"]
+
+[resource]
+script = ExtResource("4_hxew6")
+name = "Lycanroc-Midday"
+texture_id = 4
+texture_x = 36
+texture_y = 22
+main_type = "Rock"
+secondary_type = "None"
+ability1 = ExtResource("1_ddfa4")
+ability2 = ExtResource("2_fdqwy")
+ability3 = ExtResource("3_mmfj0")
+hp = 75
+atk = 115
+def = 65
+spa = 55
+spd = 65
+spe = 112
+weight = 25.0
+restriction = 0

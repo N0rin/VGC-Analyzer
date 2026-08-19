@@ -30,6 +30,21 @@ func check_list_for_contained(list: Array, text: String):
 			return thing
 	return null
 
+func check_list_for_match(list: Array, text: String):
+	for thing in list:
+		var x = remove_spaces(text)
+		var y = remove_spaces(thing.name)
+		if x.matchn(y):
+			return thing
+	return null
+
+func remove_spaces(text: String) -> String:
+	var words = text.split(" ", false)
+	var new_text = ""
+	for word in words:
+		new_text += word
+	return new_text
+
 func convert_paste_data(paste: String, format = 0) -> TeamData:
 	var team_data = TeamData.new()
 	team_data.format = format
@@ -46,6 +61,14 @@ func create_pokemon(text: String) -> PokemonData:
 	var lines = text.split("\n")
 	
 	var pokemon_name = lines[0].get_slice("@", 0)
+	
+	#Edge cases
+	match remove_spaces(pokemon_name):
+		"Floette-Mega":
+			pokemon_name = "Floette-Eternal"
+		"Basculegion":
+			pokemon_name = "Basculegion (M)"
+	
 	var species = check_list_for_contained(pokemon_list, pokemon_name)
 	if species:
 		pokemon.species = species
@@ -116,7 +139,7 @@ func create_pokemon(text: String) -> PokemonData:
 	
 	var moves = []
 	for i in move_names.size():
-		var move = check_list_for_contained(move_list, move_names[i])
+		var move = check_list_for_match(move_list, move_names[i])
 		if move:
 			moves.append(move)
 	

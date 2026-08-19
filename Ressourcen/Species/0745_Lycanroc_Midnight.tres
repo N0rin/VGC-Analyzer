@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Species" load_steps=5 format=3 uid="uid://wp2f8mwudq5v"]
+
+[ext_resource type="Resource" uid="uid://bibicy2ivua7h" path="res://Ressourcen/Abilities/Keen_Eye.tres" id="1_v41bm"]
+[ext_resource type="Resource" uid="uid://c12loa80emb8k" path="res://Ressourcen/Abilities/Vital_Spirit.tres" id="2_hag1h"]
+[ext_resource type="Resource" uid="uid://18q050h86j50" path="res://Ressourcen/Abilities/No_Guard.tres" id="3_265t6"]
+[ext_resource type="Script" path="res://Ressourcen/Species.gd" id="4_6jhvc"]
+
+[resource]
+script = ExtResource("4_6jhvc")
+name = "Lycanroc-Midnight"
+texture_id = 4
+texture_x = 37
+texture_y = 22
+main_type = "Rock"
+secondary_type = "None"
+ability1 = ExtResource("1_v41bm")
+ability2 = ExtResource("2_hag1h")
+ability3 = ExtResource("3_265t6")
+hp = 85
+atk = 115
+def = 75
+spa = 55
+spd = 75
+spe = 82
+weight = 25.0
+restriction = 0

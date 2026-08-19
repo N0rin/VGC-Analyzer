@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://ybx7cf6wgloj"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_ctspk"]
+
+[resource]
+script = ExtResource("1_ctspk")
+name = "Zap Cannon"
+base_damage = 120
+accuracy = 50
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Electric"
+makes_contact = false
+added_effect = "Paralysis"
+added_effect_chance = 100
+crit_bonus = 0
