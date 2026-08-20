@@ -39,6 +39,7 @@ func set_edit_names() -> void:
 			continue
 		lower_team_names.append(pokemon.species.name)
 	
+	
 	upper_edit.get_node("Slot1").set_menue(0, upper_team_names)
 	upper_edit.get_node("Slot2").set_menue(1, upper_team_names)
 	upper_edit.get_node("Slot3").set_menue(2, upper_team_names)
@@ -48,18 +49,41 @@ func set_edit_names() -> void:
 	lower_edit.get_node("Slot7").set_menue(2, lower_team_names)
 	lower_edit.get_node("Slot8").set_menue(3, lower_team_names)
 
+func set_data_right_side():
+	$"Interface/Right Menu/UpperTeamEdit/Slot1".set_state(get_pokemon_state(0,true))
+	$"Interface/Right Menu/UpperTeamEdit/Slot2".set_state(get_pokemon_state(1,true))
+	$"Interface/Right Menu/LowerTeamEdit/Slot5".set_state(get_pokemon_state(0,false))
+	$"Interface/Right Menu/LowerTeamEdit/Slot6".set_state(get_pokemon_state(1,false))
+
+func get_pokemon_state(slot:int, is_upper_team:bool) -> PokemonState:
+	var pokemon_state = PokemonState.new()
+	if is_upper_team:
+		pokemon_state = active_game_state.upper_team_states[slot]
+	else:
+		pokemon_state = active_game_state.lower_team_states[slot]
+	return pokemon_state
+
 func set_move_selection() -> void:
-	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[0]])
-	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[1]], false)
-	$Interface/Board/InputUpper.set_selection(active_game_state.selected_upper_moves)
-	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[0]])
-	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[1]], false)
-	$Interface/Board/InputLower.set_selection(active_game_state.selected_lower_moves)
+	var upper_reserve = []
+	for i in range(2, 6):
+		upper_reserve.append(battle_data.upper_team[active_game_state.upper_team_lineup[i]].species.name)
+	var lower_reserve = []
+	for i in range(2, 6):
+		lower_reserve.append(battle_data.lower_team[active_game_state.lower_team_lineup[i]].species.name)
+	
+	
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[0]], upper_reserve)
+	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[1]], upper_reserve, false)
+	$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves, active_game_state.selected_upper_targets)
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[0]], lower_reserve)
+	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[1]], lower_reserve, false)
+	$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves, active_game_state.selected_lower_targets)
 
 func refresh_game_state() -> void:
 	gamestate_interface.set_data(active_game_state)
 	save_changes()
 	set_edit_names()
+	set_data_right_side()
 	set_move_selection()
 
 func save_changes() -> void:
@@ -92,8 +116,6 @@ func make_gamestate_child() -> GameStateData:
 		new_gamestate.field_effects.append(new_effect)
 	new_gamestate.upper_team_lineup = active_game_state.upper_team_lineup.duplicate()
 	new_gamestate.lower_team_lineup = active_game_state.lower_team_lineup.duplicate()
-	new_gamestate.selected_upper_moves = active_game_state.selected_upper_moves.duplicate()
-	new_gamestate.selected_lower_moves = active_game_state.selected_lower_moves.duplicate()
 	
 	for slot in range(6):
 		new_gamestate.upper_team_states[slot] = PokemonState.new()
@@ -113,10 +135,18 @@ func make_gamestate_child() -> GameStateData:
 func load_gamestate(tree_path: Array[int]) -> void:
 	active_game_state = battle_data.game_state_data.get_child_at_path(tree_path.duplicate())
 	$Interface/Board/Title/TitleEdit.text = active_game_state.state_name
-	$Interface/Board/Title/Label2.text = str(active_game_state.state_turn)
+	if active_game_state.parent:
+		if active_game_state.state_turn > active_game_state.parent.state_turn:
+			$Interface/Board/Title/TurnDisplay.modulate = Color("green")
+		else:
+			$Interface/Board/Title/TurnDisplay.modulate = Color("white")
+	else:
+		$Interface/Board/Title/TurnDisplay.modulate = Color("green")
+		
+	$Interface/Board/Title/TurnDisplay/Label2.text = str(active_game_state.state_turn)
 	$Interface/Board/Commentary.text = active_game_state.commentary
-	$Interface/Board/InputUpper.set_selection(active_game_state.selected_upper_moves)
-	$Interface/Board/InputLower.set_selection(active_game_state.selected_lower_moves)
+	#$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves, active_game_state.selected_upper_targets)
+	#$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves, active_game_state.selected_lower_targets)
 	refresh_navigation_buttons()
 	refresh_game_state()
 
@@ -141,6 +171,8 @@ func refresh_navigation_buttons() -> void:
 		new_button.index = index
 		new_button.next_button_pressed.connect(_on_next_pressed)
 		new_button.text = "Outcome " + str(index+1)
+		if active_game_state.children[index].state_name:
+			new_button.text = active_game_state.children[index].state_name
 		$Interface/LeftMenu/NextSlots.add_child(new_button)
 
 func _on_pokemon_set(board_slot:int, is_upper:bool, team_slot:int, ):
@@ -220,9 +252,6 @@ func _on_save_pressed():
 	save_changes()
 	saveloader.save_data($Interface/LeftMenu/Filename.text, battle_data)
 
-func _on_button_pressed():
-	$"Interface/Board/GameState/Border/Mon-Field Split/VBoxContainer/MonGrid/FighterDisplay".set_sprite(38, 0)
-
 func _on_input_upper_move_selected() -> void:
 	active_game_state.selected_upper_moves = $Interface/Board/InputUpper.return_selection()
 	refresh_game_state()
@@ -238,3 +267,21 @@ func _on_advance_turn_pressed() -> void:
 
 func _on_delete_state_pressed() -> void:
 	remove_current_state()
+
+
+func _on_input_lower_action_selected() -> void:
+	active_game_state.selected_lower_moves = $Interface/Board/InputLower.get_selected_actions()
+	active_game_state.selected_lower_targets = $Interface/Board/InputLower.get_selected_targets()
+
+
+func _on_input_lower_target_selected() -> void:
+	active_game_state.selected_lower_targets = $Interface/Board/InputLower.get_selected_targets()
+
+
+func _on_input_upper_action_selected() -> void:
+	active_game_state.selected_upper_moves = $Interface/Board/InputUpper.get_selected_actions()
+	active_game_state.selected_upper_targets = $Interface/Board/InputUpper.get_selected_targets()
+
+
+func _on_input_upper_target_selected() -> void:
+	active_game_state.selected_upper_targets = $Interface/Board/InputUpper.get_selected_targets()

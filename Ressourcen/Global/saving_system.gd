@@ -85,10 +85,12 @@ func state_dic(gamestate: GameStateData):
 		"field_effects" = field_dic(gamestate.field_effects),
 		"upper_team_lineup" = gamestate.upper_team_lineup,
 		"upper_team_states" = poke_states_dic(gamestate.upper_team_states),
-		"selected_upper_moves" = gamestate.selected_upper_moves,
 		"lower_team_lineup" = gamestate.lower_team_lineup,
 		"lower_team_states" = poke_states_dic(gamestate.lower_team_states),
-		"selected_lower_moves" = gamestate.selected_lower_moves
+		"selected_upper_moves" = gamestate.selected_upper_moves,
+		"selected_upper_targets" = gamestate.selected_upper_targets,
+		"selected_lower_moves" = gamestate.selected_lower_moves,
+		"selected_lower_targets" = gamestate.selected_lower_targets
 		}
 	
 	else:
@@ -104,10 +106,12 @@ func state_dic(gamestate: GameStateData):
 		"field_effects" = field_dic(gamestate.field_effects),
 		"upper_team_lineup" = gamestate.upper_team_lineup,
 		"upper_team_states" = poke_states_dic(gamestate.upper_team_states),
-		"selected_upper_moves" = gamestate.selected_upper_moves,
 		"lower_team_lineup" = gamestate.lower_team_lineup,
 		"lower_team_states" = poke_states_dic(gamestate.lower_team_states),
-		"selected_lower_moves" = gamestate.selected_lower_moves
+		"selected_upper_moves" = gamestate.selected_upper_moves,
+		"selected_upper_targets" = gamestate.selected_upper_targets,
+		"selected_lower_moves" = gamestate.selected_lower_moves,
+		"selected_lower_targets" = gamestate.selected_lower_targets
 	}
 
 func field_dic(field_effects:Array[FieldEffectData]):
@@ -184,10 +188,12 @@ func read_gamestate_data(gamestate_data: Dictionary, parent = null):
 	gamestate.field_effects = read_field_effects(gamestate_data["field_effects"])
 	gamestate.upper_team_lineup = read_array(gamestate_data["upper_team_lineup"])
 	gamestate.upper_team_states = read_team_states(gamestate_data["upper_team_states"])
-	gamestate.selected_upper_moves = read_array(gamestate_data["selected_upper_moves"])
 	gamestate.lower_team_lineup = read_array(gamestate_data["lower_team_lineup"])
 	gamestate.lower_team_states = read_team_states(gamestate_data["lower_team_states"])
+	gamestate.selected_upper_moves = read_array(gamestate_data["selected_upper_moves"])
+	#gamestate.selected_upper_targets = read_array(gamestate_data["selected_upper_targets"])
 	gamestate.selected_lower_moves = read_array(gamestate_data["selected_lower_moves"])
+	#gamestate.selected_lower_targets = read_array(gamestate_data["selected_lower_targets"])
 	
 	gamestate.parent = parent
 	

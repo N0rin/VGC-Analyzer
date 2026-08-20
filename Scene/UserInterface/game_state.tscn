@@ -4,21 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://by0wc0a4eykq2" path="res://Scene/UserInterface/fighter_display.tscn" id="1_m025q"]
 [ext_resource type="Script" path="res://Ressourcen/game_state.gd" id="1_txojw"]
 
-[node name="GameState" type="Control"]
+[node name="GameState" type="MarginContainer"]
 custom_minimum_size = Vector2(420, 388)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 400.0
-offset_bottom = 388.0
+offset_right = 420.0
+offset_bottom = 477.0
 script = ExtResource("1_txojw")
 
 [node name="Border" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 
 [node name="Mon-Field Split" type="HBoxContainer" parent="Border"]
 layout_mode = 2
@@ -30,9 +23,11 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="BankDisplay" parent="Border/Mon-Field Split/VBoxContainer/UpperBank" instance=ExtResource("1_0klwg")]
+visible = false
 layout_mode = 2
 
 [node name="BankDisplay2" parent="Border/Mon-Field Split/VBoxContainer/UpperBank" instance=ExtResource("1_0klwg")]
+visible = false
 layout_mode = 2
 
 [node name="BankDisplay3" parent="Border/Mon-Field Split/VBoxContainer/UpperBank" instance=ExtResource("1_0klwg")]
@@ -69,9 +64,11 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="BankDisplay" parent="Border/Mon-Field Split/VBoxContainer/LowerBank" instance=ExtResource("1_0klwg")]
+visible = false
 layout_mode = 2
 
 [node name="BankDisplay2" parent="Border/Mon-Field Split/VBoxContainer/LowerBank" instance=ExtResource("1_0klwg")]
+visible = false
 layout_mode = 2
 
 [node name="BankDisplay3" parent="Border/Mon-Field Split/VBoxContainer/LowerBank" instance=ExtResource("1_0klwg")]

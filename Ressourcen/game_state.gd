@@ -1,4 +1,4 @@
-extends Control
+extends MarginContainer
 class_name GameStateInterface
 
 @onready var field_effect_scene = load("res://Scene/UserInterface/field_info.tscn")

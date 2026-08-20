@@ -84,11 +84,15 @@ layout_mode = 2
 [node name="Title" type="HBoxContainer" parent="Interface/Board"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Interface/Board/Title"]
+[node name="TurnDisplay" type="HBoxContainer" parent="Interface/Board/Title"]
+modulate = Color(0.152941, 1, 0.141176, 1)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Interface/Board/Title/TurnDisplay"]
 layout_mode = 2
 text = "Zug "
 
-[node name="Label2" type="Label" parent="Interface/Board/Title"]
+[node name="Label2" type="Label" parent="Interface/Board/Title/TurnDisplay"]
 layout_mode = 2
 text = "0"
 
@@ -147,10 +151,12 @@ layout_mode = 2
 slot = 1
 
 [node name="Slot3" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+visible = false
 layout_mode = 2
 slot = 2
 
 [node name="Slot4" parent="Interface/Right Menu/UpperTeamEdit" instance=ExtResource("3_q73bn")]
+visible = false
 layout_mode = 2
 slot = 3
 
@@ -198,11 +204,13 @@ slot = 1
 is_upper = false
 
 [node name="Slot7" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+visible = false
 layout_mode = 2
 slot = 2
 is_upper = false
 
 [node name="Slot8" parent="Interface/Right Menu/LowerTeamEdit" instance=ExtResource("3_q73bn")]
+visible = false
 layout_mode = 2
 slot = 3
 is_upper = false
@@ -216,8 +224,10 @@ is_upper = false
 [connection signal="pressed" from="Interface/LeftMenu/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Interface/Board/Title/AdvanceTurn" to="." method="_on_advance_turn_pressed"]
 [connection signal="text_changed" from="Interface/Board/Title/TitleEdit" to="." method="_on_title_edit_text_changed"]
-[connection signal="move_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_move_selected"]
-[connection signal="move_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_move_selected"]
+[connection signal="action_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_action_selected"]
+[connection signal="target_selected" from="Interface/Board/InputUpper" to="." method="_on_input_upper_target_selected"]
+[connection signal="action_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_action_selected"]
+[connection signal="target_selected" from="Interface/Board/InputLower" to="." method="_on_input_lower_target_selected"]
 [connection signal="lines_edited_from" from="Interface/Board/Commentary" to="." method="_on_commentary_lines_edited_from"]
 [connection signal="combat_info_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_combat_info_set"]
 [connection signal="health_set" from="Interface/Right Menu/UpperTeamEdit/Slot1" to="." method="_on_health_set"]

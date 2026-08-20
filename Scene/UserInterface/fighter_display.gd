@@ -7,10 +7,12 @@ func set_fighter(pokemon:Pokemon) -> void:
 	
 	$TileMap.show()
 	set_sprite(pokemon.data.species.texture_x, pokemon.data.species.texture_y, pokemon.data.species.texture_id)
-	$MarginContainer/ProgressBar.value = pokemon.state.health
+	$LowerInfo/MarginContainer/ProgressBar.value = pokemon.state.health
 	$"Slot Info/InfoText".text = pokemon.state.combat_data
 	set_status(pokemon.state.condition)
 	set_terra(pokemon.state.terracrystalized)
+	set_item(pokemon.data.item.name)
+	
 
 func set_status(status:String) -> void:
 	$"Status Info/brn".hide()
@@ -49,3 +51,6 @@ func set_terra(is_terra:bool):
 
 func set_sprite(x: int, y: int, source_id: int = 4):
 	$TileMap.set_cell(0, Vector2i.ZERO, source_id, Vector2i(x, y), 0)
+
+func set_item(item_name: String):
+	$LowerInfo/Item.text = item_name

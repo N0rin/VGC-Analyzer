@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://k5cgbeay3jy"]
+
+[ext_resource type="Script" path="res://Scene/UserInterface/SubScenes/move_input.gd" id="1_6bbgc"]
+
+[node name="MoveInput" type="HBoxContainer"]
+script = ExtResource("1_6bbgc")
+
+[node name="Action" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+popup/item_0/text = "Move 1"
+popup/item_1/text = "Move 2"
+popup/item_1/id = 1
+popup/item_2/text = "Move 3"
+popup/item_2/id = 2
+popup/item_3/text = "Move 4"
+popup/item_3/id = 3
+
+[node name="Target" type="OptionButton" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="item_selected" from="Action" to="." method="_on_action_item_selected"]
+[connection signal="item_selected" from="Target" to="." method="_on_target_item_selected"]

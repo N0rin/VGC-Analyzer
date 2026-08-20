@@ -1,33 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://buapsis7b6ks7"]
+[gd_scene load_steps=3 format=3 uid="uid://buapsis7b6ks7"]
 
 [ext_resource type="Script" path="res://Scene/UserInterface/input_selection.gd" id="1_mneno"]
+[ext_resource type="PackedScene" uid="uid://k5cgbeay3jy" path="res://Scene/UserInterface/SubScenes/move_input.tscn" id="2_er6fw"]
 
 [node name="Input" type="HBoxContainer"]
 script = ExtResource("1_mneno")
 
-[node name="LeftButton" type="OptionButton" parent="."]
+[node name="LeftInput" parent="." instance=ExtResource("2_er6fw")]
 layout_mode = 2
-size_flags_horizontal = 3
-item_count = 4
-popup/item_0/text = "Move 1"
-popup/item_1/text = "Move 2"
-popup/item_1/id = 1
-popup/item_2/text = "Move 3"
-popup/item_2/id = 2
-popup/item_3/text = "Move 4"
-popup/item_3/id = 3
 
-[node name="RightButton" type="OptionButton" parent="."]
+[node name="RightInput" parent="." instance=ExtResource("2_er6fw")]
 layout_mode = 2
-size_flags_horizontal = 3
-item_count = 4
-popup/item_0/text = "Move 1"
-popup/item_1/text = "Move 2"
-popup/item_1/id = 1
-popup/item_2/text = "Move 3"
-popup/item_2/id = 2
-popup/item_3/text = "Move 4"
-popup/item_3/id = 3
 
-[connection signal="item_selected" from="LeftButton" to="." method="_on_item_selected"]
-[connection signal="item_selected" from="RightButton" to="." method="_on_item_selected"]
+[connection signal="action_selected" from="LeftInput" to="." method="_on_left_input_action_selected"]
+[connection signal="target_selected" from="LeftInput" to="." method="_on_left_input_target_selected"]
+[connection signal="action_selected" from="RightInput" to="." method="_on_right_input_action_selected"]
+[connection signal="target_selected" from="RightInput" to="." method="_on_right_input_target_selected"]
