@@ -23,9 +23,12 @@ func refresh_moves(button: OptionButton, pokemon: PokemonData) -> void:
 	button.select(0)
 
 func set_selection(action: int, target: int) -> void:
+	if action == 1:
+		action = 0
 	$Action.select(action)
 	refresh_target(action)
 	$Target.select(target)
+	emit_signal("target_selected", target)
 
 func return_selection() -> Array[int]:
 	return [$Action.selected, $Target.selected]
@@ -38,19 +41,21 @@ func refresh_target(action_id):
 		2:
 			for name in reserve_names:
 				$Target.add_item(name)
-			$Target.selected = 0
+			$Target.select(0)
+			emit_signal("target_selected", 0)
 			$Target.show()
 		4, 5, 6, 7:
 			if pokemon.get_move(action_id-3).targeting == "Single":
 				$Target.add_item("Left")
 				$Target.add_item("Right")
 				$Target.add_item("Partner")
-				$Target.selected = 0
+				$Target.select(0)
+				emit_signal("target_selected", 0)
 				$Target.show()
 
 func _on_action_item_selected(index: int) -> void:
 	if $Action.selected == 1:
-		$Action.selected = 0
+		$Action.select(0)
 	refresh_target(index)
 	emit_signal("action_selected", index)
 

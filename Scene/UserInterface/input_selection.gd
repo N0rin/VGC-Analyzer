@@ -14,6 +14,8 @@ func set_pokemon(pokemon: PokemonData, reserve_names: Array, is_left = true) -> 
 		$RightInput.set_pokemon(pokemon, reserve_names)
 
 func set_input(actions: Array[int], targets: Array[int]) -> void:
+	actions_selected = actions.duplicate()
+	targets_selected = targets.duplicate()
 	$LeftInput.set_selection(actions[0], targets[0])
 	$RightInput.set_selection(actions[1], targets[1])
 
@@ -34,7 +36,7 @@ func _on_right_input_target_selected(target: Variant) -> void:
 	emit_signal("target_selected")
 
 func get_selected_actions() -> Array[int]:
-	return actions_selected
+	return actions_selected.duplicate()
 
 func get_selected_targets() -> Array[int]:
-	return targets_selected
+	return targets_selected.duplicate()

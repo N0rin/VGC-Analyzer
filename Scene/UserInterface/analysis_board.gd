@@ -7,7 +7,9 @@ extends Control
 
 @export var battle_data:GameData
 
-func startup(data: GameData) -> void:
+func startup(data: GameData, save_name = "") -> void:
+	$Interface/LeftMenu/Filename.text = save_name
+	
 	battle_data = data
 	active_game_state = battle_data.game_state_data
 	
@@ -74,10 +76,10 @@ func set_move_selection() -> void:
 	
 	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[0]], upper_reserve)
 	$Interface/Board/InputUpper.set_pokemon(battle_data.upper_team[active_game_state.upper_team_lineup[1]], upper_reserve, false)
-	$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves, active_game_state.selected_upper_targets)
+	$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves.duplicate(), active_game_state.selected_upper_targets.duplicate())
 	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[0]], lower_reserve)
 	$Interface/Board/InputLower.set_pokemon(battle_data.lower_team[active_game_state.lower_team_lineup[1]], lower_reserve, false)
-	$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves, active_game_state.selected_lower_targets)
+	$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves.duplicate(), active_game_state.selected_lower_targets.duplicate())
 
 func refresh_game_state() -> void:
 	gamestate_interface.set_data(active_game_state)
@@ -117,6 +119,11 @@ func make_gamestate_child() -> GameStateData:
 	new_gamestate.upper_team_lineup = active_game_state.upper_team_lineup.duplicate()
 	new_gamestate.lower_team_lineup = active_game_state.lower_team_lineup.duplicate()
 	
+	new_gamestate.selected_upper_moves = [0,0]
+	new_gamestate.selected_lower_moves = [0,0]
+	new_gamestate.selected_upper_targets = [0,0]
+	new_gamestate.selected_lower_targets = [0,0]
+	
 	for slot in range(6):
 		new_gamestate.upper_team_states[slot] = PokemonState.new()
 		new_gamestate.upper_team_states[slot].combat_data = active_game_state.upper_team_states[slot].combat_data
@@ -145,8 +152,8 @@ func load_gamestate(tree_path: Array[int]) -> void:
 		
 	$Interface/Board/Title/TurnDisplay/Label2.text = str(active_game_state.state_turn)
 	$Interface/Board/Commentary.text = active_game_state.commentary
-	#$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves, active_game_state.selected_upper_targets)
-	#$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves, active_game_state.selected_lower_targets)
+	$Interface/Board/InputUpper.set_input(active_game_state.selected_upper_moves, active_game_state.selected_upper_targets)
+	$Interface/Board/InputLower.set_input(active_game_state.selected_lower_moves, active_game_state.selected_lower_targets)
 	refresh_navigation_buttons()
 	refresh_game_state()
 
@@ -279,6 +286,7 @@ func _on_input_lower_target_selected() -> void:
 
 
 func _on_input_upper_action_selected() -> void:
+	pass
 	active_game_state.selected_upper_moves = $Interface/Board/InputUpper.get_selected_actions()
 	active_game_state.selected_upper_targets = $Interface/Board/InputUpper.get_selected_targets()
 

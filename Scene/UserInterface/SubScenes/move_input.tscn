@@ -21,6 +21,7 @@ popup/item_3/id = 3
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+allow_reselect = true
 
 [connection signal="item_selected" from="Action" to="." method="_on_action_item_selected"]
 [connection signal="item_selected" from="Target" to="." method="_on_target_item_selected"]

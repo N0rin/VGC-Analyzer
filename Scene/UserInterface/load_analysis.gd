@@ -1,7 +1,7 @@
 extends Control
 class_name LoadAnalysis
 
-signal load_battle_data(battle_data: GameData)
+signal load_battle_data(battle_data: GameData, save_name: String)
 
 const SAVE_GAME_BASE_PATH := "user://games/"
 @onready var load_analysis_item_scene = preload("res://Scene/UserInterface/SubScenes/load_analysis_item.tscn")
@@ -10,6 +10,7 @@ const SAVE_GAME_BASE_PATH := "user://games/"
 
 var file_list: Array
 var loaded_save: GameData
+var save_name: String
 
 func startup() -> void:
 	DirAccess.open(SAVE_GAME_BASE_PATH)
@@ -24,6 +25,7 @@ func startup() -> void:
 	show()
 
 func _on_file_chosen(filename: String):
+	save_name = filename
 	loaded_save = saveloader.load_data(filename)
 	var counter = 0
 	for icon: PokemonIcon in $MarginContainer/VBoxContainer/HBoxContainer/Overview/IconContainer1.get_children():
@@ -48,6 +50,6 @@ func _on_back_pressed() -> void:
 
 
 func _on_load_pressed() -> void:
-	emit_signal("load_battle_data", loaded_save)
+	emit_signal("load_battle_data", loaded_save, save_name)
 	hide()
 	

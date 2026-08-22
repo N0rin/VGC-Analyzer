@@ -191,9 +191,9 @@ func read_gamestate_data(gamestate_data: Dictionary, parent = null):
 	gamestate.lower_team_lineup = read_array(gamestate_data["lower_team_lineup"])
 	gamestate.lower_team_states = read_team_states(gamestate_data["lower_team_states"])
 	gamestate.selected_upper_moves = read_array(gamestate_data["selected_upper_moves"])
-	#gamestate.selected_upper_targets = read_array(gamestate_data["selected_upper_targets"])
+	gamestate.selected_upper_targets = read_array(gamestate_data["selected_upper_targets"])
 	gamestate.selected_lower_moves = read_array(gamestate_data["selected_lower_moves"])
-	#gamestate.selected_lower_targets = read_array(gamestate_data["selected_lower_targets"])
+	gamestate.selected_lower_targets = read_array(gamestate_data["selected_lower_targets"])
 	
 	gamestate.parent = parent
 	

@@ -57,5 +57,5 @@ func _on_analyzer_to_new_analysis() -> void:
 	$Analyzer/NewAnalysis.startup()
 
 
-func _on_load_analysis_load_battle_data(battle_data: GameData) -> void:
-	$Analyzer/AnalysisBoard.startup(battle_data)
+func _on_load_analysis_load_battle_data(battle_data: GameData, save_name: String) -> void:
+	$Analyzer/AnalysisBoard.startup(battle_data, save_name)
