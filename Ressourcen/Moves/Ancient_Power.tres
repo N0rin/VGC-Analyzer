@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://2rr2cg5psc3m"]
+
+[ext_resource type="Script" path="res://Ressourcen/Move.gd" id="1_fdd8n"]
+
+[resource]
+script = ExtResource("1_fdd8n")
+name = "Ancient Power"
+base_damage = 60
+accuracy = 100
+priority = 0
+targeting = "Single"
+category = "Special"
+type = "Rock"
+makes_contact = false
+added_effect = "Omniboost"
+added_effect_chance = 10
+crit_bonus = 0
